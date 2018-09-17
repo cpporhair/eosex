@@ -1,3 +1,9 @@
 [submodule "vm/third_party/WAVM"]
 	path = vm/third_party/WAVM
 	url = https://github.com/WAVM/WAVM.git
+[submodule "vm/third_party/seastar"]
+	path = vm/third_party/seastar
+	url = https://github.com/scylladb/seastar.git
+[submodule "vm/third_party/http-parser"]
+	path = vm/third_party/http-parser
+	url = https://github.com/nodejs/http-parser.git
