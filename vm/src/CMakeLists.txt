@@ -17,6 +17,7 @@ IF(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
             -I${SEASTAR_PATH} -U_FORTIFY_SOURCE
             -I${SEASTAR_PATH}/fmt
             -I${PROJECT_ROOT_PATH}
+            -I${PROJECT_ROOT_PATH}/third_party
             -DBOOST_TEST_DYN_LINK -Wno-ignored-attributes
             -Wno-overloaded-virtual
             -Wno-uninitialized
@@ -74,6 +75,7 @@ ELSEIF(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
             -fconcepts
             -I${SEASTAR_PATH}/fmt
             -I${PROJECT_ROOT_PATH}
+            -I${PROJECT_ROOT_PATH}/third_party
             -DBOOST_TEST_DYN_LINK -Wno-ignored-attributes
             -Wno-overloaded-virtual -Wno-maybe-uninitialized -Wno-error=cpp -Wno-stringop-overflow
             #        -DSEASTAR_HAVE_GCC6_CONCEPTS

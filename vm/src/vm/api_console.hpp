@@ -20,6 +20,14 @@ namespace vm_api{
 												 Runtime::CallingConvention::intrinsic);           \
 	static Result cName(Runtime::ContextRuntimeData* contextRuntimeData, ##__VA_ARGS__)
 
+
+	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a);
+
+	static Intrinsics::Function printa_Intrinsic(getIntrinsicModule());
+
+	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a){
+
+	}
     KKK_INTRINSIC_FUNCTION(AAA,"sss",void,printa,int a){
 
 	};
