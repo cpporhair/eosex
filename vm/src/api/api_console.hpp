@@ -7,10 +7,13 @@
 #include "api_aware_base.hpp"
 #include "../utils/null_terminated_ptr.hpp"
 #include "WAVM/Include/Runtime/Intrinsics.h"
+#include "WAVM/Include/Runtime/Runtime.h"
 
 
 
 namespace vm_api{
+
+
     #define KKK_INTRINSIC_FUNCTION(module, nameString, Result, cName, ...)                          \
 	static Result cName(Runtime::ContextRuntimeData* contextRuntimeData, ##__VA_ARGS__);           \
 	static Intrinsics::Function cName##Intrinsic(getIntrinsicModule_##module(),                    \
@@ -21,16 +24,24 @@ namespace vm_api{
 	static Result cName(Runtime::ContextRuntimeData* contextRuntimeData, ##__VA_ARGS__)
 
 
+
+	Intrinsics::Module& getIntrinsicModule_console(){
+		static Intrinsics::Module module;
+		return module;
+	}
+
 	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a);
 
-	static Intrinsics::Function printa_Intrinsic(getIntrinsicModule());
+	static Intrinsics::Function printa_Intrinsic(
+			getIntrinsicModule_console(),
+			"printa",
+			printa,
+			Intrinsics::inferIntrinsicFunctionType((void*)printa),
+			Runtime::CallingConvention::intrinsic);
 
 	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a){
 
 	}
-    KKK_INTRINSIC_FUNCTION(AAA,"sss",void,printa,int a){
-
-	};
 
 }
 #endif //BOXED_API_CONSOLE_HPP

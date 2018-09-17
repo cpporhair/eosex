@@ -5,7 +5,13 @@ add_library(http_parser
 add_executable(boxed
         main.cpp
         service/http_service.hpp
-        service/listener.hpp utils/connection.hpp utils/unique_ptr_wrapper.hpp utils/http.hpp vm/api_console.hpp vm/api_aware_base.hpp utils/null_terminated_ptr.hpp)
+        service/listener.hpp
+        utils/connection.hpp
+        utils/unique_ptr_wrapper.hpp
+        utils/http.hpp
+        api/api_console.hpp
+        api/api_aware_base.hpp
+        utils/null_terminated_ptr.hpp)
 message(STATUS,${CMAKE_CURRENT_BINARY_DIR})
 
 IF(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
