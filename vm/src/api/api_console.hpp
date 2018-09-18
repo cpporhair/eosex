@@ -8,6 +8,7 @@
 #include "../utils/null_terminated_ptr.hpp"
 #include "WAVM/Include/Runtime/Intrinsics.h"
 #include "WAVM/Include/Runtime/Runtime.h"
+#include "WAVM/Include/IR/IR.h"
 
 
 
