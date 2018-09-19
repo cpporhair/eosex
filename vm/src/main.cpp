@@ -8,6 +8,7 @@
 #include <iostream>
 #include "service/http_service.hpp"
 #include "service/listener.hpp"
+#include "api/api_console.hpp"
 
 
 using namespace std::chrono_literals;

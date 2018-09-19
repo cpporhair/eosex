@@ -6,41 +6,35 @@
 #define BOXED_API_CONSOLE_HPP
 #include "api_aware_base.hpp"
 #include "../utils/null_terminated_ptr.hpp"
-#include "WAVM/Include/Runtime/Intrinsics.h"
-#include "WAVM/Include/Runtime/Runtime.h"
-#include "WAVM/Include/IR/IR.h"
+#include "Runtime/Intrinsics.h"
+#include "Runtime/Runtime.h"
+#include "IR/IR.h"
+#include "IR/Types.h"
 
 
 
 namespace vm_api{
-
-
-    #define KKK_INTRINSIC_FUNCTION(module, nameString, Result, cName, ...)                          \
-	static Result cName(Runtime::ContextRuntimeData* contextRuntimeData, ##__VA_ARGS__);           \
-	static Intrinsics::Function cName##Intrinsic(getIntrinsicModule_##module(),                    \
-												 nameString,                                       \
-												 (void*)&cName,                                    \
-												 Intrinsics::inferIntrinsicFunctionType(&cName),   \
-												 Runtime::CallingConvention::intrinsic);           \
-	static Result cName(Runtime::ContextRuntimeData* contextRuntimeData, ##__VA_ARGS__)
-
-
 
 	Intrinsics::Module& getIntrinsicModule_console(){
 		static Intrinsics::Module module;
 		return module;
 	}
 
+	/*
 	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a);
 
 	static Intrinsics::Function printa_Intrinsic(
 			getIntrinsicModule_console(),
 			"printa",
-			printa,
-			Intrinsics::inferIntrinsicFunctionType((void*)printa),
-			Runtime::CallingConvention::intrinsic);
+            (void*)&printa,
+			Intrinsics::inferIntrinsicFunctionType(&printa),
+			IR::CallingConvention::intrinsic);
 
 	static void printa(Runtime::ContextRuntimeData* contextRuntimeData,int a){
+
+	}*/
+
+    DEFINE_INTRINSIC_FUNCTION(console,"printb",void,printb,int b){
 
 	}
 
