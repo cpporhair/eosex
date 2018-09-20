@@ -1,8 +1,0 @@
-//
-// Created by 杨文宇 on 2018/9/19.
-//
-
-#ifndef BLOCK_CHAIN_BLOCK_HEADER_HPP
-#define BLOCK_CHAIN_BLOCK_HEADER_HPP
-
-#endif //BLOCK_CHAIN_BLOCK_HEADER_HPP
