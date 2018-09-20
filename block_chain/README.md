@@ -358,8 +358,18 @@ class tuple;
     lvaue 
     rvalue
     右值引用T&&是一个universal references，可以接受左值或者右值，正是这个特性让他适合作为一个参	数的路由，然后再通过std::forward按照参数的实际类型去匹配对应的重载函数，最终实现完美转发。
+##区块数据结构
+
 ##区块生产
 区块生产的调度主要是在producer_plugin.cpp中实现的,相关的类为：producer_plugin和producer_plugin_impl
+
+##区块打包上链
+
+##区块同步
+
+##区块存储
+
+##chainbase::database多索引数据库实现
 
 
 
