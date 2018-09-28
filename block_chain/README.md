@@ -272,7 +272,20 @@
       _pending_block_mode = pending_block_mode::speculating;
    }
    ```
-   * 调用controller::abort_block,controller::start_block者两个函数在后文详述。
+   * 调用controller::abort_block
+   * 调用controller::start_block 这两个函数在后文详述。
+   * 在调用controller::start_block之后，在controller_impl中就会生成一个全新的pending包含了最新生成的区块头部信息  
+     然后需要对新块进行transaction打包：  
+     * 清理过期的transaction:  
+       ```cpp
+       // remove all persisted transactions that have now expired
+      auto& persisted_by_id = _persistent_transactions.get<by_id>();
+      auto& persisted_by_expiry = _persistent_transactions.get<by_expiry>();
+      while(!persisted_by_expiry.empty() && persisted_by_expiry.begin()->expiry <= pbs->header.timestamp.to_time_point()) {
+         persisted_by_expiry.erase(persisted_by_expiry.begin());
+      }
+       ```
+     * 
   3. 判断start_block返回值：  
    * result == failed  
      start pending block 失败，稍后再试.启动定时器_timer，等待50ms再次进入schedule_production_loop
@@ -404,8 +417,9 @@
         ("count",new_bs->block->transactions.size())("lib",chain.last_irreversible_block_num())("confs", new_bs->header.confirmed));
    ```
 
-   至此producer_plugin中区块的生产流程已经介绍完毕，更详细的分析会在controller中体现出来。  
+   至此producer_plugin中区块的生产流程已经介绍完毕，更详细的分析会在controller中体现出来。  总体时序如下：  
 
+    ![image](diagram/producer_sequence.png)
 
    区块同步流程：
 
@@ -413,8 +427,294 @@
 
 
 ### controller
-    producer_plugin在区块生产的过程中扮演着调度的角色，而实际工作是放在controller中来完成的，下面将纤细分析controller在区块生成过程中所扮演的角色功能：  
+producer_plugin在区块生产的过程中扮演着调度的角色，而实际工作是放在controller中来完成的，下面将纤细分析controller在区块生成过程中所扮演的角色功能：  
+上文说到在producer_plugin_impl::start_block函数中会调用controller::abort_block和controller::start_block两个函数，这里需要展示一下controller相关数据结构,controller的功能主要是在controller_impl中实现的，这里只列举关键部分：
+```cpp
+struct controller {
+    enum class block_status {
+        irreversible = 0, //区块已经被应用,且不可逆
+        validated = 1,    //区块已经被可信任的生产者签名，并已经应用但还不是不可逆状态
+        complete = 2,     //区块已经被可信任的生产者签名，但是还没有被应用，状态为可逆
+        incomplete = 3    //区块正在生产过程
+    }；
+
+    //信号量集合
+    signal<void(const signed_block_ptr&)>         pre_accepted_block;
+    signal<void(const block_state_ptr&)>          accepted_block_header;
+    signal<void(const block_state_ptr&)>          accepted_block;
+    signal<void(const block_state_ptr&)>          irreversible_block;
+    signal<void(const transaction_metadata_ptr&)> accepted_transaction;
+    signal<void(const transaction_trace_ptr&)>    applied_transaction;
+    signal<void(const header_confirmation&)>      accepted_confirmation;
+    signal<void(const int&)>                      bad_alloc;
+
+    private:
+        std::unique_ptr<controller_impl>   my;
+};
+
+struct controller_impl {
+    controller&                  self;
+    chainbase::database          db;   // state db,主要是存储合约执行后的各种状态信息
+    chainbase::database          reversible_blocks; //用来存储已经成功应用但是还是可逆状态
+    block_log                    blog;
+    optional<pending_state>      pending;   //保存正在生成的block信息，该结构在上文已经列出
+    block_state_ptr              head;      //上一次block state信息，该结构在上文已经列出
+    fork_database                fork_db;
+    wasm_interface               wasmif;
+    resource_limits_manager      resource_limits;
+    authorization_manager        authorization;
+    ...
+    /**
+    *  Transactions that were undone by pop_block or abort_block, transactions
+    *  are removed from this list if they are re-applied in other blocks. Producers
+    *  can query this list when scheduling new transactions into blocks.
+    */
+
+    /**transaction的撤销由pop_block或abort_block来完成。如果有其他块重新应用了这些事物，则需要从该列表中将其删除。
+    * 当新transaction被调度成块是，用户可以查询列表。
+    * 从后面的分析中可以看到，abort_block并没有完成撤销工作
+    */
+    map<digest_type,transaction_metadata_ptr> unapplied_transactions;
+    .
+    .
+    .
+}
+
+```
+controller的初始化工作是由chain_plugin::plugin_initialize函数来完成的：检查白名单、黑名单、灰名单，数据库目录、检查点、及命令行参数的检查，主要功能定义在：plugins/chain_plugin/chain_plugin.cpp 314行。  
+在chain_plugin中还负责相关channel的初始化工作。  
+然后chain_plugin::plugin_start函数会将controller启动,定义在：plugins/chain_plugin/chain_plugin.cpp 633行：
+```cpp
+try {
+   try {
+       //controller启动
+      my->chain->startup();
+   } catch (const database_guard_exception& e) {
+      log_guard_exception(e);
+      // make sure to properly close the db
+      my->chain.reset();
+      throw;
+   }
+
+   if(!my->readonly) {
+      ilog("starting chain in read/write mode");
+   }
+
+   ilog("Blockchain started; head block is #${num}, genesis timestamp is ${ts}",
+        ("num", my->chain->head_block_num())("ts", (std::string)my->chain_config->genesis.initial_timestamp));
+
+   my->chain_config.reset();
+} FC_CAPTURE_AND_RETHROW()
+```
+在controller::startup中会调用controller_impl::add_index:  
+这个函数主要为controller_impl::reversible_block和db添加索引：  
+```cpp
+      //为reversible block建立索引
+      reversible_blocks.add_index<reversible_block_index>();
+
+      db.add_index<account_index>();
+      db.add_index<account_sequence_index>();
+
+      db.add_index<table_id_multi_index>();
+      db.add_index<key_value_index>();
+      db.add_index<index64_index>();
+      db.add_index<index128_index>();
+      db.add_index<index256_index>();
+      db.add_index<index_double_index>();
+      db.add_index<index_long_double_index>();
+
+      db.add_index<global_property_multi_index>();
+      db.add_index<dynamic_global_property_multi_index>();
+      db.add_index<block_summary_multi_index>();
+      db.add_index<transaction_multi_index>();
+      db.add_index<generated_transaction_multi_index>();
+
+      authorization.add_indices();
+      resource_limits.add_indices();
+```
+上述结构在后文有详细说明；然后进行fork_db的初始化工作，设置controller_impl::head,使其处于正确的状态为后续的区块生产做准备工作，到这里区块的初始化基本完成了，下面就到了区块生产的环节了。  
+
+从上文我们知道producer_plugin::start_block最后会调用controller::abort_block和start_block两个函数,这两个函数最终会调用controller_impl::abort_block和controller_impl::start_block两个函数：  
+controller_impl::abort_block重置controller_impl::pending信息，使pending处于全新状态:  
+```cpp
+if( pending ) {
     
+    //这里只是将_pending_block_state中的transaction重新放到unapplied_transactions中，并没有做撤销工作
+    if ( read_mode == db_read_mode::SPECULATIVE ) {
+    for( const auto& t : pending->_pending_block_state->trxs )
+        unapplied_transactions[t->signed_id] = t;
+    }
+    pending.reset();
+}
+```  
+controller_impl::start_block函数接受三个参数：1.即将要产生的区块的时间戳when，2.区块确认数量confirm_block_count,3.区块当前的状态status:  
+  * 判断controller_impl::pending是否为初始状态，否则抛出异常
+    ```cpp
+    EOS_ASSERT( !pending, block_validate_exception, "pending block already exists" );
+    ```
+  * 建立db session
+    ```cpp
+     if (!self.skip_db_sessions(s)) {
+         EOS_ASSERT( db.revision() == head->block_num, database_exception, "db revision is not on par with head block",
+                     ("db.revision()", db.revision())("controller_head_block", head->block_num)("fork_db_head_block", fork_db.head()->block_num) );
+
+         pending.emplace(maybe_session(db));
+      } else {
+         pending.emplace(maybe_session());
+      }
+    ```
+  * 根据最近的controller_impl::head生成新的pending
+    ```cpp
+    pending->_block_status = s;
+
+    //这里会调用block_head::block_head(const block_header_state& prev, block_timestamp_type when)
+    //然后调用block_state_head::generate_next根据传进来的时间戳when生成新的block_header_state(新块)
+    //应为当前节点是正在出块的节点，所以在generate_next不需要对块进行完整性验证
+    //在同步块的时候则需要调用next函数，并做完整性验证后面详述
+    //generate_next代码定义在 libraries/chain/block_header_state.cpp 36行
+    pending->_pending_block_state = std::make_shared<block_state>( *head, when ); // promotes pending schedule (if any) to active
+    pending->_pending_block_state->in_current_chain = true;
+    ```
+  * 将出块action打进transaction并执行,然后清理过期的transactions更新生产者授权
+    ```cpp
+        try {
+            auto onbtrx = std::make_shared<transaction_metadata>( get_on_block_transaction() );
+            onbtrx->implicit = true;
+            auto reset_in_trx_requiring_checks = fc::make_scoped_exit([old_value=in_trx_requiring_checks,this](){
+                  in_trx_requiring_checks = old_value;
+               });
+            in_trx_requiring_checks = true;
+            push_transaction( onbtrx, fc::time_point::maximum(), self.get_global_properties().configuration.min_transaction_cpu_usage, true );
+         } catch( const boost::interprocess::bad_alloc& e  ) {
+            elog( "on block transaction failed due to a bad allocation" );
+            throw;
+         } catch( const fc::exception& e ) {
+            wlog( "on block transaction failed, but shouldn't impact block generation, system contract needs update" );
+            edump((e.to_detail_string()));
+         } catch( ... ) {
+         }
+
+         clear_expired_input_transactions();
+         update_producers_authority();
+    ```
+  至此controller_impl::start_block函数分析完毕，其主要功能就是根据当前head生成新块，并将出块action打进transaction中。
+  在controller_impl::start_block函数执行完毕候，控制权就交还给producer_plugin_impl::start_block了,在上文有对应的分析，producer_plugin_impl::start_block最终会把控制权交给producer_plugin_impl::schedule_production_loop，在这个函数中会启动一个定时器，在延迟一段时间之后会调用proudcer_plugin_impl::maybe_produce_block，这个函数会调用producer_plugin_impl::produce_block这在上文都有分析到，在producer_plugin_impl::produce_block中会调用:  
+  controller::finalize_block,controller::sign_block和controller::commit_block三个函数来完成区块生产，区块签名，区块上链过程，下面来一次分析这三个函数：  
+  * controller::finalize_block  
+   这个函数主要是完成资源更新包括生产该区块所使用的cpu资源，带宽资源；设置action merkle树根；设置transaction merkle树根，创建block summary信息:
+   ```cpp
+   resource_limits.process_account_limit_updates();
+    const auto& chain_config = self.get_global_properties().configuration;
+    uint32_t max_virtual_mult = 1000;
+    uint64_t CPU_TARGET = EOS_PERCENT(chain_config.max_block_cpu_usage, chain_config.target_block_cpu_usage_pct);
+    resource_limits.set_block_parameters(
+        { CPU_TARGET, chain_config.max_block_cpu_usage, config::block_cpu_usage_average_window_ms / config::block_interval_ms, max_virtual_mult, {99, 100}, {1000, 999}},
+        {EOS_PERCENT(chain_config.max_block_net_usage, chain_config.target_block_net_usage_pct), chain_config.max_block_net_usage, config::block_size_average_window_ms / config::block_interval_ms, max_virtual_mult, {99, 100}, {1000, 999}}
+    );
+    resource_limits.process_block_usage(pending->_pending_block_state->block_num);
+
+    //设置action merkle树根
+    set_action_merkle();
+
+    //设置transaction merkle树根
+    set_trx_merkle();
+
+    auto p = pending->_pending_block_state;
+    p->id = p->header.id();
+
+    //根据block id生成 summary信息并放到数据库中
+    create_block_summary(p->id);
+   ```
+  * controller::sign_block  
+   根据当前生产者提供的私钥签名函数对当前区块进行签名，并对做一次签名验证。
+   ```cpp
+    auto p = pending->_pending_block_state;
+    p->sign( signer_callback );
+    static_cast<signed_block_header&>(*p->block) = p->header;
+   ```
+   block_header_state::sign(上面p->sign)定义如下：
+   ```cpp
+    auto d = sig_digest();
+    header.producer_signature = signer( d );
+    EOS_ASSERT( block_signing_key == fc::crypto::public_key( header.producer_signature, d ), wrong_signing_key, "block is signed with unexpected key" );
+   ```
+  * controller::commit_block
+   在详细分析这个函数之前需要先来分析一下fork_database这个类，它的结构如下：
+   ```cpp
+    struct by_block_id;
+    struct by_block_num;
+    struct by_lib_block_num;
+    struct by_prev;
+
+    //建立一个基于block_state_ptr的多索引容器
+    //by_block_id以block id为索引
+    //by_block_num 以区块高度为索引
+    //by_lib_block_num以最近的区块不可逆高度为索引
+    //by_prev以前一个block id为索引
+    typedef multi_index_container<
+        block_state_ptr,
+        indexed_by<
+          hashed_unique< tag<by_block_id>, member<block_header_state, block_id_type, &block_header_state::id>, std::hash<block_id_type>>,
+          ordered_non_unique< tag<by_prev>, const_mem_fun<block_header_state, const block_id_type&, &block_header_state::prev> >,
+          ordered_non_unique< tag<by_block_num>,
+              composite_key< block_state,
+                member<block_header_state,uint32_t,&block_header_state::block_num>,
+                member<block_state,bool,&block_state::in_current_chain>
+              >,
+              composite_key_compare< std::less<uint32_t>, std::greater<bool> >
+          >,
+          ordered_non_unique< tag<by_lib_block_num>,
+              composite_key< block_header_state,
+                  member<block_header_state,uint32_t,&block_header_state::dpos_irreversible_blocknum>,
+                  member<block_header_state,uint32_t,&block_header_state::bft_irreversible_blocknum>,
+                  member<block_header_state,uint32_t,&block_header_state::block_num>
+              >,
+              composite_key_compare< std::greater<uint32_t>, std::greater<uint32_t>, std::greater<uint32_t> >
+          >
+        >
+    > fork_multi_index_type;
+    struct fork_database_impl {
+      fork_multi_index_type    index;
+      block_state_ptr          head; //区块头
+      fc::path                 datadir; //存储路径
+    }
+
+    class fork_database {
+    public:
+      //这里列举关键函数,详细定义参见 libraries/chain/include/eosio/chain/fork_database.hpp
+
+      //根据区块id获取block_state信息
+      block_state_ptr get_block(const block_id_type &id) const;
+      //根据区块高度从当前链中获取block_state信息
+      block_state_ptr get_block_in_current_chain_by_num(uint32_t num) const;
+
+      //提供一个“有效的”区块状态，有可能以此建立分支
+      void set(block_state_ptr s);
+      
+      block_state_ptr add(signed_block_ptr b,bool trust = false);
+
+      block_state_ptr add(block_state_ptr next_block);
+      void remove(const block_id_type &id);
+      void add(const header_confirmation &c);
+      const block_state_ptr &head() const;
+
+      //根据两个头block，获取两个分支（两个分支有共同的祖先，即两个头部的previous的值相同）
+      pair<branch_type,branch_type> fetch_branch_from(const block_id_type &first,const block_id_type &second) const;
+
+      //若该区块为invalid,将会从数据库中删除。若为valid，在发射irreversible信号后，所有比LIB大的block将会被修正
+      void set_validity(const block_state_ptr &h,bool valid);
+      void mark_in_current_chain(const block_state_ptr &h,bool in_current_chain);
+      void prune(const block_state_ptr&);
+
+      signal<void(block_state_ptr)>    irreversible;
+
+    private:
+      void set_bft_irreversible(block_id_type id);
+      unique_ptr<for_database_impl> my;
+    }
+
+   ```
+  回到controller_impl::commit_block,该接受一个bool参数，该参数表示是否需要将controller_impl::pending->_pending_block_state加入fork_database,如果是则将pending->_pending_block_state->validated设为true,然后调用fork_database::add(block_state_ptr)将该块加入数据库，然后会根据当前的block_state进行数据库数据修正(后文fork_database部分有详细分析),然后检查是否正在重演该区块，如果否则将其加入可以缓存reversible_blocks,发射accept_block信号
 
 ## chainbase分析
 
