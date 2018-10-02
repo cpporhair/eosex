@@ -8,5 +8,6 @@
     <mapping directory="$PROJECT_DIR$/third_party/seastar/c-ares" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/seastar/dpdk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third_party/seastar/fmt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/wabt" vcs="Git" />
   </component>
 </project>
