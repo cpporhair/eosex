@@ -1,14 +1,13 @@
 # Table of Content
 
 * [总览](##总览)
-* [环境](##环境)
-* [Web Assembly介绍](##chain分析)
+* [Web Assembly介绍](##EOS虚拟机架构介绍)
 * [WABT虚拟机](##chainbase分析)
-* [WABT虚拟机](##chainbase分析)
-* [WABT虚拟机](##chainbase分析)
-* [WABT虚拟机](##chainbase分析)
-* [WABT虚拟机](##chainbase分析)
-* [WABT虚拟机](##chainbase分析)
+* [API注册](##chainbase分析)
+* [初始化虚拟机](##chainbase分析)
+* [注入opcode](##chainbase分析)
+* [执行智能合约](##chainbase分析)
+* [并发,可扩展的智能合约解释器](##chainbase分析)
 
 ## 总览
   
