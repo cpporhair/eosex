@@ -497,6 +497,7 @@ EOS在每一个智能合约初始化的时候才会注册API.
 在wabt_runtime::instantiate_module这个函数里,通过以下代码注入
 
 ```cpp
+       ...
        std::unique_ptr<interp::Environment> env = std::make_unique<interp::Environment>();
        for(auto it = intrinsic_registrator::get_map().begin() ; it != intrinsic_registrator::get_map().end(); ++it) {
           interp::HostModule* host_module = env->AppendHostModule(it->first);
@@ -509,7 +510,10 @@ EOS在每一个智能合约初始化的时候才会注册API.
              });
           }
        }
+       ...
 ```
+EOS在执行智能合约时,如果发现这个合约没有被缓存,那么则会调用instantiate_module函数来初始化合约的模块.intrinsic_registrator::get_map()中的每一个模块.注册该模块所有的API.
+
 
 
     
