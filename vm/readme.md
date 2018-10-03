@@ -2,7 +2,7 @@
 
 * [总览](##总览)
 * [Web Assembly介绍](##Web Assembly介绍)
-* [Web Assembly介绍](##EOS虚拟机架构介绍)
+* [EOS虚拟机架构介绍](##EOS虚拟机架构介绍)
 * [WABT虚拟机](##chainbase分析)
 * [API注册](##chainbase分析)
 * [初始化虚拟机](##chainbase分析)
@@ -15,9 +15,13 @@
   本部分主要致力于EOS中智能合约相关部分的源码分析，并在此基础上实现并发和水平扩展的智能合约解释器.
   
 ## Web Assembly介绍
+
+
   Web Assembly(wasm)是一种字节码，C/C++,javascript等语言都可以被相关的编译器编译成wasm模块并由wasm解释器执行.
   
 ## EOS虚拟机架构介绍
+
+
 EOS在1.3.0版本中添加了**WABT虚拟机**作为新的智能合约解释器。目前，EOS一共使用了3种解释器
 
     WAVM
@@ -202,6 +206,8 @@ EOS会把调用过的虚拟机上下文保存在
   这个函数里对loop和call等opcode做了注入处理.在之后的章节里，会详细的讲述注入过程。
   
   ## WABT虚拟机
+  
+  
   WABT是WebAssembly推出的开源二进制工具包.
   源码地址在https://github.com/WebAssembly/wabt
   
@@ -409,4 +415,102 @@ TEST_F(HostMemoryTest, Rot13) {
 }
 ```
 
+这段代码基本说明了WABT虚拟机运行wasm模块的过程,代码比较清晰.我加了注释.之后结合EOS的源码相关部分,对每个细节进行介绍.
+
+## EOS的API注册.
+
+EOS在 "wasm_interface.cpp"里.使用REGISTER_INTRINSICS和REGISTER_INJECTED_INTRINSICS宏,向3个wasm解释器注册了大量的API.
+这两个宏基于BOOST_PP_SEQ_FOR_EACH系列宏实现.
+
+对于REGISTER_INTRINSIC,展开后是如下代码(仅截取WABT部分)
+
+```cpp
+REGISTER_INTRINSICS(producer_api,
+   (get_active_producers,      int(int, int) )
+);
+
+...
+REGISTER_INTRINSICS 展开后
+...
+
+static eosio::chain::webassembly::wabt_runtime::intrinsic_registrator
+    __wabt_intrinsic_fn164(
+        "env",
+        "get_active_producers",
+        eosio::chain::webassembly::wabt_runtime::wabt_function_type_provider<
+            int(int, int)>::type(),
+        eosio::chain::webassembly::wabt_runtime::
+            intrinsic_function_invoker_wrapper<
+                decltype(&producer_api::get_active_producers)>::type::
+                fn<&producer_api::get_active_producers>());
+                
+                
+                
+REGISTER_INJECTED_INTRINSICS(call_depth_api,
+   (call_depth_assert,  void()               )
+);
+
+...
+REGISTER_INJECTED_INTRINSICS 展开后
+...
+
+static eosio::chain::webassembly::wabt_runtime::intrinsic_registrator
+    __wabt_intrinsic_fn2(
+        "eosio_injection",
+        "call_depth_assert",
+        eosio::chain::webassembly::wabt_runtime::wabt_function_type_provider<
+            void()>::type(),
+        eosio::chain::webassembly::wabt_runtime::
+            intrinsic_function_invoker_wrapper<
+                decltype(&call_depth_api::call_depth_assert)>::type::
+                fn<&call_depth_api::call_depth_assert>());
+```
+这2个宏的区别在于注册时的模块名称不同
+
+REGISTER_INTRINSICS注册到env里去
+REGISTER_INJECTED_INTRINSICS注册到eosio_injection里去
+
+这2个模块的区别在于env是提供给智能合约的API.eosio_injection则是eos本身用于注入操作码调用的的API.比如call_depth_assert是为了防止无限递归的函数
+
+对于WABT来说,这段代码构造了一个wabt_runtime::intrinsic_registrator对象,构造函数传入了相关的信息
+    
+    struct intrinsic_registrator {
+       using intrinsic_fn = TypedValue(*)(wabt_apply_instance_vars&, const TypedValues&);
+    
+       struct intrinsic_func_info {
+          FuncSignature sig;
+          intrinsic_fn func;
+       }; 
+    
+       static auto& get_map(){
+          static map<string, map<string, intrinsic_func_info>> _map;
+          return _map;
+       };
+    
+       intrinsic_registrator(const char* mod, const char* name, const FuncSignature& sig, intrinsic_fn fn) {
+          get_map()[string(mod)][string(name)] = intrinsic_func_info{sig, fn};
+       }
+    };
+EOS中,这段代码只是把需要注册的API函数按照模块名收集到一个map<string, map<string, intrinsic_func_info>>当中去,
+EOS在每一个智能合约初始化的时候才会注册API.
+
+在wabt_runtime::instantiate_module这个函数里,通过以下代码注入
+
+```cpp
+       std::unique_ptr<interp::Environment> env = std::make_unique<interp::Environment>();
+       for(auto it = intrinsic_registrator::get_map().begin() ; it != intrinsic_registrator::get_map().end(); ++it) {
+          interp::HostModule* host_module = env->AppendHostModule(it->first);
+          for(auto itf = it->second.begin(); itf != it->second.end(); ++itf) {
+             host_module->AppendFuncExport(itf->first, itf->second.sig, [fn=itf->second.func](const auto* f, const auto* fs, const auto& args, auto& res) {
+                TypedValue ret = fn(*static_wabt_vars, args);
+                if(ret.type != Type::Void)
+                   res[0] = ret;
+                return interp::Result::Ok;
+             });
+          }
+       }
+```
+
+
+    
 
