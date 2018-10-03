@@ -1,6 +1,7 @@
 # Table of Content
 
 * [总览](##总览)
+* [Web Assembly介绍](##Web Assembly介绍)
 * [Web Assembly介绍](##EOS虚拟机架构介绍)
 * [WABT虚拟机](##chainbase分析)
 * [API注册](##chainbase分析)
@@ -9,7 +10,7 @@
 * [执行智能合约](##chainbase分析)
 * [并发,可扩展的智能合约解释器](##chainbase分析)
 
-## 总览
+##总览
   
   本部分主要致力于EOS中智能合约相关部分的源码分析，并在此基础上实现并发和水平扩展的智能合约解释器.
   
@@ -37,17 +38,17 @@ EOS执行智能合约的主要步骤是
     6.重复第2步，执行调用的只能合约
     7.智能合约的调用结果，会放在EOS的fork_db里,并在新的区块到来时入链或者回滚.
     
-EOS在`wasm_interface.cpp`里，向3个虚拟机解释器，注册了API函数
+EOS在`wasm_interface.cpp`里，向3个虚拟机解释器，注册了API函数,比如:
 
   ``` cpp
+  ...
   REGISTER_INTRINSICS(memory_api,
      (memcpy,                 int(int, int, int)  )
      (memmove,                int(int, int, int)  )
      (memcmp,                 int(int, int, int)  )
      (memset,                 int(int, int, int)  )
   );
-
-
+  ...
   ```
 
 REGISTER_INTRINSICS是EOS自定义的宏，其中引用了经典BOOST_PP_SEQ_FOR_EACH系列宏，具体可以参考BOOST相关文档。
@@ -199,3 +200,213 @@ EOS会把调用过的虚拟机上下文保存在
   ```
   
   这个函数里对loop和call等opcode做了注入处理.在之后的章节里，会详细的讲述注入过程。
+  
+  ## WABT虚拟机
+  WABT是WebAssembly推出的开源二进制工具包.
+  源码地址在https://github.com/WebAssembly/wabt
+  
+  WABT包含下列工具:
+  
+  ```
+  wat2wasm        将"WebAssembly text format"转换到"WebAssembly binary format"
+  wasm2wat        将"WebAssembly binary format"转换到"WebAssembly text format"
+  wasm-objdump    类似objdump
+  wasm-interp     命令行形式的wasm二进制文件解释器.wasm
+  wat-desugar     命令行形式的wasm文本文件解释器.wat/wast
+  wasm2c          wasm转换到c文件
+  ```
+
+我们参考 src/test-interp.cc 的一段代码
+```cpp
+class HostMemoryTest : public ::testing::Test {
+ protected:
+  virtual void SetUp() {
+    //注册模块:EOS传入合约ID
+    interp::HostModule* host_module = env_.AppendHostModule("host");
+    //创建执行器
+    executor_ = MakeUnique<interp::Executor>(&env_);
+    //注册内存(因为测试的WASM使用了内存,EOS不支持合约使用节点的内存,所以没有注册内存)
+    //对应wast里的(import "host" "mem" (memory $mem 1))
+    std::pair<interp::Memory*, Index> pair =
+        host_module->AppendMemoryExport("mem", Limits(1));
+
+    using namespace std::placeholders;
+
+    //注册函数fill_buf
+    host_module->AppendFuncExport(
+        "fill_buf", {{Type::I32, Type::I32}, {Type::I32}},
+        std::bind(&HostMemoryTest::FillBufCallback, this, _1, _2, _3, _4));
+    //注册函数fill_buf
+    host_module->AppendFuncExport(
+        "buf_done", {{Type::I32, Type::I32}, {}},
+        std::bind(&HostMemoryTest::BufDoneCallback, this, _1, _2, _3, _4));
+    memory_ = pair.first;
+  }
+
+  virtual void TearDown() {
+    executor_.reset();
+  }
+
+  Result LoadModule(const std::vector<uint8_t>& data) {
+    Errors errors;
+    ReadBinaryOptions options;
+    //读取wasm,EOS使用这个函数读取传来的合约
+    return ReadBinaryInterp(&env_, data.data(), data.size(), options, &errors,
+                            &module_);
+  }
+
+  std::string string_data;
+
+  interp::Result FillBufCallback(const interp::HostFunc* func,
+                                 const interp::FuncSignature* sig,
+                                 const interp::TypedValues& args,
+                                 interp::TypedValues& results) {
+    // (param $ptr i32) (param $max_size i32) (result $size i32)
+    EXPECT_EQ(2u, args.size());
+    EXPECT_EQ(Type::I32, args[0].type);
+    EXPECT_EQ(Type::I32, args[1].type);
+    EXPECT_EQ(1u, results.size());
+    EXPECT_EQ(Type::I32, results[0].type);
+
+    uint32_t ptr = args[0].get_i32();
+    uint32_t max_size = args[1].get_i32();
+    uint32_t size = std::min(max_size, uint32_t(string_data.size()));
+
+    EXPECT_LT(ptr + size, memory_->data.size());
+
+    std::copy(string_data.begin(), string_data.begin() + size,
+              memory_->data.begin() + ptr);
+
+    results[0].set_i32(size);
+    return interp::Result::Ok;
+  }
+
+  interp::Result BufDoneCallback(const interp::HostFunc* func,
+                                 const interp::FuncSignature* sig,
+                                 const interp::TypedValues& args,
+                                 interp::TypedValues& results) {
+    // (param $ptr i32) (param $size i32)
+    EXPECT_EQ(2u, args.size());
+    EXPECT_EQ(Type::I32, args[0].type);
+    EXPECT_EQ(Type::I32, args[1].type);
+    EXPECT_EQ(0u, results.size());
+
+    uint32_t ptr = args[0].get_i32();
+    uint32_t size = args[1].get_i32();
+
+    EXPECT_LT(ptr + size, memory_->data.size());
+
+    string_data.resize(size);
+    std::copy(memory_->data.begin() + ptr, memory_->data.begin() + ptr + size,
+              string_data.begin());
+
+    return interp::Result::Ok;
+  }
+
+  interp::Environment env_;
+  interp::Memory* memory_;
+  interp::DefinedModule* module_;
+  std::unique_ptr<interp::Executor> executor_;
+};
+
+}  // end of anonymous namespace
+
+TEST_F(HostMemoryTest, Rot13) {
+  // 这里是 WAST
+  // (import "host" "mem" (memory $mem 1))
+  // (import "host" "fill_buf" (func $fill_buf (param i32 i32) (result i32)))
+  // (import "host" "buf_done" (func $buf_done (param i32 i32)))
+  //
+  // (func $rot13c (param $c i32) (result i32)
+  //   (local $uc i32)
+  //
+  //   ;; No change if < 'A'.
+  //   (if (i32.lt_u (get_local $c) (i32.const 65))
+  //     (return (get_local $c)))
+  //
+  //   ;; Clear 5th bit of c, to force uppercase. 0xdf = 0b11011111
+  //   (set_local $uc (i32.and (get_local $c) (i32.const 0xdf)))
+  //
+  //   ;; In range ['A', 'M'] return |c| + 13.
+  //   (if (i32.le_u (get_local $uc) (i32.const 77))
+  //     (return (i32.add (get_local $c) (i32.const 13))))
+  //
+  //   ;; In range ['N', 'Z'] return |c| - 13.
+  //   (if (i32.le_u (get_local $uc) (i32.const 90))
+  //     (return (i32.sub (get_local $c) (i32.const 13))))
+  //
+  //   ;; No change for everything else.
+  //   (return (get_local $c))
+  // )
+  //
+  // (func (export "rot13")
+  //   (local $size i32)
+  //   (local $i i32)
+  //
+  //   ;; Ask host to fill memory [0, 1024) with data.
+  //   (call $fill_buf (i32.const 0) (i32.const 1024))
+  //
+  //   ;; The host returns the size filled.
+  //   (set_local $size)
+  //
+  //   ;; Loop over all bytes and rot13 them.
+  //   (block $exit
+  //     (loop $top
+  //       ;; if (i >= size) break
+  //       (if (i32.ge_u (get_local $i) (get_local $size)) (br $exit))
+  //
+  //       ;; mem[i] = rot13c(mem[i])
+  //       (i32.store8
+  //         (get_local $i)
+  //         (call $rot13c
+  //           (i32.load8_u (get_local $i))))
+  //
+  //       ;; i++
+  //       (set_local $i (i32.add (get_local $i) (i32.const 1)))
+  //       (br $top)
+  //     )
+  //   )
+  //
+  //   (call $buf_done (i32.const 0) (get_local $size))
+  // )
+  
+  // data 是 WASM
+  std::vector<uint8_t> data = {
+      0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00, 0x01, 0x14, 0x04, 0x60,
+      0x02, 0x7f, 0x7f, 0x01, 0x7f, 0x60, 0x02, 0x7f, 0x7f, 0x00, 0x60, 0x01,
+      0x7f, 0x01, 0x7f, 0x60, 0x00, 0x00, 0x02, 0x2d, 0x03, 0x04, 0x68, 0x6f,
+      0x73, 0x74, 0x03, 0x6d, 0x65, 0x6d, 0x02, 0x00, 0x01, 0x04, 0x68, 0x6f,
+      0x73, 0x74, 0x08, 0x66, 0x69, 0x6c, 0x6c, 0x5f, 0x62, 0x75, 0x66, 0x00,
+      0x00, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x08, 0x62, 0x75, 0x66, 0x5f, 0x64,
+      0x6f, 0x6e, 0x65, 0x00, 0x01, 0x03, 0x03, 0x02, 0x02, 0x03, 0x07, 0x09,
+      0x01, 0x05, 0x72, 0x6f, 0x74, 0x31, 0x33, 0x00, 0x03, 0x0a, 0x74, 0x02,
+      0x39, 0x01, 0x01, 0x7f, 0x20, 0x00, 0x41, 0xc1, 0x00, 0x49, 0x04, 0x40,
+      0x20, 0x00, 0x0f, 0x0b, 0x20, 0x00, 0x41, 0xdf, 0x01, 0x71, 0x21, 0x01,
+      0x20, 0x01, 0x41, 0xcd, 0x00, 0x4d, 0x04, 0x40, 0x20, 0x00, 0x41, 0x0d,
+      0x6a, 0x0f, 0x0b, 0x20, 0x01, 0x41, 0xda, 0x00, 0x4d, 0x04, 0x40, 0x20,
+      0x00, 0x41, 0x0d, 0x6b, 0x0f, 0x0b, 0x20, 0x00, 0x0f, 0x0b, 0x38, 0x01,
+      0x02, 0x7f, 0x41, 0x00, 0x41, 0x80, 0x08, 0x10, 0x00, 0x21, 0x00, 0x02,
+      0x40, 0x03, 0x40, 0x20, 0x01, 0x20, 0x00, 0x4f, 0x04, 0x40, 0x0c, 0x02,
+      0x0b, 0x20, 0x01, 0x20, 0x01, 0x2d, 0x00, 0x00, 0x10, 0x02, 0x3a, 0x00,
+      0x00, 0x20, 0x01, 0x41, 0x01, 0x6a, 0x21, 0x01, 0x0c, 0x00, 0x0b, 0x0b,
+      0x41, 0x00, 0x20, 0x00, 0x10, 0x01, 0x0b,
+  };
+
+  ASSERT_EQ(Result::Ok, LoadModule(data));
+
+  string_data = "Hello, WebAssembly!";
+
+//调用函数rot13
+  ASSERT_EQ(interp::Result::Ok,
+            executor_->RunExportByName(module_, "rot13", {}).result);
+
+  ASSERT_EQ("Uryyb, JroNffrzoyl!", string_data);
+
+  ASSERT_EQ(interp::Result::Ok,
+            executor_->RunExportByName(module_, "rot13", {}).result);
+
+  ASSERT_EQ("Hello, WebAssembly!", string_data);
+}
+```
+
+
