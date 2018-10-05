@@ -10,7 +10,7 @@
 * [执行智能合约](##chainbase分析)
 * [并发,可扩展的智能合约解释器](##chainbase分析)
 
-##总览
+## 总览
   
   本部分主要致力于EOS中智能合约相关部分的源码分析，并在此基础上实现并发和水平扩展的智能合约解释器.
   
@@ -494,7 +494,7 @@ REGISTER_INJECTED_INTRINSICS注册到eosio_injection里去
 EOS中,这段代码只是把需要注册的API函数按照模块名收集到一个map<string, map<string, intrinsic_func_info>>当中去,
 EOS在每一个智能合约初始化的时候才会注册API.
 
-在wabt_runtime::instantiate_module这个函数里,通过以下代码注入
+在wabt_runtime::instantiate_module这个函数里,通过以下代码注册
 
 ```cpp
        ...
@@ -516,5 +516,90 @@ EOS在执行智能合约时,如果发现这个合约没有被缓存,那么则会
 
 
 
-    
+## 初始化虚拟机.
 
+```cpp
+   void wasm_interface::apply( const digest_type& code_id, const shared_string& code, apply_context& context ) {
+      my->get_instantiated_module(code_id, code, context.trx_context)->apply(context);
+   }
+```
+    
+当EOS调用wasm_interface::apply的时候,会从缓存当中查找对应的智能合约的虚拟机模块.如果没有查找到,则会初始化虚拟机
+
+```cpp
+      ......
+      std::unique_ptr<wasm_instantiated_module_interface>& get_instantiated_module( const digest_type& code_id,
+                                                                                    const shared_string& code,
+                                                                                    transaction_context& trx_context )
+      {
+         **//查找智能合约的虚拟机模块**
+         auto it = instantiation_cache.find(code_id);
+         if(it == instantiation_cache.end()) {
+            **//这里会停止掉CPU时间计费函数**
+            auto timer_pause = fc::make_scoped_exit([&](){
+               trx_context.resume_billing_timer();
+            });
+            trx_context.pause_billing_timer();
+            
+            //准备注入相关的模块
+            IR::Module module;
+            try {
+               Serialization::MemoryInputStream stream((const U8*)code.data(), code.size());
+               WASM::serialize(stream, module);
+               module.userSections.clear();
+            } catch(const Serialization::FatalSerializationException& e) {
+               EOS_ASSERT(false, wasm_serialization_error, e.message.c_str());
+            } catch(const IR::ValidationException& e) {
+               EOS_ASSERT(false, wasm_serialization_error, e.message.c_str());
+            }
+            
+            **//opcode注入,防止死循环等恶意代码**
+
+            wasm_injections::wasm_binary_injection injector(module);
+            injector.inject();
+
+            //准备注入的结果
+            std::vector<U8> bytes;
+            try {
+               Serialization::ArrayOutputStream outstream;
+               WASM::serialize(outstream, module);
+               bytes = outstream.getBytes();
+            } catch(const Serialization::FatalSerializationException& e) {
+               EOS_ASSERT(false, wasm_serialization_error, e.message.c_str());
+            } catch(const IR::ValidationException& e) {
+               EOS_ASSERT(false, wasm_serialization_error, e.message.c_str());
+            }
+            //调用虚拟机构造模块
+            it = instantiation_cache.emplace(code_id, runtime_interface->instantiate_module((const char*)bytes.data(), bytes.size(), parse_initial_memory(module))).first;
+         }
+         return it->second;
+      }
+   ......
+   ...
+   ...
+    std::unique_ptr<wasm_instantiated_module_interface> wabt_runtime::instantiate_module(const char* code_bytes, size_t code_size, std::vector<uint8_t> initial_memory) {
+       std::unique_ptr<interp::Environment> env = std::make_unique<interp::Environment>();
+       for(auto it = intrinsic_registrator::get_map().begin() ; it != intrinsic_registrator::get_map().end(); ++it) {
+          interp::HostModule* host_module = env->AppendHostModule(it->first);
+          for(auto itf = it->second.begin(); itf != it->second.end(); ++itf) {
+             host_module->AppendFuncExport(itf->first, itf->second.sig, [fn=itf->second.func](const auto* f, const auto* fs, const auto& args, auto& res) {
+                TypedValue ret = fn(*static_wabt_vars, args);
+                if(ret.type != Type::Void)
+                   res[0] = ret;
+                return interp::Result::Ok;
+             });
+          }
+       }
+    
+       interp::DefinedModule* instantiated_module = nullptr;
+       wabt::Errors errors;
+       //读入智能合约的代码(注入修正过的代码)
+       wabt::Result res = ReadBinaryInterp(env.get(), code_bytes, code_size, read_binary_options, &errors, &instantiated_module);
+       EOS_ASSERT( Succeeded(res), wasm_execution_error, "Error building wabt interp: ${e}", ("e", wabt::FormatErrorsToString(errors, Location::Type::Binary)) );
+       
+       return std::make_unique<wabt_instantiated_module>(std::move(env), initial_memory, instantiated_module);
+    }
+   ...
+```
+
+EOS初始化的时候会对智能合约代码进行注入
