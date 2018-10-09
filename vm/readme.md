@@ -6,6 +6,7 @@
 * [WABT虚拟机](##chainbase分析)
 * [API注册](##chainbase分析)
 * [初始化虚拟机](##chainbase分析)
+* [setcode](##chainbase分析)
 * [注入opcode](##chainbase分析)
 * [执行智能合约](##chainbase分析)
 * [并发,可扩展的智能合约解释器](##chainbase分析)
@@ -97,7 +98,20 @@ EOS会把调用过的虚拟机上下文保存在
 
 
 结构里
-这个map的KEY是智能合约的ID。当调用智能合约时,EOS会调用`get_instantiated_module`函数
+这个map的KEY是智能合约的ID。合约的ID,是在setcode里根据合约的二进制代码作hash256运算得出的.
+
+```cpp
+   ...
+   fc::sha256 code_id; /// default ID == 0
+
+   if( act.code.size() > 0 ) {
+     code_id = fc::sha256::hash( act.code.data(), (uint32_t)act.code.size() );
+     wasm_interface::validate(context.control, act.code);
+   }
+   ...
+```
+
+当调用智能合约时,EOS会调用`get_instantiated_module`函数
 
 ``` cpp
   std::unique_ptr<wasm_instantiated_module_interface>& get_instantiated_module( const digest_type& code_id,
@@ -532,11 +546,12 @@ EOS在执行智能合约时,如果发现这个合约没有被缓存,那么则会
                                                                                     const shared_string& code,
                                                                                     transaction_context& trx_context )
       {
-         **//查找智能合约的虚拟机模块**
+         //查找智能合约的虚拟机模块
          auto it = instantiation_cache.find(code_id);
          if(it == instantiation_cache.end()) {
-            **//这里会停止掉CPU时间计费函数**
+            //这里会停止掉CPU时间计费函数
             auto timer_pause = fc::make_scoped_exit([&](){
+               //恢复CPU时间计费
                trx_context.resume_billing_timer();
             });
             trx_context.pause_billing_timer();
@@ -553,7 +568,7 @@ EOS在执行智能合约时,如果发现这个合约没有被缓存,那么则会
                EOS_ASSERT(false, wasm_serialization_error, e.message.c_str());
             }
             
-            **//opcode注入,防止死循环等恶意代码**
+            //opcode注入,防止死循环等恶意代码
 
             wasm_injections::wasm_binary_injection injector(module);
             injector.inject();
@@ -602,4 +617,79 @@ EOS在执行智能合约时,如果发现这个合约没有被缓存,那么则会
    ...
 ```
 
-EOS初始化的时候会对智能合约代码进行注入
+## 发布合约
+
+eos源生注册了一些API用于注册帐号,发布合约等功能
+```cpp
+    ...
+    SET_APP_HANDLER( eosio, eosio, newaccount );
+    SET_APP_HANDLER( eosio, eosio, setcode );
+    SET_APP_HANDLER( eosio, eosio, setabi );
+    SET_APP_HANDLER( eosio, eosio, updateauth );
+    SET_APP_HANDLER( eosio, eosio, deleteauth );
+    SET_APP_HANDLER( eosio, eosio, linkauth );
+    SET_APP_HANDLER( eosio, eosio, unlinkauth );
+    ...
+    
+    以发布合约为例,宏展开后的函数是
+    set_apply_handler("eosio", "eosio", "setcode", &apply_eosio_setcode);
+```
+eos使用apply_eosio_setcode用来发布合约
+```cpp
+    void apply_eosio_setcode(apply_context& context) {
+       const auto& cfg = context.control.get_global_properties().configuration;
+    
+       auto& db = context.db;
+       auto  act = context.act.data_as<setcode>();
+       context.require_authorization(act.account);
+    
+       EOS_ASSERT( act.vmtype == 0, invalid_contract_vm_type, "code should be 0" );
+       EOS_ASSERT( act.vmversion == 0, invalid_contract_vm_version, "version should be 0" );
+    
+       fc::sha256 code_id; /// default ID == 0
+    
+       if( act.code.size() > 0 ) {
+         code_id = fc::sha256::hash( act.code.data(), (uint32_t)act.code.size() );
+         wasm_interface::validate(context.control, act.code);
+       }
+    
+       const auto& account = db.get<account_object,by_name>(act.account);
+    
+       int64_t code_size = (int64_t)act.code.size();
+       int64_t old_size  = (int64_t)account.code.size() * config::setcode_ram_bytes_multiplier;
+       int64_t new_size  = code_size * config::setcode_ram_bytes_multiplier;
+    
+       EOS_ASSERT( account.code_version != code_id, set_exact_code, "contract is already running this version of code" );
+    
+       db.modify( account, [&]( auto& a ) {
+          /** TODO: consider whether a microsecond level local timestamp is sufficient to detect code version changes*/
+          // TODO: update setcode message to include the hash, then validate it in validate
+          a.last_code_update = context.control.pending_block_time();
+          a.code_version = code_id;
+          a.code.resize( code_size );
+          if( code_size > 0 )
+             memcpy( a.code.data(), act.code.data(), code_size );
+    
+       });
+    
+       const auto& account_sequence = db.get<account_sequence_object, by_name>(act.account);
+       db.modify( account_sequence, [&]( auto& aso ) {
+          aso.code_sequence += 1;
+       });
+    
+       if (new_size != old_size) {
+          context.add_ram_usage( act.account, new_size - old_size );
+       }
+    }
+```
+
+在apply_eosio_setcode中,EOS验证了合约的发布账号,计算了合约的hash256作为合约的ID.检查合约的版本(ID),
+并且把合约的数据入库.最后根据新合约的大小.更新账号占用的RAM.
+
+## opcode注入
+
+EOS初始化的时候会对智能合约代码进行注入.修改虚拟机的opcode.加入CPU时间检查等等安全措施.
+
+注入的代码是在wasm_binary_injection类里实现的.
+
+未完待续
