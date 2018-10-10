@@ -38,14 +38,14 @@
   ``` cpp
   struct block_header {
     block_timestamp_type             timestamp;            //区块产生时间
-	account_name                     producer;             //区块生产者
-	uint16_t                         confirmed = 1;        //dpos确认数
-	block_id_type                    previous;             //前一个区块的头的hash值
-	checksum256_type                 transaction_mroot;    //区块包含的transactions的merkel树根
-	checksum256_type                 action_mroot;         //区块包含的actions的merkel树根，这些actions实际包含在transactions中
-	uint32_t                         schedule_version = 0;
-	optional<producer_schedule_type> new_producers;
-	extension_type                   header_extension;
+    account_name                     producer;             //区块生产者
+    uint16_t                         confirmed = 1;        //dpos确认数
+    block_id_type                    previous;             //前一个区块的头的hash值
+    checksum256_type                 transaction_mroot;    //区块包含的transactions的merkel树根
+    checksum256_type                 action_mroot;         //区块包含的actions的merkel树根，这些actions实际包含在transactions中
+    uint32_t                         schedule_version = 0;
+    optional<producer_schedule_type> new_producers;
+    extension_type                   header_extension;
   }
   ```
   
@@ -398,12 +398,14 @@
    EOS_ASSERT(signature_provider_itr != _signature_providers.end(), producer_priv_key_not_found, "Attempting to produce a block for which we don't have the private key");
 
    //idump( (fc::time_point::now() - chain.pending_block_time()) );
+   //完成块
    chain.finalize_block();
+   //对块进行签名
    chain.sign_block( [&]( const digest_type& d ) {
       auto debug_logger = maybe_make_debug_time_logger();
       return signature_provider_itr->second(d);
    } );
-
+   //提交块到数据库
    chain.commit_block();
    auto hbt = chain.head_block_time();
    //idump((fc::time_point::now() - hbt));
@@ -714,8 +716,915 @@ if( pending ) {
     }
 
    ```
-  回到controller_impl::commit_block,该接受一个bool参数，该参数表示是否需要将controller_impl::pending->_pending_block_state加入fork_database,如果是则将pending->_pending_block_state->validated设为true,然后调用fork_database::add(block_state_ptr)将该块加入数据库，然后会根据当前的block_state进行数据库数据修正(后文fork_database部分有详细分析),然后检查是否正在重演该区块，如果否则将其加入可以缓存reversible_blocks,发射accept_block信号
+  回到controller_impl::commit_block,该接受一个bool参数，该参数表示是否需要将controller_impl::pending->_pending_block_state加入fork_database,如果是则将pending->_pending_block_state->validated设为true,然后调用fork_database::add(block_state_ptr)将该块加入数据库，然后会根据当前的block_state进行数据库数据修正(后文fork_database部分有详细分析),然后检查是否正在重演该区块，如果否则将其加入可以缓存reversible_blocks,发射accept_block信号,该信号会调用net_plugin_impl::accept_block，函数，这些信号量的设置定义在plugins/net_plugin/net_plugin.cpp 3017行：
+  ```cpp
+    chain::controller&cc = my->chain_plug->chain();
+    {
+        cc.accepted_block_header.connect( boost::bind(&net_plugin_impl::accepted_block_header, my.get(), _1));
+        cc.accepted_block.connect(  boost::bind(&net_plugin_impl::accepted_block, my.get(), _1));
+        cc.irreversible_block.connect( boost::bind(&net_plugin_impl::irreversible_block, my.get(), _1));
+        cc.accepted_transaction.connect( boost::bind(&net_plugin_impl::accepted_transaction, my.get(), _1));
+        cc.applied_transaction.connect( boost::bind(&net_plugin_impl::applied_transaction, my.get(), _1));
+        cc.accepted_confirmation.connect( boost::bind(&net_plugin_impl::accepted_confirmation, my.get(), _1));
+    }
+  ```
+  commit_block关键代码如下：
+  ```cpp
+    try {
+        if (add_to_fork_db) {
+          pending->_pending_block_state->validated = true;
+          auto new_bsp = fork_db.add(pending->_pending_block_state);
+          emit(self.accepted_block_header, pending->_pending_block_state);
+
+          //更新head到最新生成的区块头
+          head = fork_db.head();
+          EOS_ASSERT(new_bsp == head, fork_database_exception, "committed block did not become the new head in fork database");
+        }
+
+        if( !replaying ) {
+          reversible_blocks.create<reversible_block_object>( [&]( auto& ubo ) {
+              ubo.blocknum = pending->_pending_block_state->block_num;
+              ubo.set_block( pending->_pending_block_state->block );
+          });
+        }
+
+        emit( self.accepted_block, pending->_pending_block_state );
+    } catch (...) {
+        // dont bother resetting pending, instead abort the block
+        reset_pending_on_exit.cancel();
+        abort_block();
+        throw;
+    }
+  ```
+  至此controller_impl::commit_block工作完成。控制权回到producer_plugin_impl::produce_block,一次block生产调度就完成了，然后进入下一次调度。
+
+  fork_database分析：  
+  结构如下：
+  ```cpp
+
+    struct by_block_id;
+    struct by_block_num;
+    struct by_lib_block_num;
+    struct by_prev;
+
+    //建立一个基于block_state_ptr的多索引容器
+    //by_block_id以block id为索引
+    //by_block_num 以区块高度为索引，组合键<block_num,in_current_chain>,降序
+    //by_lib_block_num以最近的区块不可逆高度为索引，组合键<dpos_irreversible_blocknum,bft_irreversible_blocknum,block_num>，升序
+    //by_prev以前一个block id为索引
+    typedef multi_index_container<
+        block_state_ptr,
+        indexed_by<
+          hashed_unique< tag<by_block_id>, member<block_header_state, block_id_type, &block_header_state::id>, std::hash<block_id_type>>,
+          ordered_non_unique< tag<by_prev>, const_mem_fun<block_header_state, const block_id_type&, &block_header_state::prev> >,
+          ordered_non_unique< tag<by_block_num>,
+              composite_key< block_state,
+                member<block_header_state,uint32_t,&block_header_state::block_num>,
+                member<block_state,bool,&block_state::in_current_chain>
+              >,
+              composite_key_compare< std::less<uint32_t>, std::greater<bool> >
+          >,
+          ordered_non_unique< tag<by_lib_block_num>,
+              composite_key< block_header_state,
+                  member<block_header_state,uint32_t,&block_header_state::dpos_irreversible_blocknum>,
+                  member<block_header_state,uint32_t,&block_header_state::bft_irreversible_blocknum>,
+                  member<block_header_state,uint32_t,&block_header_state::block_num>
+              >,
+              composite_key_compare< std::greater<uint32_t>, std::greater<uint32_t>, std::greater<uint32_t> >
+          >
+        >
+    > fork_multi_index_type;
+    struct fork_database_impl {
+      fork_multi_index_type    index;
+      block_state_ptr          head; //区块头
+      fc::path                 datadir; //存储路径
+    }
+
+    class fork_database {
+    public:
+      //这里列举关键函数,详细定义参见 libraries/chain/include/eosio/chain/fork_database.hpp
+
+      //根据区块id获取block_state信息
+      block_state_ptr get_block(const block_id_type &id) const;
+      //根据区块高度从当前链中获取block_state信息
+      block_state_ptr get_block_in_current_chain_by_num(uint32_t num) const;
+
+      //提供一个“有效的”区块状态，有可能以此建立分支
+      void set(block_state_ptr s);
+      
+      block_state_ptr add(signed_block_ptr b,bool trust = false);
+
+      block_state_ptr add(block_state_ptr next_block);
+      void remove(const block_id_type &id);
+      void add(const header_confirmation &c);
+      const block_state_ptr &head() const;
+
+      //根据两个头block，获取两个分支（两个分支有共同的祖先，即两个头部的previous的值相同）
+      pair<branch_type,branch_type> fetch_branch_from(const block_id_type &first,const block_id_type &second) const;
+
+      //若该区块为invalid,将会从数据库中删除。若为valid，在发射irreversible信号后，所有比LIB大的block将会被修正
+      void set_validity(const block_state_ptr &h,bool valid);
+      void mark_in_current_chain(const block_state_ptr &h,bool in_current_chain);
+      void prune(const block_state_ptr&);
+
+      signal<void(block_state_ptr)>    irreversible;
+
+    private:
+      void set_bft_irreversible(block_id_type id);
+      unique_ptr<for_database_impl> my;
+    }
+
+  ```
+  下面一次解释每个函数的实现：  
+  1. void fork_database::set(block_state_ptr s)
+   ```cpp
+    //将s插入多索引容器中
+    auto result = my->index.insert( s );
+      EOS_ASSERT( s->id == s->header.id(), fork_database_exception, 
+                  "block state id (${id}) is different from block state header id (${hid})", ("id", string(s->id))("hid", string(s->header.id())) );
+
+         //FC_ASSERT( s->block_num == s->header.block_num() );
+
+      EOS_ASSERT( result.second, fork_database_exception, "unable to insert block state, duplicate state detected" );
+
+
+      //更新head状态
+      if( !my->head ) {
+         my->head =  s;
+      } else if( my->head->block_num < s->block_num ) {
+         my->head =  s;
+      }
+   ```
+  2. 
+  3. 
+  4. 
+
+
+  transaction执行，涉及到的关键数据结构如下：
+  ```cpp
+
+    struct action_receipt {
+      account_name        receiver;                //执行该action的account
+      digest_type         act_digest;
+      uint64_t            global_sequence = 0;
+      uint64_t            recv_sequence = 0;
+      flat_map<account_name,uint64_t> auth_sequence;
+      fc::unsigned_int    code_sequence;
+      fc::unsigned_int    abi_sequence;
+    };
+
+    struct base_action_trace {
+      action_receipt      receipt;
+      action              act;
+      fc::microseconds    elapsed;
+      uint64_t            cpu_usage = 0;
+      string              console;
+      uint64_t            total_cpu_usage = 0;
+      transaction_id_type trx_id;
+    }
+
+    struct action_trace : public base_action_trace {
+      vector<action_trace> inline_traces;
+    }
+
+    struct transaction_trace {
+      transaction_id_type                      id;
+      fc::optional<transaction_receipt_header> receipt;
+      fc::microseconds                         elapsed;
+      uint64_t                                 net_usage;
+      bool                                     scheduled = false;
+      vector<action_trace>                     action_traces;
+      transaction_trace_ptr                    failed_dtrx_trace;
+      fc::optional<fc::exception>              except;
+      std::exception_ptr                       except_ptr;
+    }
+
+  ```
+
+  一个transaction是由一个或多个action组成的，这些action如果又一个失败了，那么该transaction也就失败了，已经执行过的action需要回滚。每个transaction必须在30ms内完成，如果一个包含了多个action且这些action执行时间总和超过30ms，则整个transaction失败。
 
 ## chainbase分析
 
 ### database基本数据结构
+  和数据库相关的数据结构均派生自 struct object,结构如下：
+  ```cpp
+  template<typename T>
+    class oid {
+    public:
+        oid( int64_t i = 0 ):_id{i}{}
+        oid& operator++() {
+            ++_id;
+            return *this;
+        }
+
+        friend bool operator < ( const oid& a,const oid& b ) {
+            return a._id < b._id;
+        }
+
+        friend bool operator > ( const oid& a,const oid& b ) {
+            return a._id > b._id;
+        }
+
+        friend bool operator == ( const oid& a,const oid& b ) {
+            return a._id == b._id;
+        }
+
+        friend bool operator != ( const oid& a,const oid& b ) {
+            return a._id != b._id;
+        }
+
+        friend std::ostream& operator << ( std::ostream& s,const oid& id ) {
+            s << boost::core::demangle( typeid( oid<T> ).name() ) << '(' << id._id << ')';
+            return s;
+        }
+
+        int64_t _id;
+    };
+    template<uint16_t TypeNumber,typename Derived>
+    struct object {
+      typedef oid<Derived> id_type;
+      static const uint16_t type_id = TypeNumber; //类型标识
+    };
+  ```
+
+  数据库的索引是通过元编程来实现的，每一种数据类型都有一个唯一id作为标识。程序在运行过程中要产生26个数据表：
+  1. account_object:  
+      保存账户信息，结构如下：  
+      ```cpp
+      class account_object : public chainbase::object<account_object_type,account_objct> {
+        OBJECT_CTOR(account_object,(code)(abi))
+        id_type              id;
+        account_name         name;                  //账户名称base32编码
+        uint8_t              vm_type      = 0;      // vm_type
+        uint8_t              vm_version   = 0;      // vm_version
+        bool                 privileged   = false;  // 是否优先
+
+        time_point           last_code_update;      //上次参与权限验证的时间
+        digest_type          code_version;
+        block_timestamp_type creation_date;         //创建时间
+
+        shared_string  code;
+        shared_string  abi;
+
+        void set_abi( const eosio::chain::abi_def& a ) {
+          abi.resize( fc::raw::pack_size( a ) );
+          fc::datastream<char*> ds( abi.data(), abi.size() );
+          fc::raw::pack( ds, a );
+        }
+
+        eosio::chain::abi_def get_abi()const {
+          eosio::chain::abi_def a;
+          EOS_ASSERT( abi.size() != 0, abi_not_found_exception, "No ABI set on account ${n}", ("n",name) );
+
+          fc::datastream<const char*> ds( abi.data(), abi.size() );
+          fc::raw::unpack( ds, a );
+          return a;
+        }
+      };
+      ```
+      其中宏OBJECT_CTOR(account_object,(code)(abi))展开如下：
+      ```
+      account_object() = delete; 
+      public: 
+      template<typename Constructor, typename Allocator> 
+      account_object(Constructor&& c, chainbase::allocator<Allocator> a) : id(0) ,code(a) ,abi(a) { c(*this); }
+      ```
+      该结构保存了账户的信息，对应的多索引容器为：
+      ```
+      struct by_name;
+      using account_index = chainbase::shared_multi_index_container<
+          account_object,
+          indexed_by<
+            ordered_unique<tag<by_id>, member<account_object, account_object::id_type, &account_object::id>>,
+            ordered_unique<tag<by_name>, member<account_object, account_name, &account_object::name>>
+          >
+      >;
+      ```
+      创建一个账户的函数调用在libraries/chain/eos_contract.cpp void apply_eosio_newaccount(apply_context& context)函数中.
+  2. account_sequence_object  
+    这个结构用来存储和账户相关的序列数据，具体结构如下：
+      ```
+      class account_sequence_object : public chainbase::object<account_sequence_object_type, account_sequence_object>
+      {
+          OBJECT_CTOR(account_sequence_object);
+
+          id_type      id;
+          account_name name;
+          uint64_t     recv_sequence = 0;
+          uint64_t     auth_sequence = 0;
+          uint64_t     code_sequence = 0;
+          uint64_t     abi_sequence  = 0;
+      };
+      ```
+      对应的多索引容器如下：
+      ```
+      struct by_name;
+      using account_sequence_index = chainbase::shared_multi_index_container<
+          account_sequence_object,
+          indexed_by<
+            ordered_unique<tag<by_id>, member<account_sequence_object, account_sequence_object::id_type, &account_sequence_object::id>>,
+            ordered_unique<tag<by_name>, member<account_sequence_object, account_name, &account_sequence_object::name>>
+          >
+      >;
+      ```
+  3. permission_object  
+   用来存储授权相关信息，具体结构如下：
+      ```
+      class permission_object : public chainbase::object<permission_object_type, permission_object> {
+      OBJECT_CTOR(permission_object, (auth) )
+
+        id_type                           id;
+        permission_usage_object::id_type  usage_id;
+        id_type                           parent; ///< parent permission
+        account_name                      owner; ///< the account this permission belongs to
+        permission_name                   name; ///< human-readable name for the permission
+        time_point                        last_updated; ///< the last time this authority was updated
+        shared_authority                  auth; ///< authority required to execute this permission
+
+
+        /**
+        * @brief Checks if this permission is equivalent or greater than other
+        * @tparam Index The permission_index
+        * @return true if this permission is equivalent or greater than other, false otherwise
+        *
+        * Permissions are organized hierarchically such that a parent permission is strictly more powerful than its
+        * children/grandchildren. This method checks whether this permission is of greater or equal power (capable of
+        * satisfying) permission @ref other.
+        */
+        template <typename Index>
+        bool satisfies(const permission_object& other, const Index& permission_index) const {
+          // If the owners are not the same, this permission cannot satisfy other
+          if( owner != other.owner )
+              return false;
+
+          // If this permission matches other, or is the immediate parent of other, then this permission satisfies other
+          if( id == other.id || id == other.parent )
+              return true;
+
+          // Walk up other's parent tree, seeing if we find this permission. If so, this permission satisfies other
+          const permission_object* parent = &*permission_index.template get<by_id>().find(other.parent);
+          while( parent ) {
+              if( id == parent->parent )
+                return true;
+              if( parent->parent._id == 0 )
+                return false;
+              parent = &*permission_index.template get<by_id>().find(parent->parent);
+          }
+          // This permission is not a parent of other, and so does not satisfy other
+          return false;
+        }
+      };
+      ```
+      对应的多索引容器为：
+        ```
+        struct by_parent;
+        struct by_owner;
+        struct by_name;
+        using permission_index = chainbase::shared_multi_index_container<
+            permission_object,
+            indexed_by<
+              ordered_unique<tag<by_id>, member<permission_object, permission_object::id_type, &permission_object::id>>,
+              ordered_unique<tag<by_parent>,
+                  composite_key<permission_object,
+                    member<permission_object, permission_object::id_type, &permission_object::parent>,
+                    member<permission_object, permission_object::id_type, &permission_object::id>
+                  >
+              >,
+              ordered_unique<tag<by_owner>,
+                  composite_key<permission_object,
+                    member<permission_object, account_name, &permission_object::owner>,
+                    member<permission_object, permission_name, &permission_object::name>
+                  >
+              >,
+              ordered_unique<tag<by_name>,
+                  composite_key<permission_object,
+                    member<permission_object, permission_name, &permission_object::name>,
+                    member<permission_object, permission_object::id_type, &permission_object::id>
+                  >
+              >
+            >
+        >;
+        ```
+
+  4. permission_usage_object  
+   保存了授权的使用信息，具体结构如下：
+   ```
+   class permission_usage_object : public chainbase::object<permission_usage_object_type, permission_usage_object> {
+      OBJECT_CTOR(permission_usage_object)
+
+      id_type           id;
+      time_point        last_used;   ///< when this permission was last used
+   };
+   ```
+   对应的多索引容器为：
+   ```
+    struct by_account_permission;
+    using permission_usage_index = chainbase::shared_multi_index_container<
+        permission_usage_object,
+        indexed_by<
+          ordered_unique<tag<by_id>, member<permission_usage_object, permission_usage_object::id_type, &permission_usage_object::id>>
+        >
+    >;
+   ```
+  5. permission_link_object  
+   这个类记录了contract 和 action之间的permission_object的链接，以记录这些contract在执行的过程中所需要的权限
+   ```
+    class permission_link_object : public chainbase::object<permission_link_object_type, permission_link_object> {
+        OBJECT_CTOR(permission_link_object)
+
+        id_type        id;
+        /// The account which is defining its permission requirements
+        account_name    account;
+        /// The contract which account requires @ref required_permission to invoke
+        account_name    code; /// TODO: rename to scope
+        /// The message type which account requires @ref required_permission to invoke
+        /// May be empty; if so, it sets a default @ref required_permission for all messages to @ref code
+        action_name       message_type;
+        /// The permission level which @ref account requires for the specified message types
+        permission_name required_permission;
+    };
+   ```
+   对应的索引如下：
+   ```
+   struct by_action_name;
+   struct by_permission_name;
+   using permission_link_index = chainbase::shared_multi_index_container<
+      permission_link_object,
+      indexed_by<
+         ordered_unique<tag<by_id>,
+            BOOST_MULTI_INDEX_MEMBER(permission_link_object, permission_link_object::id_type, id)
+         >,
+         ordered_unique<tag<by_action_name>,
+            composite_key<permission_link_object,
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, account),
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, code),
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, action_name, message_type)
+            >
+         >,
+         ordered_unique<tag<by_permission_name>,
+            composite_key<permission_link_object,
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, account),
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, permission_name, required_permission),
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, code),
+               BOOST_MULTI_INDEX_MEMBER(permission_link_object, action_name, message_type)
+            >
+         >
+      >
+   >;
+   ```
+  6. key_value_object  
+    结构如下：
+      ```
+        struct key_value_object : public chainbase::object<key_value_object_type, key_value_object> {
+          OBJECT_CTOR(key_value_object, (value))
+
+          typedef uint64_t key_type;
+          static const int number_of_keys = 1;
+
+          id_type               id;
+          table_id              t_id;
+          uint64_t              primary_key; //主键
+          account_name          payer = 0;
+          shared_string         value;      //值
+        };
+      ```
+      对应的索引：
+      ```
+          using key_value_index = chainbase::shared_multi_index_container<
+          key_value_object,
+          indexed_by<
+            ordered_unique<tag<by_id>, member<key_value_object, key_value_object::id_type, &key_value_object::id>>,
+            ordered_unique<tag<by_scope_primary>,
+                composite_key< key_value_object,
+                  member<key_value_object, table_id, &key_value_object::t_id>,
+                  member<key_value_object, uint64_t, &key_value_object::primary_key>
+                >,
+                composite_key_compare< std::less<table_id>, std::less<uint64_t> >
+            >
+          >
+      >;
+      ```
+  7. index64_object  
+    是基于多索引容器建立的一个二级索引，定义如下：
+    ```
+    typedef secondary_index<uint64_t,index64_object_type>::index_object   index64_object;
+    typedef secondary_index<uint64_t,index64_object_type>::index_index    index64_index;
+    ```
+  8. index128_object
+   同上
+  9.  index256_object  
+    同上
+  10. index_double_object  
+    同上
+  11. index_long_double_object  
+   同上
+  12. global_property_object
+   存储了初始设定的值，用来调用块参数：
+   ```
+   class global_property_object : public chainbase::object<global_property_object_type, global_property_object>
+   {
+      OBJECT_CTOR(global_property_object, (proposed_schedule))
+
+      id_type                           id;
+      optional<block_num_type>          proposed_schedule_block_num;
+      shared_producer_schedule_type     proposed_schedule;
+      chain_config                      configuration;
+   };
+   ```
+   对应的索引：
+   ```
+   using dynamic_global_property_multi_index = chainbase::shared_multi_index_container<
+      dynamic_global_property_object,
+      indexed_by<
+         ordered_unique<tag<by_id>,
+            BOOST_MULTI_INDEX_MEMBER(dynamic_global_property_object, dynamic_global_property_object::id_type, id)
+         >
+      >
+   >;
+   ```
+  13. dynamic_global_property_object  
+   记录了区块链正常操作期间所计算的值，这些值反映了区块链的当前的全局的值：
+   ```
+   class dynamic_global_property_object : public chainbase::object<dynamic_global_property_object_type, dynamic_global_property_object>
+   {
+        OBJECT_CTOR(dynamic_global_property_object)
+
+        id_type    id;
+        uint64_t   global_action_sequence = 0;
+   };
+
+   ```
+   对应的索引为：
+   ```
+   using global_property_multi_index = chainbase::shared_multi_index_container<
+      global_property_object,
+      indexed_by<
+         ordered_unique<tag<by_id>,
+            BOOST_MULTI_INDEX_MEMBER(global_property_object, global_property_object::id_type, id)
+         >
+      >
+   >;
+   ```
+  14. block_summary_object  
+    block的一个简明信息，用于transaction的TaPos验证。结构如下：
+    ```
+     class block_summary_object : public chainbase::object<block_summary_object_type, block_summary_object>
+    {
+          OBJECT_CTOR(block_summary_object)
+
+          id_type        id;
+          block_id_type  block_id;
+    };
+    ```
+    对应的索引为：
+    ```
+    struct by_block_id;
+    using block_summary_multi_index = chainbase::shared_multi_index_container<
+        block_summary_object,
+        indexed_by<
+          ordered_unique<tag<by_id>, BOOST_MULTI_INDEX_MEMBER(block_summary_object, block_summary_object::id_type, id)>
+    //      ordered_unique<tag<by_block_id>, BOOST_MULTI_INDEX_MEMBER(block_summary_object, block_id_type, block_id)>
+        >
+    >;
+    ```
+    在controller::finalize_block函数中，会产生一个该结构的记录：
+    ```
+      set_action_merkle();
+      set_trx_merkle();
+
+      auto p = pending->_pending_block_state;
+      p->id = p->header.id();
+
+      create_block_summary(p->id); //创建一个block_summary
+
+    ```
+  15. transaction_object  
+   记录了transaction的过期时间，在该过期时间内，如果该transaction还没得倒确认，则会删除：
+      ```
+      class transaction_object : public chainbase::object<transaction_object_type, transaction_object>
+      {
+            OBJECT_CTOR(transaction_object)
+
+            id_type             id;
+            time_point_sec      expiration;
+            transaction_id_type trx_id;
+      };
+      ```
+  对应的索引为：
+
+  ```
+   struct by_expiration;
+   struct by_trx_id;
+   using transaction_multi_index = chainbase::shared_multi_index_container<
+      transaction_object,
+      indexed_by<
+         ordered_unique< tag<by_id>, BOOST_MULTI_INDEX_MEMBER(transaction_object, transaction_object::id_type, id)>,
+         ordered_unique< tag<by_trx_id>, BOOST_MULTI_INDEX_MEMBER(transaction_object, transaction_id_type, trx_id)>,
+         ordered_unique< tag<by_expiration>,
+            composite_key< transaction_object,
+               BOOST_MULTI_INDEX_MEMBER( transaction_object, time_point_sec, expiration ),
+               BOOST_MULTI_INDEX_MEMBER( transaction_object, transaction_object::id_type, id)
+            >
+         >
+      >
+   >;
+  ```
+  在transaction执行的时候，会对收到的transaction做一个初始化工作，transaction_context::init_for_input_trx会调用该函数产生一个transaction_object记录：
+  ```
+    published = control.pending_block_time();
+      is_input = true;
+      if (!control.skip_trx_checks()) {
+         control.validate_expiration(trx);
+         control.validate_tapos(trx);
+         control.validate_referenced_accounts(trx);
+      }
+      init( initial_net_usage);
+      if (!skip_recording)
+         record_transaction( id, trx.expiration ); /// checks for dupes
+  ```
+  16. generated_transaction_object  
+   结构如下：
+   ```
+   class generated_transaction_object : public chainbase::object<generated_transaction_object_type, generated_transaction_object>
+   {
+         OBJECT_CTOR(generated_transaction_object, (packed_trx) )
+
+         id_type                       id;
+         transaction_id_type           trx_id;
+         account_name                  sender;
+         uint128_t                     sender_id = 0; /// ID given this transaction by the sender
+         account_name                  payer;
+         time_point                    delay_until; /// this generated transaction will not be applied until the specified time
+         time_point                    expiration; /// this generated transaction will not be applied after this time
+         time_point                    published;
+         shared_string                 packed_trx;
+
+         uint32_t set( const transaction& trx ) {
+            auto trxsize = fc::raw::pack_size( trx );
+            packed_trx.resize( trxsize );
+            fc::datastream<char*> ds( packed_trx.data(), trxsize );
+            fc::raw::pack( ds, trx );
+            return trxsize;
+         }
+   };
+
+   ```
+   对应的索引：
+   ```
+   struct by_trx_id;
+   struct by_expiration;
+   struct by_delay;
+   struct by_status;
+   struct by_sender_id;
+
+   using generated_transaction_multi_index = chainbase::shared_multi_index_container<
+      generated_transaction_object,
+      indexed_by<
+         ordered_unique< tag<by_id>, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, generated_transaction_object::id_type, id)>,
+         ordered_unique< tag<by_trx_id>, BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, transaction_id_type, trx_id)>,
+         ordered_unique< tag<by_expiration>,
+            composite_key< generated_transaction_object,
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, time_point, expiration),
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, generated_transaction_object::id_type, id)
+            >
+         >,
+         ordered_unique< tag<by_delay>,
+            composite_key< generated_transaction_object,
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, time_point, delay_until),
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, generated_transaction_object::id_type, id)
+            >
+         >,
+         ordered_unique< tag<by_sender_id>,
+            composite_key< generated_transaction_object,
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, account_name, sender),
+               BOOST_MULTI_INDEX_MEMBER( generated_transaction_object, uint128_t, sender_id)
+            >
+         >
+      >
+   >;
+   ```
+  17. producer_object  
+   结构如下：
+   ```
+    class producer_object : public chainbase::object<producer_object_type, producer_object> {
+      OBJECT_CTOR(producer_object)
+
+      id_type            id;
+      account_name       owner;
+      uint64_t           last_aslot = 0;
+      public_key_type    signing_key;
+      int64_t            total_missed = 0;
+      uint32_t           last_confirmed_block_num = 0;
+
+
+        /// The blockchain configuration values this producer recommends
+        chain_config       configuration;
+    };
+   ```
+   对应的索引：
+   ```
+   struct by_key;
+    struct by_owner;
+    using producer_multi_index = chainbase::shared_multi_index_container<
+      producer_object,
+      indexed_by<
+          ordered_unique<tag<by_id>, member<producer_object, producer_object::id_type, &producer_object::id>>,
+          ordered_unique<tag<by_owner>, member<producer_object, account_name, &producer_object::owner>>,
+          ordered_unique<tag<by_key>,
+            composite_key<producer_object,
+                member<producer_object, public_key_type, &producer_object::signing_key>,
+                member<producer_object, producer_object::id_type, &producer_object::id>
+            >
+          >
+      >
+    >;
+   ```
+  18. account_control_history_object
+  19. public_key_history_object
+  20. table_id_object
+   结构如下：
+   ```
+    class table_id_object : public chainbase::object<table_id_object_type, table_id_object> {
+        OBJECT_CTOR(table_id_object)
+
+        id_type        id;
+        account_name   code;
+        scope_name     scope;
+        table_name     table;
+        account_name   payer;
+        uint32_t       count = 0; /// the number of elements in the table
+    };
+   ```
+   对应的索引：
+   ```
+   struct by_code_scope_table;
+
+   using table_id_multi_index = chainbase::shared_multi_index_container<
+      table_id_object,
+      indexed_by<
+         ordered_unique<tag<by_id>,
+            member<table_id_object, table_id_object::id_type, &table_id_object::id>
+         >,
+         ordered_unique<tag<by_code_scope_table>,
+            composite_key< table_id_object,
+               member<table_id_object, account_name, &table_id_object::code>,
+               member<table_id_object, scope_name,   &table_id_object::scope>,
+               member<table_id_object, table_name,   &table_id_object::table>
+            >
+         >
+      >
+   >;
+   ```
+  21. resource_limits_object  
+   结构如下：
+   ```
+    struct resource_limits_object : public chainbase::object<resource_limits_object_type, resource_limits_object> {
+
+      OBJECT_CTOR(resource_limits_object)
+
+      id_type id;
+      account_name owner;
+      bool pending = false;
+
+      int64_t net_weight = -1;
+      int64_t cpu_weight = -1;
+      int64_t ram_bytes = -1;
+
+   };
+   ```
+   对应的索引:
+   ```
+   struct by_owner;
+   struct by_dirty;
+
+   using resource_limits_index = chainbase::shared_multi_index_container<
+      resource_limits_object,
+      indexed_by<
+         ordered_unique<tag<by_id>, member<resource_limits_object, resource_limits_object::id_type, &resource_limits_object::id>>,
+         ordered_unique<tag<by_owner>,
+            composite_key<resource_limits_object,
+               BOOST_MULTI_INDEX_MEMBER(resource_limits_object, bool, pending),
+               BOOST_MULTI_INDEX_MEMBER(resource_limits_object, account_name, owner)
+            >
+         >
+      >
+   >;
+   ```
+  22. resource_usage_object  
+   结构如下：
+   ```
+   struct resource_usage_object : public chainbase::object<resource_usage_object_type, resource_usage_object> {
+      OBJECT_CTOR(resource_usage_object)
+
+      id_type id;
+      account_name owner;
+
+      usage_accumulator        net_usage;
+      usage_accumulator        cpu_usage;
+
+      uint64_t                 ram_usage = 0;
+   };
+
+   ```
+   对应的索引：
+   ```
+   using resource_usage_index = chainbase::shared_multi_index_container<
+      resource_usage_object,
+      indexed_by<
+         ordered_unique<tag<by_id>, member<resource_usage_object, resource_usage_object::id_type, &resource_usage_object::id>>,
+         ordered_unique<tag<by_owner>, member<resource_usage_object, account_name, &resource_usage_object::owner> >
+      >
+   >;
+   ```
+  23. resource_limits_config_object  
+   结构如下：
+   ```
+   class resource_limits_config_object : public chainbase::object<resource_limits_config_object_type, resource_limits_config_object> {
+      OBJECT_CTOR(resource_limits_config_object);
+      id_type id;
+
+      static_assert( config::block_interval_ms > 0, "config::block_interval_ms must be positive" );
+      static_assert( config::block_cpu_usage_average_window_ms >= config::block_interval_ms,
+                     "config::block_cpu_usage_average_window_ms cannot be less than config::block_interval_ms" );
+      static_assert( config::block_size_average_window_ms >= config::block_interval_ms,
+                     "config::block_size_average_window_ms cannot be less than config::block_interval_ms" );
+
+
+      elastic_limit_parameters cpu_limit_parameters = {EOS_PERCENT(config::default_max_block_cpu_usage, config::default_target_block_cpu_usage_pct), config::default_max_block_cpu_usage, config::block_cpu_usage_average_window_ms / config::block_interval_ms, 1000, {99, 100}, {1000, 999}};
+      elastic_limit_parameters net_limit_parameters = {EOS_PERCENT(config::default_max_block_net_usage, config::default_target_block_net_usage_pct), config::default_max_block_net_usage, config::block_size_average_window_ms / config::block_interval_ms, 1000, {99, 100}, {1000, 999}};
+
+      uint32_t account_cpu_usage_average_window = config::account_cpu_usage_average_window_ms / config::block_interval_ms;
+      uint32_t account_net_usage_average_window = config::account_net_usage_average_window_ms / config::block_interval_ms;
+   };
+   ```
+   对应的索引：
+   ```
+   using resource_limits_config_index = chainbase::shared_multi_index_container<
+      resource_limits_config_object,
+      indexed_by<
+         ordered_unique<tag<by_id>, member<resource_limits_config_object, resource_limits_config_object::id_type, &resource_limits_config_object::id>>
+      >
+   >;
+   ```
+  24. resource_limits_state_object  
+   ```
+   class resource_limits_state_object : public chainbase::object<resource_limits_state_object_type, resource_limits_state_object> {
+      OBJECT_CTOR(resource_limits_state_object);
+      id_type id;
+
+      /**
+       * Track the average netusage for blocks
+       */
+      usage_accumulator average_block_net_usage;
+
+      /**
+       * Track the average cpu usage for blocks
+       */
+      usage_accumulator average_block_cpu_usage;
+
+      void update_virtual_net_limit( const resource_limits_config_object& cfg );
+      void update_virtual_cpu_limit( const resource_limits_config_object& cfg );
+
+      uint64_t pending_net_usage = 0ULL;
+      uint64_t pending_cpu_usage = 0ULL;
+
+      uint64_t total_net_weight = 0ULL;
+      uint64_t total_cpu_weight = 0ULL;
+      uint64_t total_ram_bytes = 0ULL;
+
+      /**
+       * The virtual number of bytes that would be consumed over blocksize_average_window_ms
+       * if all blocks were at their maximum virtual size. This is virtual because the
+       * real maximum block is less, this virtual number is only used for rate limiting users.
+       *
+       * It's lowest possible value is max_block_size * blocksize_average_window_ms / block_interval
+       * It's highest possible value is 1000 times its lowest possible value
+       *
+       * This means that the most an account can consume during idle periods is 1000x the bandwidth
+       * it is gauranteed under congestion.
+       *
+       * Increases when average_block_size < target_block_size, decreases when
+       * average_block_size > target_block_size, with a cap at 1000x max_block_size
+       * and a floor at max_block_size;
+       **/
+      uint64_t virtual_net_limit = 0ULL;
+
+      /**
+       *  Increases when average_bloc
+       */
+      uint64_t virtual_cpu_limit = 0ULL;
+
+   };
+   ```
+   对应的索引：
+   ```
+   using resource_limits_state_index = chainbase::shared_multi_index_container<
+      resource_limits_state_object,
+      indexed_by<
+         ordered_unique<tag<by_id>, member<resource_limits_state_object, resource_limits_state_object::id_type, &resource_limits_state_object::id>>
+      >
+   >;
+   ```
+  25. account_history_object
+  26. action_history_object
+  27. reversible_block_object
