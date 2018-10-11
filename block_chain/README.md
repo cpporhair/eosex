@@ -9,6 +9,7 @@
   * [controller](###controller)
 * [chainbase分析](##chainbase分析)
   * [基本数据结构](###database基本数据结构)
+* [智能合约的持久化存储和database的交互](##智能合约的持久化存储和database交互)
 
 ## 总览
   
@@ -1784,5 +1785,145 @@ if( pending ) {
 
       trace = move(acontext.trace);
   ```
-  在apply_context::exec()中会调用apply_context::exec_one()调用vm借口进入合约层，进行action和数据的解析并执行。
+  在apply_context::exec()中会调用apply_context::exec_one() 调用vm借口进入合约层，进行action和数据的解析并执行。
+  vm会通过注册进入的借口来调用action执行，注册的借口为：
+  ```
+    REGISTER_INTRINSICS(transaction_api,
+    (send_inline,               void(int, int)               )
+    (send_context_free_inline,  void(int, int)               )
+    (send_deferred,             void(int, int64_t, int, int, int32_t) )
+    (cancel_deferred,           int(int)                     )
+    );
+  ```
+  transaction_api接口定义如下：
+  ```
+  class transaction_api : public context_aware_api {
+   public:
+      using context_aware_api::context_aware_api;
+
+      void send_inline( array_ptr<char> data, size_t data_len ) {
+         //TODO: Why is this limit even needed? And why is it not consistently checked on actions in input or deferred transactions
+         EOS_ASSERT( data_len < context.control.get_global_properties().configuration.max_inline_action_size, inline_action_too_big,
+                    "inline action too big" );
+
+         action act;
+         fc::raw::unpack<action>(data, data_len, act);
+         context.execute_inline(std::move(act));
+      }
+
+      void send_context_free_inline( array_ptr<char> data, size_t data_len ) {
+         //TODO: Why is this limit even needed? And why is it not consistently checked on actions in input or deferred transactions
+         EOS_ASSERT( data_len < context.control.get_global_properties().configuration.max_inline_action_size, inline_action_too_big,
+                   "inline action too big" );
+
+         action act;
+         fc::raw::unpack<action>(data, data_len, act);
+         context.execute_context_free_inline(std::move(act));
+      }
+
+      void send_deferred( const uint128_t& sender_id, account_name payer, array_ptr<char> data, size_t data_len, uint32_t replace_existing) {
+         try {
+            transaction trx;
+            fc::raw::unpack<transaction>(data, data_len, trx);
+            context.schedule_deferred_transaction(sender_id, payer, std::move(trx), replace_existing);
+         } FC_RETHROW_EXCEPTIONS(warn, "data as hex: ${data}", ("data", fc::to_hex(data, data_len)))
+      }
+
+      bool cancel_deferred( const unsigned __int128& val ) {
+         fc::uint128_t sender_id(val>>64, uint64_t(val) );
+         return context.cancel_deferred_transaction( (unsigned __int128)sender_id );
+      }
+  };
+  ```
+  以上为系统数据表和database交互的模式。  
   
+  ## 智能合约的持久化存储和database交互
+   说到智能合约的持久化存储离不开Multi-Index,这个Multi-index是EOS实现的类boost::multi_index_container的功能，定义在： contracts/eosiolib/multi_index.hpp文件中，采用的是hana元编程，我们写的智能合约中的数据就是存储在这个multi_index中的。
+  该类实现了数据的增删改查接口：emplace,erase,modify,get,find等接口，通过这些接口和database进行交互。  
+  1. emplace中和database交互的关键代码：
+      ```
+        datastream<char*> ds( (char*)buffer, size );
+            ds << obj;
+
+            auto pk = obj.primary_key();
+
+            //db_store_i64就是和database进行交互的接口
+            i.__primary_itr = db_store_i64( _scope, TableName, payer, pk, buffer, size );
+
+            if ( max_stack_buffer_size < size ) {
+               free(buffer);
+            }
+      ```
+  2. erase中和database交互的关键代码:
+      ```
+        eosio_assert( itr2 != _items_vector.rend(), "attempt to remove object that was not in multi_index" );
+
+         _items_vector.erase(--(itr2.base()));
+         
+         //和database进行交互
+         db_remove_i64( objitem.__primary_itr );
+      ```
+  其他接口和数据库交互请参看源码。   
+multi_index的使用：  
+```
+  class book_manager : public eosio::contract {
+  public:
+    void create()
+    void delete()
+    void find()
+  private:
+    account_name   _contract_name;
+    struct book {
+      uint64_t            _id;
+      std::string         _name;
+      EOSLIB_SERIALIZE(book,(_id)(_name));
+    }
+    typedef eosio::multi_index<N(book),book> _table;
+
+  }
+```
+大概类似于上面的代码，后面我会出一个详细智能合约开发的例子。EOSLIB_SERIALIZE宏用于序列化book接口，将其转为字节数组。后面我就可以基于_table对book进行管理了，增删改查也会与database进行交互，现在来看一下database提供的api接口，这些接口定义在 libraries/chain/wasm_interface.cpp中：
+```
+class database_api : public context_aware_api {
+   public:
+      using context_aware_api::context_aware_api;
+
+      int db_store_i64( uint64_t scope, uint64_t table, uint64_t payer, uint64_t id, array_ptr<const char> buffer, size_t buffer_size ) {
+         return context.db_store_i64( scope, table, payer, id, buffer, buffer_size );
+      }
+      void db_update_i64( int itr, uint64_t payer, array_ptr<const char> buffer, size_t buffer_size ) {
+         context.db_update_i64( itr, payer, buffer, buffer_size );
+      }
+      void db_remove_i64( int itr ) {
+         context.db_remove_i64( itr );
+      }
+      int db_get_i64( int itr, array_ptr<char> buffer, size_t buffer_size ) {
+         return context.db_get_i64( itr, buffer, buffer_size );
+      }
+      int db_next_i64( int itr, uint64_t& primary ) {
+         return context.db_next_i64(itr, primary);
+      }
+      int db_previous_i64( int itr, uint64_t& primary ) {
+         return context.db_previous_i64(itr, primary);
+      }
+      int db_find_i64( uint64_t code, uint64_t scope, uint64_t table, uint64_t id ) {
+         return context.db_find_i64( code, scope, table, id );
+      }
+      int db_lowerbound_i64( uint64_t code, uint64_t scope, uint64_t table, uint64_t id ) {
+         return context.db_lowerbound_i64( code, scope, table, id );
+      }
+      int db_upperbound_i64( uint64_t code, uint64_t scope, uint64_t table, uint64_t id ) {
+         return context.db_upperbound_i64( code, scope, table, id );
+      }
+      int db_end_i64( uint64_t code, uint64_t scope, uint64_t table ) {
+         return context.db_end_i64( code, scope, table );
+      }
+
+      DB_API_METHOD_WRAPPERS_SIMPLE_SECONDARY(idx64,  uint64_t)
+      DB_API_METHOD_WRAPPERS_SIMPLE_SECONDARY(idx128, uint128_t)
+      DB_API_METHOD_WRAPPERS_ARRAY_SECONDARY(idx256, 2, uint128_t)
+      DB_API_METHOD_WRAPPERS_FLOAT_SECONDARY(idx_double, float64_t)
+      DB_API_METHOD_WRAPPERS_FLOAT_SECONDARY(idx_long_double, float128_t)
+  } ;
+```
+由上可见database_api调用的是apply_context提供的接口，而appy_context中有database的引用，最终所有的操作都会反映到database中去
