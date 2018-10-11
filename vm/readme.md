@@ -692,4 +692,171 @@ EOS初始化的时候会对智能合约代码进行注入.修改虚拟机的opco
 
 注入的代码是在wasm_binary_injection类里实现的.
 
+```cpp
+        void inject() {
+            _module_injectors.inject( *_module );
+            // inject checktime first
+            injector_utils::add_import<ResultType::none>( *_module, u8"checktime", checktime_injection::chktm_idx );
+
+            for ( auto& fd : _module->functions.defs ) {
+               wasm_ops::EOSIO_OperatorDecoderStream<pre_op_injectors> pre_decoder(fd.code);
+               wasm_ops::instruction_stream pre_code(fd.code.size()*2);
+
+               while ( pre_decoder ) {
+                  auto op = pre_decoder.decodeOp();
+                  if (op->is_post()) {
+                     op->pack(&pre_code);
+                     op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+                  }
+                  else {
+                     op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+                     if (!(op->is_kill()))
+                        op->pack(&pre_code);
+                  }
+               }
+               fd.code = pre_code.get();
+            }
+            for ( auto& fd : _module->functions.defs ) {
+               wasm_ops::EOSIO_OperatorDecoderStream<post_op_injectors> post_decoder(fd.code);
+               wasm_ops::instruction_stream post_code(fd.code.size()*2);
+
+               wasm_ops::op_types<>::call_t chktm; 
+               chktm.field = injector_utils::injected_index_mapping.find(checktime_injection::chktm_idx)->second;
+               chktm.pack(&post_code);
+
+               while ( post_decoder ) {
+                  auto op = post_decoder.decodeOp();
+                  if (op->is_post()) {
+                     op->pack(&post_code);
+                     op->visit( { _module, &post_code, &fd, post_decoder.index() } );
+                  }
+                  else {
+                     op->visit( { _module, &post_code, &fd, post_decoder.index() } );
+                     if (!(op->is_kill()))
+                        op->pack(&post_code);
+                  }
+               }
+               fd.code = post_code.get();
+            }
+         }
+```
+在inject中,首先注册了checktime这个ABI,然后对合约的每个函数的opcode进行注入
+
+op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+
+在这个调用里,对174个相关的操作码进行了注入.相关的注入代码如下:
+
+```cpp
+    template <typename ... Mutators>
+    struct instr_base : instr {
+       bool is_post() override { return propagate_post_injection<Mutators...>::value; }
+       bool is_kill() override { return propagate_should_kill<Mutators...>::value; }
+       virtual void visit( visitor_arg&& arg ) override {
+          for ( auto m : { Mutators::accept... } ) {
+             m(this, arg);
+          }
+       } 
+    };
+    
+    // construct the instructions
+    
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, voidtype,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 0, 133 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, blocktype,        BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 133, 3 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, uint32_t,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 136, 11 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, memarg,           BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 147, 23 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, uint64_t,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 170, 2 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, branchtabletype,  BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 172, 1 ) )
+```
+
+EOS里使用了大量的BOOST_PP_SEQ_FOR_EACH宏,具体可以参见BOOST的相关文档.
+以loop为例,展开后是这样的
+
+```cpp
+            template <typename... Mutators>
+            struct loop final : instr_base<Mutators...> {
+                uint16_t code = loop_code;
+                blocktype field;
+                uint16_t get_code() override { return loop_code; }
+                int skip_ahead() override {
+                    return field_specific_params<blocktype>::skip_ahead;
+                }
+                void unpack(char* opcode) override {
+                    field_specific_params<blocktype>::unpack(opcode, field);
+                }
+                void pack(instruction_stream* stream) override {
+                    stream->set(2, (const char*)&code);
+                    field_specific_params<blocktype>::pack(stream, field);
+                }
+                std::string to_string() override {
+                    return std::string("loop") +
+                           field_specific_params<blocktype>::to_string(field);
+                }
+            };
+```
+其中模板参数Mutators,是一系列实现了accept接口的类,控制对操作码进行哪些注入操作.以最复杂的call_depth_check(检查函数调用的深度,防止无限递归)为例
+
+```cpp
+    static void accept( wasm_ops::instr* inst, wasm_ops::visitor_arg& arg ) {
+         if ( global_idx == -1 ) {
+            arg.module->globals.defs.push_back({{ValueType::i32, true}, {(I32) eosio::chain::wasm_constraints::maximum_call_depth}});
+         }
+
+         global_idx = arg.module->globals.size()-1;
+
+         int32_t assert_idx;
+         injector_utils::add_import<ResultType::none>(*(arg.module), "call_depth_assert", assert_idx);
+
+         wasm_ops::op_types<>::call_t call_assert;
+         wasm_ops::op_types<>::get_global_t get_global_inst; 
+         wasm_ops::op_types<>::set_global_t set_global_inst;
+
+         wasm_ops::op_types<>::i32_eqz_t eqz_inst; 
+         wasm_ops::op_types<>::i32_const_t const_inst; 
+         wasm_ops::op_types<>::i32_add_t add_inst;
+         wasm_ops::op_types<>::end_t end_inst;
+         wasm_ops::op_types<>::if__t if_inst; 
+         wasm_ops::op_types<>::else__t else_inst; 
+
+         call_assert.field = assert_idx;
+         get_global_inst.field = global_idx;
+         set_global_inst.field = global_idx;
+         const_inst.field = -1;
+
+#define INSERT_INJECTED(X)       \
+         X.pack(arg.new_code);   \
+
+         INSERT_INJECTED(get_global_inst); //inject
+         INSERT_INJECTED(eqz_inst);//inject
+         INSERT_INJECTED(if_inst);//inject
+         INSERT_INJECTED(call_assert);//inject
+         INSERT_INJECTED(else_inst);//inject
+         INSERT_INJECTED(const_inst);//inject
+         INSERT_INJECTED(get_global_inst);//inject
+         INSERT_INJECTED(add_inst);//inject
+         INSERT_INJECTED(set_global_inst);//inject
+         INSERT_INJECTED(end_inst);//inject
+
+         /* print the correct call type */
+         if ( inst->get_code() == wasm_ops::call_code ) {
+            wasm_ops::op_types<>::call_t* call_inst = reinterpret_cast<wasm_ops::op_types<>::call_t*>(inst);
+            call_inst->pack(arg.new_code);//inject
+         }
+         else {
+            wasm_ops::op_types<>::call_indirect_t* call_inst = reinterpret_cast<wasm_ops::op_types<>::call_indirect_t*>(inst);
+            call_inst->pack(arg.new_code);//inject
+         }
+
+         const_inst.field = 1;
+         INSERT_INJECTED(get_global_inst); //inject
+         INSERT_INJECTED(const_inst);//inject
+         INSERT_INJECTED(add_inst);//inject
+         INSERT_INJECTED(set_global_inst);//inject
+
+#undef INSERT_INJECTED
+      }
+   }; 
+```
+
+其中我注释了//inject的都是具体注入的代码.
+
 未完待续
