@@ -947,7 +947,7 @@ if( pending ) {
     };
   ```
 
-  数据库的索引是通过元编程来实现的，每一种数据类型都有一个唯一id作为标识。程序在运行过程中要产生26个数据表：
+  数据库的索引是通过元编程来实现的，每一种数据类型都有一个唯一id作为标识。程序在运行过程中要产生27个数据表：
   1. account_object:  
       保存账户信息，结构如下：  
       ```cpp
@@ -1627,4 +1627,162 @@ if( pending ) {
    ```
   25. account_history_object
   26. action_history_object
-  27. reversible_block_object
+  27. reversible_block_object  
+   记录还没变成不可逆的区块，结构如下：
+   ```
+   class reversible_block_object : public chainbase::object<reversible_block_object_type, reversible_block_object> {
+      OBJECT_CTOR(reversible_block_object,(packedblock) )
+
+      id_type        id;
+      uint32_t       blocknum = 0;
+      shared_string  packedblock;
+
+      void set_block( const signed_block_ptr& b ) {
+         packedblock.resize( fc::raw::pack_size( *b ) );
+         fc::datastream<char*> ds( packedblock.data(), packedblock.size() );
+         fc::raw::pack( ds, *b );
+      }
+
+      signed_block_ptr get_block()const {
+         fc::datastream<const char*> ds( packedblock.data(), packedblock.size() );
+         auto result = std::make_shared<signed_block>();
+         fc::raw::unpack( ds, *result );
+         return result;
+      }
+   };
+
+   ```
+   对应的索引为：
+   ```
+   struct by_num;
+   using reversible_block_index = chainbase::shared_multi_index_container<
+      reversible_block_object,
+      indexed_by<
+         ordered_unique<tag<by_id>, member<reversible_block_object, reversible_block_object::id_type, &reversible_block_object::id>>,
+         ordered_unique<tag<by_num>, member<reversible_block_object, uint32_t, &reversible_block_object::blocknum>>
+      >
+   >;
+   ```
+
+   以上数据表的初始化工作在controller_impl::add_indices()函数中：
+   ```
+      reversible_blocks.add_index<reversible_block_index>();
+
+      db.add_index<account_index>();
+      db.add_index<account_sequence_index>();
+
+      db.add_index<table_id_multi_index>();
+      db.add_index<key_value_index>();
+      db.add_index<index64_index>();
+      db.add_index<index128_index>();
+      db.add_index<index256_index>();
+      db.add_index<index_double_index>();
+      db.add_index<index_long_double_index>();
+
+      db.add_index<global_property_multi_index>();
+      db.add_index<dynamic_global_property_multi_index>();
+      db.add_index<block_summary_multi_index>();
+      db.add_index<transaction_multi_index>();
+      db.add_index<generated_transaction_multi_index>();
+
+      authorization.add_indices();
+      resource_limits.add_indices();
+   ```
+   在authorization_manager::add_indices():
+   ```
+      _db.add_index<permission_index>();
+      _db.add_index<permission_usage_index>();
+      _db.add_index<permission_link_index>();
+   ```
+   在resource_limits_manager::add_indices():
+   ```
+    _db.add_index<resource_limits_index>();
+    _db.add_index<resource_usage_index>();
+    _db.add_index<resource_limits_state_index>();
+    _db.add_index<resource_limits_config_index>();
+   ```
+   在transaction执行过程中涉及到的数据及流程如下：
+   调用controller_impl::push_transaction,在该函数中会生成一个transaction_context类型的变量trx_context, 然后对transaction进行初始化操作：
+   ```
+    transaction_context trx_context(self, trx->trx, trx->id);
+         if ((bool)subjective_cpu_leeway && pending->_block_status == controller::block_status::incomplete) {
+            trx_context.leeway = *subjective_cpu_leeway;
+         }
+         trx_context.deadline = deadline;
+         trx_context.explicit_billed_cpu_time = explicit_billed_cpu_time;
+         trx_context.billed_cpu_time_us = billed_cpu_time_us;
+         trace = trx_context.trace;
+         try {
+            if( trx->implicit ) {
+               trx_context.init_for_implicit_trx();
+               trx_context.can_subjectively_fail = false;
+            } else {
+               bool skip_recording = replay_head_time && (time_point(trx->trx.expiration) <= *replay_head_time);
+               trx_context.init_for_input_trx( trx->packed_trx.get_unprunable_size(),
+                                               trx->packed_trx.get_prunable_size(),
+                                               trx->trx.signatures.size(),
+                                               skip_recording);
+            }
+
+            if( trx_context.can_subjectively_fail && pending->_block_status == controller::block_status::incomplete ) {
+               check_actor_list( trx_context.bill_to_accounts ); // Assumes bill_to_accounts is the set of actors authorizing the transaction
+            }
+
+
+            trx_context.delay = fc::seconds(trx->trx.delay_sec);
+
+   ```
+   然后对transaction进行授权检查：
+   ```
+   if( !self.skip_auth_check() && !trx->implicit ) {
+               authorization.check_authorization(
+                       trx->trx.actions,
+                       trx->recover_keys( chain_id ),
+                       {},
+                       trx_context.delay,
+                       [](){}
+                       /*std::bind(&transaction_context::add_cpu_usage_and_check_time, &trx_context,
+                                 std::placeholders::_1)*/,
+                       false
+               );
+            }
+    trx_context.exec();
+    trx_context.finalize(); /
+   ```
+  在此需要用到上面的global_property_object数据表，然后调用transaction_context::exec()对action进行调用：
+  ```
+    EOS_ASSERT( is_initialized, transaction_exception, "must first initialize" );
+
+      if( apply_context_free ) {
+         for( const auto& act : trx.context_free_actions ) {
+            trace->action_traces.emplace_back();
+            dispatch_action( trace->action_traces.back(), act, true );//action调用
+         }
+      }
+
+      if( delay == fc::microseconds() ) {
+         for( const auto& act : trx.actions ) {
+            trace->action_traces.emplace_back();
+            dispatch_action( trace->action_traces.back(), act ); //action调用
+         }
+      } else {
+         schedule_transaction();
+      }
+  ```
+  在transaction_context::dispatch_action中会产生一个类型为apply_context的变量 acontext,调用apply_context::exec()进行真正的action的执行
+  ```
+      apply_context  acontext( control, *this, a, recurse_depth );
+      acontext.context_free = context_free;
+      acontext.receiver     = receiver;
+
+      try {
+         acontext.exec();
+      } catch( ... ) {
+         trace = move(acontext.trace);
+         throw;
+      }
+
+      trace = move(acontext.trace);
+  ```
+  在apply_context::exec()中会调用apply_context::exec_one()调用vm借口进入合约层，进行action和数据的解析并执行。
+  
