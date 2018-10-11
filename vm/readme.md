@@ -692,4 +692,349 @@ EOS初始化的时候会对智能合约代码进行注入.修改虚拟机的opco
 
 注入的代码是在wasm_binary_injection类里实现的.
 
+```cpp
+        void inject() {
+            _module_injectors.inject( *_module );
+            // inject checktime first
+            injector_utils::add_import<ResultType::none>( *_module, u8"checktime", checktime_injection::chktm_idx );
+
+            for ( auto& fd : _module->functions.defs ) {
+               wasm_ops::EOSIO_OperatorDecoderStream<pre_op_injectors> pre_decoder(fd.code);
+               wasm_ops::instruction_stream pre_code(fd.code.size()*2);
+
+               while ( pre_decoder ) {
+                  auto op = pre_decoder.decodeOp();
+                  if (op->is_post()) {
+                     op->pack(&pre_code);
+                     op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+                  }
+                  else {
+                     op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+                     if (!(op->is_kill()))
+                        op->pack(&pre_code);
+                  }
+               }
+               fd.code = pre_code.get();
+            }
+            for ( auto& fd : _module->functions.defs ) {
+               wasm_ops::EOSIO_OperatorDecoderStream<post_op_injectors> post_decoder(fd.code);
+               wasm_ops::instruction_stream post_code(fd.code.size()*2);
+
+               wasm_ops::op_types<>::call_t chktm; 
+               chktm.field = injector_utils::injected_index_mapping.find(checktime_injection::chktm_idx)->second;
+               chktm.pack(&post_code);
+
+               while ( post_decoder ) {
+                  auto op = post_decoder.decodeOp();
+                  if (op->is_post()) {
+                     op->pack(&post_code);
+                     op->visit( { _module, &post_code, &fd, post_decoder.index() } );
+                  }
+                  else {
+                     op->visit( { _module, &post_code, &fd, post_decoder.index() } );
+                     if (!(op->is_kill()))
+                        op->pack(&post_code);
+                  }
+               }
+               fd.code = post_code.get();
+            }
+         }
+```
+在inject中,首先注册了checktime这个ABI,然后对合约的每个函数的opcode进行注入
+
+op->visit( { _module, &pre_code, &fd, pre_decoder.index() } );
+
+在这个调用里,对174个相关的操作码进行了注入.相关的注入代码如下:
+
+```cpp
+    template <typename ... Mutators>
+    struct instr_base : instr {
+       bool is_post() override { return propagate_post_injection<Mutators...>::value; }
+       bool is_kill() override { return propagate_should_kill<Mutators...>::value; }
+       virtual void visit( visitor_arg&& arg ) override {
+          for ( auto m : { Mutators::accept... } ) {
+             m(this, arg);
+          }
+       } 
+    };
+    
+    // construct the instructions
+    
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, voidtype,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 0, 133 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, blocktype,        BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 133, 3 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, uint32_t,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 136, 11 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, memarg,           BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 147, 23 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, uint64_t,         BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 170, 2 ) )
+    BOOST_PP_SEQ_FOR_EACH( CONSTRUCT_OP_HAS_DATA, branchtabletype,  BOOST_PP_SEQ_SUBSEQ( WASM_OP_SEQ, 172, 1 ) )
+```
+
+EOS里使用了大量的BOOST_PP_SEQ_FOR_EACH宏,具体可以参见BOOST的相关文档.
+以loop为例,展开后是这样的
+
+```cpp
+            template <typename... Mutators>
+            struct loop final : instr_base<Mutators...> {
+                uint16_t code = loop_code;
+                blocktype field;
+                uint16_t get_code() override { return loop_code; }
+                int skip_ahead() override {
+                    return field_specific_params<blocktype>::skip_ahead;
+                }
+                void unpack(char* opcode) override {
+                    field_specific_params<blocktype>::unpack(opcode, field);
+                }
+                void pack(instruction_stream* stream) override {
+                    stream->set(2, (const char*)&code);
+                    field_specific_params<blocktype>::pack(stream, field);
+                }
+                std::string to_string() override {
+                    return std::string("loop") +
+                           field_specific_params<blocktype>::to_string(field);
+                }
+            };
+```
+其中模板参数Mutators,是一系列实现了accept接口的类,控制对操作码进行哪些注入操作.以最复杂的call_depth_check(检查函数调用的深度,防止无限递归)为例
+
+```cpp
+    static void accept( wasm_ops::instr* inst, wasm_ops::visitor_arg& arg ) {
+         if ( global_idx == -1 ) {
+            arg.module->globals.defs.push_back({{ValueType::i32, true}, {(I32) eosio::chain::wasm_constraints::maximum_call_depth}});
+         }
+
+         global_idx = arg.module->globals.size()-1;
+
+         int32_t assert_idx;
+         injector_utils::add_import<ResultType::none>(*(arg.module), "call_depth_assert", assert_idx);
+
+         wasm_ops::op_types<>::call_t call_assert;
+         wasm_ops::op_types<>::get_global_t get_global_inst; 
+         wasm_ops::op_types<>::set_global_t set_global_inst;
+
+         wasm_ops::op_types<>::i32_eqz_t eqz_inst; 
+         wasm_ops::op_types<>::i32_const_t const_inst; 
+         wasm_ops::op_types<>::i32_add_t add_inst;
+         wasm_ops::op_types<>::end_t end_inst;
+         wasm_ops::op_types<>::if__t if_inst; 
+         wasm_ops::op_types<>::else__t else_inst; 
+
+         call_assert.field = assert_idx;
+         get_global_inst.field = global_idx;
+         set_global_inst.field = global_idx;
+         const_inst.field = -1;
+
+#define INSERT_INJECTED(X)       \
+         X.pack(arg.new_code);   \
+
+         INSERT_INJECTED(get_global_inst); //inject
+         INSERT_INJECTED(eqz_inst);//inject
+         INSERT_INJECTED(if_inst);//inject
+         INSERT_INJECTED(call_assert);//inject
+         INSERT_INJECTED(else_inst);//inject
+         INSERT_INJECTED(const_inst);//inject
+         INSERT_INJECTED(get_global_inst);//inject
+         INSERT_INJECTED(add_inst);//inject
+         INSERT_INJECTED(set_global_inst);//inject
+         INSERT_INJECTED(end_inst);//inject
+
+         /* print the correct call type */
+         if ( inst->get_code() == wasm_ops::call_code ) {
+            wasm_ops::op_types<>::call_t* call_inst = reinterpret_cast<wasm_ops::op_types<>::call_t*>(inst);
+            call_inst->pack(arg.new_code);//inject
+         }
+         else {
+            wasm_ops::op_types<>::call_indirect_t* call_inst = reinterpret_cast<wasm_ops::op_types<>::call_indirect_t*>(inst);
+            call_inst->pack(arg.new_code);//inject
+         }
+
+         const_inst.field = 1;
+         INSERT_INJECTED(get_global_inst); //inject
+         INSERT_INJECTED(const_inst);//inject
+         INSERT_INJECTED(add_inst);//inject
+         INSERT_INJECTED(set_global_inst);//inject
+
+#undef INSERT_INJECTED
+      }
+   }; 
+```
+
+INSERT_INJECTED宏展开后"get_global_inst.pack(arg.new_code)"实现注入.call_depth_check注入了一系列代码,检查合约的函数是否出现了无限递归调用.
+
+EOS对以下函数进行了注入
+
+```cpp
+_cached_ops[error_code] = cached_error.get();
+_cached_ops[end_code] = cached_end.get();
+_cached_ops[unreachable_code] = cached_unreachable.get();
+_cached_ops[nop_code] = cached_nop.get();
+_cached_ops[else__code] = cached_else_.get();
+_cached_ops[return__code] = cached_return_.get();
+_cached_ops[drop_code] = cached_drop.get();
+_cached_ops[select_code] = cached_select.get();
+_cached_ops[i32_eqz_code] = cached_i32_eqz.get();
+_cached_ops[i32_eq_code] = cached_i32_eq.get();
+_cached_ops[i32_ne_code] = cached_i32_ne.get();
+_cached_ops[i32_lt_s_code] = cached_i32_lt_s.get();
+_cached_ops[i32_lt_u_code] = cached_i32_lt_u.get();
+_cached_ops[i32_gt_s_code] = cached_i32_gt_s.get();
+_cached_ops[i32_gt_u_code] = cached_i32_gt_u.get();
+_cached_ops[i32_le_s_code] = cached_i32_le_s.get();
+_cached_ops[i32_le_u_code] = cached_i32_le_u.get();
+_cached_ops[i32_ge_s_code] = cached_i32_ge_s.get();
+_cached_ops[i32_ge_u_code] = cached_i32_ge_u.get();
+_cached_ops[i64_eqz_code] = cached_i64_eqz.get();
+_cached_ops[i64_eq_code] = cached_i64_eq.get();
+_cached_ops[i64_ne_code] = cached_i64_ne.get();
+_cached_ops[i64_lt_s_code] = cached_i64_lt_s.get();
+_cached_ops[i64_lt_u_code] = cached_i64_lt_u.get();
+_cached_ops[i64_gt_s_code] = cached_i64_gt_s.get();
+_cached_ops[i64_gt_u_code] = cached_i64_gt_u.get();
+_cached_ops[i64_le_s_code] = cached_i64_le_s.get();
+_cached_ops[i64_le_u_code] = cached_i64_le_u.get();
+_cached_ops[i64_ge_s_code] = cached_i64_ge_s.get();
+_cached_ops[i64_ge_u_code] = cached_i64_ge_u.get();
+_cached_ops[f32_eq_code] = cached_f32_eq.get();
+_cached_ops[f32_ne_code] = cached_f32_ne.get();
+_cached_ops[f32_lt_code] = cached_f32_lt.get();
+_cached_ops[f32_gt_code] = cached_f32_gt.get();
+_cached_ops[f32_le_code] = cached_f32_le.get();
+_cached_ops[f32_ge_code] = cached_f32_ge.get();
+_cached_ops[f64_eq_code] = cached_f64_eq.get();
+_cached_ops[f64_ne_code] = cached_f64_ne.get();
+_cached_ops[f64_lt_code] = cached_f64_lt.get();
+_cached_ops[f64_gt_code] = cached_f64_gt.get();
+_cached_ops[f64_le_code] = cached_f64_le.get();
+_cached_ops[f64_ge_code] = cached_f64_ge.get();
+_cached_ops[i32_clz_code] = cached_i32_clz.get();
+_cached_ops[i32_ctz_code] = cached_i32_ctz.get();
+_cached_ops[i32_popcnt_code] = cached_i32_popcnt.get();
+_cached_ops[i32_add_code] = cached_i32_add.get();
+_cached_ops[i32_sub_code] = cached_i32_sub.get();
+_cached_ops[i32_mul_code] = cached_i32_mul.get();
+_cached_ops[i32_div_s_code] = cached_i32_div_s.get();
+_cached_ops[i32_div_u_code] = cached_i32_div_u.get();
+_cached_ops[i32_rem_s_code] = cached_i32_rem_s.get();
+_cached_ops[i32_rem_u_code] = cached_i32_rem_u.get();
+_cached_ops[i32_and_code] = cached_i32_and.get();
+_cached_ops[i32_or_code] = cached_i32_or.get();
+_cached_ops[i32_xor_code] = cached_i32_xor.get();
+_cached_ops[i32_shl_code] = cached_i32_shl.get();
+_cached_ops[i32_shr_s_code] = cached_i32_shr_s.get();
+_cached_ops[i32_shr_u_code] = cached_i32_shr_u.get();
+_cached_ops[i32_rotl_code] = cached_i32_rotl.get();
+_cached_ops[i32_rotr_code] = cached_i32_rotr.get();
+_cached_ops[i64_clz_code] = cached_i64_clz.get();
+_cached_ops[i64_ctz_code] = cached_i64_ctz.get();
+_cached_ops[i64_popcnt_code] = cached_i64_popcnt.get();
+_cached_ops[i64_add_code] = cached_i64_add.get();
+_cached_ops[i64_sub_code] = cached_i64_sub.get();
+_cached_ops[i64_mul_code] = cached_i64_mul.get();
+_cached_ops[i64_div_s_code] = cached_i64_div_s.get();
+_cached_ops[i64_div_u_code] = cached_i64_div_u.get();
+_cached_ops[i64_rem_s_code] = cached_i64_rem_s.get();
+_cached_ops[i64_rem_u_code] = cached_i64_rem_u.get();
+_cached_ops[i64_and_code] = cached_i64_and.get();
+_cached_ops[i64_or_code] = cached_i64_or.get();
+_cached_ops[i64_xor_code] = cached_i64_xor.get();
+_cached_ops[i64_shl_code] = cached_i64_shl.get();
+_cached_ops[i64_shr_s_code] = cached_i64_shr_s.get();
+_cached_ops[i64_shr_u_code] = cached_i64_shr_u.get();
+_cached_ops[i64_rotl_code] = cached_i64_rotl.get();
+_cached_ops[i64_rotr_code] = cached_i64_rotr.get();
+_cached_ops[f32_abs_code] = cached_f32_abs.get();
+_cached_ops[f32_neg_code] = cached_f32_neg.get();
+_cached_ops[f32_ceil_code] = cached_f32_ceil.get();
+_cached_ops[f32_floor_code] = cached_f32_floor.get();
+_cached_ops[f32_trunc_code] = cached_f32_trunc.get();
+_cached_ops[f32_nearest_code] = cached_f32_nearest.get();
+_cached_ops[f32_sqrt_code] = cached_f32_sqrt.get();
+_cached_ops[f32_add_code] = cached_f32_add.get();
+_cached_ops[f32_sub_code] = cached_f32_sub.get();
+_cached_ops[f32_mul_code] = cached_f32_mul.get();
+_cached_ops[f32_div_code] = cached_f32_div.get();
+_cached_ops[f32_min_code] = cached_f32_min.get();
+_cached_ops[f32_max_code] = cached_f32_max.get();
+_cached_ops[f32_copysign_code] = cached_f32_copysign.get();
+_cached_ops[f64_abs_code] = cached_f64_abs.get();
+_cached_ops[f64_neg_code] = cached_f64_neg.get();
+_cached_ops[f64_ceil_code] = cached_f64_ceil.get();
+_cached_ops[f64_floor_code] = cached_f64_floor.get();
+_cached_ops[f64_trunc_code] = cached_f64_trunc.get();
+_cached_ops[f64_nearest_code] = cached_f64_nearest.get();
+_cached_ops[f64_sqrt_code] = cached_f64_sqrt.get();
+_cached_ops[f64_add_code] = cached_f64_add.get();
+_cached_ops[f64_sub_code] = cached_f64_sub.get();
+_cached_ops[f64_mul_code] = cached_f64_mul.get();
+_cached_ops[f64_div_code] = cached_f64_div.get();
+_cached_ops[f64_min_code] = cached_f64_min.get();
+_cached_ops[f64_max_code] = cached_f64_max.get();
+_cached_ops[f64_copysign_code] = cached_f64_copysign.get();
+_cached_ops[i32_wrap_i64_code] = cached_i32_wrap_i64.get();
+_cached_ops[i32_trunc_s_f32_code] = cached_i32_trunc_s_f32.get();
+_cached_ops[i32_trunc_u_f32_code] = cached_i32_trunc_u_f32.get();
+_cached_ops[i32_trunc_s_f64_code] = cached_i32_trunc_s_f64.get();
+_cached_ops[i32_trunc_u_f64_code] = cached_i32_trunc_u_f64.get();
+_cached_ops[i64_extend_s_i32_code] = cached_i64_extend_s_i32.get();
+_cached_ops[i64_extend_u_i32_code] = cached_i64_extend_u_i32.get();
+_cached_ops[i64_trunc_s_f32_code] = cached_i64_trunc_s_f32.get();
+_cached_ops[i64_trunc_u_f32_code] = cached_i64_trunc_u_f32.get();
+_cached_ops[i64_trunc_s_f64_code] = cached_i64_trunc_s_f64.get();
+_cached_ops[i64_trunc_u_f64_code] = cached_i64_trunc_u_f64.get();
+_cached_ops[f32_convert_s_i32_code] = cached_f32_convert_s_i32.get();
+_cached_ops[f32_convert_u_i32_code] = cached_f32_convert_u_i32.get();
+_cached_ops[f32_convert_s_i64_code] = cached_f32_convert_s_i64.get();
+_cached_ops[f32_convert_u_i64_code] = cached_f32_convert_u_i64.get();
+_cached_ops[f32_demote_f64_code] = cached_f32_demote_f64.get();
+_cached_ops[f64_convert_s_i32_code] = cached_f64_convert_s_i32.get();
+_cached_ops[f64_convert_u_i32_code] = cached_f64_convert_u_i32.get();
+_cached_ops[f64_convert_s_i64_code] = cached_f64_convert_s_i64.get();
+_cached_ops[f64_convert_u_i64_code] = cached_f64_convert_u_i64.get();
+_cached_ops[f64_promote_f32_code] = cached_f64_promote_f32.get();
+_cached_ops[i32_reinterpret_f32_code] = cached_i32_reinterpret_f32.get();
+_cached_ops[i64_reinterpret_f64_code] = cached_i64_reinterpret_f64.get();
+_cached_ops[f32_reinterpret_i32_code] = cached_f32_reinterpret_i32.get();
+_cached_ops[f64_reinterpret_i64_code] = cached_f64_reinterpret_i64.get();
+_cached_ops[grow_memory_code] = cached_grow_memory.get();
+_cached_ops[current_memory_code] = cached_current_memory.get();
+_cached_ops[block_code] = cached_block.get();
+_cached_ops[loop_code] = cached_loop.get();
+_cached_ops[if__code] = cached_if_.get();
+_cached_ops[br_code] = cached_br.get();
+_cached_ops[br_if_code] = cached_br_if.get();
+_cached_ops[call_code] = cached_call.get();
+_cached_ops[call_indirect_code] = cached_call_indirect.get();
+_cached_ops[get_local_code] = cached_get_local.get();
+_cached_ops[set_local_code] = cached_set_local.get();
+_cached_ops[tee_local_code] = cached_tee_local.get();
+_cached_ops[get_global_code] = cached_get_global.get();
+_cached_ops[set_global_code] = cached_set_global.get();
+_cached_ops[i32_const_code] = cached_i32_const.get();
+_cached_ops[f32_const_code] = cached_f32_const.get();
+_cached_ops[i32_load_code] = cached_i32_load.get();
+_cached_ops[i64_load_code] = cached_i64_load.get();
+_cached_ops[f32_load_code] = cached_f32_load.get();
+_cached_ops[f64_load_code] = cached_f64_load.get();
+_cached_ops[i32_load8_s_code] = cached_i32_load8_s.get();
+_cached_ops[i32_load8_u_code] = cached_i32_load8_u.get();
+_cached_ops[i32_load16_s_code] = cached_i32_load16_s.get();
+_cached_ops[i32_load16_u_code] = cached_i32_load16_u.get();
+_cached_ops[i64_load8_s_code] = cached_i64_load8_s.get();
+_cached_ops[i64_load8_u_code] = cached_i64_load8_u.get();
+_cached_ops[i64_load16_s_code] = cached_i64_load16_s.get();
+_cached_ops[i64_load16_u_code] = cached_i64_load16_u.get();
+_cached_ops[i64_load32_s_code] = cached_i64_load32_s.get();
+_cached_ops[i64_load32_u_code] = cached_i64_load32_u.get();
+_cached_ops[i32_store_code] = cached_i32_store.get();
+_cached_ops[i64_store_code] = cached_i64_store.get();
+_cached_ops[f32_store_code] = cached_f32_store.get();
+_cached_ops[f64_store_code] = cached_f64_store.get();
+_cached_ops[i32_store8_code] = cached_i32_store8.get();
+_cached_ops[i32_store16_code] = cached_i32_store16.get();
+_cached_ops[i64_store8_code] = cached_i64_store8.get();
+_cached_ops[i64_store16_code] = cached_i64_store16.get();
+_cached_ops[i64_store32_code] = cached_i64_store32.get();
+_cached_ops[i64_const_code] = cached_i64_const.get();
+_cached_ops[f64_const_code] = cached_f64_const.get();
+_cached_ops[br_table_code] = cached_br_table.get();
+```
+
 未完待续
