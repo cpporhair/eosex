@@ -6,6 +6,7 @@
 #include <rpc_service/utility.hpp>
 #include <thread>
 #include <protocol/fork_db_message_wrapper.hpp>
+#include <network/tcp_server.hpp>
 
 
 void prompt_for_address( tutorial::person *person ) {
@@ -100,6 +101,10 @@ private:
 int main(int argc, char const *argv[]) {
 
     GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+
+    tcp_server srv{9988};
+    srv.run();
 
     auto request = get_block_add_by_block_state_request();
     request->set_data("aaaa");

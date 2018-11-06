@@ -70,17 +70,47 @@ src/network/CMakeFiles/network.dir/connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/network.dir/connection.cpp.s"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection.cpp -o CMakeFiles/network.dir/connection.cpp.s
 
+src/network/CMakeFiles/network.dir/tcp_server.cpp.o: src/network/CMakeFiles/network.dir/flags.make
+src/network/CMakeFiles/network.dir/tcp_server.cpp.o: ../src/network/tcp_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/network/CMakeFiles/network.dir/tcp_server.cpp.o"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/network.dir/tcp_server.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/network/tcp_server.cpp
+
+src/network/CMakeFiles/network.dir/tcp_server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/network.dir/tcp_server.cpp.i"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yangwenyu/workspace/eosex/eosio_database/src/network/tcp_server.cpp > CMakeFiles/network.dir/tcp_server.cpp.i
+
+src/network/CMakeFiles/network.dir/tcp_server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/network.dir/tcp_server.cpp.s"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/network/tcp_server.cpp -o CMakeFiles/network.dir/tcp_server.cpp.s
+
+src/network/CMakeFiles/network.dir/connection_manager.cpp.o: src/network/CMakeFiles/network.dir/flags.make
+src/network/CMakeFiles/network.dir/connection_manager.cpp.o: ../src/network/connection_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/network/CMakeFiles/network.dir/connection_manager.cpp.o"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/network.dir/connection_manager.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection_manager.cpp
+
+src/network/CMakeFiles/network.dir/connection_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/network.dir/connection_manager.cpp.i"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection_manager.cpp > CMakeFiles/network.dir/connection_manager.cpp.i
+
+src/network/CMakeFiles/network.dir/connection_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/network.dir/connection_manager.cpp.s"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection_manager.cpp -o CMakeFiles/network.dir/connection_manager.cpp.s
+
 # Object files for target network
 network_OBJECTS = \
-"CMakeFiles/network.dir/connection.cpp.o"
+"CMakeFiles/network.dir/connection.cpp.o" \
+"CMakeFiles/network.dir/tcp_server.cpp.o" \
+"CMakeFiles/network.dir/connection_manager.cpp.o"
 
 # External object files for target network
 network_EXTERNAL_OBJECTS =
 
 src/network/libnetwork.a: src/network/CMakeFiles/network.dir/connection.cpp.o
+src/network/libnetwork.a: src/network/CMakeFiles/network.dir/tcp_server.cpp.o
+src/network/libnetwork.a: src/network/CMakeFiles/network.dir/connection_manager.cpp.o
 src/network/libnetwork.a: src/network/CMakeFiles/network.dir/build.make
 src/network/libnetwork.a: src/network/CMakeFiles/network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libnetwork.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libnetwork.a"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && $(CMAKE_COMMAND) -P CMakeFiles/network.dir/cmake_clean_target.cmake
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/network.dir/link.txt --verbose=$(VERBOSE)
 

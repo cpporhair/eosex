@@ -266,9 +266,144 @@ enum message_id {
     reversible_block_remove_response                         = 1217;
 
 
+    db_store_i64_request                                     = 2000;
+    db_store_i64_response                                    = 2001;
+    db_update_i64_request                                    = 2002;
+    db_update_i64_response                                   = 2003;
+    db_remove_i64_request                                    = 2004;
+    db_remove_i64_response                                   = 2005;
+    db_get_i64_request                                       = 2006;
+    db_get_i64_response                                      = 2007;
+    db_next_i64_request                                      = 2008;
+    db_next_i64_response                                     = 2009;
+    db_previous_request                                      = 2010;
+    db_previous_response                                     = 2011;
+    db_find_i64_request                                      = 2012;
+    db_find_i64_response                                     = 2013;
+    db_lowerbound_i64_request                                = 2014;
+    db_lowerbound_i64_response                               = 2015;
+    db_upperbound_i64_request                                = 2016;
+    db_upperbound_i64_response                               = 2017;
+    db_end_i64_request                                       = 2018;
+    db_end_i64_response                                      = 2019;
 
-    permission_level_check_request                           = 2000;
-    permission_level_check_response                          = 2001;
+    db_idx64_store_request                                   = 2020;
+    db_idx64_store_response                                  = 2021;
+    db_idx64_update_request                                  = 2022;
+    db_idx64_update_response                                 = 2023;
+    db_idx64_remove_request                                  = 2024;
+    db_idx64_remove_response                                 = 2025;
+    db_idx64_find_secondary_request                          = 2026;
+    db_idx64_find_secondary_response                         = 2027;
+    db_idx64_find_primary_request                            = 2028;
+    db_idx64_find_primary_response                           = 2029;
+    db_idx64_lowerbound_request                              = 2030;
+    db_idx64_lowerbound_response                             = 2031;
+    db_idx64_upperbound_request                              = 2032;
+    db_idx64_upperbound_response                             = 2033;
+    db_idx64_end_request                                     = 2034;
+    db_idx64_end_response                                    = 2035;
+    db_idx64_next_request                                    = 2036;
+    db_idx64_next_response                                   = 2037;
+    db_idx64_previous_request                                = 2038;
+    db_idx64_previous_response                               = 2039;
+
+    db_idx128_store_request                                   = 2040;
+    db_idx128_store_response                                  = 2041;
+    db_idx128_update_request                                  = 2042;
+    db_idx128_update_response                                 = 2043;
+    db_idx128_remove_request                                  = 2044;
+    db_idx128_remove_response                                 = 2045;
+    db_idx128_find_secondary_request                          = 2046;
+    db_idx128_find_secondary_response                         = 2047;
+    db_idx128_find_primary_request                            = 2048;
+    db_idx128_find_primary_response                           = 2049;
+    db_idx128_lowerbound_request                              = 2050;
+    db_idx128_lowerbound_response                             = 2051;
+    db_idx128_upperbound_request                              = 2052;
+    db_idx128_upperbound_response                             = 2053;
+    db_idx128_end_request                                     = 2054;
+    db_idx128_end_response                                    = 2055;
+    db_idx128_next_request                                    = 2056;
+    db_idx128_next_response                                   = 2057;
+    db_idx128_previous_request                                = 2058;
+    db_idx128_previous_response                               = 2059;
+
+    db_idx256_store_request                                   = 2060;
+    db_idx256_store_response                                  = 2061;
+    db_idx256_update_request                                  = 2062;
+    db_idx256_update_response                                 = 2063;
+    db_idx256_remove_request                                  = 2064;
+    db_idx256_remove_response                                 = 2065;
+    db_idx256_find_secondary_request                          = 2066;
+    db_idx256_find_secondary_response                         = 2067;
+    db_idx256_find_primary_request                            = 2068;
+    db_idx256_find_primary_response                           = 2069;
+    db_idx256_lowerbound_request                              = 2070;
+    db_idx256_lowerbound_response                             = 2071;
+    db_idx256_upperbound_request                              = 2072;
+    db_idx256_upperbound_response                             = 2073;
+    db_idx256_end_request                                     = 2074;
+    db_idx256_end_response                                    = 2075;
+    db_idx256_next_request                                    = 2076;
+    db_idx256_next_response                                   = 2077;
+    db_idx256_previous_request                                = 2078;
+    db_idx256_previous_response                               = 2079;
+
+    db_idx_double_store_request                                   = 2080;
+    db_idx_double_store_response                                  = 2081;
+    db_idx_double_update_request                                  = 2082;
+    db_idx_double_update_response                                 = 2083;
+    db_idx_double_remove_request                                  = 2084;
+    db_idx_double_remove_response                                 = 2085;
+    db_idx_double_find_secondary_request                          = 2086;
+    db_idx_double_find_secondary_response                         = 2087;
+    db_idx_double_find_primary_request                            = 2088;
+    db_idx_double_find_primary_response                           = 2089;
+    db_idx_double_lowerbound_request                              = 2090;
+    db_idx_double_lowerbound_response                             = 2091;
+    db_idx_double_upperbound_request                              = 2092;
+    db_idx_double_upperbound_response                             = 2093;
+    db_idx_double_end_request                                     = 2094;
+    db_idx_double_end_response                                    = 2095;
+    db_idx_double_next_request                                    = 2096;
+    db_idx_double_next_response                                   = 2097;
+    db_idx_double_previous_request                                = 2098;
+    db_idx_double_previous_response                               = 2099;
+
+    db_idx_long_double_store_request                                   = 2100;
+    db_idx_long_double_store_response                                  = 2101;
+    db_idx_long_double_update_request                                  = 2102;
+    db_idx_long_double_update_response                                 = 2103;
+    db_idx_long_double_remove_request                                  = 2104;
+    db_idx_long_double_remove_response                                 = 2105;
+    db_idx_long_double_find_secondary_request                          = 2106;
+    db_idx_long_double_find_secondary_response                         = 2107;
+    db_idx_long_double_find_primary_request                            = 2108;
+    db_idx_long_double_find_primary_response                           = 2109;
+    db_idx_long_double_lowerbound_request                              = 2110;
+    db_idx_long_double_lowerbound_response                             = 2111;
+    db_idx_long_double_upperbound_request                              = 2112;
+    db_idx_long_double_upperbound_response                             = 2113;
+    db_idx_long_double_end_request                                     = 2114;
+    db_idx_long_double_end_response                                    = 2115;
+    db_idx_long_double_next_request                                    = 2116;
+    db_idx_long_double_next_response                                   = 2117;
+    db_idx_long_double_previous_request                                = 2118;
+    db_idx_long_double_previous_response                               = 2119;
+
+
+    permission_level_check_request                           = 3000;
+    permission_level_check_response                          = 3001;
+
+    check_transaction_authorization_request                  = 3002;
+    check_transaction_authorization_response                 = 3003;
+    check_permission_authorization_request                   = 3004;
+    check_permission_authorization_response                  = 3005;
+    get_permission_last_used_request                         = 3006;
+    get_permission_last_used_response                        = 3007;
+    get_account_creation_time_request                        = 3008;
+    get_account_creation_time_response                       = 3009;
 }
 
 message error {
@@ -282,17 +417,436 @@ message meta {
     optional uint32 method_id   = 3;
 }
 
-message rpc_request {
-    optional meta        head    = 1;
-    optional object_type type    = 2;
-    optional message_id  msg_id  = 3;
+message db_stroe_i64 {
+    optional uint64 scope  = 1;
+    optional uint64 table  = 2;
+    optional uint64 payer  = 3;
+    optional uint64 id     = 4;
+    optional bytes  buffer = 5;
+    optional uint64 buffer_size = 6;
+}
+
+message db_update_i64 {
+    optional uint32 itr    = 1;
+    optional uint64 payer  = 2;
+    optional bytes  buffer = 3;
+    optional uint64 buffer_size = 4;
+}
+
+message db_remove_i64 {
+    optional uint32 itr = 1;
+}
+
+message db_get_i64 {
+    optional uint32 itr = 1;
+    optional bytes buffer = 2;
+    optional uint64 buffer_size = 3;
+}
+
+message db_next_64 {
+    optional uint32 itr   = 1;
+    optional uint64 primary = 2;
+}
+
+message db_pervious_i64 {
+    optional uint32 itr = 1;
+    optional uint64 primary = 2;
+}
+
+message db_find_i64 {
+    optional uint64  code = 1;
+    optional uint64  scope = 2;
+    optional uint64  table = 3;
+    optional uint64  id    = 4;
+}
+
+message db_lowerbound_i64 {
+    optional uint64   code = 1;
+    optional uint64   scope = 2;
+    optional uint64   table = 3;
+    optional uint64   id    = 4;
+}
+
+message db_upperbound_i64 {
+    optional uint64   code = 1;
+    optional uint64   scope = 2;
+    optional uint64   table = 3;
+    optional uint64   id    = 4; 
+}
+
+message db_end_i64 {
+    optional uint64  code = 1;
+    optional uint64  table = 2;
+    optional uint64  scope = 3;
+}
+
+message db_idx64_store {
+    optional uint64    scope  = 1;
+    optional uint64    table  = 2;
+    optional uint64    payer  = 3;
+    optional uint64    id     = 4;
+    optional uint64    secondary = 5;
+}
+
+message db_idx64_update {
+    optional uint32    itr = 1;
+    optional uint64    payer = 2;
+    optional uint64    secondary = 3;
+}
+
+message db_idx64_remove {
+    optional uint32  itr = 1;
+}
+
+message db_idx64_find_secondary {
+    optional uint64    code  = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional uint64    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx64_find_primary {
+    optional uint64    code = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional uint64    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx64_lowerbound {
+    optional uint64    code  = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional uint64    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx64_upperbound {
+    optional uint64    code   = 1;
+    optional uint64    scope  = 2;
+    optional uint64    table  = 3;
+    optional uint64    secondary = 4;
+    optional uint64    primary  = 5;
+}
+
+message db_idx64_end {
+    optional uint64    code   = 1;
+    optional uint64    scope  = 2;
+    optional uint64    table  = 3;
+}
+
+message db_idx64_next {
+    optional uint32   itr     = 1;
+    optional uint64   primary = 2;
+}
+
+message db_idx64_previous {
+    optional uint32   itr    = 1;
+    optional uint64   primary = 2;
+}
+
+message db_idx128_store {
+    optional uint64    scope  = 1;
+    optional uint64    table  = 2;
+    optional uint64    payer  = 3;
+    optional uint64    id     = 4;
+    optional bytes    secondary = 5;
+}
+
+message db_idx128_update {
+    optional uint32    itr = 1;
+    optional uint64    payer = 2;
+    optional bytes    secondary = 3;
+}
+
+message db_idx128_remove {
+    optional uint32  itr = 1;
+}
+
+message db_idx128_find_secondary {
+    optional uint64    code  = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional bytes    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx128_find_primary {
+    optional uint64    code = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional bytes    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx128_lowerbound {
+    optional uint64    code  = 1;
+    optional uint64    scope = 2;
+    optional uint64    table = 3;
+    optional bytes    secondary = 4;
+    optional uint64    primary = 5;
+}
+
+message db_idx128_upperbound {
+    optional uint64    code   = 1;
+    optional uint64    scope  = 2;
+    optional uint64    table  = 3;
+    optional bytes    secondary = 4;
+    optional uint64    primary  = 5;
+}
+
+message db_idx128_end {
+    optional uint64    code   = 1;
+    optional uint64    scope  = 2;
+    optional uint64    table  = 3;
+}
+
+message db_idx128_next {
+    optional uint32   itr     = 1;
+    optional uint64   primary = 2;
+}
+
+message db_idx128_previous {
+    optional uint32   itr    = 1;
+    optional uint64   primary = 2;
+}
+
+message db_idx256_store {
+    optional uint64      scope   = 1;
+    optional uint64      table   = 2;
+    optional uint64      payer   = 3;
+    optional uint64      id      = 4;
+    optional bytes       data    = 5;
+    optional uint64      data_len = 6;
+}
+
+message db_idx256_update {
+    optional uint32      itr    = 1;
+    optional uint64      payer  = 2;
+    optional bytes       data   = 3;
+    optional uint64      data_len = 4;
+}
+
+message db_idx256_remove {
+    optional uint32     id = 1;
+}
+
+message db_idx256_find_secondary {
+    optional uint64      code    = 1;
+    optional uint64      scope   = 2;
+    optional uint64      table   = 3;
     optional bytes       data    = 4;
+    optional uint64      data_len = 5;
+    optional uint64      primary = 6;
+}
+
+message db_idx256_find_primary {
+    optional uint64     code     = 1;
+    optional uint64     scope    = 2;
+    optional uint64     table    = 3;
+    optional bytes      data     = 4;
+    optional uint64     data_len = 5;
+    optional uint64     primary  = 6;
+}
+
+message db_idx256_lowerbound {
+    optional uint64     code     = 1;
+    optional uint64     scope    = 2;
+    optional uint64     table    = 3;
+    optional bytes      data     = 4;
+    optional uint64     data_len = 5;
+    optional uint64     primary  = 6;
+}
+
+message db_idx256_upperbound {
+    optional uint64     code     = 1;
+    optional uint64     scope    = 2;
+    optional uint64     table    = 3;
+    optional bytes      data     = 4;
+    optional uint64     data_len = 5;
+    optional uint64     primary  = 6;
+}
+
+message db_idx256_end {
+    optional uint64     code   = 1;
+    optional uint64     scope  = 2;
+    optional uint64     table  = 3;
+}
+
+message db_idx256_next {
+    optional uint32     itr   = 1;
+    optional uint64     primary = 2;
+}
+
+message db_idx256_previous {
+    optional uint32     itr     = 1;
+    optional uint64     primary = 2;
+}
+
+message db_idx_double_store {
+    optional uint64      scope   = 1;
+    optional uint64      table   = 2;
+    optional uint64      payer   = 3;
+    optional uint64      id      = 4;
+    optional bytes       secondary = 5;
+}
+
+message db_idx_double_update {
+    optional uint32      itr     = 1;
+    optional uint64      payer   = 2;
+    optional bytes       secondary = 3;
+}
+
+message db_idx_double_remove {
+    optional uint32    itr = 1;
+}
+
+message db_idx_double_find_secondary {
+    optional  uint64    code    = 1;
+    optional  uint64    scope   = 2;
+    optional  uint64    table   = 3;
+    optional  bytes     secondary = 4;
+    optional uint64     primary  = 5;
+}
+
+message db_idx_double_find_primary {
+    optional uint64      code   = 1;
+    optional uint64      scope  = 2;
+    optional uint64      table  = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary = 5;
+}
+
+message db_idx_double_lowerbound {
+    optional uint64      code    = 1;
+    optional uint64      scope   = 2;
+    optional uint64      table   = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary  = 5;
+}
+
+message db_idx_double_upperbound {
+    optional uint64      code    = 1;
+    optional uint64      scope   = 2;
+    optional uint64      table   = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary  = 5;
+}
+
+message db_idx_double_end {
+    optional uint64      code   = 1;
+    optional uint64      scope  = 2;
+    optional uint64      table  = 3;
+}
+
+message db_idx_double_next {
+    optional uint32       itr  = 1;
+    optional uint64       primary = 2;
+}
+
+message db_idx_double_previous {
+    optional uint32       itr  = 1;
+    optional uint64       primary = 2;
+}
+
+message db_idx_long_double_store {
+    optional uint64      scope   = 1;
+    optional uint64      table   = 2;
+    optional uint64      payer   = 3;
+    optional uint64      id      = 4;
+    optional bytes       secondary = 5;
+}
+
+message db_idx_long_double_update {
+    optional uint32      itr     = 1;
+    optional uint64      payer   = 2;
+    optional bytes       secondary = 3;
+}
+
+message db_idx_long_double_remove {
+    optional uint32    itr = 1;
+}
+
+message db_idx_long_double_find_secondary {
+    optional  uint64    code    = 1;
+    optional  uint64    scope   = 2;
+    optional  uint64    table   = 3;
+    optional  bytes     secondary = 4;
+    optional uint64     primary  = 5;
+}
+
+message db_idx_long_double_find_primary {
+    optional uint64      code   = 1;
+    optional uint64      scope  = 2;
+    optional uint64      table  = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary = 5;
+}
+
+message db_idx_long_double_lowerbound {
+    optional uint64      code    = 1;
+    optional uint64      scope   = 2;
+    optional uint64      table   = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary  = 5;
+}
+
+message db_idx_long_double_upperbound {
+    optional uint64      code    = 1;
+    optional uint64      scope   = 2;
+    optional uint64      table   = 3;
+    optional bytes       secondary = 4;
+    optional uint64      primary  = 5;
+}
+
+message db_idx_long_double_end {
+    optional uint64      code   = 1;
+    optional uint64      scope  = 2;
+    optional uint64      table  = 3;
+}
+
+message db_idx_long_double_next {
+    optional uint32       itr  = 1;
+    optional uint64       primary = 2;
+}
+
+message db_idx_long_double_previous {
+    optional uint32       itr  = 1;
+    optional uint64       primary = 2;
+}
+
+message check_transaction_authorization {
+    optional bytes     trx_data = 1;
+    optional bytes     pubkeys_data = 2;
+    optional bytes     perms_data = 3;
+}
+
+message check_permission_authorization {
+    optional bytes           account   = 1;
+    optional bytes           permission = 2;
+    optional bytes           pubkeys_data = 3;
+    optional bytes           perms_data = 4;
+    optional uint64          delay_us = 5;
+}
+
+message get_permission_last_used {
+    optional bytes           account  = 1;
+    optional bytes           permission = 2;
+}
+
+message get_account_creation_time {
+    optional bytes    account  = 1;
+}
+
+
+message rpc_request {
+    optional message_id   msg_id = 1;
+    optional bytes        data   = 2;
 }
 
 message rpc_response {
-    optional message_id  msg_id = 1;
-    optional object_type type   = 2;
-    optional error       err    = 3;
-    optional bytes       data   = 4;
+    optional message_id   msg_id = 1;
+    optional error        err = 2;
+    optional bytes        data = 3;
 }
-

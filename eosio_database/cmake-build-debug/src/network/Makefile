@@ -152,6 +152,60 @@ connection.cpp.s:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/connection.cpp.s
 .PHONY : connection.cpp.s
 
+connection_manager.o: connection_manager.cpp.o
+
+.PHONY : connection_manager.o
+
+# target to build an object file
+connection_manager.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/connection_manager.cpp.o
+.PHONY : connection_manager.cpp.o
+
+connection_manager.i: connection_manager.cpp.i
+
+.PHONY : connection_manager.i
+
+# target to preprocess a source file
+connection_manager.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/connection_manager.cpp.i
+.PHONY : connection_manager.cpp.i
+
+connection_manager.s: connection_manager.cpp.s
+
+.PHONY : connection_manager.s
+
+# target to generate assembly for a file
+connection_manager.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/connection_manager.cpp.s
+.PHONY : connection_manager.cpp.s
+
+tcp_server.o: tcp_server.cpp.o
+
+.PHONY : tcp_server.o
+
+# target to build an object file
+tcp_server.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.cpp.o
+.PHONY : tcp_server.cpp.o
+
+tcp_server.i: tcp_server.cpp.i
+
+.PHONY : tcp_server.i
+
+# target to preprocess a source file
+tcp_server.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.cpp.i
+.PHONY : tcp_server.cpp.i
+
+tcp_server.s: tcp_server.cpp.s
+
+.PHONY : tcp_server.s
+
+# target to generate assembly for a file
+tcp_server.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.cpp.s
+.PHONY : tcp_server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +218,12 @@ help:
 	@echo "... connection.o"
 	@echo "... connection.i"
 	@echo "... connection.s"
+	@echo "... connection_manager.o"
+	@echo "... connection_manager.i"
+	@echo "... connection_manager.s"
+	@echo "... tcp_server.o"
+	@echo "... tcp_server.i"
+	@echo "... tcp_server.s"
 .PHONY : help
 
 

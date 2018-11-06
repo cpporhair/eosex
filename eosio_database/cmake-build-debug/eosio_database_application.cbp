@@ -236,6 +236,12 @@
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection.cpp">
 			<Option target="network"/>
 		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection_manager.cpp">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/tcp_server.cpp">
+			<Option target="network"/>
+		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.cc">
 			<Option target="protocol"/>
 		</Unit>

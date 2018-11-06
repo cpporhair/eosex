@@ -9,16 +9,17 @@
 #include <network/io_context_pool.hpp>
 #include <network/connection.hpp>
 
-using boost::asio::ip::tcp;
-
 class tcp_server {
 public:
+
+    using tcp = boost::asio::ip::tcp;
+
     tcp_server(uint16_t port);
     tcp_server(const std::string &ip,int16_t port);
     void start_accept(connection_ptr conn,const boost::system::error_code &err);
     void run();
     void stop();
 private:
-    tcp::acceptor     _acceptor;
     io_context_pool   _io_context_pool;
+    tcp::acceptor     _acceptor;
 };
