@@ -1,0 +1,19 @@
+cmake_minimum_required( VERSION 3.10 )
+
+project(eosio_database_application)
+
+set(CMAKE_CXX_STANDARD 17)
+
+include_directories(
+    /usr/include
+    /usr/local/include
+    /usr/local/Cellar/boost/1.67.0_1/include
+    include
+    src
+)
+
+link_directories(
+    /usr/local/Cellar/boost/1.67.0_1/lib
+)
+
+add_subdirectory(src)

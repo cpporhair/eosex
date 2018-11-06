@@ -1,0 +1,1 @@
+add_library(protocol sample.pb.cc fork_database_service.pb.cc)

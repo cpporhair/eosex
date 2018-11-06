@@ -1,0 +1,18 @@
+add_subdirectory(protocol)
+add_subdirectory(rpc_service)
+add_subdirectory(network)
+
+find_package(Protobuf REQUIRED)
+if(PROTOBUF_FOUND)
+    message(STATUS "protobuf library found")
+else()
+    message(FATAL_ERROR "protobuf library is needed but can not be found")
+endif()
+
+add_executable(eosio_database_application main.cpp)
+
+target_link_libraries(
+    eosio_database_application
+    protocol
+    ${PROTOBUF_LIBRARIES}
+)

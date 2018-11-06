@@ -1,0 +1,1 @@
+add_library(rpc_service rpc_service.cpp service_manager.cpp)

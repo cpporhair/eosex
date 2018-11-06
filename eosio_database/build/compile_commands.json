@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/yangwenyu/workspace/eosex/eosio_database/build/src",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/eosio_database_application.dir/main.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/main.cpp",
+  "file": "/Users/yangwenyu/workspace/eosex/eosio_database/src/main.cpp"
+},
+{
+  "directory": "/Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/protocol.dir/sample.pb.cc.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/sample.pb.cc",
+  "file": "/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/sample.pb.cc"
+},
+{
+  "directory": "/Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/rpc_service.dir/rpc_service.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/rpc_service.cpp",
+  "file": "/Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/rpc_service.cpp"
+},
+{
+  "directory": "/Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service",
+  "command": "/usr/bin/clang++   -I/usr/local/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/rpc_service.dir/service_manager.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/service_manager.cpp",
+  "file": "/Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/service_manager.cpp"
+}
+]

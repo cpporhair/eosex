@@ -1,0 +1,2 @@
+/usr/bin/ar qc librpc_service.a  CMakeFiles/rpc_service.dir/rpc_service.cpp.o CMakeFiles/rpc_service.dir/service_manager.cpp.o
+/usr/bin/ranlib librpc_service.a

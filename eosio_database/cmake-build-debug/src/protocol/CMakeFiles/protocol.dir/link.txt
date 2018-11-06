@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprotocol.a  CMakeFiles/protocol.dir/sample.pb.cc.o CMakeFiles/protocol.dir/fork_database_service.pb.cc.o
+/usr/bin/ranlib libprotocol.a

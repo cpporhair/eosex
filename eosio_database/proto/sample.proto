@@ -1,0 +1,86 @@
+syntax = "proto2";
+
+import "google/protobuf/descriptor.proto";
+
+package tutorial;
+
+option cc_generic_services = true;
+
+extend google.protobuf.ServiceOptions {
+    optional uint32 global_service_id = 2000;
+}
+
+extend google.protobuf.MethodOptions {
+    optional uint32 local_method_id = 1000;
+}
+
+message person {
+    required string name = 1;
+    required int32  id = 2;
+    optional string email = 3;
+
+    enum phone_type {
+        MOBILE = 0;
+        HOME   = 1;
+        WORK   = 2;
+    }
+
+    message phone_number {
+        required string number = 1;
+        optional phone_type type = 2 [default = HOME];
+    }
+
+    repeated phone_number phones = 4;
+}
+
+message address_book {
+    required string id = 1;
+    repeated person people = 2;
+}
+
+message request_person {
+    required int32 id = 1;
+}
+
+message request_address_book {
+    optional string id = 1;
+}
+
+message meta {
+    optional uint32 id          = 1;
+    optional uint32 service     = 2;
+    optional uint32 method      = 3;
+}
+
+message error {
+    optional uint32 code = 1;
+    optional string text = 2;
+}
+
+message request_action {
+    optional meta  head = 1;
+    optional bytes data = 2;
+}
+
+message response_action {
+    optional error err  = 1;
+    optional bytes data = 2;
+}
+
+service address_book_service {
+
+    //option (global_service_id) = 1010;
+
+    rpc get_person (request_person) returns (person)/*  {
+        option (local_method_id) = 1;
+    } */;
+
+    rpc add_person (person) returns (person) /* {
+        option (local_method_id) = 2;
+    } */;
+
+    rpc get_address_book (request_address_book) returns (address_book)/*  {
+        option (local_method_id) = 3;
+    } */;
+
+}
