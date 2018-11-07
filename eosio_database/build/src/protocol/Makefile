@@ -125,6 +125,33 @@ protocol/fast:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
 
+fork_database_service.pb.o: fork_database_service.pb.cc.o
+
+.PHONY : fork_database_service.pb.o
+
+# target to build an object file
+fork_database_service.pb.cc.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o
+.PHONY : fork_database_service.pb.cc.o
+
+fork_database_service.pb.i: fork_database_service.pb.cc.i
+
+.PHONY : fork_database_service.pb.i
+
+# target to preprocess a source file
+fork_database_service.pb.cc.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.i
+.PHONY : fork_database_service.pb.cc.i
+
+fork_database_service.pb.s: fork_database_service.pb.cc.s
+
+.PHONY : fork_database_service.pb.s
+
+# target to generate assembly for a file
+fork_database_service.pb.cc.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.s
+.PHONY : fork_database_service.pb.cc.s
+
 sample.pb.o: sample.pb.cc.o
 
 .PHONY : sample.pb.o
@@ -161,6 +188,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... protocol"
+	@echo "... fork_database_service.pb.o"
+	@echo "... fork_database_service.pb.i"
+	@echo "... fork_database_service.pb.s"
 	@echo "... sample.pb.o"
 	@echo "... sample.pb.i"
 	@echo "... sample.pb.s"

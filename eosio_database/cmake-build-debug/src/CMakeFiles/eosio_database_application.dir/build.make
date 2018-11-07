@@ -81,6 +81,7 @@ src/eosio_database_application: src/CMakeFiles/eosio_database_application.dir/ma
 src/eosio_database_application: src/CMakeFiles/eosio_database_application.dir/build.make
 src/eosio_database_application: src/protocol/libprotocol.a
 src/eosio_database_application: /usr/local/lib/libprotobuf.dylib
+src/eosio_database_application: src/network/libnetwork.a
 src/eosio_database_application: src/CMakeFiles/eosio_database_application.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable eosio_database_application"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eosio_database_application.dir/link.txt --verbose=$(VERBOSE)

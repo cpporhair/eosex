@@ -14,12 +14,11 @@ public:
 
     using tcp = boost::asio::ip::tcp;
 
-    tcp_server(uint16_t port);
-    tcp_server(const std::string &ip,int16_t port);
+    tcp_server(uint16_t port,io_context_pool &pool);
     void start_accept(connection_ptr conn,const boost::system::error_code &err);
     void run();
     void stop();
 private:
-    io_context_pool   _io_context_pool;
+    io_context_pool   &_io_context_pool;
     tcp::acceptor     _acceptor;
 };

@@ -433,11 +433,19 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boo
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/asio/write.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/asio/write_at.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/assert.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/arg.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/bind.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/bind_cc.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/bind_mf2_cc.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/bind_mf_cc.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/bind_template.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/mem_fn.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/mem_fn_cc.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/mem_fn_template.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/mem_fn_vw.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/placeholders.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/bind/storage.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/call_traits.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/cerrno.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -535,6 +543,7 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boo
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/checked_delete.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/demangle.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/enable_if.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/is_same.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/no_exceptions_support.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/noncopyable.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/core/ref.hpp
@@ -1179,6 +1188,7 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boo
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/utility/enable_if.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/utility/result_of.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/version.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/visit_each.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/weak_ptr.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/winapi/basic_types.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/winapi/character_code_conversion.hpp

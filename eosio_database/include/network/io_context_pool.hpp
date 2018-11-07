@@ -6,7 +6,7 @@
 #include <memory>
 #include <vector>
 #include <exception>
-#include <functional>
+#include <boost/bind.hpp>
 #include <boost/asio.hpp>
 #include <boost/noncopyable.hpp>
 
@@ -30,8 +30,8 @@ public:
         std::vector<std::shared_ptr<std::thread>> threads;
         for(std::size_t i{0};i < _io_contexts.size();++i) {
             std::shared_ptr<std::thread> thread {
-                    new std::thread{
-                        std::bind(&boost::asio::io_context::run,_io_contexts[i])
+                    new std::thread {
+                        boost::bind(&boost::asio::io_context::run,_io_contexts[i])
                     }
             };
             threads.push_back(thread);

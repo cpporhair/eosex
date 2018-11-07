@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnetwork.a  CMakeFiles/network.dir/connection.cpp.o CMakeFiles/network.dir/tcp_server.cpp.o CMakeFiles/network.dir/connection_manager.cpp.o
+/usr/bin/ranlib libnetwork.a

@@ -19,6 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake"
+  "/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network/CMakeFiles/network.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -434,11 +434,19 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o
  /usr/local/include/boost/asio/write.hpp
  /usr/local/include/boost/asio/write_at.hpp
  /usr/local/include/boost/assert.hpp
+ /usr/local/include/boost/bind.hpp
  /usr/local/include/boost/bind/arg.hpp
+ /usr/local/include/boost/bind/bind.hpp
+ /usr/local/include/boost/bind/bind_cc.hpp
+ /usr/local/include/boost/bind/bind_mf2_cc.hpp
+ /usr/local/include/boost/bind/bind_mf_cc.hpp
+ /usr/local/include/boost/bind/bind_template.hpp
  /usr/local/include/boost/bind/mem_fn.hpp
  /usr/local/include/boost/bind/mem_fn_cc.hpp
  /usr/local/include/boost/bind/mem_fn_template.hpp
  /usr/local/include/boost/bind/mem_fn_vw.hpp
+ /usr/local/include/boost/bind/placeholders.hpp
+ /usr/local/include/boost/bind/storage.hpp
  /usr/local/include/boost/call_traits.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -536,6 +544,7 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o
  /usr/local/include/boost/core/checked_delete.hpp
  /usr/local/include/boost/core/demangle.hpp
  /usr/local/include/boost/core/enable_if.hpp
+ /usr/local/include/boost/core/is_same.hpp
  /usr/local/include/boost/core/no_exceptions_support.hpp
  /usr/local/include/boost/core/noncopyable.hpp
  /usr/local/include/boost/core/ref.hpp
@@ -1180,6 +1189,7 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o
  /usr/local/include/boost/utility/enable_if.hpp
  /usr/local/include/boost/utility/result_of.hpp
  /usr/local/include/boost/version.hpp
+ /usr/local/include/boost/visit_each.hpp
  /usr/local/include/boost/weak_ptr.hpp
  /usr/local/include/boost/winapi/basic_types.hpp
  /usr/local/include/boost/winapi/character_code_conversion.hpp

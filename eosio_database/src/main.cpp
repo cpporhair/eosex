@@ -103,8 +103,16 @@ int main(int argc, char const *argv[]) {
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 
-    tcp_server srv{9988};
+    std::shared_ptr<std::string> msg1;
+    msg1.reset(new std::string{"yyy"});
+    std::shared_ptr<std::string> msg2 = msg1;
+    msg1.reset(new std::string{"bbb"});
+    std::cout << *msg1 << " " << *msg2 << std::endl;
+
+    io_context_pool pool{std::thread::hardware_concurrency()};
+    tcp_server srv{9988,pool};
     srv.run();
+    srv.stop();
 
     auto request = get_block_add_by_block_state_request();
     request->set_data("aaaa");

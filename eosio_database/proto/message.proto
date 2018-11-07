@@ -276,8 +276,8 @@ enum message_id {
     db_get_i64_response                                      = 2007;
     db_next_i64_request                                      = 2008;
     db_next_i64_response                                     = 2009;
-    db_previous_request                                      = 2010;
-    db_previous_response                                     = 2011;
+    db_previous_i64_request                                  = 2010;
+    db_previous_i64_response                                 = 2011;
     db_find_i64_request                                      = 2012;
     db_find_i64_response                                     = 2013;
     db_lowerbound_i64_request                                = 2014;
@@ -448,7 +448,7 @@ message db_next_64 {
     optional uint64 primary = 2;
 }
 
-message db_pervious_i64 {
+message db_previous_i64 {
     optional uint32 itr = 1;
     optional uint64 primary = 2;
 }

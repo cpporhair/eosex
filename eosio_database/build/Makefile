@@ -149,6 +149,19 @@ rpc_service/fast:
 	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/build
 .PHONY : rpc_service/fast
 
+#=============================================================================
+# Target rules for targets named network
+
+# Build rule for target.
+network: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 network
+.PHONY : network
+
+# fast build rule for target.
+network/fast:
+	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
+.PHONY : network/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,6 +173,7 @@ help:
 	@echo "... eosio_database_application"
 	@echo "... protocol"
 	@echo "... rpc_service"
+	@echo "... network"
 .PHONY : help
 
 

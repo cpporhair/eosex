@@ -1,4 +1,4 @@
-# Install script for directory: /Users/yangwenyu/workspace/eosex/eosio_database/src
+# Install script for directory: /Users/yangwenyu/workspace/eosex/eosio_database/src/network
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,13 +30,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol/cmake_install.cmake")
-  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service/cmake_install.cmake")
-  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/cmake_install.cmake")
-
 endif()
 

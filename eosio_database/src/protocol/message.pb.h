@@ -42,7 +42,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[4]
+  static const ::google::protobuf::internal::ParseTable schema[68]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -50,9 +50,201 @@ struct TableStruct_message_2eproto {
 };
 void AddDescriptors_message_2eproto();
 namespace action_message {
+class check_permission_authorization;
+class check_permission_authorizationDefaultTypeInternal;
+extern check_permission_authorizationDefaultTypeInternal _check_permission_authorization_default_instance_;
+class check_transaction_authorization;
+class check_transaction_authorizationDefaultTypeInternal;
+extern check_transaction_authorizationDefaultTypeInternal _check_transaction_authorization_default_instance_;
+class db_end_i64;
+class db_end_i64DefaultTypeInternal;
+extern db_end_i64DefaultTypeInternal _db_end_i64_default_instance_;
+class db_find_i64;
+class db_find_i64DefaultTypeInternal;
+extern db_find_i64DefaultTypeInternal _db_find_i64_default_instance_;
+class db_get_i64;
+class db_get_i64DefaultTypeInternal;
+extern db_get_i64DefaultTypeInternal _db_get_i64_default_instance_;
+class db_idx128_end;
+class db_idx128_endDefaultTypeInternal;
+extern db_idx128_endDefaultTypeInternal _db_idx128_end_default_instance_;
+class db_idx128_find_primary;
+class db_idx128_find_primaryDefaultTypeInternal;
+extern db_idx128_find_primaryDefaultTypeInternal _db_idx128_find_primary_default_instance_;
+class db_idx128_find_secondary;
+class db_idx128_find_secondaryDefaultTypeInternal;
+extern db_idx128_find_secondaryDefaultTypeInternal _db_idx128_find_secondary_default_instance_;
+class db_idx128_lowerbound;
+class db_idx128_lowerboundDefaultTypeInternal;
+extern db_idx128_lowerboundDefaultTypeInternal _db_idx128_lowerbound_default_instance_;
+class db_idx128_next;
+class db_idx128_nextDefaultTypeInternal;
+extern db_idx128_nextDefaultTypeInternal _db_idx128_next_default_instance_;
+class db_idx128_previous;
+class db_idx128_previousDefaultTypeInternal;
+extern db_idx128_previousDefaultTypeInternal _db_idx128_previous_default_instance_;
+class db_idx128_remove;
+class db_idx128_removeDefaultTypeInternal;
+extern db_idx128_removeDefaultTypeInternal _db_idx128_remove_default_instance_;
+class db_idx128_store;
+class db_idx128_storeDefaultTypeInternal;
+extern db_idx128_storeDefaultTypeInternal _db_idx128_store_default_instance_;
+class db_idx128_update;
+class db_idx128_updateDefaultTypeInternal;
+extern db_idx128_updateDefaultTypeInternal _db_idx128_update_default_instance_;
+class db_idx128_upperbound;
+class db_idx128_upperboundDefaultTypeInternal;
+extern db_idx128_upperboundDefaultTypeInternal _db_idx128_upperbound_default_instance_;
+class db_idx256_end;
+class db_idx256_endDefaultTypeInternal;
+extern db_idx256_endDefaultTypeInternal _db_idx256_end_default_instance_;
+class db_idx256_find_primary;
+class db_idx256_find_primaryDefaultTypeInternal;
+extern db_idx256_find_primaryDefaultTypeInternal _db_idx256_find_primary_default_instance_;
+class db_idx256_find_secondary;
+class db_idx256_find_secondaryDefaultTypeInternal;
+extern db_idx256_find_secondaryDefaultTypeInternal _db_idx256_find_secondary_default_instance_;
+class db_idx256_lowerbound;
+class db_idx256_lowerboundDefaultTypeInternal;
+extern db_idx256_lowerboundDefaultTypeInternal _db_idx256_lowerbound_default_instance_;
+class db_idx256_next;
+class db_idx256_nextDefaultTypeInternal;
+extern db_idx256_nextDefaultTypeInternal _db_idx256_next_default_instance_;
+class db_idx256_previous;
+class db_idx256_previousDefaultTypeInternal;
+extern db_idx256_previousDefaultTypeInternal _db_idx256_previous_default_instance_;
+class db_idx256_remove;
+class db_idx256_removeDefaultTypeInternal;
+extern db_idx256_removeDefaultTypeInternal _db_idx256_remove_default_instance_;
+class db_idx256_store;
+class db_idx256_storeDefaultTypeInternal;
+extern db_idx256_storeDefaultTypeInternal _db_idx256_store_default_instance_;
+class db_idx256_update;
+class db_idx256_updateDefaultTypeInternal;
+extern db_idx256_updateDefaultTypeInternal _db_idx256_update_default_instance_;
+class db_idx256_upperbound;
+class db_idx256_upperboundDefaultTypeInternal;
+extern db_idx256_upperboundDefaultTypeInternal _db_idx256_upperbound_default_instance_;
+class db_idx64_end;
+class db_idx64_endDefaultTypeInternal;
+extern db_idx64_endDefaultTypeInternal _db_idx64_end_default_instance_;
+class db_idx64_find_primary;
+class db_idx64_find_primaryDefaultTypeInternal;
+extern db_idx64_find_primaryDefaultTypeInternal _db_idx64_find_primary_default_instance_;
+class db_idx64_find_secondary;
+class db_idx64_find_secondaryDefaultTypeInternal;
+extern db_idx64_find_secondaryDefaultTypeInternal _db_idx64_find_secondary_default_instance_;
+class db_idx64_lowerbound;
+class db_idx64_lowerboundDefaultTypeInternal;
+extern db_idx64_lowerboundDefaultTypeInternal _db_idx64_lowerbound_default_instance_;
+class db_idx64_next;
+class db_idx64_nextDefaultTypeInternal;
+extern db_idx64_nextDefaultTypeInternal _db_idx64_next_default_instance_;
+class db_idx64_previous;
+class db_idx64_previousDefaultTypeInternal;
+extern db_idx64_previousDefaultTypeInternal _db_idx64_previous_default_instance_;
+class db_idx64_remove;
+class db_idx64_removeDefaultTypeInternal;
+extern db_idx64_removeDefaultTypeInternal _db_idx64_remove_default_instance_;
+class db_idx64_store;
+class db_idx64_storeDefaultTypeInternal;
+extern db_idx64_storeDefaultTypeInternal _db_idx64_store_default_instance_;
+class db_idx64_update;
+class db_idx64_updateDefaultTypeInternal;
+extern db_idx64_updateDefaultTypeInternal _db_idx64_update_default_instance_;
+class db_idx64_upperbound;
+class db_idx64_upperboundDefaultTypeInternal;
+extern db_idx64_upperboundDefaultTypeInternal _db_idx64_upperbound_default_instance_;
+class db_idx_double_end;
+class db_idx_double_endDefaultTypeInternal;
+extern db_idx_double_endDefaultTypeInternal _db_idx_double_end_default_instance_;
+class db_idx_double_find_primary;
+class db_idx_double_find_primaryDefaultTypeInternal;
+extern db_idx_double_find_primaryDefaultTypeInternal _db_idx_double_find_primary_default_instance_;
+class db_idx_double_find_secondary;
+class db_idx_double_find_secondaryDefaultTypeInternal;
+extern db_idx_double_find_secondaryDefaultTypeInternal _db_idx_double_find_secondary_default_instance_;
+class db_idx_double_lowerbound;
+class db_idx_double_lowerboundDefaultTypeInternal;
+extern db_idx_double_lowerboundDefaultTypeInternal _db_idx_double_lowerbound_default_instance_;
+class db_idx_double_next;
+class db_idx_double_nextDefaultTypeInternal;
+extern db_idx_double_nextDefaultTypeInternal _db_idx_double_next_default_instance_;
+class db_idx_double_previous;
+class db_idx_double_previousDefaultTypeInternal;
+extern db_idx_double_previousDefaultTypeInternal _db_idx_double_previous_default_instance_;
+class db_idx_double_remove;
+class db_idx_double_removeDefaultTypeInternal;
+extern db_idx_double_removeDefaultTypeInternal _db_idx_double_remove_default_instance_;
+class db_idx_double_store;
+class db_idx_double_storeDefaultTypeInternal;
+extern db_idx_double_storeDefaultTypeInternal _db_idx_double_store_default_instance_;
+class db_idx_double_update;
+class db_idx_double_updateDefaultTypeInternal;
+extern db_idx_double_updateDefaultTypeInternal _db_idx_double_update_default_instance_;
+class db_idx_double_upperbound;
+class db_idx_double_upperboundDefaultTypeInternal;
+extern db_idx_double_upperboundDefaultTypeInternal _db_idx_double_upperbound_default_instance_;
+class db_idx_long_double_end;
+class db_idx_long_double_endDefaultTypeInternal;
+extern db_idx_long_double_endDefaultTypeInternal _db_idx_long_double_end_default_instance_;
+class db_idx_long_double_find_primary;
+class db_idx_long_double_find_primaryDefaultTypeInternal;
+extern db_idx_long_double_find_primaryDefaultTypeInternal _db_idx_long_double_find_primary_default_instance_;
+class db_idx_long_double_find_secondary;
+class db_idx_long_double_find_secondaryDefaultTypeInternal;
+extern db_idx_long_double_find_secondaryDefaultTypeInternal _db_idx_long_double_find_secondary_default_instance_;
+class db_idx_long_double_lowerbound;
+class db_idx_long_double_lowerboundDefaultTypeInternal;
+extern db_idx_long_double_lowerboundDefaultTypeInternal _db_idx_long_double_lowerbound_default_instance_;
+class db_idx_long_double_next;
+class db_idx_long_double_nextDefaultTypeInternal;
+extern db_idx_long_double_nextDefaultTypeInternal _db_idx_long_double_next_default_instance_;
+class db_idx_long_double_previous;
+class db_idx_long_double_previousDefaultTypeInternal;
+extern db_idx_long_double_previousDefaultTypeInternal _db_idx_long_double_previous_default_instance_;
+class db_idx_long_double_remove;
+class db_idx_long_double_removeDefaultTypeInternal;
+extern db_idx_long_double_removeDefaultTypeInternal _db_idx_long_double_remove_default_instance_;
+class db_idx_long_double_store;
+class db_idx_long_double_storeDefaultTypeInternal;
+extern db_idx_long_double_storeDefaultTypeInternal _db_idx_long_double_store_default_instance_;
+class db_idx_long_double_update;
+class db_idx_long_double_updateDefaultTypeInternal;
+extern db_idx_long_double_updateDefaultTypeInternal _db_idx_long_double_update_default_instance_;
+class db_idx_long_double_upperbound;
+class db_idx_long_double_upperboundDefaultTypeInternal;
+extern db_idx_long_double_upperboundDefaultTypeInternal _db_idx_long_double_upperbound_default_instance_;
+class db_lowerbound_i64;
+class db_lowerbound_i64DefaultTypeInternal;
+extern db_lowerbound_i64DefaultTypeInternal _db_lowerbound_i64_default_instance_;
+class db_next_64;
+class db_next_64DefaultTypeInternal;
+extern db_next_64DefaultTypeInternal _db_next_64_default_instance_;
+class db_pervious_i64;
+class db_pervious_i64DefaultTypeInternal;
+extern db_pervious_i64DefaultTypeInternal _db_pervious_i64_default_instance_;
+class db_remove_i64;
+class db_remove_i64DefaultTypeInternal;
+extern db_remove_i64DefaultTypeInternal _db_remove_i64_default_instance_;
+class db_stroe_i64;
+class db_stroe_i64DefaultTypeInternal;
+extern db_stroe_i64DefaultTypeInternal _db_stroe_i64_default_instance_;
+class db_update_i64;
+class db_update_i64DefaultTypeInternal;
+extern db_update_i64DefaultTypeInternal _db_update_i64_default_instance_;
+class db_upperbound_i64;
+class db_upperbound_i64DefaultTypeInternal;
+extern db_upperbound_i64DefaultTypeInternal _db_upperbound_i64_default_instance_;
 class error;
 class errorDefaultTypeInternal;
 extern errorDefaultTypeInternal _error_default_instance_;
+class get_account_creation_time;
+class get_account_creation_timeDefaultTypeInternal;
+extern get_account_creation_timeDefaultTypeInternal _get_account_creation_time_default_instance_;
+class get_permission_last_used;
+class get_permission_last_usedDefaultTypeInternal;
+extern get_permission_last_usedDefaultTypeInternal _get_permission_last_used_default_instance_;
 class meta;
 class metaDefaultTypeInternal;
 extern metaDefaultTypeInternal _meta_default_instance_;
@@ -65,7 +257,71 @@ extern rpc_responseDefaultTypeInternal _rpc_response_default_instance_;
 }  // namespace action_message
 namespace google {
 namespace protobuf {
+template<> ::action_message::check_permission_authorization* Arena::CreateMaybeMessage<::action_message::check_permission_authorization>(Arena*);
+template<> ::action_message::check_transaction_authorization* Arena::CreateMaybeMessage<::action_message::check_transaction_authorization>(Arena*);
+template<> ::action_message::db_end_i64* Arena::CreateMaybeMessage<::action_message::db_end_i64>(Arena*);
+template<> ::action_message::db_find_i64* Arena::CreateMaybeMessage<::action_message::db_find_i64>(Arena*);
+template<> ::action_message::db_get_i64* Arena::CreateMaybeMessage<::action_message::db_get_i64>(Arena*);
+template<> ::action_message::db_idx128_end* Arena::CreateMaybeMessage<::action_message::db_idx128_end>(Arena*);
+template<> ::action_message::db_idx128_find_primary* Arena::CreateMaybeMessage<::action_message::db_idx128_find_primary>(Arena*);
+template<> ::action_message::db_idx128_find_secondary* Arena::CreateMaybeMessage<::action_message::db_idx128_find_secondary>(Arena*);
+template<> ::action_message::db_idx128_lowerbound* Arena::CreateMaybeMessage<::action_message::db_idx128_lowerbound>(Arena*);
+template<> ::action_message::db_idx128_next* Arena::CreateMaybeMessage<::action_message::db_idx128_next>(Arena*);
+template<> ::action_message::db_idx128_previous* Arena::CreateMaybeMessage<::action_message::db_idx128_previous>(Arena*);
+template<> ::action_message::db_idx128_remove* Arena::CreateMaybeMessage<::action_message::db_idx128_remove>(Arena*);
+template<> ::action_message::db_idx128_store* Arena::CreateMaybeMessage<::action_message::db_idx128_store>(Arena*);
+template<> ::action_message::db_idx128_update* Arena::CreateMaybeMessage<::action_message::db_idx128_update>(Arena*);
+template<> ::action_message::db_idx128_upperbound* Arena::CreateMaybeMessage<::action_message::db_idx128_upperbound>(Arena*);
+template<> ::action_message::db_idx256_end* Arena::CreateMaybeMessage<::action_message::db_idx256_end>(Arena*);
+template<> ::action_message::db_idx256_find_primary* Arena::CreateMaybeMessage<::action_message::db_idx256_find_primary>(Arena*);
+template<> ::action_message::db_idx256_find_secondary* Arena::CreateMaybeMessage<::action_message::db_idx256_find_secondary>(Arena*);
+template<> ::action_message::db_idx256_lowerbound* Arena::CreateMaybeMessage<::action_message::db_idx256_lowerbound>(Arena*);
+template<> ::action_message::db_idx256_next* Arena::CreateMaybeMessage<::action_message::db_idx256_next>(Arena*);
+template<> ::action_message::db_idx256_previous* Arena::CreateMaybeMessage<::action_message::db_idx256_previous>(Arena*);
+template<> ::action_message::db_idx256_remove* Arena::CreateMaybeMessage<::action_message::db_idx256_remove>(Arena*);
+template<> ::action_message::db_idx256_store* Arena::CreateMaybeMessage<::action_message::db_idx256_store>(Arena*);
+template<> ::action_message::db_idx256_update* Arena::CreateMaybeMessage<::action_message::db_idx256_update>(Arena*);
+template<> ::action_message::db_idx256_upperbound* Arena::CreateMaybeMessage<::action_message::db_idx256_upperbound>(Arena*);
+template<> ::action_message::db_idx64_end* Arena::CreateMaybeMessage<::action_message::db_idx64_end>(Arena*);
+template<> ::action_message::db_idx64_find_primary* Arena::CreateMaybeMessage<::action_message::db_idx64_find_primary>(Arena*);
+template<> ::action_message::db_idx64_find_secondary* Arena::CreateMaybeMessage<::action_message::db_idx64_find_secondary>(Arena*);
+template<> ::action_message::db_idx64_lowerbound* Arena::CreateMaybeMessage<::action_message::db_idx64_lowerbound>(Arena*);
+template<> ::action_message::db_idx64_next* Arena::CreateMaybeMessage<::action_message::db_idx64_next>(Arena*);
+template<> ::action_message::db_idx64_previous* Arena::CreateMaybeMessage<::action_message::db_idx64_previous>(Arena*);
+template<> ::action_message::db_idx64_remove* Arena::CreateMaybeMessage<::action_message::db_idx64_remove>(Arena*);
+template<> ::action_message::db_idx64_store* Arena::CreateMaybeMessage<::action_message::db_idx64_store>(Arena*);
+template<> ::action_message::db_idx64_update* Arena::CreateMaybeMessage<::action_message::db_idx64_update>(Arena*);
+template<> ::action_message::db_idx64_upperbound* Arena::CreateMaybeMessage<::action_message::db_idx64_upperbound>(Arena*);
+template<> ::action_message::db_idx_double_end* Arena::CreateMaybeMessage<::action_message::db_idx_double_end>(Arena*);
+template<> ::action_message::db_idx_double_find_primary* Arena::CreateMaybeMessage<::action_message::db_idx_double_find_primary>(Arena*);
+template<> ::action_message::db_idx_double_find_secondary* Arena::CreateMaybeMessage<::action_message::db_idx_double_find_secondary>(Arena*);
+template<> ::action_message::db_idx_double_lowerbound* Arena::CreateMaybeMessage<::action_message::db_idx_double_lowerbound>(Arena*);
+template<> ::action_message::db_idx_double_next* Arena::CreateMaybeMessage<::action_message::db_idx_double_next>(Arena*);
+template<> ::action_message::db_idx_double_previous* Arena::CreateMaybeMessage<::action_message::db_idx_double_previous>(Arena*);
+template<> ::action_message::db_idx_double_remove* Arena::CreateMaybeMessage<::action_message::db_idx_double_remove>(Arena*);
+template<> ::action_message::db_idx_double_store* Arena::CreateMaybeMessage<::action_message::db_idx_double_store>(Arena*);
+template<> ::action_message::db_idx_double_update* Arena::CreateMaybeMessage<::action_message::db_idx_double_update>(Arena*);
+template<> ::action_message::db_idx_double_upperbound* Arena::CreateMaybeMessage<::action_message::db_idx_double_upperbound>(Arena*);
+template<> ::action_message::db_idx_long_double_end* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_end>(Arena*);
+template<> ::action_message::db_idx_long_double_find_primary* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_find_primary>(Arena*);
+template<> ::action_message::db_idx_long_double_find_secondary* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_find_secondary>(Arena*);
+template<> ::action_message::db_idx_long_double_lowerbound* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_lowerbound>(Arena*);
+template<> ::action_message::db_idx_long_double_next* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_next>(Arena*);
+template<> ::action_message::db_idx_long_double_previous* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_previous>(Arena*);
+template<> ::action_message::db_idx_long_double_remove* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_remove>(Arena*);
+template<> ::action_message::db_idx_long_double_store* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_store>(Arena*);
+template<> ::action_message::db_idx_long_double_update* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_update>(Arena*);
+template<> ::action_message::db_idx_long_double_upperbound* Arena::CreateMaybeMessage<::action_message::db_idx_long_double_upperbound>(Arena*);
+template<> ::action_message::db_lowerbound_i64* Arena::CreateMaybeMessage<::action_message::db_lowerbound_i64>(Arena*);
+template<> ::action_message::db_next_64* Arena::CreateMaybeMessage<::action_message::db_next_64>(Arena*);
+template<> ::action_message::db_pervious_i64* Arena::CreateMaybeMessage<::action_message::db_pervious_i64>(Arena*);
+template<> ::action_message::db_remove_i64* Arena::CreateMaybeMessage<::action_message::db_remove_i64>(Arena*);
+template<> ::action_message::db_stroe_i64* Arena::CreateMaybeMessage<::action_message::db_stroe_i64>(Arena*);
+template<> ::action_message::db_update_i64* Arena::CreateMaybeMessage<::action_message::db_update_i64>(Arena*);
+template<> ::action_message::db_upperbound_i64* Arena::CreateMaybeMessage<::action_message::db_upperbound_i64>(Arena*);
 template<> ::action_message::error* Arena::CreateMaybeMessage<::action_message::error>(Arena*);
+template<> ::action_message::get_account_creation_time* Arena::CreateMaybeMessage<::action_message::get_account_creation_time>(Arena*);
+template<> ::action_message::get_permission_last_used* Arena::CreateMaybeMessage<::action_message::get_permission_last_used>(Arena*);
 template<> ::action_message::meta* Arena::CreateMaybeMessage<::action_message::meta>(Arena*);
 template<> ::action_message::rpc_request* Arena::CreateMaybeMessage<::action_message::rpc_request>(Arena*);
 template<> ::action_message::rpc_response* Arena::CreateMaybeMessage<::action_message::rpc_response>(Arena*);
@@ -347,12 +603,140 @@ enum message_id {
   reversible_block_update_response = 1215,
   reversible_block_remove_request = 1216,
   reversible_block_remove_response = 1217,
-  permission_level_check_request = 2000,
-  permission_level_check_response = 2001
+  db_store_i64_request = 2000,
+  db_store_i64_response = 2001,
+  db_update_i64_request = 2002,
+  db_update_i64_response = 2003,
+  db_remove_i64_request = 2004,
+  db_remove_i64_response = 2005,
+  db_get_i64_request = 2006,
+  db_get_i64_response = 2007,
+  db_next_i64_request = 2008,
+  db_next_i64_response = 2009,
+  db_previous_request = 2010,
+  db_previous_response = 2011,
+  db_find_i64_request = 2012,
+  db_find_i64_response = 2013,
+  db_lowerbound_i64_request = 2014,
+  db_lowerbound_i64_response = 2015,
+  db_upperbound_i64_request = 2016,
+  db_upperbound_i64_response = 2017,
+  db_end_i64_request = 2018,
+  db_end_i64_response = 2019,
+  db_idx64_store_request = 2020,
+  db_idx64_store_response = 2021,
+  db_idx64_update_request = 2022,
+  db_idx64_update_response = 2023,
+  db_idx64_remove_request = 2024,
+  db_idx64_remove_response = 2025,
+  db_idx64_find_secondary_request = 2026,
+  db_idx64_find_secondary_response = 2027,
+  db_idx64_find_primary_request = 2028,
+  db_idx64_find_primary_response = 2029,
+  db_idx64_lowerbound_request = 2030,
+  db_idx64_lowerbound_response = 2031,
+  db_idx64_upperbound_request = 2032,
+  db_idx64_upperbound_response = 2033,
+  db_idx64_end_request = 2034,
+  db_idx64_end_response = 2035,
+  db_idx64_next_request = 2036,
+  db_idx64_next_response = 2037,
+  db_idx64_previous_request = 2038,
+  db_idx64_previous_response = 2039,
+  db_idx128_store_request = 2040,
+  db_idx128_store_response = 2041,
+  db_idx128_update_request = 2042,
+  db_idx128_update_response = 2043,
+  db_idx128_remove_request = 2044,
+  db_idx128_remove_response = 2045,
+  db_idx128_find_secondary_request = 2046,
+  db_idx128_find_secondary_response = 2047,
+  db_idx128_find_primary_request = 2048,
+  db_idx128_find_primary_response = 2049,
+  db_idx128_lowerbound_request = 2050,
+  db_idx128_lowerbound_response = 2051,
+  db_idx128_upperbound_request = 2052,
+  db_idx128_upperbound_response = 2053,
+  db_idx128_end_request = 2054,
+  db_idx128_end_response = 2055,
+  db_idx128_next_request = 2056,
+  db_idx128_next_response = 2057,
+  db_idx128_previous_request = 2058,
+  db_idx128_previous_response = 2059,
+  db_idx256_store_request = 2060,
+  db_idx256_store_response = 2061,
+  db_idx256_update_request = 2062,
+  db_idx256_update_response = 2063,
+  db_idx256_remove_request = 2064,
+  db_idx256_remove_response = 2065,
+  db_idx256_find_secondary_request = 2066,
+  db_idx256_find_secondary_response = 2067,
+  db_idx256_find_primary_request = 2068,
+  db_idx256_find_primary_response = 2069,
+  db_idx256_lowerbound_request = 2070,
+  db_idx256_lowerbound_response = 2071,
+  db_idx256_upperbound_request = 2072,
+  db_idx256_upperbound_response = 2073,
+  db_idx256_end_request = 2074,
+  db_idx256_end_response = 2075,
+  db_idx256_next_request = 2076,
+  db_idx256_next_response = 2077,
+  db_idx256_previous_request = 2078,
+  db_idx256_previous_response = 2079,
+  db_idx_double_store_request = 2080,
+  db_idx_double_store_response = 2081,
+  db_idx_double_update_request = 2082,
+  db_idx_double_update_response = 2083,
+  db_idx_double_remove_request = 2084,
+  db_idx_double_remove_response = 2085,
+  db_idx_double_find_secondary_request = 2086,
+  db_idx_double_find_secondary_response = 2087,
+  db_idx_double_find_primary_request = 2088,
+  db_idx_double_find_primary_response = 2089,
+  db_idx_double_lowerbound_request = 2090,
+  db_idx_double_lowerbound_response = 2091,
+  db_idx_double_upperbound_request = 2092,
+  db_idx_double_upperbound_response = 2093,
+  db_idx_double_end_request = 2094,
+  db_idx_double_end_response = 2095,
+  db_idx_double_next_request = 2096,
+  db_idx_double_next_response = 2097,
+  db_idx_double_previous_request = 2098,
+  db_idx_double_previous_response = 2099,
+  db_idx_long_double_store_request = 2100,
+  db_idx_long_double_store_response = 2101,
+  db_idx_long_double_update_request = 2102,
+  db_idx_long_double_update_response = 2103,
+  db_idx_long_double_remove_request = 2104,
+  db_idx_long_double_remove_response = 2105,
+  db_idx_long_double_find_secondary_request = 2106,
+  db_idx_long_double_find_secondary_response = 2107,
+  db_idx_long_double_find_primary_request = 2108,
+  db_idx_long_double_find_primary_response = 2109,
+  db_idx_long_double_lowerbound_request = 2110,
+  db_idx_long_double_lowerbound_response = 2111,
+  db_idx_long_double_upperbound_request = 2112,
+  db_idx_long_double_upperbound_response = 2113,
+  db_idx_long_double_end_request = 2114,
+  db_idx_long_double_end_response = 2115,
+  db_idx_long_double_next_request = 2116,
+  db_idx_long_double_next_response = 2117,
+  db_idx_long_double_previous_request = 2118,
+  db_idx_long_double_previous_response = 2119,
+  permission_level_check_request = 3000,
+  permission_level_check_response = 3001,
+  check_transaction_authorization_request = 3002,
+  check_transaction_authorization_response = 3003,
+  check_permission_authorization_request = 3004,
+  check_permission_authorization_response = 3005,
+  get_permission_last_used_request = 3006,
+  get_permission_last_used_response = 3007,
+  get_account_creation_time_request = 3008,
+  get_account_creation_time_response = 3009
 };
 bool message_id_IsValid(int value);
 const message_id message_id_MIN = account_create_request;
-const message_id message_id_MAX = permission_level_check_response;
+const message_id message_id_MAX = get_account_creation_time_response;
 const int message_id_ARRAYSIZE = message_id_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* message_id_descriptor();
@@ -639,6 +1023,9310 @@ class meta : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 };
 // -------------------------------------------------------------------
 
+class db_stroe_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_stroe_i64) */ {
+ public:
+  db_stroe_i64();
+  virtual ~db_stroe_i64();
+
+  db_stroe_i64(const db_stroe_i64& from);
+
+  inline db_stroe_i64& operator=(const db_stroe_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_stroe_i64(db_stroe_i64&& from) noexcept
+    : db_stroe_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_stroe_i64& operator=(db_stroe_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_stroe_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_stroe_i64* internal_default_instance() {
+    return reinterpret_cast<const db_stroe_i64*>(
+               &_db_stroe_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(db_stroe_i64* other);
+  friend void swap(db_stroe_i64& a, db_stroe_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_stroe_i64* New() const final {
+    return CreateMaybeMessage<db_stroe_i64>(NULL);
+  }
+
+  db_stroe_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_stroe_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_stroe_i64& from);
+  void MergeFrom(const db_stroe_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_stroe_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes buffer = 5;
+  bool has_buffer() const;
+  void clear_buffer();
+  static const int kBufferFieldNumber = 5;
+  const ::std::string& buffer() const;
+  void set_buffer(const ::std::string& value);
+  #if LANG_CXX11
+  void set_buffer(::std::string&& value);
+  #endif
+  void set_buffer(const char* value);
+  void set_buffer(const void* value, size_t size);
+  ::std::string* mutable_buffer();
+  ::std::string* release_buffer();
+  void set_allocated_buffer(::std::string* buffer);
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // optional uint64 buffer_size = 6;
+  bool has_buffer_size() const;
+  void clear_buffer_size();
+  static const int kBufferSizeFieldNumber = 6;
+  ::google::protobuf::uint64 buffer_size() const;
+  void set_buffer_size(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_stroe_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr buffer_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  ::google::protobuf::uint64 buffer_size_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_update_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_update_i64) */ {
+ public:
+  db_update_i64();
+  virtual ~db_update_i64();
+
+  db_update_i64(const db_update_i64& from);
+
+  inline db_update_i64& operator=(const db_update_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_update_i64(db_update_i64&& from) noexcept
+    : db_update_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_update_i64& operator=(db_update_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_update_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_update_i64* internal_default_instance() {
+    return reinterpret_cast<const db_update_i64*>(
+               &_db_update_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(db_update_i64* other);
+  friend void swap(db_update_i64& a, db_update_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_update_i64* New() const final {
+    return CreateMaybeMessage<db_update_i64>(NULL);
+  }
+
+  db_update_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_update_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_update_i64& from);
+  void MergeFrom(const db_update_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_update_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes buffer = 3;
+  bool has_buffer() const;
+  void clear_buffer();
+  static const int kBufferFieldNumber = 3;
+  const ::std::string& buffer() const;
+  void set_buffer(const ::std::string& value);
+  #if LANG_CXX11
+  void set_buffer(::std::string&& value);
+  #endif
+  void set_buffer(const char* value);
+  void set_buffer(const void* value, size_t size);
+  ::std::string* mutable_buffer();
+  ::std::string* release_buffer();
+  void set_allocated_buffer(::std::string* buffer);
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 buffer_size = 4;
+  bool has_buffer_size() const;
+  void clear_buffer_size();
+  static const int kBufferSizeFieldNumber = 4;
+  ::google::protobuf::uint64 buffer_size() const;
+  void set_buffer_size(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_update_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr buffer_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 buffer_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_remove_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_remove_i64) */ {
+ public:
+  db_remove_i64();
+  virtual ~db_remove_i64();
+
+  db_remove_i64(const db_remove_i64& from);
+
+  inline db_remove_i64& operator=(const db_remove_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_remove_i64(db_remove_i64&& from) noexcept
+    : db_remove_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_remove_i64& operator=(db_remove_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_remove_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_remove_i64* internal_default_instance() {
+    return reinterpret_cast<const db_remove_i64*>(
+               &_db_remove_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(db_remove_i64* other);
+  friend void swap(db_remove_i64& a, db_remove_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_remove_i64* New() const final {
+    return CreateMaybeMessage<db_remove_i64>(NULL);
+  }
+
+  db_remove_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_remove_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_remove_i64& from);
+  void MergeFrom(const db_remove_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_remove_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_remove_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_get_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_get_i64) */ {
+ public:
+  db_get_i64();
+  virtual ~db_get_i64();
+
+  db_get_i64(const db_get_i64& from);
+
+  inline db_get_i64& operator=(const db_get_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_get_i64(db_get_i64&& from) noexcept
+    : db_get_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_get_i64& operator=(db_get_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_get_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_get_i64* internal_default_instance() {
+    return reinterpret_cast<const db_get_i64*>(
+               &_db_get_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(db_get_i64* other);
+  friend void swap(db_get_i64& a, db_get_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_get_i64* New() const final {
+    return CreateMaybeMessage<db_get_i64>(NULL);
+  }
+
+  db_get_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_get_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_get_i64& from);
+  void MergeFrom(const db_get_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_get_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes buffer = 2;
+  bool has_buffer() const;
+  void clear_buffer();
+  static const int kBufferFieldNumber = 2;
+  const ::std::string& buffer() const;
+  void set_buffer(const ::std::string& value);
+  #if LANG_CXX11
+  void set_buffer(::std::string&& value);
+  #endif
+  void set_buffer(const char* value);
+  void set_buffer(const void* value, size_t size);
+  ::std::string* mutable_buffer();
+  ::std::string* release_buffer();
+  void set_allocated_buffer(::std::string* buffer);
+
+  // optional uint64 buffer_size = 3;
+  bool has_buffer_size() const;
+  void clear_buffer_size();
+  static const int kBufferSizeFieldNumber = 3;
+  ::google::protobuf::uint64 buffer_size() const;
+  void set_buffer_size(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_get_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr buffer_;
+  ::google::protobuf::uint64 buffer_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_next_64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_next_64) */ {
+ public:
+  db_next_64();
+  virtual ~db_next_64();
+
+  db_next_64(const db_next_64& from);
+
+  inline db_next_64& operator=(const db_next_64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_next_64(db_next_64&& from) noexcept
+    : db_next_64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_next_64& operator=(db_next_64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_next_64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_next_64* internal_default_instance() {
+    return reinterpret_cast<const db_next_64*>(
+               &_db_next_64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(db_next_64* other);
+  friend void swap(db_next_64& a, db_next_64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_next_64* New() const final {
+    return CreateMaybeMessage<db_next_64>(NULL);
+  }
+
+  db_next_64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_next_64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_next_64& from);
+  void MergeFrom(const db_next_64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_next_64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_next_64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_pervious_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_pervious_i64) */ {
+ public:
+  db_pervious_i64();
+  virtual ~db_pervious_i64();
+
+  db_pervious_i64(const db_pervious_i64& from);
+
+  inline db_pervious_i64& operator=(const db_pervious_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_pervious_i64(db_pervious_i64&& from) noexcept
+    : db_pervious_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_pervious_i64& operator=(db_pervious_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_pervious_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_pervious_i64* internal_default_instance() {
+    return reinterpret_cast<const db_pervious_i64*>(
+               &_db_pervious_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(db_pervious_i64* other);
+  friend void swap(db_pervious_i64& a, db_pervious_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_pervious_i64* New() const final {
+    return CreateMaybeMessage<db_pervious_i64>(NULL);
+  }
+
+  db_pervious_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_pervious_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_pervious_i64& from);
+  void MergeFrom(const db_pervious_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_pervious_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_pervious_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_find_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_find_i64) */ {
+ public:
+  db_find_i64();
+  virtual ~db_find_i64();
+
+  db_find_i64(const db_find_i64& from);
+
+  inline db_find_i64& operator=(const db_find_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_find_i64(db_find_i64&& from) noexcept
+    : db_find_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_find_i64& operator=(db_find_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_find_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_find_i64* internal_default_instance() {
+    return reinterpret_cast<const db_find_i64*>(
+               &_db_find_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  void Swap(db_find_i64* other);
+  friend void swap(db_find_i64& a, db_find_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_find_i64* New() const final {
+    return CreateMaybeMessage<db_find_i64>(NULL);
+  }
+
+  db_find_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_find_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_find_i64& from);
+  void MergeFrom(const db_find_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_find_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_find_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_lowerbound_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_lowerbound_i64) */ {
+ public:
+  db_lowerbound_i64();
+  virtual ~db_lowerbound_i64();
+
+  db_lowerbound_i64(const db_lowerbound_i64& from);
+
+  inline db_lowerbound_i64& operator=(const db_lowerbound_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_lowerbound_i64(db_lowerbound_i64&& from) noexcept
+    : db_lowerbound_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_lowerbound_i64& operator=(db_lowerbound_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_lowerbound_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_lowerbound_i64* internal_default_instance() {
+    return reinterpret_cast<const db_lowerbound_i64*>(
+               &_db_lowerbound_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  void Swap(db_lowerbound_i64* other);
+  friend void swap(db_lowerbound_i64& a, db_lowerbound_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_lowerbound_i64* New() const final {
+    return CreateMaybeMessage<db_lowerbound_i64>(NULL);
+  }
+
+  db_lowerbound_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_lowerbound_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_lowerbound_i64& from);
+  void MergeFrom(const db_lowerbound_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_lowerbound_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_lowerbound_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_upperbound_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_upperbound_i64) */ {
+ public:
+  db_upperbound_i64();
+  virtual ~db_upperbound_i64();
+
+  db_upperbound_i64(const db_upperbound_i64& from);
+
+  inline db_upperbound_i64& operator=(const db_upperbound_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_upperbound_i64(db_upperbound_i64&& from) noexcept
+    : db_upperbound_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_upperbound_i64& operator=(db_upperbound_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_upperbound_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_upperbound_i64* internal_default_instance() {
+    return reinterpret_cast<const db_upperbound_i64*>(
+               &_db_upperbound_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  void Swap(db_upperbound_i64* other);
+  friend void swap(db_upperbound_i64& a, db_upperbound_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_upperbound_i64* New() const final {
+    return CreateMaybeMessage<db_upperbound_i64>(NULL);
+  }
+
+  db_upperbound_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_upperbound_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_upperbound_i64& from);
+  void MergeFrom(const db_upperbound_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_upperbound_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_upperbound_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_end_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_end_i64) */ {
+ public:
+  db_end_i64();
+  virtual ~db_end_i64();
+
+  db_end_i64(const db_end_i64& from);
+
+  inline db_end_i64& operator=(const db_end_i64& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_end_i64(db_end_i64&& from) noexcept
+    : db_end_i64() {
+    *this = ::std::move(from);
+  }
+
+  inline db_end_i64& operator=(db_end_i64&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_end_i64& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_end_i64* internal_default_instance() {
+    return reinterpret_cast<const db_end_i64*>(
+               &_db_end_i64_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  void Swap(db_end_i64* other);
+  friend void swap(db_end_i64& a, db_end_i64& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_end_i64* New() const final {
+    return CreateMaybeMessage<db_end_i64>(NULL);
+  }
+
+  db_end_i64* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_end_i64>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_end_i64& from);
+  void MergeFrom(const db_end_i64& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_end_i64* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 3;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 3;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_end_i64)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 scope_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_store : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_store) */ {
+ public:
+  db_idx64_store();
+  virtual ~db_idx64_store();
+
+  db_idx64_store(const db_idx64_store& from);
+
+  inline db_idx64_store& operator=(const db_idx64_store& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_store(db_idx64_store&& from) noexcept
+    : db_idx64_store() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_store& operator=(db_idx64_store&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_store& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_store* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_store*>(
+               &_db_idx64_store_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(db_idx64_store* other);
+  friend void swap(db_idx64_store& a, db_idx64_store& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_store* New() const final {
+    return CreateMaybeMessage<db_idx64_store>(NULL);
+  }
+
+  db_idx64_store* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_store>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_store& from);
+  void MergeFrom(const db_idx64_store& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_store* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 5;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 5;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_store)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  ::google::protobuf::uint64 secondary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_update : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_update) */ {
+ public:
+  db_idx64_update();
+  virtual ~db_idx64_update();
+
+  db_idx64_update(const db_idx64_update& from);
+
+  inline db_idx64_update& operator=(const db_idx64_update& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_update(db_idx64_update&& from) noexcept
+    : db_idx64_update() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_update& operator=(db_idx64_update&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_update& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_update* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_update*>(
+               &_db_idx64_update_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  void Swap(db_idx64_update* other);
+  friend void swap(db_idx64_update& a, db_idx64_update& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_update* New() const final {
+    return CreateMaybeMessage<db_idx64_update>(NULL);
+  }
+
+  db_idx64_update* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_update>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_update& from);
+  void MergeFrom(const db_idx64_update& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_update* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 3;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 3;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_update)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 secondary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_remove : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_remove) */ {
+ public:
+  db_idx64_remove();
+  virtual ~db_idx64_remove();
+
+  db_idx64_remove(const db_idx64_remove& from);
+
+  inline db_idx64_remove& operator=(const db_idx64_remove& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_remove(db_idx64_remove&& from) noexcept
+    : db_idx64_remove() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_remove& operator=(db_idx64_remove&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_remove& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_remove* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_remove*>(
+               &_db_idx64_remove_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  void Swap(db_idx64_remove* other);
+  friend void swap(db_idx64_remove& a, db_idx64_remove& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_remove* New() const final {
+    return CreateMaybeMessage<db_idx64_remove>(NULL);
+  }
+
+  db_idx64_remove* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_remove>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_remove& from);
+  void MergeFrom(const db_idx64_remove& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_remove* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_remove)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_find_secondary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_find_secondary) */ {
+ public:
+  db_idx64_find_secondary();
+  virtual ~db_idx64_find_secondary();
+
+  db_idx64_find_secondary(const db_idx64_find_secondary& from);
+
+  inline db_idx64_find_secondary& operator=(const db_idx64_find_secondary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_find_secondary(db_idx64_find_secondary&& from) noexcept
+    : db_idx64_find_secondary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_find_secondary& operator=(db_idx64_find_secondary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_find_secondary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_find_secondary* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_find_secondary*>(
+               &_db_idx64_find_secondary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  void Swap(db_idx64_find_secondary* other);
+  friend void swap(db_idx64_find_secondary& a, db_idx64_find_secondary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_find_secondary* New() const final {
+    return CreateMaybeMessage<db_idx64_find_secondary>(NULL);
+  }
+
+  db_idx64_find_secondary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_find_secondary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_find_secondary& from);
+  void MergeFrom(const db_idx64_find_secondary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_find_secondary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_find_secondary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 secondary_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_find_primary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_find_primary) */ {
+ public:
+  db_idx64_find_primary();
+  virtual ~db_idx64_find_primary();
+
+  db_idx64_find_primary(const db_idx64_find_primary& from);
+
+  inline db_idx64_find_primary& operator=(const db_idx64_find_primary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_find_primary(db_idx64_find_primary&& from) noexcept
+    : db_idx64_find_primary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_find_primary& operator=(db_idx64_find_primary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_find_primary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_find_primary* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_find_primary*>(
+               &_db_idx64_find_primary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  void Swap(db_idx64_find_primary* other);
+  friend void swap(db_idx64_find_primary& a, db_idx64_find_primary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_find_primary* New() const final {
+    return CreateMaybeMessage<db_idx64_find_primary>(NULL);
+  }
+
+  db_idx64_find_primary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_find_primary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_find_primary& from);
+  void MergeFrom(const db_idx64_find_primary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_find_primary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_find_primary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 secondary_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_lowerbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_lowerbound) */ {
+ public:
+  db_idx64_lowerbound();
+  virtual ~db_idx64_lowerbound();
+
+  db_idx64_lowerbound(const db_idx64_lowerbound& from);
+
+  inline db_idx64_lowerbound& operator=(const db_idx64_lowerbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_lowerbound(db_idx64_lowerbound&& from) noexcept
+    : db_idx64_lowerbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_lowerbound& operator=(db_idx64_lowerbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_lowerbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_lowerbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_lowerbound*>(
+               &_db_idx64_lowerbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  void Swap(db_idx64_lowerbound* other);
+  friend void swap(db_idx64_lowerbound& a, db_idx64_lowerbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_lowerbound* New() const final {
+    return CreateMaybeMessage<db_idx64_lowerbound>(NULL);
+  }
+
+  db_idx64_lowerbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_lowerbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_lowerbound& from);
+  void MergeFrom(const db_idx64_lowerbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_lowerbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_lowerbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 secondary_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_upperbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_upperbound) */ {
+ public:
+  db_idx64_upperbound();
+  virtual ~db_idx64_upperbound();
+
+  db_idx64_upperbound(const db_idx64_upperbound& from);
+
+  inline db_idx64_upperbound& operator=(const db_idx64_upperbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_upperbound(db_idx64_upperbound&& from) noexcept
+    : db_idx64_upperbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_upperbound& operator=(db_idx64_upperbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_upperbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_upperbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_upperbound*>(
+               &_db_idx64_upperbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  void Swap(db_idx64_upperbound* other);
+  friend void swap(db_idx64_upperbound& a, db_idx64_upperbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_upperbound* New() const final {
+    return CreateMaybeMessage<db_idx64_upperbound>(NULL);
+  }
+
+  db_idx64_upperbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_upperbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_upperbound& from);
+  void MergeFrom(const db_idx64_upperbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_upperbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  ::google::protobuf::uint64 secondary() const;
+  void set_secondary(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_upperbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 secondary_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_end : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_end) */ {
+ public:
+  db_idx64_end();
+  virtual ~db_idx64_end();
+
+  db_idx64_end(const db_idx64_end& from);
+
+  inline db_idx64_end& operator=(const db_idx64_end& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_end(db_idx64_end&& from) noexcept
+    : db_idx64_end() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_end& operator=(db_idx64_end&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_end& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_end* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_end*>(
+               &_db_idx64_end_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  void Swap(db_idx64_end* other);
+  friend void swap(db_idx64_end& a, db_idx64_end& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_end* New() const final {
+    return CreateMaybeMessage<db_idx64_end>(NULL);
+  }
+
+  db_idx64_end* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_end>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_end& from);
+  void MergeFrom(const db_idx64_end& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_end* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_end)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_next : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_next) */ {
+ public:
+  db_idx64_next();
+  virtual ~db_idx64_next();
+
+  db_idx64_next(const db_idx64_next& from);
+
+  inline db_idx64_next& operator=(const db_idx64_next& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_next(db_idx64_next&& from) noexcept
+    : db_idx64_next() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_next& operator=(db_idx64_next&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_next& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_next* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_next*>(
+               &_db_idx64_next_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  void Swap(db_idx64_next* other);
+  friend void swap(db_idx64_next& a, db_idx64_next& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_next* New() const final {
+    return CreateMaybeMessage<db_idx64_next>(NULL);
+  }
+
+  db_idx64_next* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_next>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_next& from);
+  void MergeFrom(const db_idx64_next& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_next* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_next)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx64_previous : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx64_previous) */ {
+ public:
+  db_idx64_previous();
+  virtual ~db_idx64_previous();
+
+  db_idx64_previous(const db_idx64_previous& from);
+
+  inline db_idx64_previous& operator=(const db_idx64_previous& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx64_previous(db_idx64_previous&& from) noexcept
+    : db_idx64_previous() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx64_previous& operator=(db_idx64_previous&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx64_previous& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx64_previous* internal_default_instance() {
+    return reinterpret_cast<const db_idx64_previous*>(
+               &_db_idx64_previous_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  void Swap(db_idx64_previous* other);
+  friend void swap(db_idx64_previous& a, db_idx64_previous& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx64_previous* New() const final {
+    return CreateMaybeMessage<db_idx64_previous>(NULL);
+  }
+
+  db_idx64_previous* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx64_previous>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx64_previous& from);
+  void MergeFrom(const db_idx64_previous& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx64_previous* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx64_previous)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_store : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_store) */ {
+ public:
+  db_idx128_store();
+  virtual ~db_idx128_store();
+
+  db_idx128_store(const db_idx128_store& from);
+
+  inline db_idx128_store& operator=(const db_idx128_store& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_store(db_idx128_store&& from) noexcept
+    : db_idx128_store() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_store& operator=(db_idx128_store&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_store& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_store* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_store*>(
+               &_db_idx128_store_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  void Swap(db_idx128_store* other);
+  friend void swap(db_idx128_store& a, db_idx128_store& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_store* New() const final {
+    return CreateMaybeMessage<db_idx128_store>(NULL);
+  }
+
+  db_idx128_store* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_store>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_store& from);
+  void MergeFrom(const db_idx128_store& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_store* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 5;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 5;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_store)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_update : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_update) */ {
+ public:
+  db_idx128_update();
+  virtual ~db_idx128_update();
+
+  db_idx128_update(const db_idx128_update& from);
+
+  inline db_idx128_update& operator=(const db_idx128_update& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_update(db_idx128_update&& from) noexcept
+    : db_idx128_update() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_update& operator=(db_idx128_update&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_update& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_update* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_update*>(
+               &_db_idx128_update_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  void Swap(db_idx128_update* other);
+  friend void swap(db_idx128_update& a, db_idx128_update& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_update* New() const final {
+    return CreateMaybeMessage<db_idx128_update>(NULL);
+  }
+
+  db_idx128_update* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_update>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_update& from);
+  void MergeFrom(const db_idx128_update& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_update* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 3;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 3;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_update)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_remove : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_remove) */ {
+ public:
+  db_idx128_remove();
+  virtual ~db_idx128_remove();
+
+  db_idx128_remove(const db_idx128_remove& from);
+
+  inline db_idx128_remove& operator=(const db_idx128_remove& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_remove(db_idx128_remove&& from) noexcept
+    : db_idx128_remove() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_remove& operator=(db_idx128_remove&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_remove& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_remove* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_remove*>(
+               &_db_idx128_remove_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  void Swap(db_idx128_remove* other);
+  friend void swap(db_idx128_remove& a, db_idx128_remove& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_remove* New() const final {
+    return CreateMaybeMessage<db_idx128_remove>(NULL);
+  }
+
+  db_idx128_remove* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_remove>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_remove& from);
+  void MergeFrom(const db_idx128_remove& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_remove* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_remove)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_find_secondary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_find_secondary) */ {
+ public:
+  db_idx128_find_secondary();
+  virtual ~db_idx128_find_secondary();
+
+  db_idx128_find_secondary(const db_idx128_find_secondary& from);
+
+  inline db_idx128_find_secondary& operator=(const db_idx128_find_secondary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_find_secondary(db_idx128_find_secondary&& from) noexcept
+    : db_idx128_find_secondary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_find_secondary& operator=(db_idx128_find_secondary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_find_secondary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_find_secondary* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_find_secondary*>(
+               &_db_idx128_find_secondary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  void Swap(db_idx128_find_secondary* other);
+  friend void swap(db_idx128_find_secondary& a, db_idx128_find_secondary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_find_secondary* New() const final {
+    return CreateMaybeMessage<db_idx128_find_secondary>(NULL);
+  }
+
+  db_idx128_find_secondary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_find_secondary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_find_secondary& from);
+  void MergeFrom(const db_idx128_find_secondary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_find_secondary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_find_secondary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_find_primary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_find_primary) */ {
+ public:
+  db_idx128_find_primary();
+  virtual ~db_idx128_find_primary();
+
+  db_idx128_find_primary(const db_idx128_find_primary& from);
+
+  inline db_idx128_find_primary& operator=(const db_idx128_find_primary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_find_primary(db_idx128_find_primary&& from) noexcept
+    : db_idx128_find_primary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_find_primary& operator=(db_idx128_find_primary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_find_primary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_find_primary* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_find_primary*>(
+               &_db_idx128_find_primary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  void Swap(db_idx128_find_primary* other);
+  friend void swap(db_idx128_find_primary& a, db_idx128_find_primary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_find_primary* New() const final {
+    return CreateMaybeMessage<db_idx128_find_primary>(NULL);
+  }
+
+  db_idx128_find_primary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_find_primary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_find_primary& from);
+  void MergeFrom(const db_idx128_find_primary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_find_primary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_find_primary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_lowerbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_lowerbound) */ {
+ public:
+  db_idx128_lowerbound();
+  virtual ~db_idx128_lowerbound();
+
+  db_idx128_lowerbound(const db_idx128_lowerbound& from);
+
+  inline db_idx128_lowerbound& operator=(const db_idx128_lowerbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_lowerbound(db_idx128_lowerbound&& from) noexcept
+    : db_idx128_lowerbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_lowerbound& operator=(db_idx128_lowerbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_lowerbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_lowerbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_lowerbound*>(
+               &_db_idx128_lowerbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    27;
+
+  void Swap(db_idx128_lowerbound* other);
+  friend void swap(db_idx128_lowerbound& a, db_idx128_lowerbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_lowerbound* New() const final {
+    return CreateMaybeMessage<db_idx128_lowerbound>(NULL);
+  }
+
+  db_idx128_lowerbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_lowerbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_lowerbound& from);
+  void MergeFrom(const db_idx128_lowerbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_lowerbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_lowerbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_upperbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_upperbound) */ {
+ public:
+  db_idx128_upperbound();
+  virtual ~db_idx128_upperbound();
+
+  db_idx128_upperbound(const db_idx128_upperbound& from);
+
+  inline db_idx128_upperbound& operator=(const db_idx128_upperbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_upperbound(db_idx128_upperbound&& from) noexcept
+    : db_idx128_upperbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_upperbound& operator=(db_idx128_upperbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_upperbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_upperbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_upperbound*>(
+               &_db_idx128_upperbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    28;
+
+  void Swap(db_idx128_upperbound* other);
+  friend void swap(db_idx128_upperbound& a, db_idx128_upperbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_upperbound* New() const final {
+    return CreateMaybeMessage<db_idx128_upperbound>(NULL);
+  }
+
+  db_idx128_upperbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_upperbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_upperbound& from);
+  void MergeFrom(const db_idx128_upperbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_upperbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_upperbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_end : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_end) */ {
+ public:
+  db_idx128_end();
+  virtual ~db_idx128_end();
+
+  db_idx128_end(const db_idx128_end& from);
+
+  inline db_idx128_end& operator=(const db_idx128_end& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_end(db_idx128_end&& from) noexcept
+    : db_idx128_end() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_end& operator=(db_idx128_end&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_end& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_end* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_end*>(
+               &_db_idx128_end_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    29;
+
+  void Swap(db_idx128_end* other);
+  friend void swap(db_idx128_end& a, db_idx128_end& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_end* New() const final {
+    return CreateMaybeMessage<db_idx128_end>(NULL);
+  }
+
+  db_idx128_end* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_end>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_end& from);
+  void MergeFrom(const db_idx128_end& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_end* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_end)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_next : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_next) */ {
+ public:
+  db_idx128_next();
+  virtual ~db_idx128_next();
+
+  db_idx128_next(const db_idx128_next& from);
+
+  inline db_idx128_next& operator=(const db_idx128_next& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_next(db_idx128_next&& from) noexcept
+    : db_idx128_next() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_next& operator=(db_idx128_next&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_next& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_next* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_next*>(
+               &_db_idx128_next_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    30;
+
+  void Swap(db_idx128_next* other);
+  friend void swap(db_idx128_next& a, db_idx128_next& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_next* New() const final {
+    return CreateMaybeMessage<db_idx128_next>(NULL);
+  }
+
+  db_idx128_next* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_next>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_next& from);
+  void MergeFrom(const db_idx128_next& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_next* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_next)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx128_previous : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx128_previous) */ {
+ public:
+  db_idx128_previous();
+  virtual ~db_idx128_previous();
+
+  db_idx128_previous(const db_idx128_previous& from);
+
+  inline db_idx128_previous& operator=(const db_idx128_previous& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx128_previous(db_idx128_previous&& from) noexcept
+    : db_idx128_previous() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx128_previous& operator=(db_idx128_previous&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx128_previous& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx128_previous* internal_default_instance() {
+    return reinterpret_cast<const db_idx128_previous*>(
+               &_db_idx128_previous_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    31;
+
+  void Swap(db_idx128_previous* other);
+  friend void swap(db_idx128_previous& a, db_idx128_previous& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx128_previous* New() const final {
+    return CreateMaybeMessage<db_idx128_previous>(NULL);
+  }
+
+  db_idx128_previous* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx128_previous>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx128_previous& from);
+  void MergeFrom(const db_idx128_previous& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx128_previous* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx128_previous)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_store : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_store) */ {
+ public:
+  db_idx256_store();
+  virtual ~db_idx256_store();
+
+  db_idx256_store(const db_idx256_store& from);
+
+  inline db_idx256_store& operator=(const db_idx256_store& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_store(db_idx256_store&& from) noexcept
+    : db_idx256_store() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_store& operator=(db_idx256_store&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_store& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_store* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_store*>(
+               &_db_idx256_store_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    32;
+
+  void Swap(db_idx256_store* other);
+  friend void swap(db_idx256_store& a, db_idx256_store& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_store* New() const final {
+    return CreateMaybeMessage<db_idx256_store>(NULL);
+  }
+
+  db_idx256_store* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_store>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_store& from);
+  void MergeFrom(const db_idx256_store& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_store* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 5;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 5;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 6;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 6;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_store)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  ::google::protobuf::uint64 data_len_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_update : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_update) */ {
+ public:
+  db_idx256_update();
+  virtual ~db_idx256_update();
+
+  db_idx256_update(const db_idx256_update& from);
+
+  inline db_idx256_update& operator=(const db_idx256_update& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_update(db_idx256_update&& from) noexcept
+    : db_idx256_update() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_update& operator=(db_idx256_update&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_update& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_update* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_update*>(
+               &_db_idx256_update_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    33;
+
+  void Swap(db_idx256_update* other);
+  friend void swap(db_idx256_update& a, db_idx256_update& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_update* New() const final {
+    return CreateMaybeMessage<db_idx256_update>(NULL);
+  }
+
+  db_idx256_update* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_update>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_update& from);
+  void MergeFrom(const db_idx256_update& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_update* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 3;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 3;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 4;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 4;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_update)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 data_len_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_remove : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_remove) */ {
+ public:
+  db_idx256_remove();
+  virtual ~db_idx256_remove();
+
+  db_idx256_remove(const db_idx256_remove& from);
+
+  inline db_idx256_remove& operator=(const db_idx256_remove& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_remove(db_idx256_remove&& from) noexcept
+    : db_idx256_remove() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_remove& operator=(db_idx256_remove&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_remove& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_remove* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_remove*>(
+               &_db_idx256_remove_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    34;
+
+  void Swap(db_idx256_remove* other);
+  friend void swap(db_idx256_remove& a, db_idx256_remove& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_remove* New() const final {
+    return CreateMaybeMessage<db_idx256_remove>(NULL);
+  }
+
+  db_idx256_remove* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_remove>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_remove& from);
+  void MergeFrom(const db_idx256_remove& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_remove* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 id = 1;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  ::google::protobuf::uint32 id() const;
+  void set_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_remove)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_find_secondary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_find_secondary) */ {
+ public:
+  db_idx256_find_secondary();
+  virtual ~db_idx256_find_secondary();
+
+  db_idx256_find_secondary(const db_idx256_find_secondary& from);
+
+  inline db_idx256_find_secondary& operator=(const db_idx256_find_secondary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_find_secondary(db_idx256_find_secondary&& from) noexcept
+    : db_idx256_find_secondary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_find_secondary& operator=(db_idx256_find_secondary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_find_secondary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_find_secondary* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_find_secondary*>(
+               &_db_idx256_find_secondary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    35;
+
+  void Swap(db_idx256_find_secondary* other);
+  friend void swap(db_idx256_find_secondary& a, db_idx256_find_secondary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_find_secondary* New() const final {
+    return CreateMaybeMessage<db_idx256_find_secondary>(NULL);
+  }
+
+  db_idx256_find_secondary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_find_secondary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_find_secondary& from);
+  void MergeFrom(const db_idx256_find_secondary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_find_secondary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 4;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 4;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 5;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 5;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 6;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 6;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_find_secondary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 data_len_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_find_primary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_find_primary) */ {
+ public:
+  db_idx256_find_primary();
+  virtual ~db_idx256_find_primary();
+
+  db_idx256_find_primary(const db_idx256_find_primary& from);
+
+  inline db_idx256_find_primary& operator=(const db_idx256_find_primary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_find_primary(db_idx256_find_primary&& from) noexcept
+    : db_idx256_find_primary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_find_primary& operator=(db_idx256_find_primary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_find_primary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_find_primary* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_find_primary*>(
+               &_db_idx256_find_primary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    36;
+
+  void Swap(db_idx256_find_primary* other);
+  friend void swap(db_idx256_find_primary& a, db_idx256_find_primary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_find_primary* New() const final {
+    return CreateMaybeMessage<db_idx256_find_primary>(NULL);
+  }
+
+  db_idx256_find_primary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_find_primary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_find_primary& from);
+  void MergeFrom(const db_idx256_find_primary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_find_primary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 4;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 4;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 5;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 5;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 6;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 6;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_find_primary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 data_len_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_lowerbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_lowerbound) */ {
+ public:
+  db_idx256_lowerbound();
+  virtual ~db_idx256_lowerbound();
+
+  db_idx256_lowerbound(const db_idx256_lowerbound& from);
+
+  inline db_idx256_lowerbound& operator=(const db_idx256_lowerbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_lowerbound(db_idx256_lowerbound&& from) noexcept
+    : db_idx256_lowerbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_lowerbound& operator=(db_idx256_lowerbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_lowerbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_lowerbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_lowerbound*>(
+               &_db_idx256_lowerbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    37;
+
+  void Swap(db_idx256_lowerbound* other);
+  friend void swap(db_idx256_lowerbound& a, db_idx256_lowerbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_lowerbound* New() const final {
+    return CreateMaybeMessage<db_idx256_lowerbound>(NULL);
+  }
+
+  db_idx256_lowerbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_lowerbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_lowerbound& from);
+  void MergeFrom(const db_idx256_lowerbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_lowerbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 4;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 4;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 5;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 5;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 6;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 6;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_lowerbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 data_len_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_upperbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_upperbound) */ {
+ public:
+  db_idx256_upperbound();
+  virtual ~db_idx256_upperbound();
+
+  db_idx256_upperbound(const db_idx256_upperbound& from);
+
+  inline db_idx256_upperbound& operator=(const db_idx256_upperbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_upperbound(db_idx256_upperbound&& from) noexcept
+    : db_idx256_upperbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_upperbound& operator=(db_idx256_upperbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_upperbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_upperbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_upperbound*>(
+               &_db_idx256_upperbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    38;
+
+  void Swap(db_idx256_upperbound* other);
+  friend void swap(db_idx256_upperbound& a, db_idx256_upperbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_upperbound* New() const final {
+    return CreateMaybeMessage<db_idx256_upperbound>(NULL);
+  }
+
+  db_idx256_upperbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_upperbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_upperbound& from);
+  void MergeFrom(const db_idx256_upperbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_upperbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 4;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 4;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 data_len = 5;
+  bool has_data_len() const;
+  void clear_data_len();
+  static const int kDataLenFieldNumber = 5;
+  ::google::protobuf::uint64 data_len() const;
+  void set_data_len(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 6;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 6;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_upperbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 data_len_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_end : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_end) */ {
+ public:
+  db_idx256_end();
+  virtual ~db_idx256_end();
+
+  db_idx256_end(const db_idx256_end& from);
+
+  inline db_idx256_end& operator=(const db_idx256_end& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_end(db_idx256_end&& from) noexcept
+    : db_idx256_end() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_end& operator=(db_idx256_end&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_end& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_end* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_end*>(
+               &_db_idx256_end_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    39;
+
+  void Swap(db_idx256_end* other);
+  friend void swap(db_idx256_end& a, db_idx256_end& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_end* New() const final {
+    return CreateMaybeMessage<db_idx256_end>(NULL);
+  }
+
+  db_idx256_end* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_end>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_end& from);
+  void MergeFrom(const db_idx256_end& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_end* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_end)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_next : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_next) */ {
+ public:
+  db_idx256_next();
+  virtual ~db_idx256_next();
+
+  db_idx256_next(const db_idx256_next& from);
+
+  inline db_idx256_next& operator=(const db_idx256_next& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_next(db_idx256_next&& from) noexcept
+    : db_idx256_next() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_next& operator=(db_idx256_next&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_next& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_next* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_next*>(
+               &_db_idx256_next_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    40;
+
+  void Swap(db_idx256_next* other);
+  friend void swap(db_idx256_next& a, db_idx256_next& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_next* New() const final {
+    return CreateMaybeMessage<db_idx256_next>(NULL);
+  }
+
+  db_idx256_next* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_next>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_next& from);
+  void MergeFrom(const db_idx256_next& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_next* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_next)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx256_previous : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx256_previous) */ {
+ public:
+  db_idx256_previous();
+  virtual ~db_idx256_previous();
+
+  db_idx256_previous(const db_idx256_previous& from);
+
+  inline db_idx256_previous& operator=(const db_idx256_previous& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx256_previous(db_idx256_previous&& from) noexcept
+    : db_idx256_previous() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx256_previous& operator=(db_idx256_previous&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx256_previous& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx256_previous* internal_default_instance() {
+    return reinterpret_cast<const db_idx256_previous*>(
+               &_db_idx256_previous_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    41;
+
+  void Swap(db_idx256_previous* other);
+  friend void swap(db_idx256_previous& a, db_idx256_previous& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx256_previous* New() const final {
+    return CreateMaybeMessage<db_idx256_previous>(NULL);
+  }
+
+  db_idx256_previous* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx256_previous>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx256_previous& from);
+  void MergeFrom(const db_idx256_previous& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx256_previous* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx256_previous)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_store : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_store) */ {
+ public:
+  db_idx_double_store();
+  virtual ~db_idx_double_store();
+
+  db_idx_double_store(const db_idx_double_store& from);
+
+  inline db_idx_double_store& operator=(const db_idx_double_store& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_store(db_idx_double_store&& from) noexcept
+    : db_idx_double_store() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_store& operator=(db_idx_double_store&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_store& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_store* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_store*>(
+               &_db_idx_double_store_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    42;
+
+  void Swap(db_idx_double_store* other);
+  friend void swap(db_idx_double_store& a, db_idx_double_store& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_store* New() const final {
+    return CreateMaybeMessage<db_idx_double_store>(NULL);
+  }
+
+  db_idx_double_store* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_store>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_store& from);
+  void MergeFrom(const db_idx_double_store& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_store* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 5;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 5;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_store)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_update : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_update) */ {
+ public:
+  db_idx_double_update();
+  virtual ~db_idx_double_update();
+
+  db_idx_double_update(const db_idx_double_update& from);
+
+  inline db_idx_double_update& operator=(const db_idx_double_update& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_update(db_idx_double_update&& from) noexcept
+    : db_idx_double_update() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_update& operator=(db_idx_double_update&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_update& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_update* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_update*>(
+               &_db_idx_double_update_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    43;
+
+  void Swap(db_idx_double_update* other);
+  friend void swap(db_idx_double_update& a, db_idx_double_update& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_update* New() const final {
+    return CreateMaybeMessage<db_idx_double_update>(NULL);
+  }
+
+  db_idx_double_update* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_update>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_update& from);
+  void MergeFrom(const db_idx_double_update& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_update* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 3;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 3;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_update)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_remove : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_remove) */ {
+ public:
+  db_idx_double_remove();
+  virtual ~db_idx_double_remove();
+
+  db_idx_double_remove(const db_idx_double_remove& from);
+
+  inline db_idx_double_remove& operator=(const db_idx_double_remove& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_remove(db_idx_double_remove&& from) noexcept
+    : db_idx_double_remove() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_remove& operator=(db_idx_double_remove&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_remove& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_remove* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_remove*>(
+               &_db_idx_double_remove_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    44;
+
+  void Swap(db_idx_double_remove* other);
+  friend void swap(db_idx_double_remove& a, db_idx_double_remove& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_remove* New() const final {
+    return CreateMaybeMessage<db_idx_double_remove>(NULL);
+  }
+
+  db_idx_double_remove* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_remove>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_remove& from);
+  void MergeFrom(const db_idx_double_remove& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_remove* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_remove)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_find_secondary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_find_secondary) */ {
+ public:
+  db_idx_double_find_secondary();
+  virtual ~db_idx_double_find_secondary();
+
+  db_idx_double_find_secondary(const db_idx_double_find_secondary& from);
+
+  inline db_idx_double_find_secondary& operator=(const db_idx_double_find_secondary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_find_secondary(db_idx_double_find_secondary&& from) noexcept
+    : db_idx_double_find_secondary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_find_secondary& operator=(db_idx_double_find_secondary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_find_secondary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_find_secondary* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_find_secondary*>(
+               &_db_idx_double_find_secondary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    45;
+
+  void Swap(db_idx_double_find_secondary* other);
+  friend void swap(db_idx_double_find_secondary& a, db_idx_double_find_secondary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_find_secondary* New() const final {
+    return CreateMaybeMessage<db_idx_double_find_secondary>(NULL);
+  }
+
+  db_idx_double_find_secondary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_find_secondary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_find_secondary& from);
+  void MergeFrom(const db_idx_double_find_secondary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_find_secondary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_find_secondary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_find_primary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_find_primary) */ {
+ public:
+  db_idx_double_find_primary();
+  virtual ~db_idx_double_find_primary();
+
+  db_idx_double_find_primary(const db_idx_double_find_primary& from);
+
+  inline db_idx_double_find_primary& operator=(const db_idx_double_find_primary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_find_primary(db_idx_double_find_primary&& from) noexcept
+    : db_idx_double_find_primary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_find_primary& operator=(db_idx_double_find_primary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_find_primary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_find_primary* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_find_primary*>(
+               &_db_idx_double_find_primary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    46;
+
+  void Swap(db_idx_double_find_primary* other);
+  friend void swap(db_idx_double_find_primary& a, db_idx_double_find_primary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_find_primary* New() const final {
+    return CreateMaybeMessage<db_idx_double_find_primary>(NULL);
+  }
+
+  db_idx_double_find_primary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_find_primary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_find_primary& from);
+  void MergeFrom(const db_idx_double_find_primary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_find_primary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_find_primary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_lowerbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_lowerbound) */ {
+ public:
+  db_idx_double_lowerbound();
+  virtual ~db_idx_double_lowerbound();
+
+  db_idx_double_lowerbound(const db_idx_double_lowerbound& from);
+
+  inline db_idx_double_lowerbound& operator=(const db_idx_double_lowerbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_lowerbound(db_idx_double_lowerbound&& from) noexcept
+    : db_idx_double_lowerbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_lowerbound& operator=(db_idx_double_lowerbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_lowerbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_lowerbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_lowerbound*>(
+               &_db_idx_double_lowerbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    47;
+
+  void Swap(db_idx_double_lowerbound* other);
+  friend void swap(db_idx_double_lowerbound& a, db_idx_double_lowerbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_lowerbound* New() const final {
+    return CreateMaybeMessage<db_idx_double_lowerbound>(NULL);
+  }
+
+  db_idx_double_lowerbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_lowerbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_lowerbound& from);
+  void MergeFrom(const db_idx_double_lowerbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_lowerbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_lowerbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_upperbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_upperbound) */ {
+ public:
+  db_idx_double_upperbound();
+  virtual ~db_idx_double_upperbound();
+
+  db_idx_double_upperbound(const db_idx_double_upperbound& from);
+
+  inline db_idx_double_upperbound& operator=(const db_idx_double_upperbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_upperbound(db_idx_double_upperbound&& from) noexcept
+    : db_idx_double_upperbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_upperbound& operator=(db_idx_double_upperbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_upperbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_upperbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_upperbound*>(
+               &_db_idx_double_upperbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    48;
+
+  void Swap(db_idx_double_upperbound* other);
+  friend void swap(db_idx_double_upperbound& a, db_idx_double_upperbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_upperbound* New() const final {
+    return CreateMaybeMessage<db_idx_double_upperbound>(NULL);
+  }
+
+  db_idx_double_upperbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_upperbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_upperbound& from);
+  void MergeFrom(const db_idx_double_upperbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_upperbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_upperbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_end : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_end) */ {
+ public:
+  db_idx_double_end();
+  virtual ~db_idx_double_end();
+
+  db_idx_double_end(const db_idx_double_end& from);
+
+  inline db_idx_double_end& operator=(const db_idx_double_end& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_end(db_idx_double_end&& from) noexcept
+    : db_idx_double_end() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_end& operator=(db_idx_double_end&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_end& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_end* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_end*>(
+               &_db_idx_double_end_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    49;
+
+  void Swap(db_idx_double_end* other);
+  friend void swap(db_idx_double_end& a, db_idx_double_end& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_end* New() const final {
+    return CreateMaybeMessage<db_idx_double_end>(NULL);
+  }
+
+  db_idx_double_end* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_end>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_end& from);
+  void MergeFrom(const db_idx_double_end& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_end* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_end)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_next : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_next) */ {
+ public:
+  db_idx_double_next();
+  virtual ~db_idx_double_next();
+
+  db_idx_double_next(const db_idx_double_next& from);
+
+  inline db_idx_double_next& operator=(const db_idx_double_next& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_next(db_idx_double_next&& from) noexcept
+    : db_idx_double_next() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_next& operator=(db_idx_double_next&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_next& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_next* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_next*>(
+               &_db_idx_double_next_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    50;
+
+  void Swap(db_idx_double_next* other);
+  friend void swap(db_idx_double_next& a, db_idx_double_next& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_next* New() const final {
+    return CreateMaybeMessage<db_idx_double_next>(NULL);
+  }
+
+  db_idx_double_next* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_next>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_next& from);
+  void MergeFrom(const db_idx_double_next& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_next* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_next)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_double_previous : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_double_previous) */ {
+ public:
+  db_idx_double_previous();
+  virtual ~db_idx_double_previous();
+
+  db_idx_double_previous(const db_idx_double_previous& from);
+
+  inline db_idx_double_previous& operator=(const db_idx_double_previous& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_double_previous(db_idx_double_previous&& from) noexcept
+    : db_idx_double_previous() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_double_previous& operator=(db_idx_double_previous&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_double_previous& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_double_previous* internal_default_instance() {
+    return reinterpret_cast<const db_idx_double_previous*>(
+               &_db_idx_double_previous_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    51;
+
+  void Swap(db_idx_double_previous* other);
+  friend void swap(db_idx_double_previous& a, db_idx_double_previous& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_double_previous* New() const final {
+    return CreateMaybeMessage<db_idx_double_previous>(NULL);
+  }
+
+  db_idx_double_previous* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_double_previous>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_double_previous& from);
+  void MergeFrom(const db_idx_double_previous& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_double_previous* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_double_previous)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_store : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_store) */ {
+ public:
+  db_idx_long_double_store();
+  virtual ~db_idx_long_double_store();
+
+  db_idx_long_double_store(const db_idx_long_double_store& from);
+
+  inline db_idx_long_double_store& operator=(const db_idx_long_double_store& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_store(db_idx_long_double_store&& from) noexcept
+    : db_idx_long_double_store() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_store& operator=(db_idx_long_double_store&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_store& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_store* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_store*>(
+               &_db_idx_long_double_store_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    52;
+
+  void Swap(db_idx_long_double_store* other);
+  friend void swap(db_idx_long_double_store& a, db_idx_long_double_store& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_store* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_store>(NULL);
+  }
+
+  db_idx_long_double_store* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_store>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_store& from);
+  void MergeFrom(const db_idx_long_double_store& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_store* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 5;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 5;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 scope = 1;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 1;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 2;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 2;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 payer = 3;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 3;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint64 id = 4;
+  bool has_id() const;
+  void clear_id();
+  static const int kIdFieldNumber = 4;
+  ::google::protobuf::uint64 id() const;
+  void set_id(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_store)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint64 id_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_update : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_update) */ {
+ public:
+  db_idx_long_double_update();
+  virtual ~db_idx_long_double_update();
+
+  db_idx_long_double_update(const db_idx_long_double_update& from);
+
+  inline db_idx_long_double_update& operator=(const db_idx_long_double_update& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_update(db_idx_long_double_update&& from) noexcept
+    : db_idx_long_double_update() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_update& operator=(db_idx_long_double_update&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_update& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_update* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_update*>(
+               &_db_idx_long_double_update_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    53;
+
+  void Swap(db_idx_long_double_update* other);
+  friend void swap(db_idx_long_double_update& a, db_idx_long_double_update& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_update* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_update>(NULL);
+  }
+
+  db_idx_long_double_update* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_update>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_update& from);
+  void MergeFrom(const db_idx_long_double_update& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_update* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 3;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 3;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 payer = 2;
+  bool has_payer() const;
+  void clear_payer();
+  static const int kPayerFieldNumber = 2;
+  ::google::protobuf::uint64 payer() const;
+  void set_payer(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_update)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 payer_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_remove : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_remove) */ {
+ public:
+  db_idx_long_double_remove();
+  virtual ~db_idx_long_double_remove();
+
+  db_idx_long_double_remove(const db_idx_long_double_remove& from);
+
+  inline db_idx_long_double_remove& operator=(const db_idx_long_double_remove& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_remove(db_idx_long_double_remove&& from) noexcept
+    : db_idx_long_double_remove() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_remove& operator=(db_idx_long_double_remove&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_remove& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_remove* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_remove*>(
+               &_db_idx_long_double_remove_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    54;
+
+  void Swap(db_idx_long_double_remove* other);
+  friend void swap(db_idx_long_double_remove& a, db_idx_long_double_remove& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_remove* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_remove>(NULL);
+  }
+
+  db_idx_long_double_remove* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_remove>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_remove& from);
+  void MergeFrom(const db_idx_long_double_remove& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_remove* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_remove)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_find_secondary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_find_secondary) */ {
+ public:
+  db_idx_long_double_find_secondary();
+  virtual ~db_idx_long_double_find_secondary();
+
+  db_idx_long_double_find_secondary(const db_idx_long_double_find_secondary& from);
+
+  inline db_idx_long_double_find_secondary& operator=(const db_idx_long_double_find_secondary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_find_secondary(db_idx_long_double_find_secondary&& from) noexcept
+    : db_idx_long_double_find_secondary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_find_secondary& operator=(db_idx_long_double_find_secondary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_find_secondary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_find_secondary* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_find_secondary*>(
+               &_db_idx_long_double_find_secondary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    55;
+
+  void Swap(db_idx_long_double_find_secondary* other);
+  friend void swap(db_idx_long_double_find_secondary& a, db_idx_long_double_find_secondary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_find_secondary* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_find_secondary>(NULL);
+  }
+
+  db_idx_long_double_find_secondary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_find_secondary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_find_secondary& from);
+  void MergeFrom(const db_idx_long_double_find_secondary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_find_secondary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_find_secondary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_find_primary : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_find_primary) */ {
+ public:
+  db_idx_long_double_find_primary();
+  virtual ~db_idx_long_double_find_primary();
+
+  db_idx_long_double_find_primary(const db_idx_long_double_find_primary& from);
+
+  inline db_idx_long_double_find_primary& operator=(const db_idx_long_double_find_primary& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_find_primary(db_idx_long_double_find_primary&& from) noexcept
+    : db_idx_long_double_find_primary() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_find_primary& operator=(db_idx_long_double_find_primary&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_find_primary& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_find_primary* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_find_primary*>(
+               &_db_idx_long_double_find_primary_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    56;
+
+  void Swap(db_idx_long_double_find_primary* other);
+  friend void swap(db_idx_long_double_find_primary& a, db_idx_long_double_find_primary& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_find_primary* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_find_primary>(NULL);
+  }
+
+  db_idx_long_double_find_primary* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_find_primary>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_find_primary& from);
+  void MergeFrom(const db_idx_long_double_find_primary& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_find_primary* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_find_primary)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_lowerbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_lowerbound) */ {
+ public:
+  db_idx_long_double_lowerbound();
+  virtual ~db_idx_long_double_lowerbound();
+
+  db_idx_long_double_lowerbound(const db_idx_long_double_lowerbound& from);
+
+  inline db_idx_long_double_lowerbound& operator=(const db_idx_long_double_lowerbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_lowerbound(db_idx_long_double_lowerbound&& from) noexcept
+    : db_idx_long_double_lowerbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_lowerbound& operator=(db_idx_long_double_lowerbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_lowerbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_lowerbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_lowerbound*>(
+               &_db_idx_long_double_lowerbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    57;
+
+  void Swap(db_idx_long_double_lowerbound* other);
+  friend void swap(db_idx_long_double_lowerbound& a, db_idx_long_double_lowerbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_lowerbound* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_lowerbound>(NULL);
+  }
+
+  db_idx_long_double_lowerbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_lowerbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_lowerbound& from);
+  void MergeFrom(const db_idx_long_double_lowerbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_lowerbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_lowerbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_upperbound : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_upperbound) */ {
+ public:
+  db_idx_long_double_upperbound();
+  virtual ~db_idx_long_double_upperbound();
+
+  db_idx_long_double_upperbound(const db_idx_long_double_upperbound& from);
+
+  inline db_idx_long_double_upperbound& operator=(const db_idx_long_double_upperbound& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_upperbound(db_idx_long_double_upperbound&& from) noexcept
+    : db_idx_long_double_upperbound() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_upperbound& operator=(db_idx_long_double_upperbound&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_upperbound& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_upperbound* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_upperbound*>(
+               &_db_idx_long_double_upperbound_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    58;
+
+  void Swap(db_idx_long_double_upperbound* other);
+  friend void swap(db_idx_long_double_upperbound& a, db_idx_long_double_upperbound& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_upperbound* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_upperbound>(NULL);
+  }
+
+  db_idx_long_double_upperbound* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_upperbound>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_upperbound& from);
+  void MergeFrom(const db_idx_long_double_upperbound& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_upperbound* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes secondary = 4;
+  bool has_secondary() const;
+  void clear_secondary();
+  static const int kSecondaryFieldNumber = 4;
+  const ::std::string& secondary() const;
+  void set_secondary(const ::std::string& value);
+  #if LANG_CXX11
+  void set_secondary(::std::string&& value);
+  #endif
+  void set_secondary(const char* value);
+  void set_secondary(const void* value, size_t size);
+  ::std::string* mutable_secondary();
+  ::std::string* release_secondary();
+  void set_allocated_secondary(::std::string* secondary);
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // optional uint64 primary = 5;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_upperbound)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr secondary_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  ::google::protobuf::uint64 primary_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_end : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_end) */ {
+ public:
+  db_idx_long_double_end();
+  virtual ~db_idx_long_double_end();
+
+  db_idx_long_double_end(const db_idx_long_double_end& from);
+
+  inline db_idx_long_double_end& operator=(const db_idx_long_double_end& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_end(db_idx_long_double_end&& from) noexcept
+    : db_idx_long_double_end() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_end& operator=(db_idx_long_double_end&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_end& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_end* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_end*>(
+               &_db_idx_long_double_end_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    59;
+
+  void Swap(db_idx_long_double_end* other);
+  friend void swap(db_idx_long_double_end& a, db_idx_long_double_end& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_end* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_end>(NULL);
+  }
+
+  db_idx_long_double_end* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_end>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_end& from);
+  void MergeFrom(const db_idx_long_double_end& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_end* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 code = 1;
+  bool has_code() const;
+  void clear_code();
+  static const int kCodeFieldNumber = 1;
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
+
+  // optional uint64 scope = 2;
+  bool has_scope() const;
+  void clear_scope();
+  static const int kScopeFieldNumber = 2;
+  ::google::protobuf::uint64 scope() const;
+  void set_scope(::google::protobuf::uint64 value);
+
+  // optional uint64 table = 3;
+  bool has_table() const;
+  void clear_table();
+  static const int kTableFieldNumber = 3;
+  ::google::protobuf::uint64 table() const;
+  void set_table(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_end)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 code_;
+  ::google::protobuf::uint64 scope_;
+  ::google::protobuf::uint64 table_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_next : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_next) */ {
+ public:
+  db_idx_long_double_next();
+  virtual ~db_idx_long_double_next();
+
+  db_idx_long_double_next(const db_idx_long_double_next& from);
+
+  inline db_idx_long_double_next& operator=(const db_idx_long_double_next& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_next(db_idx_long_double_next&& from) noexcept
+    : db_idx_long_double_next() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_next& operator=(db_idx_long_double_next&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_next& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_next* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_next*>(
+               &_db_idx_long_double_next_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    60;
+
+  void Swap(db_idx_long_double_next* other);
+  friend void swap(db_idx_long_double_next& a, db_idx_long_double_next& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_next* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_next>(NULL);
+  }
+
+  db_idx_long_double_next* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_next>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_next& from);
+  void MergeFrom(const db_idx_long_double_next& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_next* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_next)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class db_idx_long_double_previous : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_idx_long_double_previous) */ {
+ public:
+  db_idx_long_double_previous();
+  virtual ~db_idx_long_double_previous();
+
+  db_idx_long_double_previous(const db_idx_long_double_previous& from);
+
+  inline db_idx_long_double_previous& operator=(const db_idx_long_double_previous& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  db_idx_long_double_previous(db_idx_long_double_previous&& from) noexcept
+    : db_idx_long_double_previous() {
+    *this = ::std::move(from);
+  }
+
+  inline db_idx_long_double_previous& operator=(db_idx_long_double_previous&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const db_idx_long_double_previous& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const db_idx_long_double_previous* internal_default_instance() {
+    return reinterpret_cast<const db_idx_long_double_previous*>(
+               &_db_idx_long_double_previous_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    61;
+
+  void Swap(db_idx_long_double_previous* other);
+  friend void swap(db_idx_long_double_previous& a, db_idx_long_double_previous& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline db_idx_long_double_previous* New() const final {
+    return CreateMaybeMessage<db_idx_long_double_previous>(NULL);
+  }
+
+  db_idx_long_double_previous* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<db_idx_long_double_previous>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const db_idx_long_double_previous& from);
+  void MergeFrom(const db_idx_long_double_previous& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(db_idx_long_double_previous* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional uint64 primary = 2;
+  bool has_primary() const;
+  void clear_primary();
+  static const int kPrimaryFieldNumber = 2;
+  ::google::protobuf::uint64 primary() const;
+  void set_primary(::google::protobuf::uint64 value);
+
+  // optional uint32 itr = 1;
+  bool has_itr() const;
+  void clear_itr();
+  static const int kItrFieldNumber = 1;
+  ::google::protobuf::uint32 itr() const;
+  void set_itr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.db_idx_long_double_previous)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint64 primary_;
+  ::google::protobuf::uint32 itr_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class check_transaction_authorization : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.check_transaction_authorization) */ {
+ public:
+  check_transaction_authorization();
+  virtual ~check_transaction_authorization();
+
+  check_transaction_authorization(const check_transaction_authorization& from);
+
+  inline check_transaction_authorization& operator=(const check_transaction_authorization& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  check_transaction_authorization(check_transaction_authorization&& from) noexcept
+    : check_transaction_authorization() {
+    *this = ::std::move(from);
+  }
+
+  inline check_transaction_authorization& operator=(check_transaction_authorization&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const check_transaction_authorization& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const check_transaction_authorization* internal_default_instance() {
+    return reinterpret_cast<const check_transaction_authorization*>(
+               &_check_transaction_authorization_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    62;
+
+  void Swap(check_transaction_authorization* other);
+  friend void swap(check_transaction_authorization& a, check_transaction_authorization& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline check_transaction_authorization* New() const final {
+    return CreateMaybeMessage<check_transaction_authorization>(NULL);
+  }
+
+  check_transaction_authorization* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<check_transaction_authorization>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const check_transaction_authorization& from);
+  void MergeFrom(const check_transaction_authorization& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(check_transaction_authorization* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes trx_data = 1;
+  bool has_trx_data() const;
+  void clear_trx_data();
+  static const int kTrxDataFieldNumber = 1;
+  const ::std::string& trx_data() const;
+  void set_trx_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_trx_data(::std::string&& value);
+  #endif
+  void set_trx_data(const char* value);
+  void set_trx_data(const void* value, size_t size);
+  ::std::string* mutable_trx_data();
+  ::std::string* release_trx_data();
+  void set_allocated_trx_data(::std::string* trx_data);
+
+  // optional bytes pubkeys_data = 2;
+  bool has_pubkeys_data() const;
+  void clear_pubkeys_data();
+  static const int kPubkeysDataFieldNumber = 2;
+  const ::std::string& pubkeys_data() const;
+  void set_pubkeys_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_pubkeys_data(::std::string&& value);
+  #endif
+  void set_pubkeys_data(const char* value);
+  void set_pubkeys_data(const void* value, size_t size);
+  ::std::string* mutable_pubkeys_data();
+  ::std::string* release_pubkeys_data();
+  void set_allocated_pubkeys_data(::std::string* pubkeys_data);
+
+  // optional bytes perms_data = 3;
+  bool has_perms_data() const;
+  void clear_perms_data();
+  static const int kPermsDataFieldNumber = 3;
+  const ::std::string& perms_data() const;
+  void set_perms_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_perms_data(::std::string&& value);
+  #endif
+  void set_perms_data(const char* value);
+  void set_perms_data(const void* value, size_t size);
+  ::std::string* mutable_perms_data();
+  ::std::string* release_perms_data();
+  void set_allocated_perms_data(::std::string* perms_data);
+
+  // @@protoc_insertion_point(class_scope:action_message.check_transaction_authorization)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr trx_data_;
+  ::google::protobuf::internal::ArenaStringPtr pubkeys_data_;
+  ::google::protobuf::internal::ArenaStringPtr perms_data_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class check_permission_authorization : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.check_permission_authorization) */ {
+ public:
+  check_permission_authorization();
+  virtual ~check_permission_authorization();
+
+  check_permission_authorization(const check_permission_authorization& from);
+
+  inline check_permission_authorization& operator=(const check_permission_authorization& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  check_permission_authorization(check_permission_authorization&& from) noexcept
+    : check_permission_authorization() {
+    *this = ::std::move(from);
+  }
+
+  inline check_permission_authorization& operator=(check_permission_authorization&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const check_permission_authorization& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const check_permission_authorization* internal_default_instance() {
+    return reinterpret_cast<const check_permission_authorization*>(
+               &_check_permission_authorization_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    63;
+
+  void Swap(check_permission_authorization* other);
+  friend void swap(check_permission_authorization& a, check_permission_authorization& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline check_permission_authorization* New() const final {
+    return CreateMaybeMessage<check_permission_authorization>(NULL);
+  }
+
+  check_permission_authorization* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<check_permission_authorization>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const check_permission_authorization& from);
+  void MergeFrom(const check_permission_authorization& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(check_permission_authorization* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes account = 1;
+  bool has_account() const;
+  void clear_account();
+  static const int kAccountFieldNumber = 1;
+  const ::std::string& account() const;
+  void set_account(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account(::std::string&& value);
+  #endif
+  void set_account(const char* value);
+  void set_account(const void* value, size_t size);
+  ::std::string* mutable_account();
+  ::std::string* release_account();
+  void set_allocated_account(::std::string* account);
+
+  // optional bytes permission = 2;
+  bool has_permission() const;
+  void clear_permission();
+  static const int kPermissionFieldNumber = 2;
+  const ::std::string& permission() const;
+  void set_permission(const ::std::string& value);
+  #if LANG_CXX11
+  void set_permission(::std::string&& value);
+  #endif
+  void set_permission(const char* value);
+  void set_permission(const void* value, size_t size);
+  ::std::string* mutable_permission();
+  ::std::string* release_permission();
+  void set_allocated_permission(::std::string* permission);
+
+  // optional bytes pubkeys_data = 3;
+  bool has_pubkeys_data() const;
+  void clear_pubkeys_data();
+  static const int kPubkeysDataFieldNumber = 3;
+  const ::std::string& pubkeys_data() const;
+  void set_pubkeys_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_pubkeys_data(::std::string&& value);
+  #endif
+  void set_pubkeys_data(const char* value);
+  void set_pubkeys_data(const void* value, size_t size);
+  ::std::string* mutable_pubkeys_data();
+  ::std::string* release_pubkeys_data();
+  void set_allocated_pubkeys_data(::std::string* pubkeys_data);
+
+  // optional bytes perms_data = 4;
+  bool has_perms_data() const;
+  void clear_perms_data();
+  static const int kPermsDataFieldNumber = 4;
+  const ::std::string& perms_data() const;
+  void set_perms_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_perms_data(::std::string&& value);
+  #endif
+  void set_perms_data(const char* value);
+  void set_perms_data(const void* value, size_t size);
+  ::std::string* mutable_perms_data();
+  ::std::string* release_perms_data();
+  void set_allocated_perms_data(::std::string* perms_data);
+
+  // optional uint64 delay_us = 5;
+  bool has_delay_us() const;
+  void clear_delay_us();
+  static const int kDelayUsFieldNumber = 5;
+  ::google::protobuf::uint64 delay_us() const;
+  void set_delay_us(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.check_permission_authorization)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr account_;
+  ::google::protobuf::internal::ArenaStringPtr permission_;
+  ::google::protobuf::internal::ArenaStringPtr pubkeys_data_;
+  ::google::protobuf::internal::ArenaStringPtr perms_data_;
+  ::google::protobuf::uint64 delay_us_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class get_permission_last_used : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.get_permission_last_used) */ {
+ public:
+  get_permission_last_used();
+  virtual ~get_permission_last_used();
+
+  get_permission_last_used(const get_permission_last_used& from);
+
+  inline get_permission_last_used& operator=(const get_permission_last_used& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  get_permission_last_used(get_permission_last_used&& from) noexcept
+    : get_permission_last_used() {
+    *this = ::std::move(from);
+  }
+
+  inline get_permission_last_used& operator=(get_permission_last_used&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const get_permission_last_used& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const get_permission_last_used* internal_default_instance() {
+    return reinterpret_cast<const get_permission_last_used*>(
+               &_get_permission_last_used_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    64;
+
+  void Swap(get_permission_last_used* other);
+  friend void swap(get_permission_last_used& a, get_permission_last_used& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline get_permission_last_used* New() const final {
+    return CreateMaybeMessage<get_permission_last_used>(NULL);
+  }
+
+  get_permission_last_used* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<get_permission_last_used>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const get_permission_last_used& from);
+  void MergeFrom(const get_permission_last_used& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(get_permission_last_used* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes account = 1;
+  bool has_account() const;
+  void clear_account();
+  static const int kAccountFieldNumber = 1;
+  const ::std::string& account() const;
+  void set_account(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account(::std::string&& value);
+  #endif
+  void set_account(const char* value);
+  void set_account(const void* value, size_t size);
+  ::std::string* mutable_account();
+  ::std::string* release_account();
+  void set_allocated_account(::std::string* account);
+
+  // optional bytes permission = 2;
+  bool has_permission() const;
+  void clear_permission();
+  static const int kPermissionFieldNumber = 2;
+  const ::std::string& permission() const;
+  void set_permission(const ::std::string& value);
+  #if LANG_CXX11
+  void set_permission(::std::string&& value);
+  #endif
+  void set_permission(const char* value);
+  void set_permission(const void* value, size_t size);
+  ::std::string* mutable_permission();
+  ::std::string* release_permission();
+  void set_allocated_permission(::std::string* permission);
+
+  // @@protoc_insertion_point(class_scope:action_message.get_permission_last_used)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr account_;
+  ::google::protobuf::internal::ArenaStringPtr permission_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class get_account_creation_time : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.get_account_creation_time) */ {
+ public:
+  get_account_creation_time();
+  virtual ~get_account_creation_time();
+
+  get_account_creation_time(const get_account_creation_time& from);
+
+  inline get_account_creation_time& operator=(const get_account_creation_time& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  get_account_creation_time(get_account_creation_time&& from) noexcept
+    : get_account_creation_time() {
+    *this = ::std::move(from);
+  }
+
+  inline get_account_creation_time& operator=(get_account_creation_time&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const get_account_creation_time& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const get_account_creation_time* internal_default_instance() {
+    return reinterpret_cast<const get_account_creation_time*>(
+               &_get_account_creation_time_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    65;
+
+  void Swap(get_account_creation_time* other);
+  friend void swap(get_account_creation_time& a, get_account_creation_time& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline get_account_creation_time* New() const final {
+    return CreateMaybeMessage<get_account_creation_time>(NULL);
+  }
+
+  get_account_creation_time* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<get_account_creation_time>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const get_account_creation_time& from);
+  void MergeFrom(const get_account_creation_time& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(get_account_creation_time* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes account = 1;
+  bool has_account() const;
+  void clear_account();
+  static const int kAccountFieldNumber = 1;
+  const ::std::string& account() const;
+  void set_account(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account(::std::string&& value);
+  #endif
+  void set_account(const char* value);
+  void set_account(const void* value, size_t size);
+  ::std::string* mutable_account();
+  ::std::string* release_account();
+  void set_allocated_account(::std::string* account);
+
+  // @@protoc_insertion_point(class_scope:action_message.get_account_creation_time)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr account_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
 class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.rpc_request) */ {
  public:
   rpc_request();
@@ -683,7 +10371,7 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_rpc_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    66;
 
   void Swap(rpc_request* other);
   friend void swap(rpc_request& a, rpc_request& b) {
@@ -740,10 +10428,10 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // optional bytes data = 4;
+  // optional bytes data = 2;
   bool has_data() const;
   void clear_data();
-  static const int kDataFieldNumber = 4;
+  static const int kDataFieldNumber = 2;
   const ::std::string& data() const;
   void set_data(const ::std::string& value);
   #if LANG_CXX11
@@ -755,26 +10443,10 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
-  // optional .action_message.meta head = 1;
-  bool has_head() const;
-  void clear_head();
-  static const int kHeadFieldNumber = 1;
-  const ::action_message::meta& head() const;
-  ::action_message::meta* release_head();
-  ::action_message::meta* mutable_head();
-  void set_allocated_head(::action_message::meta* head);
-
-  // optional .action_message.object_type type = 2;
-  bool has_type() const;
-  void clear_type();
-  static const int kTypeFieldNumber = 2;
-  ::action_message::object_type type() const;
-  void set_type(::action_message::object_type value);
-
-  // optional .action_message.message_id msg_id = 3;
+  // optional .action_message.message_id msg_id = 1;
   bool has_msg_id() const;
   void clear_msg_id();
-  static const int kMsgIdFieldNumber = 3;
+  static const int kMsgIdFieldNumber = 1;
   ::action_message::message_id msg_id() const;
   void set_msg_id(::action_message::message_id value);
 
@@ -786,8 +10458,6 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
-  ::action_message::meta* head_;
-  int type_;
   int msg_id_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -837,7 +10507,7 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_rpc_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    67;
 
   void Swap(rpc_response* other);
   friend void swap(rpc_response& a, rpc_response& b) {
@@ -894,10 +10564,10 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // optional bytes data = 4;
+  // optional bytes data = 3;
   bool has_data() const;
   void clear_data();
-  static const int kDataFieldNumber = 4;
+  static const int kDataFieldNumber = 3;
   const ::std::string& data() const;
   void set_data(const ::std::string& value);
   #if LANG_CXX11
@@ -909,21 +10579,14 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
-  // optional .action_message.error err = 3;
+  // optional .action_message.error err = 2;
   bool has_err() const;
   void clear_err();
-  static const int kErrFieldNumber = 3;
+  static const int kErrFieldNumber = 2;
   const ::action_message::error& err() const;
   ::action_message::error* release_err();
   ::action_message::error* mutable_err();
   void set_allocated_err(::action_message::error* err);
-
-  // optional .action_message.object_type type = 2;
-  bool has_type() const;
-  void clear_type();
-  static const int kTypeFieldNumber = 2;
-  ::action_message::object_type type() const;
-  void set_type(::action_message::object_type value);
 
   // optional .action_message.message_id msg_id = 1;
   bool has_msg_id() const;
@@ -941,7 +10604,6 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
   ::action_message::error* err_;
-  int type_;
   int msg_id_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -1094,83 +10756,5965 @@ inline void meta::set_method_id(::google::protobuf::uint32 value) {
 
 // -------------------------------------------------------------------
 
-// rpc_request
+// db_stroe_i64
 
-// optional .action_message.meta head = 1;
-inline bool rpc_request::has_head() const {
+// optional uint64 scope = 1;
+inline bool db_stroe_i64::has_scope() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void rpc_request::clear_head() {
-  if (head_ != NULL) head_->Clear();
+inline void db_stroe_i64::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::action_message::meta& rpc_request::head() const {
-  const ::action_message::meta* p = head_;
-  // @@protoc_insertion_point(field_get:action_message.rpc_request.head)
-  return p != NULL ? *p : *reinterpret_cast<const ::action_message::meta*>(
-      &::action_message::_meta_default_instance_);
+inline ::google::protobuf::uint64 db_stroe_i64::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.scope)
+  return scope_;
 }
-inline ::action_message::meta* rpc_request::release_head() {
-  // @@protoc_insertion_point(field_release:action_message.rpc_request.head)
-  _has_bits_[0] &= ~0x00000002u;
-  ::action_message::meta* temp = head_;
-  head_ = NULL;
-  return temp;
-}
-inline ::action_message::meta* rpc_request::mutable_head() {
+inline void db_stroe_i64::set_scope(::google::protobuf::uint64 value) {
   _has_bits_[0] |= 0x00000002u;
-  if (head_ == NULL) {
-    auto* p = CreateMaybeMessage<::action_message::meta>(GetArenaNoVirtual());
-    head_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:action_message.rpc_request.head)
-  return head_;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.scope)
 }
-inline void rpc_request::set_allocated_head(::action_message::meta* head) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete head_;
+
+// optional uint64 table = 2;
+inline bool db_stroe_i64::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_stroe_i64::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_stroe_i64::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.table)
+  return table_;
+}
+inline void db_stroe_i64::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_stroe_i64::has_payer() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_stroe_i64::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_stroe_i64::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.payer)
+  return payer_;
+}
+inline void db_stroe_i64::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_stroe_i64::has_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_stroe_i64::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_stroe_i64::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.id)
+  return id_;
+}
+inline void db_stroe_i64::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.id)
+}
+
+// optional bytes buffer = 5;
+inline bool db_stroe_i64::has_buffer() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_stroe_i64::clear_buffer() {
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_stroe_i64::buffer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.buffer)
+  return buffer_.GetNoArena();
+}
+inline void db_stroe_i64::set_buffer(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.buffer)
+}
+#if LANG_CXX11
+inline void db_stroe_i64::set_buffer(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_stroe_i64.buffer)
+}
+#endif
+inline void db_stroe_i64::set_buffer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_stroe_i64.buffer)
+}
+inline void db_stroe_i64::set_buffer(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_stroe_i64.buffer)
+}
+inline ::std::string* db_stroe_i64::mutable_buffer() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_stroe_i64.buffer)
+  return buffer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_stroe_i64::release_buffer() {
+  // @@protoc_insertion_point(field_release:action_message.db_stroe_i64.buffer)
+  if (!has_buffer()) {
+    return NULL;
   }
-  if (head) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      head = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, head, submessage_arena);
-    }
+  _has_bits_[0] &= ~0x00000001u;
+  return buffer_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_stroe_i64::set_allocated_buffer(::std::string* buffer) {
+  if (buffer != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  buffer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buffer);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_stroe_i64.buffer)
+}
+
+// optional uint64 buffer_size = 6;
+inline bool db_stroe_i64::has_buffer_size() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_stroe_i64::clear_buffer_size() {
+  buffer_size_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_stroe_i64::buffer_size() const {
+  // @@protoc_insertion_point(field_get:action_message.db_stroe_i64.buffer_size)
+  return buffer_size_;
+}
+inline void db_stroe_i64::set_buffer_size(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  buffer_size_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_stroe_i64.buffer_size)
+}
+
+// -------------------------------------------------------------------
+
+// db_update_i64
+
+// optional uint32 itr = 1;
+inline bool db_update_i64::has_itr() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_update_i64::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint32 db_update_i64::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_update_i64.itr)
+  return itr_;
+}
+inline void db_update_i64::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000008u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_update_i64.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_update_i64::has_payer() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_update_i64::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_update_i64::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_update_i64.payer)
+  return payer_;
+}
+inline void db_update_i64::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_update_i64.payer)
+}
+
+// optional bytes buffer = 3;
+inline bool db_update_i64::has_buffer() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_update_i64::clear_buffer() {
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_update_i64::buffer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_update_i64.buffer)
+  return buffer_.GetNoArena();
+}
+inline void db_update_i64::set_buffer(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_update_i64.buffer)
+}
+#if LANG_CXX11
+inline void db_update_i64::set_buffer(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_update_i64.buffer)
+}
+#endif
+inline void db_update_i64::set_buffer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_update_i64.buffer)
+}
+inline void db_update_i64::set_buffer(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_update_i64.buffer)
+}
+inline ::std::string* db_update_i64::mutable_buffer() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_update_i64.buffer)
+  return buffer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_update_i64::release_buffer() {
+  // @@protoc_insertion_point(field_release:action_message.db_update_i64.buffer)
+  if (!has_buffer()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return buffer_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_update_i64::set_allocated_buffer(::std::string* buffer) {
+  if (buffer != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  buffer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buffer);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_update_i64.buffer)
+}
+
+// optional uint64 buffer_size = 4;
+inline bool db_update_i64::has_buffer_size() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_update_i64::clear_buffer_size() {
+  buffer_size_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_update_i64::buffer_size() const {
+  // @@protoc_insertion_point(field_get:action_message.db_update_i64.buffer_size)
+  return buffer_size_;
+}
+inline void db_update_i64::set_buffer_size(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  buffer_size_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_update_i64.buffer_size)
+}
+
+// -------------------------------------------------------------------
+
+// db_remove_i64
+
+// optional uint32 itr = 1;
+inline bool db_remove_i64::has_itr() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_remove_i64::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_remove_i64::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_remove_i64.itr)
+  return itr_;
+}
+inline void db_remove_i64::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_remove_i64.itr)
+}
+
+// -------------------------------------------------------------------
+
+// db_get_i64
+
+// optional uint32 itr = 1;
+inline bool db_get_i64::has_itr() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_get_i64::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 db_get_i64::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_get_i64.itr)
+  return itr_;
+}
+inline void db_get_i64::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_get_i64.itr)
+}
+
+// optional bytes buffer = 2;
+inline bool db_get_i64::has_buffer() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_get_i64::clear_buffer() {
+  buffer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_get_i64::buffer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_get_i64.buffer)
+  return buffer_.GetNoArena();
+}
+inline void db_get_i64::set_buffer(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_get_i64.buffer)
+}
+#if LANG_CXX11
+inline void db_get_i64::set_buffer(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_get_i64.buffer)
+}
+#endif
+inline void db_get_i64::set_buffer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_get_i64.buffer)
+}
+inline void db_get_i64::set_buffer(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  buffer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_get_i64.buffer)
+}
+inline ::std::string* db_get_i64::mutable_buffer() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_get_i64.buffer)
+  return buffer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_get_i64::release_buffer() {
+  // @@protoc_insertion_point(field_release:action_message.db_get_i64.buffer)
+  if (!has_buffer()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return buffer_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_get_i64::set_allocated_buffer(::std::string* buffer) {
+  if (buffer != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  buffer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), buffer);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_get_i64.buffer)
+}
+
+// optional uint64 buffer_size = 3;
+inline bool db_get_i64::has_buffer_size() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_get_i64::clear_buffer_size() {
+  buffer_size_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_get_i64::buffer_size() const {
+  // @@protoc_insertion_point(field_get:action_message.db_get_i64.buffer_size)
+  return buffer_size_;
+}
+inline void db_get_i64::set_buffer_size(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  buffer_size_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_get_i64.buffer_size)
+}
+
+// -------------------------------------------------------------------
+
+// db_next_64
+
+// optional uint32 itr = 1;
+inline bool db_next_64::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_next_64::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_next_64::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_next_64.itr)
+  return itr_;
+}
+inline void db_next_64::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_next_64.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_next_64::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_next_64::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_next_64::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_next_64.primary)
+  return primary_;
+}
+inline void db_next_64::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_next_64.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_pervious_i64
+
+// optional uint32 itr = 1;
+inline bool db_pervious_i64::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_pervious_i64::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_pervious_i64::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_pervious_i64.itr)
+  return itr_;
+}
+inline void db_pervious_i64::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_pervious_i64.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_pervious_i64::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_pervious_i64::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_pervious_i64::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_pervious_i64.primary)
+  return primary_;
+}
+inline void db_pervious_i64::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_pervious_i64.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_find_i64
+
+// optional uint64 code = 1;
+inline bool db_find_i64::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_find_i64::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_find_i64::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_find_i64.code)
+  return code_;
+}
+inline void db_find_i64::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_find_i64.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_find_i64::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_find_i64::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_find_i64::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_find_i64.scope)
+  return scope_;
+}
+inline void db_find_i64::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_find_i64.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_find_i64::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_find_i64::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_find_i64::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_find_i64.table)
+  return table_;
+}
+inline void db_find_i64::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_find_i64.table)
+}
+
+// optional uint64 id = 4;
+inline bool db_find_i64::has_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_find_i64::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_find_i64::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_find_i64.id)
+  return id_;
+}
+inline void db_find_i64::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_find_i64.id)
+}
+
+// -------------------------------------------------------------------
+
+// db_lowerbound_i64
+
+// optional uint64 code = 1;
+inline bool db_lowerbound_i64::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_lowerbound_i64::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_lowerbound_i64::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_lowerbound_i64.code)
+  return code_;
+}
+inline void db_lowerbound_i64::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_lowerbound_i64.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_lowerbound_i64::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_lowerbound_i64::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_lowerbound_i64::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_lowerbound_i64.scope)
+  return scope_;
+}
+inline void db_lowerbound_i64::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_lowerbound_i64.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_lowerbound_i64::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_lowerbound_i64::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_lowerbound_i64::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_lowerbound_i64.table)
+  return table_;
+}
+inline void db_lowerbound_i64::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_lowerbound_i64.table)
+}
+
+// optional uint64 id = 4;
+inline bool db_lowerbound_i64::has_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_lowerbound_i64::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_lowerbound_i64::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_lowerbound_i64.id)
+  return id_;
+}
+inline void db_lowerbound_i64::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_lowerbound_i64.id)
+}
+
+// -------------------------------------------------------------------
+
+// db_upperbound_i64
+
+// optional uint64 code = 1;
+inline bool db_upperbound_i64::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_upperbound_i64::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_upperbound_i64::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_upperbound_i64.code)
+  return code_;
+}
+inline void db_upperbound_i64::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_upperbound_i64.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_upperbound_i64::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_upperbound_i64::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_upperbound_i64::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_upperbound_i64.scope)
+  return scope_;
+}
+inline void db_upperbound_i64::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_upperbound_i64.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_upperbound_i64::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_upperbound_i64::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_upperbound_i64::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_upperbound_i64.table)
+  return table_;
+}
+inline void db_upperbound_i64::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_upperbound_i64.table)
+}
+
+// optional uint64 id = 4;
+inline bool db_upperbound_i64::has_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_upperbound_i64::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_upperbound_i64::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_upperbound_i64.id)
+  return id_;
+}
+inline void db_upperbound_i64::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_upperbound_i64.id)
+}
+
+// -------------------------------------------------------------------
+
+// db_end_i64
+
+// optional uint64 code = 1;
+inline bool db_end_i64::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_end_i64::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_end_i64::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_end_i64.code)
+  return code_;
+}
+inline void db_end_i64::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_end_i64.code)
+}
+
+// optional uint64 table = 2;
+inline bool db_end_i64::has_table() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_end_i64::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_end_i64::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_end_i64.table)
+  return table_;
+}
+inline void db_end_i64::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_end_i64.table)
+}
+
+// optional uint64 scope = 3;
+inline bool db_end_i64::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_end_i64::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_end_i64::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_end_i64.scope)
+  return scope_;
+}
+inline void db_end_i64::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_end_i64.scope)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_store
+
+// optional uint64 scope = 1;
+inline bool db_idx64_store::has_scope() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_store::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_store::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_store.scope)
+  return scope_;
+}
+inline void db_idx64_store::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_store.scope)
+}
+
+// optional uint64 table = 2;
+inline bool db_idx64_store::has_table() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_store::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_store::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_store.table)
+  return table_;
+}
+inline void db_idx64_store::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_store.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_idx64_store::has_payer() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_store::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_store::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_store.payer)
+  return payer_;
+}
+inline void db_idx64_store::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_store.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_idx64_store::has_id() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx64_store::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx64_store::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_store.id)
+  return id_;
+}
+inline void db_idx64_store::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_store.id)
+}
+
+// optional uint64 secondary = 5;
+inline bool db_idx64_store::has_secondary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx64_store::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx64_store::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_store.secondary)
+  return secondary_;
+}
+inline void db_idx64_store::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_store.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_update
+
+// optional uint32 itr = 1;
+inline bool db_idx64_update::has_itr() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_update::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 db_idx64_update::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_update.itr)
+  return itr_;
+}
+inline void db_idx64_update::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_update.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_idx64_update::has_payer() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_update::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_update::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_update.payer)
+  return payer_;
+}
+inline void db_idx64_update::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_update.payer)
+}
+
+// optional uint64 secondary = 3;
+inline bool db_idx64_update::has_secondary() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_update::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_update::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_update.secondary)
+  return secondary_;
+}
+inline void db_idx64_update::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_update.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_remove
+
+// optional uint32 itr = 1;
+inline bool db_idx64_remove::has_itr() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_remove::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_idx64_remove::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_remove.itr)
+  return itr_;
+}
+inline void db_idx64_remove::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_remove.itr)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_find_secondary
+
+// optional uint64 code = 1;
+inline bool db_idx64_find_secondary::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_find_secondary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_secondary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_secondary.code)
+  return code_;
+}
+inline void db_idx64_find_secondary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_secondary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx64_find_secondary::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_find_secondary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_secondary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_secondary.scope)
+  return scope_;
+}
+inline void db_idx64_find_secondary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_secondary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx64_find_secondary::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_find_secondary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_secondary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_secondary.table)
+  return table_;
+}
+inline void db_idx64_find_secondary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_secondary.table)
+}
+
+// optional uint64 secondary = 4;
+inline bool db_idx64_find_secondary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx64_find_secondary::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_secondary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_secondary.secondary)
+  return secondary_;
+}
+inline void db_idx64_find_secondary::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_secondary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx64_find_secondary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx64_find_secondary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_secondary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_secondary.primary)
+  return primary_;
+}
+inline void db_idx64_find_secondary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_secondary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_find_primary
+
+// optional uint64 code = 1;
+inline bool db_idx64_find_primary::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_find_primary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_primary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_primary.code)
+  return code_;
+}
+inline void db_idx64_find_primary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_primary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx64_find_primary::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_find_primary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_primary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_primary.scope)
+  return scope_;
+}
+inline void db_idx64_find_primary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_primary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx64_find_primary::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_find_primary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_primary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_primary.table)
+  return table_;
+}
+inline void db_idx64_find_primary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_primary.table)
+}
+
+// optional uint64 secondary = 4;
+inline bool db_idx64_find_primary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx64_find_primary::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_primary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_primary.secondary)
+  return secondary_;
+}
+inline void db_idx64_find_primary::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_primary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx64_find_primary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx64_find_primary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx64_find_primary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_find_primary.primary)
+  return primary_;
+}
+inline void db_idx64_find_primary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_find_primary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_lowerbound
+
+// optional uint64 code = 1;
+inline bool db_idx64_lowerbound::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_lowerbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_lowerbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_lowerbound.code)
+  return code_;
+}
+inline void db_idx64_lowerbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_lowerbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx64_lowerbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_lowerbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_lowerbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_lowerbound.scope)
+  return scope_;
+}
+inline void db_idx64_lowerbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_lowerbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx64_lowerbound::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_lowerbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_lowerbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_lowerbound.table)
+  return table_;
+}
+inline void db_idx64_lowerbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_lowerbound.table)
+}
+
+// optional uint64 secondary = 4;
+inline bool db_idx64_lowerbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx64_lowerbound::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx64_lowerbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_lowerbound.secondary)
+  return secondary_;
+}
+inline void db_idx64_lowerbound::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_lowerbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx64_lowerbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx64_lowerbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx64_lowerbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_lowerbound.primary)
+  return primary_;
+}
+inline void db_idx64_lowerbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_lowerbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_upperbound
+
+// optional uint64 code = 1;
+inline bool db_idx64_upperbound::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_upperbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_upperbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_upperbound.code)
+  return code_;
+}
+inline void db_idx64_upperbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_upperbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx64_upperbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_upperbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_upperbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_upperbound.scope)
+  return scope_;
+}
+inline void db_idx64_upperbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_upperbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx64_upperbound::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_upperbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_upperbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_upperbound.table)
+  return table_;
+}
+inline void db_idx64_upperbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_upperbound.table)
+}
+
+// optional uint64 secondary = 4;
+inline bool db_idx64_upperbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx64_upperbound::clear_secondary() {
+  secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx64_upperbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_upperbound.secondary)
+  return secondary_;
+}
+inline void db_idx64_upperbound::set_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_upperbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx64_upperbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx64_upperbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx64_upperbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_upperbound.primary)
+  return primary_;
+}
+inline void db_idx64_upperbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_upperbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_end
+
+// optional uint64 code = 1;
+inline bool db_idx64_end::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_end::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_end::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_end.code)
+  return code_;
+}
+inline void db_idx64_end::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_end.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx64_end::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_end::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx64_end::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_end.scope)
+  return scope_;
+}
+inline void db_idx64_end::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_end.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx64_end::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx64_end::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx64_end::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_end.table)
+  return table_;
+}
+inline void db_idx64_end::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_end.table)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_next
+
+// optional uint32 itr = 1;
+inline bool db_idx64_next::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_next::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx64_next::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_next.itr)
+  return itr_;
+}
+inline void db_idx64_next::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_next.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx64_next::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_next::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_next::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_next.primary)
+  return primary_;
+}
+inline void db_idx64_next::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_next.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx64_previous
+
+// optional uint32 itr = 1;
+inline bool db_idx64_previous::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx64_previous::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx64_previous::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_previous.itr)
+  return itr_;
+}
+inline void db_idx64_previous::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_previous.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx64_previous::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx64_previous::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx64_previous::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx64_previous.primary)
+  return primary_;
+}
+inline void db_idx64_previous::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx64_previous.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_store
+
+// optional uint64 scope = 1;
+inline bool db_idx128_store::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_store::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_store::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_store.scope)
+  return scope_;
+}
+inline void db_idx128_store::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_store.scope)
+}
+
+// optional uint64 table = 2;
+inline bool db_idx128_store::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_store::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_store::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_store.table)
+  return table_;
+}
+inline void db_idx128_store::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_store.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_idx128_store::has_payer() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx128_store::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx128_store::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_store.payer)
+  return payer_;
+}
+inline void db_idx128_store::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_store.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_idx128_store::has_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx128_store::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx128_store::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_store.id)
+  return id_;
+}
+inline void db_idx128_store::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_store.id)
+}
+
+// optional bytes secondary = 5;
+inline bool db_idx128_store::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_store::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_store::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_store.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_store::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_store.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_store::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_store.secondary)
+}
+#endif
+inline void db_idx128_store::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_store.secondary)
+}
+inline void db_idx128_store::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_store.secondary)
+}
+inline ::std::string* db_idx128_store::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_store.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_store::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_store.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_store::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_store.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_update
+
+// optional uint32 itr = 1;
+inline bool db_idx128_update::has_itr() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_update::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 db_idx128_update::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_update.itr)
+  return itr_;
+}
+inline void db_idx128_update::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_update.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_idx128_update::has_payer() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_update::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_update::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_update.payer)
+  return payer_;
+}
+inline void db_idx128_update::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_update.payer)
+}
+
+// optional bytes secondary = 3;
+inline bool db_idx128_update::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_update::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_update::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_update.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_update::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_update.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_update::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_update.secondary)
+}
+#endif
+inline void db_idx128_update::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_update.secondary)
+}
+inline void db_idx128_update::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_update.secondary)
+}
+inline ::std::string* db_idx128_update::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_update.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_update::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_update.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_update::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_update.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_remove
+
+// optional uint32 itr = 1;
+inline bool db_idx128_remove::has_itr() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_remove::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_idx128_remove::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_remove.itr)
+  return itr_;
+}
+inline void db_idx128_remove::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_remove.itr)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_find_secondary
+
+// optional uint64 code = 1;
+inline bool db_idx128_find_secondary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_find_secondary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_secondary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_secondary.code)
+  return code_;
+}
+inline void db_idx128_find_secondary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_secondary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx128_find_secondary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_find_secondary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_secondary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_secondary.scope)
+  return scope_;
+}
+inline void db_idx128_find_secondary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_secondary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx128_find_secondary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx128_find_secondary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_secondary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_secondary.table)
+  return table_;
+}
+inline void db_idx128_find_secondary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_secondary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx128_find_secondary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_find_secondary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_find_secondary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_secondary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_find_secondary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_secondary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_find_secondary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_find_secondary.secondary)
+}
+#endif
+inline void db_idx128_find_secondary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_find_secondary.secondary)
+}
+inline void db_idx128_find_secondary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_find_secondary.secondary)
+}
+inline ::std::string* db_idx128_find_secondary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_find_secondary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_find_secondary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_find_secondary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_find_secondary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_find_secondary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx128_find_secondary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx128_find_secondary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_secondary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_secondary.primary)
+  return primary_;
+}
+inline void db_idx128_find_secondary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_secondary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_find_primary
+
+// optional uint64 code = 1;
+inline bool db_idx128_find_primary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_find_primary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_primary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_primary.code)
+  return code_;
+}
+inline void db_idx128_find_primary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_primary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx128_find_primary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_find_primary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_primary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_primary.scope)
+  return scope_;
+}
+inline void db_idx128_find_primary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_primary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx128_find_primary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx128_find_primary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_primary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_primary.table)
+  return table_;
+}
+inline void db_idx128_find_primary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_primary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx128_find_primary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_find_primary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_find_primary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_primary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_find_primary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_primary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_find_primary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_find_primary.secondary)
+}
+#endif
+inline void db_idx128_find_primary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_find_primary.secondary)
+}
+inline void db_idx128_find_primary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_find_primary.secondary)
+}
+inline ::std::string* db_idx128_find_primary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_find_primary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_find_primary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_find_primary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_find_primary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_find_primary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx128_find_primary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx128_find_primary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx128_find_primary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_find_primary.primary)
+  return primary_;
+}
+inline void db_idx128_find_primary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_find_primary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_lowerbound
+
+// optional uint64 code = 1;
+inline bool db_idx128_lowerbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_lowerbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_lowerbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_lowerbound.code)
+  return code_;
+}
+inline void db_idx128_lowerbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_lowerbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx128_lowerbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_lowerbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_lowerbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_lowerbound.scope)
+  return scope_;
+}
+inline void db_idx128_lowerbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_lowerbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx128_lowerbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx128_lowerbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx128_lowerbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_lowerbound.table)
+  return table_;
+}
+inline void db_idx128_lowerbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_lowerbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx128_lowerbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_lowerbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_lowerbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_lowerbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_lowerbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_lowerbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_lowerbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_lowerbound.secondary)
+}
+#endif
+inline void db_idx128_lowerbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_lowerbound.secondary)
+}
+inline void db_idx128_lowerbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_lowerbound.secondary)
+}
+inline ::std::string* db_idx128_lowerbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_lowerbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_lowerbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_lowerbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_lowerbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_lowerbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx128_lowerbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx128_lowerbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx128_lowerbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_lowerbound.primary)
+  return primary_;
+}
+inline void db_idx128_lowerbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_lowerbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_upperbound
+
+// optional uint64 code = 1;
+inline bool db_idx128_upperbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_upperbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_upperbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_upperbound.code)
+  return code_;
+}
+inline void db_idx128_upperbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_upperbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx128_upperbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_upperbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_upperbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_upperbound.scope)
+  return scope_;
+}
+inline void db_idx128_upperbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_upperbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx128_upperbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx128_upperbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx128_upperbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_upperbound.table)
+  return table_;
+}
+inline void db_idx128_upperbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_upperbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx128_upperbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_upperbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx128_upperbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_upperbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx128_upperbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_upperbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx128_upperbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx128_upperbound.secondary)
+}
+#endif
+inline void db_idx128_upperbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx128_upperbound.secondary)
+}
+inline void db_idx128_upperbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx128_upperbound.secondary)
+}
+inline ::std::string* db_idx128_upperbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx128_upperbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx128_upperbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx128_upperbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx128_upperbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx128_upperbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx128_upperbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx128_upperbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx128_upperbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_upperbound.primary)
+  return primary_;
+}
+inline void db_idx128_upperbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_upperbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_end
+
+// optional uint64 code = 1;
+inline bool db_idx128_end::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_end::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx128_end::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_end.code)
+  return code_;
+}
+inline void db_idx128_end::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_end.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx128_end::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_end::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx128_end::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_end.scope)
+  return scope_;
+}
+inline void db_idx128_end::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_end.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx128_end::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx128_end::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx128_end::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_end.table)
+  return table_;
+}
+inline void db_idx128_end::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_end.table)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_next
+
+// optional uint32 itr = 1;
+inline bool db_idx128_next::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_next::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx128_next::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_next.itr)
+  return itr_;
+}
+inline void db_idx128_next::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_next.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx128_next::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_next::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx128_next::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_next.primary)
+  return primary_;
+}
+inline void db_idx128_next::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_next.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx128_previous
+
+// optional uint32 itr = 1;
+inline bool db_idx128_previous::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx128_previous::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx128_previous::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_previous.itr)
+  return itr_;
+}
+inline void db_idx128_previous::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_previous.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx128_previous::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx128_previous::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx128_previous::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx128_previous.primary)
+  return primary_;
+}
+inline void db_idx128_previous::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx128_previous.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_store
+
+// optional uint64 scope = 1;
+inline bool db_idx256_store::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_store::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_store::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.scope)
+  return scope_;
+}
+inline void db_idx256_store::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.scope)
+}
+
+// optional uint64 table = 2;
+inline bool db_idx256_store::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_store::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_store::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.table)
+  return table_;
+}
+inline void db_idx256_store::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_idx256_store::has_payer() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_store::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx256_store::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.payer)
+  return payer_;
+}
+inline void db_idx256_store::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_idx256_store::has_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx256_store::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx256_store::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.id)
+  return id_;
+}
+inline void db_idx256_store::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.id)
+}
+
+// optional bytes data = 5;
+inline bool db_idx256_store::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_store::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_store::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_store::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.data)
+}
+#if LANG_CXX11
+inline void db_idx256_store::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_store.data)
+}
+#endif
+inline void db_idx256_store::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_store.data)
+}
+inline void db_idx256_store::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_store.data)
+}
+inline ::std::string* db_idx256_store::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_store.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_store::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_store.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_store::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_store.data)
+}
+
+// optional uint64 data_len = 6;
+inline bool db_idx256_store::has_data_len() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_idx256_store::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_idx256_store::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_store.data_len)
+  return data_len_;
+}
+inline void db_idx256_store::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_store.data_len)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_update
+
+// optional uint32 itr = 1;
+inline bool db_idx256_update::has_itr() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_update::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint32 db_idx256_update::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_update.itr)
+  return itr_;
+}
+inline void db_idx256_update::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000008u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_update.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_idx256_update::has_payer() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_update::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_update::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_update.payer)
+  return payer_;
+}
+inline void db_idx256_update::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_update.payer)
+}
+
+// optional bytes data = 3;
+inline bool db_idx256_update::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_update::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_update::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_update.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_update::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_update.data)
+}
+#if LANG_CXX11
+inline void db_idx256_update::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_update.data)
+}
+#endif
+inline void db_idx256_update::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_update.data)
+}
+inline void db_idx256_update::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_update.data)
+}
+inline ::std::string* db_idx256_update::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_update.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_update::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_update.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_update::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_update.data)
+}
+
+// optional uint64 data_len = 4;
+inline bool db_idx256_update::has_data_len() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_update::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_update::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_update.data_len)
+  return data_len_;
+}
+inline void db_idx256_update::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_update.data_len)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_remove
+
+// optional uint32 id = 1;
+inline bool db_idx256_remove::has_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_remove::clear_id() {
+  id_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_idx256_remove::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_remove.id)
+  return id_;
+}
+inline void db_idx256_remove::set_id(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_remove.id)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_find_secondary
+
+// optional uint64 code = 1;
+inline bool db_idx256_find_secondary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_find_secondary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_secondary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.code)
+  return code_;
+}
+inline void db_idx256_find_secondary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx256_find_secondary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_find_secondary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_secondary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.scope)
+  return scope_;
+}
+inline void db_idx256_find_secondary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx256_find_secondary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_find_secondary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_secondary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.table)
+  return table_;
+}
+inline void db_idx256_find_secondary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.table)
+}
+
+// optional bytes data = 4;
+inline bool db_idx256_find_secondary::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_find_secondary::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_find_secondary::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_find_secondary::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.data)
+}
+#if LANG_CXX11
+inline void db_idx256_find_secondary::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_find_secondary.data)
+}
+#endif
+inline void db_idx256_find_secondary::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_find_secondary.data)
+}
+inline void db_idx256_find_secondary::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_find_secondary.data)
+}
+inline ::std::string* db_idx256_find_secondary::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_find_secondary.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_find_secondary::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_find_secondary.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_find_secondary::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_find_secondary.data)
+}
+
+// optional uint64 data_len = 5;
+inline bool db_idx256_find_secondary::has_data_len() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx256_find_secondary::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_secondary::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.data_len)
+  return data_len_;
+}
+inline void db_idx256_find_secondary::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.data_len)
+}
+
+// optional uint64 primary = 6;
+inline bool db_idx256_find_secondary::has_primary() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_idx256_find_secondary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_secondary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_secondary.primary)
+  return primary_;
+}
+inline void db_idx256_find_secondary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_secondary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_find_primary
+
+// optional uint64 code = 1;
+inline bool db_idx256_find_primary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_find_primary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_primary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.code)
+  return code_;
+}
+inline void db_idx256_find_primary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx256_find_primary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_find_primary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_primary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.scope)
+  return scope_;
+}
+inline void db_idx256_find_primary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx256_find_primary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_find_primary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_primary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.table)
+  return table_;
+}
+inline void db_idx256_find_primary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.table)
+}
+
+// optional bytes data = 4;
+inline bool db_idx256_find_primary::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_find_primary::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_find_primary::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_find_primary::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.data)
+}
+#if LANG_CXX11
+inline void db_idx256_find_primary::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_find_primary.data)
+}
+#endif
+inline void db_idx256_find_primary::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_find_primary.data)
+}
+inline void db_idx256_find_primary::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_find_primary.data)
+}
+inline ::std::string* db_idx256_find_primary::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_find_primary.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_find_primary::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_find_primary.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_find_primary::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_find_primary.data)
+}
+
+// optional uint64 data_len = 5;
+inline bool db_idx256_find_primary::has_data_len() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx256_find_primary::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_primary::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.data_len)
+  return data_len_;
+}
+inline void db_idx256_find_primary::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.data_len)
+}
+
+// optional uint64 primary = 6;
+inline bool db_idx256_find_primary::has_primary() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_idx256_find_primary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_idx256_find_primary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_find_primary.primary)
+  return primary_;
+}
+inline void db_idx256_find_primary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_find_primary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_lowerbound
+
+// optional uint64 code = 1;
+inline bool db_idx256_lowerbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_lowerbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_lowerbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.code)
+  return code_;
+}
+inline void db_idx256_lowerbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx256_lowerbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_lowerbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_lowerbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.scope)
+  return scope_;
+}
+inline void db_idx256_lowerbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx256_lowerbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_lowerbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx256_lowerbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.table)
+  return table_;
+}
+inline void db_idx256_lowerbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.table)
+}
+
+// optional bytes data = 4;
+inline bool db_idx256_lowerbound::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_lowerbound::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_lowerbound::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_lowerbound::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.data)
+}
+#if LANG_CXX11
+inline void db_idx256_lowerbound::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_lowerbound.data)
+}
+#endif
+inline void db_idx256_lowerbound::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_lowerbound.data)
+}
+inline void db_idx256_lowerbound::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_lowerbound.data)
+}
+inline ::std::string* db_idx256_lowerbound::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_lowerbound.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_lowerbound::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_lowerbound.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_lowerbound::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_lowerbound.data)
+}
+
+// optional uint64 data_len = 5;
+inline bool db_idx256_lowerbound::has_data_len() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx256_lowerbound::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx256_lowerbound::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.data_len)
+  return data_len_;
+}
+inline void db_idx256_lowerbound::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.data_len)
+}
+
+// optional uint64 primary = 6;
+inline bool db_idx256_lowerbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_idx256_lowerbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_idx256_lowerbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_lowerbound.primary)
+  return primary_;
+}
+inline void db_idx256_lowerbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_lowerbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_upperbound
+
+// optional uint64 code = 1;
+inline bool db_idx256_upperbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_upperbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_upperbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.code)
+  return code_;
+}
+inline void db_idx256_upperbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx256_upperbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_upperbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_upperbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.scope)
+  return scope_;
+}
+inline void db_idx256_upperbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx256_upperbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx256_upperbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx256_upperbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.table)
+  return table_;
+}
+inline void db_idx256_upperbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.table)
+}
+
+// optional bytes data = 4;
+inline bool db_idx256_upperbound::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_upperbound::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx256_upperbound::data() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.data)
+  return data_.GetNoArena();
+}
+inline void db_idx256_upperbound::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.data)
+}
+#if LANG_CXX11
+inline void db_idx256_upperbound::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx256_upperbound.data)
+}
+#endif
+inline void db_idx256_upperbound::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx256_upperbound.data)
+}
+inline void db_idx256_upperbound::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx256_upperbound.data)
+}
+inline ::std::string* db_idx256_upperbound::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx256_upperbound.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx256_upperbound::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx256_upperbound.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx256_upperbound::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx256_upperbound.data)
+}
+
+// optional uint64 data_len = 5;
+inline bool db_idx256_upperbound::has_data_len() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx256_upperbound::clear_data_len() {
+  data_len_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx256_upperbound::data_len() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.data_len)
+  return data_len_;
+}
+inline void db_idx256_upperbound::set_data_len(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  data_len_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.data_len)
+}
+
+// optional uint64 primary = 6;
+inline bool db_idx256_upperbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+inline void db_idx256_upperbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000020u;
+}
+inline ::google::protobuf::uint64 db_idx256_upperbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_upperbound.primary)
+  return primary_;
+}
+inline void db_idx256_upperbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000020u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_upperbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_end
+
+// optional uint64 code = 1;
+inline bool db_idx256_end::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_end::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx256_end::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_end.code)
+  return code_;
+}
+inline void db_idx256_end::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_end.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx256_end::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_end::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx256_end::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_end.scope)
+  return scope_;
+}
+inline void db_idx256_end::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_end.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx256_end::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx256_end::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx256_end::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_end.table)
+  return table_;
+}
+inline void db_idx256_end::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_end.table)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_next
+
+// optional uint32 itr = 1;
+inline bool db_idx256_next::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_next::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx256_next::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_next.itr)
+  return itr_;
+}
+inline void db_idx256_next::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_next.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx256_next::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_next::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx256_next::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_next.primary)
+  return primary_;
+}
+inline void db_idx256_next::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_next.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx256_previous
+
+// optional uint32 itr = 1;
+inline bool db_idx256_previous::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx256_previous::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx256_previous::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_previous.itr)
+  return itr_;
+}
+inline void db_idx256_previous::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_previous.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx256_previous::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx256_previous::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx256_previous::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx256_previous.primary)
+  return primary_;
+}
+inline void db_idx256_previous::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx256_previous.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_store
+
+// optional uint64 scope = 1;
+inline bool db_idx_double_store::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_store::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_store::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_store.scope)
+  return scope_;
+}
+inline void db_idx_double_store::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_store.scope)
+}
+
+// optional uint64 table = 2;
+inline bool db_idx_double_store::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_store::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_store::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_store.table)
+  return table_;
+}
+inline void db_idx_double_store::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_store.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_idx_double_store::has_payer() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_double_store::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_double_store::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_store.payer)
+  return payer_;
+}
+inline void db_idx_double_store::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_store.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_idx_double_store::has_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_double_store::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_double_store::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_store.id)
+  return id_;
+}
+inline void db_idx_double_store::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_store.id)
+}
+
+// optional bytes secondary = 5;
+inline bool db_idx_double_store::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_store::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_store::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_store.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_store::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_store.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_store::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_store.secondary)
+}
+#endif
+inline void db_idx_double_store::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_store.secondary)
+}
+inline void db_idx_double_store::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_store.secondary)
+}
+inline ::std::string* db_idx_double_store::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_store.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_store::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_store.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_store::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_store.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_update
+
+// optional uint32 itr = 1;
+inline bool db_idx_double_update::has_itr() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_update::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 db_idx_double_update::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_update.itr)
+  return itr_;
+}
+inline void db_idx_double_update::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_update.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_idx_double_update::has_payer() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_update::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_update::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_update.payer)
+  return payer_;
+}
+inline void db_idx_double_update::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_update.payer)
+}
+
+// optional bytes secondary = 3;
+inline bool db_idx_double_update::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_update::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_update::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_update.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_update::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_update.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_update::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_update.secondary)
+}
+#endif
+inline void db_idx_double_update::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_update.secondary)
+}
+inline void db_idx_double_update::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_update.secondary)
+}
+inline ::std::string* db_idx_double_update::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_update.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_update::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_update.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_update::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_update.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_remove
+
+// optional uint32 itr = 1;
+inline bool db_idx_double_remove::has_itr() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_remove::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_idx_double_remove::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_remove.itr)
+  return itr_;
+}
+inline void db_idx_double_remove::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_remove.itr)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_find_secondary
+
+// optional uint64 code = 1;
+inline bool db_idx_double_find_secondary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_find_secondary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_secondary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_secondary.code)
+  return code_;
+}
+inline void db_idx_double_find_secondary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_secondary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_double_find_secondary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_find_secondary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_secondary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_secondary.scope)
+  return scope_;
+}
+inline void db_idx_double_find_secondary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_secondary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_double_find_secondary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_double_find_secondary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_secondary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_secondary.table)
+  return table_;
+}
+inline void db_idx_double_find_secondary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_secondary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_double_find_secondary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_find_secondary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_find_secondary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_secondary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_find_secondary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_secondary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_find_secondary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_find_secondary.secondary)
+}
+#endif
+inline void db_idx_double_find_secondary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_find_secondary.secondary)
+}
+inline void db_idx_double_find_secondary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_find_secondary.secondary)
+}
+inline ::std::string* db_idx_double_find_secondary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_find_secondary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_find_secondary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_find_secondary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_find_secondary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_find_secondary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_double_find_secondary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_double_find_secondary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_secondary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_secondary.primary)
+  return primary_;
+}
+inline void db_idx_double_find_secondary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_secondary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_find_primary
+
+// optional uint64 code = 1;
+inline bool db_idx_double_find_primary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_find_primary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_primary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_primary.code)
+  return code_;
+}
+inline void db_idx_double_find_primary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_primary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_double_find_primary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_find_primary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_primary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_primary.scope)
+  return scope_;
+}
+inline void db_idx_double_find_primary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_primary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_double_find_primary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_double_find_primary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_primary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_primary.table)
+  return table_;
+}
+inline void db_idx_double_find_primary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_primary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_double_find_primary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_find_primary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_find_primary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_primary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_find_primary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_primary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_find_primary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_find_primary.secondary)
+}
+#endif
+inline void db_idx_double_find_primary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_find_primary.secondary)
+}
+inline void db_idx_double_find_primary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_find_primary.secondary)
+}
+inline ::std::string* db_idx_double_find_primary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_find_primary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_find_primary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_find_primary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_find_primary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_find_primary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_double_find_primary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_double_find_primary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_double_find_primary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_find_primary.primary)
+  return primary_;
+}
+inline void db_idx_double_find_primary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_find_primary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_lowerbound
+
+// optional uint64 code = 1;
+inline bool db_idx_double_lowerbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_lowerbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_lowerbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_lowerbound.code)
+  return code_;
+}
+inline void db_idx_double_lowerbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_lowerbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_double_lowerbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_lowerbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_lowerbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_lowerbound.scope)
+  return scope_;
+}
+inline void db_idx_double_lowerbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_lowerbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_double_lowerbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_double_lowerbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_double_lowerbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_lowerbound.table)
+  return table_;
+}
+inline void db_idx_double_lowerbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_lowerbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_double_lowerbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_lowerbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_lowerbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_lowerbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_lowerbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_lowerbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_lowerbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_lowerbound.secondary)
+}
+#endif
+inline void db_idx_double_lowerbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_lowerbound.secondary)
+}
+inline void db_idx_double_lowerbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_lowerbound.secondary)
+}
+inline ::std::string* db_idx_double_lowerbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_lowerbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_lowerbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_lowerbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_lowerbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_lowerbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_double_lowerbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_double_lowerbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_double_lowerbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_lowerbound.primary)
+  return primary_;
+}
+inline void db_idx_double_lowerbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_lowerbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_upperbound
+
+// optional uint64 code = 1;
+inline bool db_idx_double_upperbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_upperbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_upperbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_upperbound.code)
+  return code_;
+}
+inline void db_idx_double_upperbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_upperbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_double_upperbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_upperbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_upperbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_upperbound.scope)
+  return scope_;
+}
+inline void db_idx_double_upperbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_upperbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_double_upperbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_double_upperbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_double_upperbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_upperbound.table)
+  return table_;
+}
+inline void db_idx_double_upperbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_upperbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_double_upperbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_upperbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_double_upperbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_upperbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_double_upperbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_upperbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_double_upperbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_double_upperbound.secondary)
+}
+#endif
+inline void db_idx_double_upperbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_double_upperbound.secondary)
+}
+inline void db_idx_double_upperbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_double_upperbound.secondary)
+}
+inline ::std::string* db_idx_double_upperbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_double_upperbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_double_upperbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_double_upperbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_double_upperbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_double_upperbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_double_upperbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_double_upperbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_double_upperbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_upperbound.primary)
+  return primary_;
+}
+inline void db_idx_double_upperbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_upperbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_end
+
+// optional uint64 code = 1;
+inline bool db_idx_double_end::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_end::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_double_end::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_end.code)
+  return code_;
+}
+inline void db_idx_double_end::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_end.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_double_end::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_end::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_double_end::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_end.scope)
+  return scope_;
+}
+inline void db_idx_double_end::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_end.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_double_end::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_double_end::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_double_end::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_end.table)
+  return table_;
+}
+inline void db_idx_double_end::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_end.table)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_next
+
+// optional uint32 itr = 1;
+inline bool db_idx_double_next::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_next::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx_double_next::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_next.itr)
+  return itr_;
+}
+inline void db_idx_double_next::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_next.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx_double_next::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_next::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_double_next::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_next.primary)
+  return primary_;
+}
+inline void db_idx_double_next::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_next.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_double_previous
+
+// optional uint32 itr = 1;
+inline bool db_idx_double_previous::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_double_previous::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx_double_previous::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_previous.itr)
+  return itr_;
+}
+inline void db_idx_double_previous::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_previous.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx_double_previous::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_double_previous::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_double_previous::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_double_previous.primary)
+  return primary_;
+}
+inline void db_idx_double_previous::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_double_previous.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_store
+
+// optional uint64 scope = 1;
+inline bool db_idx_long_double_store::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_store::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_store::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_store.scope)
+  return scope_;
+}
+inline void db_idx_long_double_store::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_store.scope)
+}
+
+// optional uint64 table = 2;
+inline bool db_idx_long_double_store::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_store::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_store::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_store.table)
+  return table_;
+}
+inline void db_idx_long_double_store::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_store.table)
+}
+
+// optional uint64 payer = 3;
+inline bool db_idx_long_double_store::has_payer() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_long_double_store::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_store::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_store.payer)
+  return payer_;
+}
+inline void db_idx_long_double_store::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_store.payer)
+}
+
+// optional uint64 id = 4;
+inline bool db_idx_long_double_store::has_id() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_long_double_store::clear_id() {
+  id_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_store::id() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_store.id)
+  return id_;
+}
+inline void db_idx_long_double_store::set_id(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  id_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_store.id)
+}
+
+// optional bytes secondary = 5;
+inline bool db_idx_long_double_store::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_store::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_store::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_store.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_store::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_store.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_store::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_store.secondary)
+}
+#endif
+inline void db_idx_long_double_store::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_store.secondary)
+}
+inline void db_idx_long_double_store::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_store.secondary)
+}
+inline ::std::string* db_idx_long_double_store::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_store.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_store::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_store.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_store::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_store.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_update
+
+// optional uint32 itr = 1;
+inline bool db_idx_long_double_update::has_itr() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_update::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 db_idx_long_double_update::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_update.itr)
+  return itr_;
+}
+inline void db_idx_long_double_update::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_update.itr)
+}
+
+// optional uint64 payer = 2;
+inline bool db_idx_long_double_update::has_payer() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_update::clear_payer() {
+  payer_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_update::payer() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_update.payer)
+  return payer_;
+}
+inline void db_idx_long_double_update::set_payer(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  payer_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_update.payer)
+}
+
+// optional bytes secondary = 3;
+inline bool db_idx_long_double_update::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_update::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_update::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_update.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_update::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_update.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_update::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_update.secondary)
+}
+#endif
+inline void db_idx_long_double_update::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_update.secondary)
+}
+inline void db_idx_long_double_update::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_update.secondary)
+}
+inline ::std::string* db_idx_long_double_update::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_update.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_update::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_update.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_update::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_update.secondary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_remove
+
+// optional uint32 itr = 1;
+inline bool db_idx_long_double_remove::has_itr() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_remove::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint32 db_idx_long_double_remove::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_remove.itr)
+  return itr_;
+}
+inline void db_idx_long_double_remove::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000001u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_remove.itr)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_find_secondary
+
+// optional uint64 code = 1;
+inline bool db_idx_long_double_find_secondary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_find_secondary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_secondary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_secondary.code)
+  return code_;
+}
+inline void db_idx_long_double_find_secondary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_secondary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_long_double_find_secondary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_find_secondary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_secondary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_secondary.scope)
+  return scope_;
+}
+inline void db_idx_long_double_find_secondary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_secondary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_long_double_find_secondary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_long_double_find_secondary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_secondary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_secondary.table)
+  return table_;
+}
+inline void db_idx_long_double_find_secondary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_secondary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_long_double_find_secondary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_find_secondary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_find_secondary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_secondary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_find_secondary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_secondary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_find_secondary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_find_secondary.secondary)
+}
+#endif
+inline void db_idx_long_double_find_secondary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_find_secondary.secondary)
+}
+inline void db_idx_long_double_find_secondary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_find_secondary.secondary)
+}
+inline ::std::string* db_idx_long_double_find_secondary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_find_secondary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_find_secondary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_find_secondary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_find_secondary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_find_secondary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_long_double_find_secondary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_long_double_find_secondary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_secondary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_secondary.primary)
+  return primary_;
+}
+inline void db_idx_long_double_find_secondary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_secondary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_find_primary
+
+// optional uint64 code = 1;
+inline bool db_idx_long_double_find_primary::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_find_primary::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_primary::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_primary.code)
+  return code_;
+}
+inline void db_idx_long_double_find_primary::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_primary.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_long_double_find_primary::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_find_primary::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_primary::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_primary.scope)
+  return scope_;
+}
+inline void db_idx_long_double_find_primary::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_primary.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_long_double_find_primary::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_long_double_find_primary::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_primary::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_primary.table)
+  return table_;
+}
+inline void db_idx_long_double_find_primary::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_primary.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_long_double_find_primary::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_find_primary::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_find_primary::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_primary.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_find_primary::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_primary.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_find_primary::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_find_primary.secondary)
+}
+#endif
+inline void db_idx_long_double_find_primary::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_find_primary.secondary)
+}
+inline void db_idx_long_double_find_primary::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_find_primary.secondary)
+}
+inline ::std::string* db_idx_long_double_find_primary::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_find_primary.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_find_primary::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_find_primary.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_find_primary::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_find_primary.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_long_double_find_primary::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_long_double_find_primary::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_find_primary::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_find_primary.primary)
+  return primary_;
+}
+inline void db_idx_long_double_find_primary::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_find_primary.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_lowerbound
+
+// optional uint64 code = 1;
+inline bool db_idx_long_double_lowerbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_lowerbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_lowerbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_lowerbound.code)
+  return code_;
+}
+inline void db_idx_long_double_lowerbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_lowerbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_long_double_lowerbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_lowerbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_lowerbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_lowerbound.scope)
+  return scope_;
+}
+inline void db_idx_long_double_lowerbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_lowerbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_long_double_lowerbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_long_double_lowerbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_lowerbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_lowerbound.table)
+  return table_;
+}
+inline void db_idx_long_double_lowerbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_lowerbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_long_double_lowerbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_lowerbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_lowerbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_lowerbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_lowerbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_lowerbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_lowerbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_lowerbound.secondary)
+}
+#endif
+inline void db_idx_long_double_lowerbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_lowerbound.secondary)
+}
+inline void db_idx_long_double_lowerbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_lowerbound.secondary)
+}
+inline ::std::string* db_idx_long_double_lowerbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_lowerbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_lowerbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_lowerbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_lowerbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_lowerbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_long_double_lowerbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_long_double_lowerbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_lowerbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_lowerbound.primary)
+  return primary_;
+}
+inline void db_idx_long_double_lowerbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_lowerbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_upperbound
+
+// optional uint64 code = 1;
+inline bool db_idx_long_double_upperbound::has_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_upperbound::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_upperbound::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_upperbound.code)
+  return code_;
+}
+inline void db_idx_long_double_upperbound::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_upperbound.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_long_double_upperbound::has_scope() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_upperbound::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_upperbound::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_upperbound.scope)
+  return scope_;
+}
+inline void db_idx_long_double_upperbound::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_upperbound.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_long_double_upperbound::has_table() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void db_idx_long_double_upperbound::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_upperbound::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_upperbound.table)
+  return table_;
+}
+inline void db_idx_long_double_upperbound::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_upperbound.table)
+}
+
+// optional bytes secondary = 4;
+inline bool db_idx_long_double_upperbound::has_secondary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_upperbound::clear_secondary() {
+  secondary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& db_idx_long_double_upperbound::secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_upperbound.secondary)
+  return secondary_.GetNoArena();
+}
+inline void db_idx_long_double_upperbound::set_secondary(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_upperbound.secondary)
+}
+#if LANG_CXX11
+inline void db_idx_long_double_upperbound::set_secondary(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.db_idx_long_double_upperbound.secondary)
+}
+#endif
+inline void db_idx_long_double_upperbound::set_secondary(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.db_idx_long_double_upperbound.secondary)
+}
+inline void db_idx_long_double_upperbound::set_secondary(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  secondary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.db_idx_long_double_upperbound.secondary)
+}
+inline ::std::string* db_idx_long_double_upperbound::mutable_secondary() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.db_idx_long_double_upperbound.secondary)
+  return secondary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* db_idx_long_double_upperbound::release_secondary() {
+  // @@protoc_insertion_point(field_release:action_message.db_idx_long_double_upperbound.secondary)
+  if (!has_secondary()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return secondary_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void db_idx_long_double_upperbound::set_allocated_secondary(::std::string* secondary) {
+  if (secondary != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  secondary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), secondary);
+  // @@protoc_insertion_point(field_set_allocated:action_message.db_idx_long_double_upperbound.secondary)
+}
+
+// optional uint64 primary = 5;
+inline bool db_idx_long_double_upperbound::has_primary() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void db_idx_long_double_upperbound::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_upperbound::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_upperbound.primary)
+  return primary_;
+}
+inline void db_idx_long_double_upperbound::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_upperbound.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_end
+
+// optional uint64 code = 1;
+inline bool db_idx_long_double_end::has_code() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_end::clear_code() {
+  code_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_end::code() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_end.code)
+  return code_;
+}
+inline void db_idx_long_double_end::set_code(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  code_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_end.code)
+}
+
+// optional uint64 scope = 2;
+inline bool db_idx_long_double_end::has_scope() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_end::clear_scope() {
+  scope_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_end::scope() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_end.scope)
+  return scope_;
+}
+inline void db_idx_long_double_end::set_scope(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  scope_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_end.scope)
+}
+
+// optional uint64 table = 3;
+inline bool db_idx_long_double_end::has_table() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void db_idx_long_double_end::clear_table() {
+  table_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_end::table() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_end.table)
+  return table_;
+}
+inline void db_idx_long_double_end::set_table(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  table_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_end.table)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_next
+
+// optional uint32 itr = 1;
+inline bool db_idx_long_double_next::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_next::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx_long_double_next::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_next.itr)
+  return itr_;
+}
+inline void db_idx_long_double_next::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_next.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx_long_double_next::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_next::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_next::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_next.primary)
+  return primary_;
+}
+inline void db_idx_long_double_next::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_next.primary)
+}
+
+// -------------------------------------------------------------------
+
+// db_idx_long_double_previous
+
+// optional uint32 itr = 1;
+inline bool db_idx_long_double_previous::has_itr() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void db_idx_long_double_previous::clear_itr() {
+  itr_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 db_idx_long_double_previous::itr() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_previous.itr)
+  return itr_;
+}
+inline void db_idx_long_double_previous::set_itr(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  itr_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_previous.itr)
+}
+
+// optional uint64 primary = 2;
+inline bool db_idx_long_double_previous::has_primary() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void db_idx_long_double_previous::clear_primary() {
+  primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::google::protobuf::uint64 db_idx_long_double_previous::primary() const {
+  // @@protoc_insertion_point(field_get:action_message.db_idx_long_double_previous.primary)
+  return primary_;
+}
+inline void db_idx_long_double_previous::set_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.db_idx_long_double_previous.primary)
+}
+
+// -------------------------------------------------------------------
+
+// check_transaction_authorization
+
+// optional bytes trx_data = 1;
+inline bool check_transaction_authorization::has_trx_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void check_transaction_authorization::clear_trx_data() {
+  trx_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& check_transaction_authorization::trx_data() const {
+  // @@protoc_insertion_point(field_get:action_message.check_transaction_authorization.trx_data)
+  return trx_data_.GetNoArena();
+}
+inline void check_transaction_authorization::set_trx_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  trx_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_transaction_authorization.trx_data)
+}
+#if LANG_CXX11
+inline void check_transaction_authorization::set_trx_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  trx_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_transaction_authorization.trx_data)
+}
+#endif
+inline void check_transaction_authorization::set_trx_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  trx_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_transaction_authorization.trx_data)
+}
+inline void check_transaction_authorization::set_trx_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  trx_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_transaction_authorization.trx_data)
+}
+inline ::std::string* check_transaction_authorization::mutable_trx_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_transaction_authorization.trx_data)
+  return trx_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_transaction_authorization::release_trx_data() {
+  // @@protoc_insertion_point(field_release:action_message.check_transaction_authorization.trx_data)
+  if (!has_trx_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return trx_data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_transaction_authorization::set_allocated_trx_data(::std::string* trx_data) {
+  if (trx_data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  trx_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trx_data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_transaction_authorization.trx_data)
+}
+
+// optional bytes pubkeys_data = 2;
+inline bool check_transaction_authorization::has_pubkeys_data() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void check_transaction_authorization::clear_pubkeys_data() {
+  pubkeys_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::std::string& check_transaction_authorization::pubkeys_data() const {
+  // @@protoc_insertion_point(field_get:action_message.check_transaction_authorization.pubkeys_data)
+  return pubkeys_data_.GetNoArena();
+}
+inline void check_transaction_authorization::set_pubkeys_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_transaction_authorization.pubkeys_data)
+}
+#if LANG_CXX11
+inline void check_transaction_authorization::set_pubkeys_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000002u;
+  pubkeys_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_transaction_authorization.pubkeys_data)
+}
+#endif
+inline void check_transaction_authorization::set_pubkeys_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000002u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_transaction_authorization.pubkeys_data)
+}
+inline void check_transaction_authorization::set_pubkeys_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000002u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_transaction_authorization.pubkeys_data)
+}
+inline ::std::string* check_transaction_authorization::mutable_pubkeys_data() {
+  _has_bits_[0] |= 0x00000002u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_transaction_authorization.pubkeys_data)
+  return pubkeys_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_transaction_authorization::release_pubkeys_data() {
+  // @@protoc_insertion_point(field_release:action_message.check_transaction_authorization.pubkeys_data)
+  if (!has_pubkeys_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return pubkeys_data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_transaction_authorization::set_allocated_pubkeys_data(::std::string* pubkeys_data) {
+  if (pubkeys_data != NULL) {
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  head_ = head;
-  // @@protoc_insertion_point(field_set_allocated:action_message.rpc_request.head)
+  pubkeys_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pubkeys_data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_transaction_authorization.pubkeys_data)
 }
 
-// optional .action_message.object_type type = 2;
-inline bool rpc_request::has_type() const {
+// optional bytes perms_data = 3;
+inline bool check_transaction_authorization::has_perms_data() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void rpc_request::clear_type() {
-  type_ = 0;
+inline void check_transaction_authorization::clear_perms_data() {
+  perms_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _has_bits_[0] &= ~0x00000004u;
 }
-inline ::action_message::object_type rpc_request::type() const {
-  // @@protoc_insertion_point(field_get:action_message.rpc_request.type)
-  return static_cast< ::action_message::object_type >(type_);
+inline const ::std::string& check_transaction_authorization::perms_data() const {
+  // @@protoc_insertion_point(field_get:action_message.check_transaction_authorization.perms_data)
+  return perms_data_.GetNoArena();
 }
-inline void rpc_request::set_type(::action_message::object_type value) {
-  assert(::action_message::object_type_IsValid(value));
+inline void check_transaction_authorization::set_perms_data(const ::std::string& value) {
   _has_bits_[0] |= 0x00000004u;
-  type_ = value;
-  // @@protoc_insertion_point(field_set:action_message.rpc_request.type)
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_transaction_authorization.perms_data)
+}
+#if LANG_CXX11
+inline void check_transaction_authorization::set_perms_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000004u;
+  perms_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_transaction_authorization.perms_data)
+}
+#endif
+inline void check_transaction_authorization::set_perms_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000004u;
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_transaction_authorization.perms_data)
+}
+inline void check_transaction_authorization::set_perms_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000004u;
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_transaction_authorization.perms_data)
+}
+inline ::std::string* check_transaction_authorization::mutable_perms_data() {
+  _has_bits_[0] |= 0x00000004u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_transaction_authorization.perms_data)
+  return perms_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_transaction_authorization::release_perms_data() {
+  // @@protoc_insertion_point(field_release:action_message.check_transaction_authorization.perms_data)
+  if (!has_perms_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return perms_data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_transaction_authorization::set_allocated_perms_data(::std::string* perms_data) {
+  if (perms_data != NULL) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  perms_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), perms_data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_transaction_authorization.perms_data)
 }
 
-// optional .action_message.message_id msg_id = 3;
-inline bool rpc_request::has_msg_id() const {
+// -------------------------------------------------------------------
+
+// check_permission_authorization
+
+// optional bytes account = 1;
+inline bool check_permission_authorization::has_account() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void check_permission_authorization::clear_account() {
+  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& check_permission_authorization::account() const {
+  // @@protoc_insertion_point(field_get:action_message.check_permission_authorization.account)
+  return account_.GetNoArena();
+}
+inline void check_permission_authorization::set_account(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_permission_authorization.account)
+}
+#if LANG_CXX11
+inline void check_permission_authorization::set_account(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_permission_authorization.account)
+}
+#endif
+inline void check_permission_authorization::set_account(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_permission_authorization.account)
+}
+inline void check_permission_authorization::set_account(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_permission_authorization.account)
+}
+inline ::std::string* check_permission_authorization::mutable_account() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_permission_authorization.account)
+  return account_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_permission_authorization::release_account() {
+  // @@protoc_insertion_point(field_release:action_message.check_permission_authorization.account)
+  if (!has_account()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return account_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_permission_authorization::set_allocated_account(::std::string* account) {
+  if (account != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  account_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_permission_authorization.account)
+}
+
+// optional bytes permission = 2;
+inline bool check_permission_authorization::has_permission() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void check_permission_authorization::clear_permission() {
+  permission_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::std::string& check_permission_authorization::permission() const {
+  // @@protoc_insertion_point(field_get:action_message.check_permission_authorization.permission)
+  return permission_.GetNoArena();
+}
+inline void check_permission_authorization::set_permission(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_permission_authorization.permission)
+}
+#if LANG_CXX11
+inline void check_permission_authorization::set_permission(::std::string&& value) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_permission_authorization.permission)
+}
+#endif
+inline void check_permission_authorization::set_permission(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_permission_authorization.permission)
+}
+inline void check_permission_authorization::set_permission(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_permission_authorization.permission)
+}
+inline ::std::string* check_permission_authorization::mutable_permission() {
+  _has_bits_[0] |= 0x00000002u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_permission_authorization.permission)
+  return permission_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_permission_authorization::release_permission() {
+  // @@protoc_insertion_point(field_release:action_message.check_permission_authorization.permission)
+  if (!has_permission()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return permission_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_permission_authorization::set_allocated_permission(::std::string* permission) {
+  if (permission != NULL) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  permission_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), permission);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_permission_authorization.permission)
+}
+
+// optional bytes pubkeys_data = 3;
+inline bool check_permission_authorization::has_pubkeys_data() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void check_permission_authorization::clear_pubkeys_data() {
+  pubkeys_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const ::std::string& check_permission_authorization::pubkeys_data() const {
+  // @@protoc_insertion_point(field_get:action_message.check_permission_authorization.pubkeys_data)
+  return pubkeys_data_.GetNoArena();
+}
+inline void check_permission_authorization::set_pubkeys_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_permission_authorization.pubkeys_data)
+}
+#if LANG_CXX11
+inline void check_permission_authorization::set_pubkeys_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000004u;
+  pubkeys_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_permission_authorization.pubkeys_data)
+}
+#endif
+inline void check_permission_authorization::set_pubkeys_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000004u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_permission_authorization.pubkeys_data)
+}
+inline void check_permission_authorization::set_pubkeys_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000004u;
+  pubkeys_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_permission_authorization.pubkeys_data)
+}
+inline ::std::string* check_permission_authorization::mutable_pubkeys_data() {
+  _has_bits_[0] |= 0x00000004u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_permission_authorization.pubkeys_data)
+  return pubkeys_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_permission_authorization::release_pubkeys_data() {
+  // @@protoc_insertion_point(field_release:action_message.check_permission_authorization.pubkeys_data)
+  if (!has_pubkeys_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return pubkeys_data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_permission_authorization::set_allocated_pubkeys_data(::std::string* pubkeys_data) {
+  if (pubkeys_data != NULL) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  pubkeys_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pubkeys_data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_permission_authorization.pubkeys_data)
+}
+
+// optional bytes perms_data = 4;
+inline bool check_permission_authorization::has_perms_data() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void check_permission_authorization::clear_perms_data() {
+  perms_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline const ::std::string& check_permission_authorization::perms_data() const {
+  // @@protoc_insertion_point(field_get:action_message.check_permission_authorization.perms_data)
+  return perms_data_.GetNoArena();
+}
+inline void check_permission_authorization::set_perms_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000008u;
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.check_permission_authorization.perms_data)
+}
+#if LANG_CXX11
+inline void check_permission_authorization::set_perms_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000008u;
+  perms_data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.check_permission_authorization.perms_data)
+}
+#endif
+inline void check_permission_authorization::set_perms_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000008u;
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.check_permission_authorization.perms_data)
+}
+inline void check_permission_authorization::set_perms_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000008u;
+  perms_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.check_permission_authorization.perms_data)
+}
+inline ::std::string* check_permission_authorization::mutable_perms_data() {
+  _has_bits_[0] |= 0x00000008u;
+  // @@protoc_insertion_point(field_mutable:action_message.check_permission_authorization.perms_data)
+  return perms_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* check_permission_authorization::release_perms_data() {
+  // @@protoc_insertion_point(field_release:action_message.check_permission_authorization.perms_data)
+  if (!has_perms_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000008u;
+  return perms_data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void check_permission_authorization::set_allocated_perms_data(::std::string* perms_data) {
+  if (perms_data != NULL) {
+    _has_bits_[0] |= 0x00000008u;
+  } else {
+    _has_bits_[0] &= ~0x00000008u;
+  }
+  perms_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), perms_data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.check_permission_authorization.perms_data)
+}
+
+// optional uint64 delay_us = 5;
+inline bool check_permission_authorization::has_delay_us() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void check_permission_authorization::clear_delay_us() {
+  delay_us_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint64 check_permission_authorization::delay_us() const {
+  // @@protoc_insertion_point(field_get:action_message.check_permission_authorization.delay_us)
+  return delay_us_;
+}
+inline void check_permission_authorization::set_delay_us(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000010u;
+  delay_us_ = value;
+  // @@protoc_insertion_point(field_set:action_message.check_permission_authorization.delay_us)
+}
+
+// -------------------------------------------------------------------
+
+// get_permission_last_used
+
+// optional bytes account = 1;
+inline bool get_permission_last_used::has_account() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void get_permission_last_used::clear_account() {
+  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& get_permission_last_used::account() const {
+  // @@protoc_insertion_point(field_get:action_message.get_permission_last_used.account)
+  return account_.GetNoArena();
+}
+inline void get_permission_last_used::set_account(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.get_permission_last_used.account)
+}
+#if LANG_CXX11
+inline void get_permission_last_used::set_account(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.get_permission_last_used.account)
+}
+#endif
+inline void get_permission_last_used::set_account(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.get_permission_last_used.account)
+}
+inline void get_permission_last_used::set_account(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.get_permission_last_used.account)
+}
+inline ::std::string* get_permission_last_used::mutable_account() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.get_permission_last_used.account)
+  return account_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* get_permission_last_used::release_account() {
+  // @@protoc_insertion_point(field_release:action_message.get_permission_last_used.account)
+  if (!has_account()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return account_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void get_permission_last_used::set_allocated_account(::std::string* account) {
+  if (account != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  account_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account);
+  // @@protoc_insertion_point(field_set_allocated:action_message.get_permission_last_used.account)
+}
+
+// optional bytes permission = 2;
+inline bool get_permission_last_used::has_permission() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void get_permission_last_used::clear_permission() {
+  permission_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::std::string& get_permission_last_used::permission() const {
+  // @@protoc_insertion_point(field_get:action_message.get_permission_last_used.permission)
+  return permission_.GetNoArena();
+}
+inline void get_permission_last_used::set_permission(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.get_permission_last_used.permission)
+}
+#if LANG_CXX11
+inline void get_permission_last_used::set_permission(::std::string&& value) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.get_permission_last_used.permission)
+}
+#endif
+inline void get_permission_last_used::set_permission(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.get_permission_last_used.permission)
+}
+inline void get_permission_last_used::set_permission(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000002u;
+  permission_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.get_permission_last_used.permission)
+}
+inline ::std::string* get_permission_last_used::mutable_permission() {
+  _has_bits_[0] |= 0x00000002u;
+  // @@protoc_insertion_point(field_mutable:action_message.get_permission_last_used.permission)
+  return permission_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* get_permission_last_used::release_permission() {
+  // @@protoc_insertion_point(field_release:action_message.get_permission_last_used.permission)
+  if (!has_permission()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return permission_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void get_permission_last_used::set_allocated_permission(::std::string* permission) {
+  if (permission != NULL) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  permission_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), permission);
+  // @@protoc_insertion_point(field_set_allocated:action_message.get_permission_last_used.permission)
+}
+
+// -------------------------------------------------------------------
+
+// get_account_creation_time
+
+// optional bytes account = 1;
+inline bool get_account_creation_time::has_account() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void get_account_creation_time::clear_account() {
+  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& get_account_creation_time::account() const {
+  // @@protoc_insertion_point(field_get:action_message.get_account_creation_time.account)
+  return account_.GetNoArena();
+}
+inline void get_account_creation_time::set_account(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.get_account_creation_time.account)
+}
+#if LANG_CXX11
+inline void get_account_creation_time::set_account(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.get_account_creation_time.account)
+}
+#endif
+inline void get_account_creation_time::set_account(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.get_account_creation_time.account)
+}
+inline void get_account_creation_time::set_account(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.get_account_creation_time.account)
+}
+inline ::std::string* get_account_creation_time::mutable_account() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.get_account_creation_time.account)
+  return account_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* get_account_creation_time::release_account() {
+  // @@protoc_insertion_point(field_release:action_message.get_account_creation_time.account)
+  if (!has_account()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return account_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void get_account_creation_time::set_allocated_account(::std::string* account) {
+  if (account != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  account_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account);
+  // @@protoc_insertion_point(field_set_allocated:action_message.get_account_creation_time.account)
+}
+
+// -------------------------------------------------------------------
+
+// rpc_request
+
+// optional .action_message.message_id msg_id = 1;
+inline bool rpc_request::has_msg_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void rpc_request::clear_msg_id() {
   msg_id_ = 1000;
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline ::action_message::message_id rpc_request::msg_id() const {
   // @@protoc_insertion_point(field_get:action_message.rpc_request.msg_id)
@@ -1178,12 +16722,12 @@ inline ::action_message::message_id rpc_request::msg_id() const {
 }
 inline void rpc_request::set_msg_id(::action_message::message_id value) {
   assert(::action_message::message_id_IsValid(value));
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000002u;
   msg_id_ = value;
   // @@protoc_insertion_point(field_set:action_message.rpc_request.msg_id)
 }
 
-// optional bytes data = 4;
+// optional bytes data = 2;
 inline bool rpc_request::has_data() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -1249,11 +16793,11 @@ inline void rpc_request::set_allocated_data(::std::string* data) {
 
 // optional .action_message.message_id msg_id = 1;
 inline bool rpc_response::has_msg_id() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void rpc_response::clear_msg_id() {
   msg_id_ = 1000;
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline ::action_message::message_id rpc_response::msg_id() const {
   // @@protoc_insertion_point(field_get:action_message.rpc_response.msg_id)
@@ -1261,31 +16805,12 @@ inline ::action_message::message_id rpc_response::msg_id() const {
 }
 inline void rpc_response::set_msg_id(::action_message::message_id value) {
   assert(::action_message::message_id_IsValid(value));
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000004u;
   msg_id_ = value;
   // @@protoc_insertion_point(field_set:action_message.rpc_response.msg_id)
 }
 
-// optional .action_message.object_type type = 2;
-inline bool rpc_response::has_type() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void rpc_response::clear_type() {
-  type_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::action_message::object_type rpc_response::type() const {
-  // @@protoc_insertion_point(field_get:action_message.rpc_response.type)
-  return static_cast< ::action_message::object_type >(type_);
-}
-inline void rpc_response::set_type(::action_message::object_type value) {
-  assert(::action_message::object_type_IsValid(value));
-  _has_bits_[0] |= 0x00000004u;
-  type_ = value;
-  // @@protoc_insertion_point(field_set:action_message.rpc_response.type)
-}
-
-// optional .action_message.error err = 3;
+// optional .action_message.error err = 2;
 inline bool rpc_response::has_err() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -1334,7 +16859,7 @@ inline void rpc_response::set_allocated_err(::action_message::error* err) {
   // @@protoc_insertion_point(field_set_allocated:action_message.rpc_response.err)
 }
 
-// optional bytes data = 4;
+// optional bytes data = 3;
 inline bool rpc_response::has_data() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -1397,6 +16922,134 @@ inline void rpc_response::set_allocated_data(::std::string* data) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

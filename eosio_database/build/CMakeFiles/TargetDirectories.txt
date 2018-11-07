@@ -9,3 +9,6 @@
 /Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service/CMakeFiles/rebuild_cache.dir
 /Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service/CMakeFiles/edit_cache.dir
 /Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service/CMakeFiles/rpc_service.dir
+/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/CMakeFiles/rebuild_cache.dir
+/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/CMakeFiles/edit_cache.dir
+/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/CMakeFiles/network.dir
