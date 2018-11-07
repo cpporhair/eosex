@@ -152,6 +152,33 @@ fork_database_service.pb.cc.s:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.s
 .PHONY : fork_database_service.pb.cc.s
 
+message.pb.o: message.pb.cc.o
+
+.PHONY : message.pb.o
+
+# target to build an object file
+message.pb.cc.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
+
+message.pb.i: message.pb.cc.i
+
+.PHONY : message.pb.i
+
+# target to preprocess a source file
+message.pb.cc.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
+
+message.pb.s: message.pb.cc.s
+
+.PHONY : message.pb.s
+
+# target to generate assembly for a file
+message.pb.cc.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
+
 sample.pb.o: sample.pb.cc.o
 
 .PHONY : sample.pb.o
@@ -191,6 +218,9 @@ help:
 	@echo "... fork_database_service.pb.o"
 	@echo "... fork_database_service.pb.i"
 	@echo "... fork_database_service.pb.s"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 	@echo "... sample.pb.o"
 	@echo "... sample.pb.i"
 	@echo "... sample.pb.s"

@@ -7,6 +7,7 @@
 #include <thread>
 #include <protocol/fork_db_message_wrapper.hpp>
 #include <network/tcp_server.hpp>
+#include <protocol/message_factory.hpp>
 
 
 void prompt_for_address( tutorial::person *person ) {
@@ -98,34 +99,17 @@ private:
     google::protobuf::Service* _service;
 };
 
+
 int main(int argc, char const *argv[]) {
 
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-
-    std::shared_ptr<std::string> msg1;
-    msg1.reset(new std::string{"yyy"});
-    std::shared_ptr<std::string> msg2 = msg1;
-    msg1.reset(new std::string{"bbb"});
-    std::cout << *msg1 << " " << *msg2 << std::endl;
+    auto req = message_factory::produce<action_message::db_store_i64>(action_message::db_store_i64_request);
 
     io_context_pool pool{std::thread::hardware_concurrency()};
     tcp_server srv{9988,pool};
     srv.run();
     srv.stop();
-
-    auto request = get_block_add_by_block_state_request();
-    request->set_data("aaaa");
-    char buf[32]{};
-    std::size_t ret_len = request->get_data(buf,32);
-    int32_t len;
-    std::memcpy(&len,buf,sizeof(int32_t));
-    char *data = new char[len];
-    std::memcpy(data,buf+ sizeof(int32_t),len);
-
-    auto req = get_raw_block_add_by_block_state_request();
-    req->ParseFromArray(data,len);
-    std::cout << req->data() << std::endl;
 
     std::cout << std::thread::hardware_concurrency() << std::endl;
 

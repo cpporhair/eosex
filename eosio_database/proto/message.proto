@@ -417,7 +417,7 @@ message meta {
     optional uint32 method_id   = 3;
 }
 
-message db_stroe_i64 {
+message db_store_i64 {
     optional uint64 scope  = 1;
     optional uint64 table  = 2;
     optional uint64 payer  = 3;

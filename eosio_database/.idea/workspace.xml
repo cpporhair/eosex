@@ -3,9 +3,9 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="eosio_database_application" targetName="protocol" />
-      <config projectName="eosio_database_application" targetName="eosio_database_application" />
-      <config projectName="eosio_database_application" targetName="rpc_service" />
       <config projectName="eosio_database_application" targetName="network" />
+      <config projectName="eosio_database_application" targetName="rpc_service" />
+      <config projectName="eosio_database_application" targetName="eosio_database_application" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,58 +15,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b28596f0-2934-4295-a5e7-6df11bb288fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/network/dispatcher.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/network/message_handlers.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/protocol/message_factory.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../block_chain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../block_chain/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../block_chain/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../block_chain/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/compile_commands.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/eosio_database_application.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/CMakeFiles/protocol.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/protocol/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/protocol/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/rpc_service/CMakeFiles/rpc_service.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/rpc_service/CMakeFiles/rpc_service.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/eosio_database_application.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/eosio_database_application.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/eosio_database_application.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/eosio_database_application" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/eosio_database_application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/network/CMakeFiles/network.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/network/CMakeFiles/network.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_gen.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code_gen.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/network/connection.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/network/connection.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/network/io_context_pool.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/network/io_context_pool.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/network/message.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/network/message.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/network/tcp_server.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/network/tcp_server.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/thread_safe/queue.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/thread_safe/queue.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakelists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakelists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/CMakeFiles/protocol.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/protocol/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/protocol/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/rpc_service/CMakeFiles/rpc_service.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/rpc_service/CMakeFiles/rpc_service.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/message.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/message.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/connection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/connection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/network/tcp_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/tcp_server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/message.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/message.pb.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/protocol/message.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/message.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/message_factory.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/protocol/message_factory.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/message_wrapper.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/protocol/message_wrapper.hpp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +71,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cc" value="12" />
-          <entry key="cpp" value="39" />
-          <entry key="h" value="39" />
+          <entry key="cpp" value="40" />
+          <entry key="h" value="40" />
           <entry key="hpp" value="102" />
           <entry key="inc" value="1" />
           <entry key="map" value="1" />
@@ -102,31 +80,31 @@
           <entry key="proto" value="38" />
           <entry key="sh" value="6" />
           <entry key="string" value="1" />
-          <entry key="txt" value="23" />
+          <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="22" />
-          <entry key="ObjectiveC" value="196" />
+          <entry key="CMakeLists.txt" value="23" />
+          <entry key="ObjectiveC" value="198" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="PROTO" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="12666" />
+          <entry key="cpp" value="12741" />
           <entry key="h" value="7" />
-          <entry key="hpp" value="19411" />
+          <entry key="hpp" value="20354" />
           <entry key="proto" value="17801" />
           <entry key="sh" value="28" />
-          <entry key="txt" value="339" />
+          <entry key="txt" value="352" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="339" />
-          <entry key="ObjectiveC" value="32084" />
+          <entry key="CMakeLists.txt" value="352" />
+          <entry key="ObjectiveC" value="33102" />
           <entry key="PLAIN_TEXT" value="28" />
           <entry key="PROTO" value="17801" />
         </counts>
@@ -136,27 +114,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/protocol/message.pb.h">
+        <entry file="file://$PROJECT_DIR$/src/protocol/message_factory.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="2297" column="6" selection-start-line="2297" selection-start-column="6" selection-end-line="2297" selection-end-column="6" />
+            <state relative-caret-position="-176">
+              <caret line="54" column="76" lean-forward="true" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
               <folding>
-                <element signature="e#171#188#0" expanded="true" />
-                <element signature="e#279#437#0" expanded="true" />
-                <element signature="e#13036#13038#0" expanded="true" />
-                <element signature="e#13182#13184#0" expanded="true" />
+                <element signature="e#52#66#0" expanded="true" />
+                <element signature="e#205#217#0" expanded="true" />
+                <element signature="e#472#491#0" expanded="true" />
+                <element signature="e#723#735#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/protocol/message_factory.hpp">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            <state relative-caret-position="203">
+              <caret line="106" column="68" selection-start-line="106" selection-start-column="68" selection-end-line="106" selection-end-column="68" />
               <folding>
-                <element signature="e#52#66#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,7 +198,6 @@
         <option value="$PROJECT_DIR$/proto/fork_database_service.proto" />
         <option value="$PROJECT_DIR$/src/network/raw_message.hpp" />
         <option value="$PROJECT_DIR$/src/network/connection.hpp" />
-        <option value="$PROJECT_DIR$/src/protocol/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/protocol/fork_db_message_wrapper.hpp" />
         <option value="$PROJECT_DIR$/src/protocol/message_wrapper.hpp" />
         <option value="$PROJECT_DIR$/src/network/connection_manager.cpp" />
@@ -236,11 +213,12 @@
         <option value="$PROJECT_DIR$/include/thread_safe/queue.hpp" />
         <option value="$PROJECT_DIR$/src/network/tcp_server.cpp" />
         <option value="$PROJECT_DIR$/include/network/tcp_server.hpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/network/dispatcher.hpp" />
         <option value="$PROJECT_DIR$/include/network/message_handlers.hpp" />
         <option value="$PROJECT_DIR$/proto/message_factory.hpp" />
+        <option value="$PROJECT_DIR$/src/protocol/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/protocol/message_factory.hpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -251,11 +229,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="639" />
-    <option name="y" value="101" />
-    <option name="width" value="1254" />
-    <option name="height" value="1156" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="717" />
+    <option name="y" value="56" />
+    <option name="width" value="1532" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -279,18 +257,7 @@
             <path>
               <item name="eosio_database_application" type="b2602c69:ProjectViewProjectNode" />
               <item name="eosio_database" type="462c0819:PsiDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eosio_database_application" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eosio_database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eosio_database_application" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eosio_database" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="protocol" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,24 +343,24 @@
       <workItem from="1541123148550" duration="24979000" />
       <workItem from="1541157978216" duration="282000" />
       <workItem from="1541227106573" duration="53346000" />
-      <workItem from="1541554500225" duration="16466000" />
+      <workItem from="1541554500225" duration="20715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192897000" />
+    <option name="totallyTimeSpent" value="197146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="639" y="101" width="1254" height="1156" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1177" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18811882" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18796591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299539" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.27537593" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2516129" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -401,8 +368,8 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.17511521" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3907834" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.21843319" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3907834" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -420,38 +387,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>88</line>
+          <line>89</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>136</line>
+          <line>120</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>131</line>
+          <line>115</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>129</line>
+          <line>113</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>116</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>113</line>
+          <line>110</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>109</line>
-          <option name="timeStamp" value="9" />
+          <line>106</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -515,13 +477,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/network/connection.hpp" />
     <entry file="file://$PROJECT_DIR$/src/network/raw_message.hpp" />
-    <entry file="file://$PROJECT_DIR$/src/protocol/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="61" selection-start-column="61" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/protocol/message_wrapper.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1280">
@@ -799,16 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="119" column="52" lean-forward="true" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/google/protobuf/message.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -816,25 +761,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/protocol/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/protocol/message.pb.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="2297" column="6" selection-start-line="2297" selection-start-column="6" selection-end-line="2297" selection-end-column="6" />
+        <state relative-caret-position="759">
+          <caret line="3713" column="6" selection-start-line="3713" selection-start-column="6" selection-end-line="3713" selection-end-column="6" />
           <folding>
             <element signature="e#171#188#0" expanded="true" />
             <element signature="e#279#437#0" expanded="true" />
-            <element signature="e#13036#13038#0" expanded="true" />
-            <element signature="e#13182#13184#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/protocol/message_factory.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="-176">
+          <caret line="54" column="76" lean-forward="true" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
           <folding>
             <element signature="e#52#66#0" expanded="true" />
+            <element signature="e#205#217#0" expanded="true" />
+            <element signature="e#472#491#0" expanded="true" />
+            <element signature="e#723#735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="106" column="68" selection-start-line="106" selection-start-column="68" selection-end-line="106" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

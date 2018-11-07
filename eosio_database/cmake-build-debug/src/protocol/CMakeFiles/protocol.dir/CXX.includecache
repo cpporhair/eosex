@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.cc
-fork_database_service.pb.h
-/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.h
+/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.cc
+message.pb.h
+/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -32,7 +32,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.h
+/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.h
 limits
 -
 string

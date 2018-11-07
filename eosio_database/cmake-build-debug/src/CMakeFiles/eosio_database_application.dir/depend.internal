@@ -9,6 +9,8 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o
  ../include/rpc_service/utility.hpp
  ../src/protocol/fork_database_service.pb.h
  ../src/protocol/fork_db_message_wrapper.hpp
+ ../src/protocol/message.pb.h
+ ../src/protocol/message_factory.hpp
  ../src/protocol/sample.pb.h
  /Users/yangwenyu/workspace/eosex/eosio_database/src/main.cpp
  /usr/local/include/boost/array.hpp

@@ -8,6 +8,8 @@ src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../include/network/tcp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../include/rpc_service/utility.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/protocol/fork_database_service.pb.h
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/protocol/fork_db_message_wrapper.hpp
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/protocol/message.pb.h
+src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/protocol/message_factory.hpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/protocol/sample.pb.h
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/eosio_database_application.dir/main.cpp.o: /usr/local/include/boost/array.hpp

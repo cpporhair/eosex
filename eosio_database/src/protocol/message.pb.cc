@@ -26,10 +26,10 @@ class metaDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<meta> _instance;
 } _meta_default_instance_;
-class db_stroe_i64DefaultTypeInternal {
+class db_store_i64DefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<db_stroe_i64> _instance;
-} _db_stroe_i64_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<db_store_i64> _instance;
+} _db_store_i64_default_instance_;
 class db_update_i64DefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<db_update_i64> _instance;
@@ -46,10 +46,10 @@ class db_next_64DefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<db_next_64> _instance;
 } _db_next_64_default_instance_;
-class db_pervious_i64DefaultTypeInternal {
+class db_previous_i64DefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<db_pervious_i64> _instance;
-} _db_pervious_i64_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<db_previous_i64> _instance;
+} _db_previous_i64_default_instance_;
 class db_find_i64DefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<db_find_i64> _instance;
@@ -319,19 +319,19 @@ static void InitDefaultsmeta_message_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_meta_message_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsmeta_message_2eproto}, {}};
 
-static void InitDefaultsdb_stroe_i64_message_2eproto() {
+static void InitDefaultsdb_store_i64_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::action_message::_db_stroe_i64_default_instance_;
-    new (ptr) ::action_message::db_stroe_i64();
+    void* ptr = &::action_message::_db_store_i64_default_instance_;
+    new (ptr) ::action_message::db_store_i64();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::action_message::db_stroe_i64::InitAsDefaultInstance();
+  ::action_message::db_store_i64::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_db_stroe_i64_message_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsdb_stroe_i64_message_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_db_store_i64_message_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsdb_store_i64_message_2eproto}, {}};
 
 static void InitDefaultsdb_update_i64_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -389,19 +389,19 @@ static void InitDefaultsdb_next_64_message_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_db_next_64_message_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsdb_next_64_message_2eproto}, {}};
 
-static void InitDefaultsdb_pervious_i64_message_2eproto() {
+static void InitDefaultsdb_previous_i64_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::action_message::_db_pervious_i64_default_instance_;
-    new (ptr) ::action_message::db_pervious_i64();
+    void* ptr = &::action_message::_db_previous_i64_default_instance_;
+    new (ptr) ::action_message::db_previous_i64();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::action_message::db_pervious_i64::InitAsDefaultInstance();
+  ::action_message::db_previous_i64::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_db_pervious_i64_message_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsdb_pervious_i64_message_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_db_previous_i64_message_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsdb_previous_i64_message_2eproto}, {}};
 
 static void InitDefaultsdb_find_i64_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -1247,12 +1247,12 @@ static void InitDefaultsrpc_response_message_2eproto() {
 void InitDefaults_message_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_error_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_meta_message_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_db_stroe_i64_message_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_db_store_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_update_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_remove_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_get_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_next_64_message_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_db_pervious_i64_message_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_db_previous_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_find_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_lowerbound_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_upperbound_i64_message_2eproto.base);
@@ -1340,17 +1340,17 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
   0,
   1,
   2,
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, scope_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, table_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, payer_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, id_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, buffer_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_stroe_i64, buffer_size_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, scope_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, table_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, payer_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, id_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, buffer_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_store_i64, buffer_size_),
   1,
   2,
   3,
@@ -1397,13 +1397,13 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::action_message::db_next_64, primary_),
   1,
   0,
-  PROTOBUF_FIELD_OFFSET(::action_message::db_pervious_i64, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_pervious_i64, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_previous_i64, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_previous_i64, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::action_message::db_pervious_i64, itr_),
-  PROTOBUF_FIELD_OFFSET(::action_message::db_pervious_i64, primary_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_previous_i64, itr_),
+  PROTOBUF_FIELD_OFFSET(::action_message::db_previous_i64, primary_),
   1,
   0,
   PROTOBUF_FIELD_OFFSET(::action_message::db_find_i64, _has_bits_),
@@ -2144,12 +2144,12 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::action_message::error)},
   { 9, 17, sizeof(::action_message::meta)},
-  { 20, 31, sizeof(::action_message::db_stroe_i64)},
+  { 20, 31, sizeof(::action_message::db_store_i64)},
   { 37, 46, sizeof(::action_message::db_update_i64)},
   { 50, 56, sizeof(::action_message::db_remove_i64)},
   { 57, 65, sizeof(::action_message::db_get_i64)},
   { 68, 75, sizeof(::action_message::db_next_64)},
-  { 77, 84, sizeof(::action_message::db_pervious_i64)},
+  { 77, 84, sizeof(::action_message::db_previous_i64)},
   { 86, 95, sizeof(::action_message::db_find_i64)},
   { 99, 108, sizeof(::action_message::db_lowerbound_i64)},
   { 112, 121, sizeof(::action_message::db_upperbound_i64)},
@@ -2215,12 +2215,12 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_error_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_meta_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_stroe_i64_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_store_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_update_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_remove_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_get_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_next_64_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_pervious_i64_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_previous_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_find_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_lowerbound_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_upperbound_i64_default_instance_),
@@ -2294,7 +2294,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   "\n\rmessage.proto\022\016action_message\"\"\n\005error"
   "\022\014\n\004code\030\001 \001(\r\022\013\n\003msg\030\002 \001(\t\"9\n\004meta\022\n\n\002i"
   "d\030\001 \001(\r\022\022\n\nservice_id\030\002 \001(\r\022\021\n\tmethod_id"
-  "\030\003 \001(\r\"l\n\014db_stroe_i64\022\r\n\005scope\030\001 \001(\004\022\r\n"
+  "\030\003 \001(\r\"l\n\014db_store_i64\022\r\n\005scope\030\001 \001(\004\022\r\n"
   "\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022"
   "\016\n\006buffer\030\005 \001(\014\022\023\n\013buffer_size\030\006 \001(\004\"P\n\r"
   "db_update_i64\022\013\n\003itr\030\001 \001(\r\022\r\n\005payer\030\002 \001("
@@ -2302,7 +2302,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   "\n\rdb_remove_i64\022\013\n\003itr\030\001 \001(\r\">\n\ndb_get_i"
   "64\022\013\n\003itr\030\001 \001(\r\022\016\n\006buffer\030\002 \001(\014\022\023\n\013buffe"
   "r_size\030\003 \001(\004\"*\n\ndb_next_64\022\013\n\003itr\030\001 \001(\r\022"
-  "\017\n\007primary\030\002 \001(\004\"/\n\017db_pervious_i64\022\013\n\003i"
+  "\017\n\007primary\030\002 \001(\004\"/\n\017db_previous_i64\022\013\n\003i"
   "tr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"E\n\013db_find_i64"
   "\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003"
   " \001(\004\022\n\n\002id\030\004 \001(\004\"K\n\021db_lowerbound_i64\022\014\n"
@@ -2459,7 +2459,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   "\022\037\n\033account_history_object_type\020#\022\036\n\032act"
   "ion_history_object_type\020$\022 \n\034reversible_"
   "block_object_type\020%\022\034\n\030signed_block_obje"
-  "ct_type\020(\022\033\n\027block_state_object_type\020)*\207"
+  "ct_type\020(\022\033\n\027block_state_object_type\020)*\217"
   "a\n\nmessage_id\022\033\n\026account_create_request\020"
   "\350\007\022\034\n\027account_create_response\020\351\007\022\032\n\025acco"
   "unt_guery_request\020\352\007\022\033\n\026account_query_re"
@@ -2663,116 +2663,116 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   "_i64_request\020\324\017\022\033\n\026db_remove_i64_respons"
   "e\020\325\017\022\027\n\022db_get_i64_request\020\326\017\022\030\n\023db_get_"
   "i64_response\020\327\017\022\030\n\023db_next_i64_request\020\330"
-  "\017\022\031\n\024db_next_i64_response\020\331\017\022\030\n\023db_previ"
-  "ous_request\020\332\017\022\031\n\024db_previous_response\020\333"
-  "\017\022\030\n\023db_find_i64_request\020\334\017\022\031\n\024db_find_i"
-  "64_response\020\335\017\022\036\n\031db_lowerbound_i64_requ"
-  "est\020\336\017\022\037\n\032db_lowerbound_i64_response\020\337\017\022"
-  "\036\n\031db_upperbound_i64_request\020\340\017\022\037\n\032db_up"
-  "perbound_i64_response\020\341\017\022\027\n\022db_end_i64_r"
-  "equest\020\342\017\022\030\n\023db_end_i64_response\020\343\017\022\033\n\026d"
-  "b_idx64_store_request\020\344\017\022\034\n\027db_idx64_sto"
-  "re_response\020\345\017\022\034\n\027db_idx64_update_reques"
-  "t\020\346\017\022\035\n\030db_idx64_update_response\020\347\017\022\034\n\027d"
-  "b_idx64_remove_request\020\350\017\022\035\n\030db_idx64_re"
-  "move_response\020\351\017\022$\n\037db_idx64_find_second"
-  "ary_request\020\352\017\022%\n db_idx64_find_secondar"
-  "y_response\020\353\017\022\"\n\035db_idx64_find_primary_r"
-  "equest\020\354\017\022#\n\036db_idx64_find_primary_respo"
-  "nse\020\355\017\022 \n\033db_idx64_lowerbound_request\020\356\017"
-  "\022!\n\034db_idx64_lowerbound_response\020\357\017\022 \n\033d"
-  "b_idx64_upperbound_request\020\360\017\022!\n\034db_idx6"
-  "4_upperbound_response\020\361\017\022\031\n\024db_idx64_end"
-  "_request\020\362\017\022\032\n\025db_idx64_end_response\020\363\017\022"
-  "\032\n\025db_idx64_next_request\020\364\017\022\033\n\026db_idx64_"
-  "next_response\020\365\017\022\036\n\031db_idx64_previous_re"
-  "quest\020\366\017\022\037\n\032db_idx64_previous_response\020\367"
-  "\017\022\034\n\027db_idx128_store_request\020\370\017\022\035\n\030db_id"
-  "x128_store_response\020\371\017\022\035\n\030db_idx128_upda"
-  "te_request\020\372\017\022\036\n\031db_idx128_update_respon"
-  "se\020\373\017\022\035\n\030db_idx128_remove_request\020\374\017\022\036\n\031"
-  "db_idx128_remove_response\020\375\017\022%\n db_idx12"
-  "8_find_secondary_request\020\376\017\022&\n!db_idx128"
-  "_find_secondary_response\020\377\017\022#\n\036db_idx128"
-  "_find_primary_request\020\200\020\022$\n\037db_idx128_fi"
-  "nd_primary_response\020\201\020\022!\n\034db_idx128_lowe"
-  "rbound_request\020\202\020\022\"\n\035db_idx128_lowerboun"
-  "d_response\020\203\020\022!\n\034db_idx128_upperbound_re"
-  "quest\020\204\020\022\"\n\035db_idx128_upperbound_respons"
-  "e\020\205\020\022\032\n\025db_idx128_end_request\020\206\020\022\033\n\026db_i"
-  "dx128_end_response\020\207\020\022\033\n\026db_idx128_next_"
-  "request\020\210\020\022\034\n\027db_idx128_next_response\020\211\020"
-  "\022\037\n\032db_idx128_previous_request\020\212\020\022 \n\033db_"
-  "idx128_previous_response\020\213\020\022\034\n\027db_idx256"
-  "_store_request\020\214\020\022\035\n\030db_idx256_store_res"
-  "ponse\020\215\020\022\035\n\030db_idx256_update_request\020\216\020\022"
-  "\036\n\031db_idx256_update_response\020\217\020\022\035\n\030db_id"
-  "x256_remove_request\020\220\020\022\036\n\031db_idx256_remo"
-  "ve_response\020\221\020\022%\n db_idx256_find_seconda"
-  "ry_request\020\222\020\022&\n!db_idx256_find_secondar"
-  "y_response\020\223\020\022#\n\036db_idx256_find_primary_"
-  "request\020\224\020\022$\n\037db_idx256_find_primary_res"
-  "ponse\020\225\020\022!\n\034db_idx256_lowerbound_request"
-  "\020\226\020\022\"\n\035db_idx256_lowerbound_response\020\227\020\022"
-  "!\n\034db_idx256_upperbound_request\020\230\020\022\"\n\035db"
-  "_idx256_upperbound_response\020\231\020\022\032\n\025db_idx"
-  "256_end_request\020\232\020\022\033\n\026db_idx256_end_resp"
-  "onse\020\233\020\022\033\n\026db_idx256_next_request\020\234\020\022\034\n\027"
-  "db_idx256_next_response\020\235\020\022\037\n\032db_idx256_"
-  "previous_request\020\236\020\022 \n\033db_idx256_previou"
-  "s_response\020\237\020\022 \n\033db_idx_double_store_req"
-  "uest\020\240\020\022!\n\034db_idx_double_store_response\020"
-  "\241\020\022!\n\034db_idx_double_update_request\020\242\020\022\"\n"
-  "\035db_idx_double_update_response\020\243\020\022!\n\034db_"
-  "idx_double_remove_request\020\244\020\022\"\n\035db_idx_d"
-  "ouble_remove_response\020\245\020\022)\n$db_idx_doubl"
-  "e_find_secondary_request\020\246\020\022*\n%db_idx_do"
-  "uble_find_secondary_response\020\247\020\022\'\n\"db_id"
-  "x_double_find_primary_request\020\250\020\022(\n#db_i"
-  "dx_double_find_primary_response\020\251\020\022%\n db"
-  "_idx_double_lowerbound_request\020\252\020\022&\n!db_"
-  "idx_double_lowerbound_response\020\253\020\022%\n db_"
-  "idx_double_upperbound_request\020\254\020\022&\n!db_i"
-  "dx_double_upperbound_response\020\255\020\022\036\n\031db_i"
-  "dx_double_end_request\020\256\020\022\037\n\032db_idx_doubl"
-  "e_end_response\020\257\020\022\037\n\032db_idx_double_next_"
-  "request\020\260\020\022 \n\033db_idx_double_next_respons"
-  "e\020\261\020\022#\n\036db_idx_double_previous_request\020\262"
-  "\020\022$\n\037db_idx_double_previous_response\020\263\020\022"
-  "%\n db_idx_long_double_store_request\020\264\020\022&"
-  "\n!db_idx_long_double_store_response\020\265\020\022&"
-  "\n!db_idx_long_double_update_request\020\266\020\022\'"
-  "\n\"db_idx_long_double_update_response\020\267\020\022"
-  "&\n!db_idx_long_double_remove_request\020\270\020\022"
-  "\'\n\"db_idx_long_double_remove_response\020\271\020"
-  "\022.\n)db_idx_long_double_find_secondary_re"
-  "quest\020\272\020\022/\n*db_idx_long_double_find_seco"
-  "ndary_response\020\273\020\022,\n\'db_idx_long_double_"
-  "find_primary_request\020\274\020\022-\n(db_idx_long_d"
-  "ouble_find_primary_response\020\275\020\022*\n%db_idx"
-  "_long_double_lowerbound_request\020\276\020\022+\n&db"
-  "_idx_long_double_lowerbound_response\020\277\020\022"
-  "*\n%db_idx_long_double_upperbound_request"
-  "\020\300\020\022+\n&db_idx_long_double_upperbound_res"
-  "ponse\020\301\020\022#\n\036db_idx_long_double_end_reque"
-  "st\020\302\020\022$\n\037db_idx_long_double_end_response"
-  "\020\303\020\022$\n\037db_idx_long_double_next_request\020\304"
-  "\020\022%\n db_idx_long_double_next_response\020\305\020"
-  "\022(\n#db_idx_long_double_previous_request\020"
-  "\306\020\022)\n$db_idx_long_double_previous_respon"
-  "se\020\307\020\022#\n\036permission_level_check_request\020"
-  "\270\027\022$\n\037permission_level_check_response\020\271\027"
-  "\022,\n\'check_transaction_authorization_requ"
-  "est\020\272\027\022-\n(check_transaction_authorizatio"
-  "n_response\020\273\027\022+\n&check_permission_author"
-  "ization_request\020\274\027\022,\n\'check_permission_a"
-  "uthorization_response\020\275\027\022%\n get_permissi"
-  "on_last_used_request\020\276\027\022&\n!get_permissio"
-  "n_last_used_response\020\277\027\022&\n!get_account_c"
-  "reation_time_request\020\300\027\022\'\n\"get_account_c"
-  "reation_time_response\020\301\027"
+  "\017\022\031\n\024db_next_i64_response\020\331\017\022\034\n\027db_previ"
+  "ous_i64_request\020\332\017\022\035\n\030db_previous_i64_re"
+  "sponse\020\333\017\022\030\n\023db_find_i64_request\020\334\017\022\031\n\024d"
+  "b_find_i64_response\020\335\017\022\036\n\031db_lowerbound_"
+  "i64_request\020\336\017\022\037\n\032db_lowerbound_i64_resp"
+  "onse\020\337\017\022\036\n\031db_upperbound_i64_request\020\340\017\022"
+  "\037\n\032db_upperbound_i64_response\020\341\017\022\027\n\022db_e"
+  "nd_i64_request\020\342\017\022\030\n\023db_end_i64_response"
+  "\020\343\017\022\033\n\026db_idx64_store_request\020\344\017\022\034\n\027db_i"
+  "dx64_store_response\020\345\017\022\034\n\027db_idx64_updat"
+  "e_request\020\346\017\022\035\n\030db_idx64_update_response"
+  "\020\347\017\022\034\n\027db_idx64_remove_request\020\350\017\022\035\n\030db_"
+  "idx64_remove_response\020\351\017\022$\n\037db_idx64_fin"
+  "d_secondary_request\020\352\017\022%\n db_idx64_find_"
+  "secondary_response\020\353\017\022\"\n\035db_idx64_find_p"
+  "rimary_request\020\354\017\022#\n\036db_idx64_find_prima"
+  "ry_response\020\355\017\022 \n\033db_idx64_lowerbound_re"
+  "quest\020\356\017\022!\n\034db_idx64_lowerbound_response"
+  "\020\357\017\022 \n\033db_idx64_upperbound_request\020\360\017\022!\n"
+  "\034db_idx64_upperbound_response\020\361\017\022\031\n\024db_i"
+  "dx64_end_request\020\362\017\022\032\n\025db_idx64_end_resp"
+  "onse\020\363\017\022\032\n\025db_idx64_next_request\020\364\017\022\033\n\026d"
+  "b_idx64_next_response\020\365\017\022\036\n\031db_idx64_pre"
+  "vious_request\020\366\017\022\037\n\032db_idx64_previous_re"
+  "sponse\020\367\017\022\034\n\027db_idx128_store_request\020\370\017\022"
+  "\035\n\030db_idx128_store_response\020\371\017\022\035\n\030db_idx"
+  "128_update_request\020\372\017\022\036\n\031db_idx128_updat"
+  "e_response\020\373\017\022\035\n\030db_idx128_remove_reques"
+  "t\020\374\017\022\036\n\031db_idx128_remove_response\020\375\017\022%\n "
+  "db_idx128_find_secondary_request\020\376\017\022&\n!d"
+  "b_idx128_find_secondary_response\020\377\017\022#\n\036d"
+  "b_idx128_find_primary_request\020\200\020\022$\n\037db_i"
+  "dx128_find_primary_response\020\201\020\022!\n\034db_idx"
+  "128_lowerbound_request\020\202\020\022\"\n\035db_idx128_l"
+  "owerbound_response\020\203\020\022!\n\034db_idx128_upper"
+  "bound_request\020\204\020\022\"\n\035db_idx128_upperbound"
+  "_response\020\205\020\022\032\n\025db_idx128_end_request\020\206\020"
+  "\022\033\n\026db_idx128_end_response\020\207\020\022\033\n\026db_idx1"
+  "28_next_request\020\210\020\022\034\n\027db_idx128_next_res"
+  "ponse\020\211\020\022\037\n\032db_idx128_previous_request\020\212"
+  "\020\022 \n\033db_idx128_previous_response\020\213\020\022\034\n\027d"
+  "b_idx256_store_request\020\214\020\022\035\n\030db_idx256_s"
+  "tore_response\020\215\020\022\035\n\030db_idx256_update_req"
+  "uest\020\216\020\022\036\n\031db_idx256_update_response\020\217\020\022"
+  "\035\n\030db_idx256_remove_request\020\220\020\022\036\n\031db_idx"
+  "256_remove_response\020\221\020\022%\n db_idx256_find"
+  "_secondary_request\020\222\020\022&\n!db_idx256_find_"
+  "secondary_response\020\223\020\022#\n\036db_idx256_find_"
+  "primary_request\020\224\020\022$\n\037db_idx256_find_pri"
+  "mary_response\020\225\020\022!\n\034db_idx256_lowerbound"
+  "_request\020\226\020\022\"\n\035db_idx256_lowerbound_resp"
+  "onse\020\227\020\022!\n\034db_idx256_upperbound_request\020"
+  "\230\020\022\"\n\035db_idx256_upperbound_response\020\231\020\022\032"
+  "\n\025db_idx256_end_request\020\232\020\022\033\n\026db_idx256_"
+  "end_response\020\233\020\022\033\n\026db_idx256_next_reques"
+  "t\020\234\020\022\034\n\027db_idx256_next_response\020\235\020\022\037\n\032db"
+  "_idx256_previous_request\020\236\020\022 \n\033db_idx256"
+  "_previous_response\020\237\020\022 \n\033db_idx_double_s"
+  "tore_request\020\240\020\022!\n\034db_idx_double_store_r"
+  "esponse\020\241\020\022!\n\034db_idx_double_update_reque"
+  "st\020\242\020\022\"\n\035db_idx_double_update_response\020\243"
+  "\020\022!\n\034db_idx_double_remove_request\020\244\020\022\"\n\035"
+  "db_idx_double_remove_response\020\245\020\022)\n$db_i"
+  "dx_double_find_secondary_request\020\246\020\022*\n%d"
+  "b_idx_double_find_secondary_response\020\247\020\022"
+  "\'\n\"db_idx_double_find_primary_request\020\250\020"
+  "\022(\n#db_idx_double_find_primary_response\020"
+  "\251\020\022%\n db_idx_double_lowerbound_request\020\252"
+  "\020\022&\n!db_idx_double_lowerbound_response\020\253"
+  "\020\022%\n db_idx_double_upperbound_request\020\254\020"
+  "\022&\n!db_idx_double_upperbound_response\020\255\020"
+  "\022\036\n\031db_idx_double_end_request\020\256\020\022\037\n\032db_i"
+  "dx_double_end_response\020\257\020\022\037\n\032db_idx_doub"
+  "le_next_request\020\260\020\022 \n\033db_idx_double_next"
+  "_response\020\261\020\022#\n\036db_idx_double_previous_r"
+  "equest\020\262\020\022$\n\037db_idx_double_previous_resp"
+  "onse\020\263\020\022%\n db_idx_long_double_store_requ"
+  "est\020\264\020\022&\n!db_idx_long_double_store_respo"
+  "nse\020\265\020\022&\n!db_idx_long_double_update_requ"
+  "est\020\266\020\022\'\n\"db_idx_long_double_update_resp"
+  "onse\020\267\020\022&\n!db_idx_long_double_remove_req"
+  "uest\020\270\020\022\'\n\"db_idx_long_double_remove_res"
+  "ponse\020\271\020\022.\n)db_idx_long_double_find_seco"
+  "ndary_request\020\272\020\022/\n*db_idx_long_double_f"
+  "ind_secondary_response\020\273\020\022,\n\'db_idx_long"
+  "_double_find_primary_request\020\274\020\022-\n(db_id"
+  "x_long_double_find_primary_response\020\275\020\022*"
+  "\n%db_idx_long_double_lowerbound_request\020"
+  "\276\020\022+\n&db_idx_long_double_lowerbound_resp"
+  "onse\020\277\020\022*\n%db_idx_long_double_upperbound"
+  "_request\020\300\020\022+\n&db_idx_long_double_upperb"
+  "ound_response\020\301\020\022#\n\036db_idx_long_double_e"
+  "nd_request\020\302\020\022$\n\037db_idx_long_double_end_"
+  "response\020\303\020\022$\n\037db_idx_long_double_next_r"
+  "equest\020\304\020\022%\n db_idx_long_double_next_res"
+  "ponse\020\305\020\022(\n#db_idx_long_double_previous_"
+  "request\020\306\020\022)\n$db_idx_long_double_previou"
+  "s_response\020\307\020\022#\n\036permission_level_check_"
+  "request\020\270\027\022$\n\037permission_level_check_res"
+  "ponse\020\271\027\022,\n\'check_transaction_authorizat"
+  "ion_request\020\272\027\022-\n(check_transaction_auth"
+  "orization_response\020\273\027\022+\n&check_permissio"
+  "n_authorization_request\020\274\027\022,\n\'check_perm"
+  "ission_authorization_response\020\275\027\022%\n get_"
+  "permission_last_used_request\020\276\027\022&\n!get_p"
+  "ermission_last_used_response\020\277\027\022&\n!get_a"
+  "ccount_creation_time_request\020\300\027\022\'\n\"get_a"
+  "ccount_creation_time_response\020\301\027"
 ,
-  "message.proto", &assign_descriptors_table_message_2eproto, 19184,
+  "message.proto", &assign_descriptors_table_message_2eproto, 19192,
 };
 
 void AddDescriptors_message_2eproto() {
@@ -3956,45 +3956,45 @@ void meta::InternalSwap(meta* other) {
 
 // ===================================================================
 
-void db_stroe_i64::InitAsDefaultInstance() {
+void db_store_i64::InitAsDefaultInstance() {
 }
-class db_stroe_i64::HasBitSetters {
+class db_store_i64::HasBitSetters {
  public:
-  static void set_has_scope(db_stroe_i64* msg) {
+  static void set_has_scope(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000002u;
   }
-  static void set_has_table(db_stroe_i64* msg) {
+  static void set_has_table(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000004u;
   }
-  static void set_has_payer(db_stroe_i64* msg) {
+  static void set_has_payer(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000008u;
   }
-  static void set_has_id(db_stroe_i64* msg) {
+  static void set_has_id(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000010u;
   }
-  static void set_has_buffer(db_stroe_i64* msg) {
+  static void set_has_buffer(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000001u;
   }
-  static void set_has_buffer_size(db_stroe_i64* msg) {
+  static void set_has_buffer_size(db_store_i64* msg) {
     msg->_has_bits_[0] |= 0x00000020u;
   }
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int db_stroe_i64::kScopeFieldNumber;
-const int db_stroe_i64::kTableFieldNumber;
-const int db_stroe_i64::kPayerFieldNumber;
-const int db_stroe_i64::kIdFieldNumber;
-const int db_stroe_i64::kBufferFieldNumber;
-const int db_stroe_i64::kBufferSizeFieldNumber;
+const int db_store_i64::kScopeFieldNumber;
+const int db_store_i64::kTableFieldNumber;
+const int db_store_i64::kPayerFieldNumber;
+const int db_store_i64::kIdFieldNumber;
+const int db_store_i64::kBufferFieldNumber;
+const int db_store_i64::kBufferSizeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-db_stroe_i64::db_stroe_i64()
+db_store_i64::db_store_i64()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(constructor:action_message.db_store_i64)
 }
-db_stroe_i64::db_stroe_i64(const db_stroe_i64& from)
+db_store_i64::db_store_i64(const db_store_i64& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_) {
@@ -4006,38 +4006,38 @@ db_stroe_i64::db_stroe_i64(const db_stroe_i64& from)
   ::memcpy(&scope_, &from.scope_,
     static_cast<size_t>(reinterpret_cast<char*>(&buffer_size_) -
     reinterpret_cast<char*>(&scope_)) + sizeof(buffer_size_));
-  // @@protoc_insertion_point(copy_constructor:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(copy_constructor:action_message.db_store_i64)
 }
 
-void db_stroe_i64::SharedCtor() {
+void db_store_i64::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
-      &scc_info_db_stroe_i64_message_2eproto.base);
+      &scc_info_db_store_i64_message_2eproto.base);
   buffer_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&scope_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&buffer_size_) -
       reinterpret_cast<char*>(&scope_)) + sizeof(buffer_size_));
 }
 
-db_stroe_i64::~db_stroe_i64() {
-  // @@protoc_insertion_point(destructor:action_message.db_stroe_i64)
+db_store_i64::~db_store_i64() {
+  // @@protoc_insertion_point(destructor:action_message.db_store_i64)
   SharedDtor();
 }
 
-void db_stroe_i64::SharedDtor() {
+void db_store_i64::SharedDtor() {
   buffer_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void db_stroe_i64::SetCachedSize(int size) const {
+void db_store_i64::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const db_stroe_i64& db_stroe_i64::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_db_stroe_i64_message_2eproto.base);
+const db_store_i64& db_store_i64::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_db_store_i64_message_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void db_stroe_i64::Clear() {
-// @@protoc_insertion_point(message_clear_start:action_message.db_stroe_i64)
+void db_store_i64::Clear() {
+// @@protoc_insertion_point(message_clear_start:action_message.db_store_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4056,9 +4056,9 @@ void db_stroe_i64::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* db_stroe_i64::_InternalParse(const char* begin, const char* end, void* object,
+const char* db_store_i64::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<db_stroe_i64*>(object);
+  auto msg = static_cast<db_store_i64*>(object);
   ::google::protobuf::uint32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
@@ -4156,11 +4156,11 @@ group_continues: (void)&&group_continues;
   return ptr;
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool db_stroe_i64::MergePartialFromCodedStream(
+bool db_store_i64::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(parse_start:action_message.db_store_i64)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -4254,18 +4254,18 @@ bool db_stroe_i64::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(parse_success:action_message.db_store_i64)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(parse_failure:action_message.db_store_i64)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void db_stroe_i64::SerializeWithCachedSizes(
+void db_store_i64::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(serialize_start:action_message.db_store_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4305,13 +4305,13 @@ void db_stroe_i64::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(serialize_end:action_message.db_store_i64)
 }
 
-::google::protobuf::uint8* db_stroe_i64::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* db_store_i64::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(serialize_to_array_start:action_message.db_store_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4352,12 +4352,12 @@ void db_stroe_i64::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(serialize_to_array_end:action_message.db_store_i64)
   return target;
 }
 
-size_t db_stroe_i64::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:action_message.db_stroe_i64)
+size_t db_store_i64::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:action_message.db_store_i64)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4419,23 +4419,23 @@ size_t db_stroe_i64::ByteSizeLong() const {
   return total_size;
 }
 
-void db_stroe_i64::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:action_message.db_stroe_i64)
+void db_store_i64::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:action_message.db_store_i64)
   GOOGLE_DCHECK_NE(&from, this);
-  const db_stroe_i64* source =
-      ::google::protobuf::DynamicCastToGenerated<db_stroe_i64>(
+  const db_store_i64* source =
+      ::google::protobuf::DynamicCastToGenerated<db_store_i64>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.db_store_i64)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.db_stroe_i64)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.db_store_i64)
     MergeFrom(*source);
   }
 }
 
-void db_stroe_i64::MergeFrom(const db_stroe_i64& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:action_message.db_stroe_i64)
+void db_store_i64::MergeFrom(const db_store_i64& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:action_message.db_store_i64)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -4466,29 +4466,29 @@ void db_stroe_i64::MergeFrom(const db_stroe_i64& from) {
   }
 }
 
-void db_stroe_i64::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:action_message.db_stroe_i64)
+void db_store_i64::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:action_message.db_store_i64)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void db_stroe_i64::CopyFrom(const db_stroe_i64& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:action_message.db_stroe_i64)
+void db_store_i64::CopyFrom(const db_store_i64& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:action_message.db_store_i64)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool db_stroe_i64::IsInitialized() const {
+bool db_store_i64::IsInitialized() const {
   return true;
 }
 
-void db_stroe_i64::Swap(db_stroe_i64* other) {
+void db_store_i64::Swap(db_store_i64* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void db_stroe_i64::InternalSwap(db_stroe_i64* other) {
+void db_store_i64::InternalSwap(db_store_i64* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
@@ -4501,7 +4501,7 @@ void db_stroe_i64::InternalSwap(db_stroe_i64* other) {
   swap(buffer_size_, other->buffer_size_);
 }
 
-::google::protobuf::Metadata db_stroe_i64::GetMetadata() const {
+::google::protobuf::Metadata db_store_i64::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
   return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
 }
@@ -5998,29 +5998,29 @@ void db_next_64::InternalSwap(db_next_64* other) {
 
 // ===================================================================
 
-void db_pervious_i64::InitAsDefaultInstance() {
+void db_previous_i64::InitAsDefaultInstance() {
 }
-class db_pervious_i64::HasBitSetters {
+class db_previous_i64::HasBitSetters {
  public:
-  static void set_has_itr(db_pervious_i64* msg) {
+  static void set_has_itr(db_previous_i64* msg) {
     msg->_has_bits_[0] |= 0x00000002u;
   }
-  static void set_has_primary(db_pervious_i64* msg) {
+  static void set_has_primary(db_previous_i64* msg) {
     msg->_has_bits_[0] |= 0x00000001u;
   }
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int db_pervious_i64::kItrFieldNumber;
-const int db_pervious_i64::kPrimaryFieldNumber;
+const int db_previous_i64::kItrFieldNumber;
+const int db_previous_i64::kPrimaryFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-db_pervious_i64::db_pervious_i64()
+db_previous_i64::db_previous_i64()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(constructor:action_message.db_previous_i64)
 }
-db_pervious_i64::db_pervious_i64(const db_pervious_i64& from)
+db_previous_i64::db_previous_i64(const db_previous_i64& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_) {
@@ -6028,34 +6028,34 @@ db_pervious_i64::db_pervious_i64(const db_pervious_i64& from)
   ::memcpy(&primary_, &from.primary_,
     static_cast<size_t>(reinterpret_cast<char*>(&itr_) -
     reinterpret_cast<char*>(&primary_)) + sizeof(itr_));
-  // @@protoc_insertion_point(copy_constructor:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(copy_constructor:action_message.db_previous_i64)
 }
 
-void db_pervious_i64::SharedCtor() {
+void db_previous_i64::SharedCtor() {
   ::memset(&primary_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&itr_) -
       reinterpret_cast<char*>(&primary_)) + sizeof(itr_));
 }
 
-db_pervious_i64::~db_pervious_i64() {
-  // @@protoc_insertion_point(destructor:action_message.db_pervious_i64)
+db_previous_i64::~db_previous_i64() {
+  // @@protoc_insertion_point(destructor:action_message.db_previous_i64)
   SharedDtor();
 }
 
-void db_pervious_i64::SharedDtor() {
+void db_previous_i64::SharedDtor() {
 }
 
-void db_pervious_i64::SetCachedSize(int size) const {
+void db_previous_i64::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const db_pervious_i64& db_pervious_i64::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_db_pervious_i64_message_2eproto.base);
+const db_previous_i64& db_previous_i64::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_db_previous_i64_message_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void db_pervious_i64::Clear() {
-// @@protoc_insertion_point(message_clear_start:action_message.db_pervious_i64)
+void db_previous_i64::Clear() {
+// @@protoc_insertion_point(message_clear_start:action_message.db_previous_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6071,9 +6071,9 @@ void db_pervious_i64::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* db_pervious_i64::_InternalParse(const char* begin, const char* end, void* object,
+const char* db_previous_i64::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<db_pervious_i64*>(object);
+  auto msg = static_cast<db_previous_i64*>(object);
   ::google::protobuf::uint32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
@@ -6127,11 +6127,11 @@ group_continues: (void)&&group_continues;
   return ptr;
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool db_pervious_i64::MergePartialFromCodedStream(
+bool db_previous_i64::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(parse_start:action_message.db_previous_i64)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -6175,18 +6175,18 @@ bool db_pervious_i64::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(parse_success:action_message.db_previous_i64)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(parse_failure:action_message.db_previous_i64)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void db_pervious_i64::SerializeWithCachedSizes(
+void db_previous_i64::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(serialize_start:action_message.db_previous_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6205,13 +6205,13 @@ void db_pervious_i64::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(serialize_end:action_message.db_previous_i64)
 }
 
-::google::protobuf::uint8* db_pervious_i64::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* db_previous_i64::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(serialize_to_array_start:action_message.db_previous_i64)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -6230,12 +6230,12 @@ void db_pervious_i64::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(serialize_to_array_end:action_message.db_previous_i64)
   return target;
 }
 
-size_t db_pervious_i64::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:action_message.db_pervious_i64)
+size_t db_previous_i64::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:action_message.db_previous_i64)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6269,23 +6269,23 @@ size_t db_pervious_i64::ByteSizeLong() const {
   return total_size;
 }
 
-void db_pervious_i64::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:action_message.db_pervious_i64)
+void db_previous_i64::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:action_message.db_previous_i64)
   GOOGLE_DCHECK_NE(&from, this);
-  const db_pervious_i64* source =
-      ::google::protobuf::DynamicCastToGenerated<db_pervious_i64>(
+  const db_previous_i64* source =
+      ::google::protobuf::DynamicCastToGenerated<db_previous_i64>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.db_previous_i64)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.db_pervious_i64)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.db_previous_i64)
     MergeFrom(*source);
   }
 }
 
-void db_pervious_i64::MergeFrom(const db_pervious_i64& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:action_message.db_pervious_i64)
+void db_previous_i64::MergeFrom(const db_previous_i64& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:action_message.db_previous_i64)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -6303,29 +6303,29 @@ void db_pervious_i64::MergeFrom(const db_pervious_i64& from) {
   }
 }
 
-void db_pervious_i64::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:action_message.db_pervious_i64)
+void db_previous_i64::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:action_message.db_previous_i64)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void db_pervious_i64::CopyFrom(const db_pervious_i64& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:action_message.db_pervious_i64)
+void db_previous_i64::CopyFrom(const db_previous_i64& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:action_message.db_previous_i64)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool db_pervious_i64::IsInitialized() const {
+bool db_previous_i64::IsInitialized() const {
   return true;
 }
 
-void db_pervious_i64::Swap(db_pervious_i64* other) {
+void db_previous_i64::Swap(db_previous_i64* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void db_pervious_i64::InternalSwap(db_pervious_i64* other) {
+void db_previous_i64::InternalSwap(db_previous_i64* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
@@ -6333,7 +6333,7 @@ void db_pervious_i64::InternalSwap(db_pervious_i64* other) {
   swap(itr_, other->itr_);
 }
 
-::google::protobuf::Metadata db_pervious_i64::GetMetadata() const {
+::google::protobuf::Metadata db_previous_i64::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
   return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
 }
@@ -32137,8 +32137,8 @@ template<> PROTOBUF_NOINLINE ::action_message::error* Arena::CreateMaybeMessage<
 template<> PROTOBUF_NOINLINE ::action_message::meta* Arena::CreateMaybeMessage< ::action_message::meta >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::meta >(arena);
 }
-template<> PROTOBUF_NOINLINE ::action_message::db_stroe_i64* Arena::CreateMaybeMessage< ::action_message::db_stroe_i64 >(Arena* arena) {
-  return Arena::CreateInternal< ::action_message::db_stroe_i64 >(arena);
+template<> PROTOBUF_NOINLINE ::action_message::db_store_i64* Arena::CreateMaybeMessage< ::action_message::db_store_i64 >(Arena* arena) {
+  return Arena::CreateInternal< ::action_message::db_store_i64 >(arena);
 }
 template<> PROTOBUF_NOINLINE ::action_message::db_update_i64* Arena::CreateMaybeMessage< ::action_message::db_update_i64 >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::db_update_i64 >(arena);
@@ -32152,8 +32152,8 @@ template<> PROTOBUF_NOINLINE ::action_message::db_get_i64* Arena::CreateMaybeMes
 template<> PROTOBUF_NOINLINE ::action_message::db_next_64* Arena::CreateMaybeMessage< ::action_message::db_next_64 >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::db_next_64 >(arena);
 }
-template<> PROTOBUF_NOINLINE ::action_message::db_pervious_i64* Arena::CreateMaybeMessage< ::action_message::db_pervious_i64 >(Arena* arena) {
-  return Arena::CreateInternal< ::action_message::db_pervious_i64 >(arena);
+template<> PROTOBUF_NOINLINE ::action_message::db_previous_i64* Arena::CreateMaybeMessage< ::action_message::db_previous_i64 >(Arena* arena) {
+  return Arena::CreateInternal< ::action_message::db_previous_i64 >(arena);
 }
 template<> PROTOBUF_NOINLINE ::action_message::db_find_i64* Arena::CreateMaybeMessage< ::action_message::db_find_i64 >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::db_find_i64 >(arena);
