@@ -8,6 +8,7 @@
 #include <utility>
 #include <string>
 #include <boost/asio.hpp>
+#include <thread_safe/queue.hpp>
 
 
 using tcp = boost::asio::ip::tcp;
@@ -18,7 +19,7 @@ class message;
 typedef std::shared_ptr<message> message_ptr;
 class connection : public std::enable_shared_from_this<connection> {
 public:
-    connection(io_context& io);
+    connection(tcp::socket socket,queue<std::shared_ptr<message>>* q);
     tcp::socket& get_socket();
     void start();
     void async_write();
@@ -28,7 +29,7 @@ public:
     std::size_t sync_write(const std::string &data,boost::system::error_code &ec);
     void name(const std::string &name) { _name = name; }
     const std::string& name() const { return _name; }
-    void manager(connection_manager *mgr) { _manager = mgr; }
+    void manager(std::shared_ptr<connection_manager> mgr) { _manager = mgr; }
     const std::string remote_name() const {
         return _socket.remote_endpoint().address().to_string();
     }
@@ -39,8 +40,9 @@ private:
 private:
     tcp::socket        _socket;
     std::string        _name;
-    connection_manager *_manager;
+    std::shared_ptr<connection_manager> _manager;
     message_ptr        _message;
+    queue<std::shared_ptr<message>>* _queue;
 };
 
 typedef std::shared_ptr<connection> connection_ptr;

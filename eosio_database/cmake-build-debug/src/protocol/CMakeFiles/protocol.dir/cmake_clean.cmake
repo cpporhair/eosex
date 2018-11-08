@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/protocol.dir/sample.pb.cc.o"
   "CMakeFiles/protocol.dir/message.pb.cc.o"
   "CMakeFiles/protocol.dir/fork_database_service.pb.cc.o"
+  "CMakeFiles/protocol.dir/message_factory.cpp.o"
   "libprotocol.pdb"
   "libprotocol.a"
 )

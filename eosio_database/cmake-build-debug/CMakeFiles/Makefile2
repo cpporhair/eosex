@@ -68,65 +68,25 @@ CMAKE_BINARY_DIR = /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-d
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/CMakeFiles/eosio_database_application.dir/all
 src/all: src/protocol/all
-src/all: src/rpc_service/all
 src/all: src/network/all
+src/all: src/programs/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/CMakeFiles/eosio_database_application.dir/clean
 src/clean: src/protocol/clean
-src/clean: src/rpc_service/clean
 src/clean: src/network/clean
+src/clean: src/programs/clean
 
 .PHONY : src/clean
 
 # Convenience name for "preinstall" pass in the directory.
 src/preinstall: src/protocol/preinstall
-src/preinstall: src/rpc_service/preinstall
 src/preinstall: src/network/preinstall
+src/preinstall: src/programs/preinstall
 
 .PHONY : src/preinstall
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/eosio_database_application.dir
-
-# All Build rule for target.
-src/CMakeFiles/eosio_database_application.dir/all: src/protocol/CMakeFiles/protocol.dir/all
-src/CMakeFiles/eosio_database_application.dir/all: src/network/CMakeFiles/network.dir/all
-	$(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/depend
-	$(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target eosio_database_application"
-.PHONY : src/CMakeFiles/eosio_database_application.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/eosio_database_application.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/eosio_database_application.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/eosio_database_application.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
-.PHONY : src/CMakeFiles/eosio_database_application.dir/rule
-
-# Convenience name for target.
-eosio_database_application: src/CMakeFiles/eosio_database_application.dir/rule
-
-.PHONY : eosio_database_application
-
-# clean rule for target.
-src/CMakeFiles/eosio_database_application.dir/clean:
-	$(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/clean
-.PHONY : src/CMakeFiles/eosio_database_application.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/eosio_database_application.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory src/protocol
@@ -153,7 +113,7 @@ src/protocol/preinstall:
 src/protocol/CMakeFiles/protocol.dir/all:
 	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/depend
 	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10 "Built target protocol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=11,12,13,14,15 "Built target protocol"
 .PHONY : src/protocol/CMakeFiles/protocol.dir/all
 
 # Include target in all.
@@ -163,7 +123,7 @@ all: src/protocol/CMakeFiles/protocol.dir/all
 
 # Build rule for subdir invocation for target.
 src/protocol/CMakeFiles/protocol.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 src/protocol/CMakeFiles/protocol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
 .PHONY : src/protocol/CMakeFiles/protocol.dir/rule
@@ -180,61 +140,6 @@ src/protocol/CMakeFiles/protocol.dir/clean:
 
 # clean rule for target.
 clean: src/protocol/CMakeFiles/protocol.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory src/rpc_service
-
-# Convenience name for "all" pass in the directory.
-src/rpc_service/all: src/rpc_service/CMakeFiles/rpc_service.dir/all
-
-.PHONY : src/rpc_service/all
-
-# Convenience name for "clean" pass in the directory.
-src/rpc_service/clean: src/rpc_service/CMakeFiles/rpc_service.dir/clean
-
-.PHONY : src/rpc_service/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/rpc_service/preinstall:
-
-.PHONY : src/rpc_service/preinstall
-
-#=============================================================================
-# Target rules for target src/rpc_service/CMakeFiles/rpc_service.dir
-
-# All Build rule for target.
-src/rpc_service/CMakeFiles/rpc_service.dir/all:
-	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/depend
-	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=11,12,13 "Built target rpc_service"
-.PHONY : src/rpc_service/CMakeFiles/rpc_service.dir/all
-
-# Include target in all.
-all: src/rpc_service/CMakeFiles/rpc_service.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/rpc_service/CMakeFiles/rpc_service.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 src/rpc_service/CMakeFiles/rpc_service.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
-.PHONY : src/rpc_service/CMakeFiles/rpc_service.dir/rule
-
-# Convenience name for target.
-rpc_service: src/rpc_service/CMakeFiles/rpc_service.dir/rule
-
-.PHONY : rpc_service
-
-# clean rule for target.
-src/rpc_service/CMakeFiles/rpc_service.dir/clean:
-	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/clean
-.PHONY : src/rpc_service/CMakeFiles/rpc_service.dir/clean
-
-# clean rule for target.
-clean: src/rpc_service/CMakeFiles/rpc_service.dir/clean
 
 .PHONY : clean
 
@@ -263,7 +168,7 @@ src/network/preinstall:
 src/network/CMakeFiles/network.dir/all:
 	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/depend
 	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6 "Built target network"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target network"
 .PHONY : src/network/CMakeFiles/network.dir/all
 
 # Include target in all.
@@ -273,7 +178,7 @@ all: src/network/CMakeFiles/network.dir/all
 
 # Build rule for subdir invocation for target.
 src/network/CMakeFiles/network.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 src/network/CMakeFiles/network.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
 .PHONY : src/network/CMakeFiles/network.dir/rule
@@ -290,6 +195,139 @@ src/network/CMakeFiles/network.dir/clean:
 
 # clean rule for target.
 clean: src/network/CMakeFiles/network.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/programs
+
+# Convenience name for "all" pass in the directory.
+src/programs/all: src/programs/server_app/all
+src/programs/all: src/programs/test_client/all
+
+.PHONY : src/programs/all
+
+# Convenience name for "clean" pass in the directory.
+src/programs/clean: src/programs/server_app/clean
+src/programs/clean: src/programs/test_client/clean
+
+.PHONY : src/programs/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/programs/preinstall: src/programs/server_app/preinstall
+src/programs/preinstall: src/programs/test_client/preinstall
+
+.PHONY : src/programs/preinstall
+
+#=============================================================================
+# Directory level rules for directory src/programs/server_app
+
+# Convenience name for "all" pass in the directory.
+src/programs/server_app/all: src/programs/server_app/CMakeFiles/eosio_database_application.dir/all
+
+.PHONY : src/programs/server_app/all
+
+# Convenience name for "clean" pass in the directory.
+src/programs/server_app/clean: src/programs/server_app/CMakeFiles/eosio_database_application.dir/clean
+
+.PHONY : src/programs/server_app/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/programs/server_app/preinstall:
+
+.PHONY : src/programs/server_app/preinstall
+
+#=============================================================================
+# Target rules for target src/programs/server_app/CMakeFiles/eosio_database_application.dir
+
+# All Build rule for target.
+src/programs/server_app/CMakeFiles/eosio_database_application.dir/all: src/protocol/CMakeFiles/protocol.dir/all
+src/programs/server_app/CMakeFiles/eosio_database_application.dir/all: src/network/CMakeFiles/network.dir/all
+	$(MAKE) -f src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make src/programs/server_app/CMakeFiles/eosio_database_application.dir/depend
+	$(MAKE) -f src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make src/programs/server_app/CMakeFiles/eosio_database_application.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target eosio_database_application"
+.PHONY : src/programs/server_app/CMakeFiles/eosio_database_application.dir/all
+
+# Include target in all.
+all: src/programs/server_app/CMakeFiles/eosio_database_application.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/programs/server_app/CMakeFiles/eosio_database_application.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 src/programs/server_app/CMakeFiles/eosio_database_application.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
+.PHONY : src/programs/server_app/CMakeFiles/eosio_database_application.dir/rule
+
+# Convenience name for target.
+eosio_database_application: src/programs/server_app/CMakeFiles/eosio_database_application.dir/rule
+
+.PHONY : eosio_database_application
+
+# clean rule for target.
+src/programs/server_app/CMakeFiles/eosio_database_application.dir/clean:
+	$(MAKE) -f src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make src/programs/server_app/CMakeFiles/eosio_database_application.dir/clean
+.PHONY : src/programs/server_app/CMakeFiles/eosio_database_application.dir/clean
+
+# clean rule for target.
+clean: src/programs/server_app/CMakeFiles/eosio_database_application.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/programs/test_client
+
+# Convenience name for "all" pass in the directory.
+src/programs/test_client/all: src/programs/test_client/CMakeFiles/test_client.dir/all
+
+.PHONY : src/programs/test_client/all
+
+# Convenience name for "clean" pass in the directory.
+src/programs/test_client/clean: src/programs/test_client/CMakeFiles/test_client.dir/clean
+
+.PHONY : src/programs/test_client/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/programs/test_client/preinstall:
+
+.PHONY : src/programs/test_client/preinstall
+
+#=============================================================================
+# Target rules for target src/programs/test_client/CMakeFiles/test_client.dir
+
+# All Build rule for target.
+src/programs/test_client/CMakeFiles/test_client.dir/all: src/protocol/CMakeFiles/protocol.dir/all
+src/programs/test_client/CMakeFiles/test_client.dir/all: src/network/CMakeFiles/network.dir/all
+	$(MAKE) -f src/programs/test_client/CMakeFiles/test_client.dir/build.make src/programs/test_client/CMakeFiles/test_client.dir/depend
+	$(MAKE) -f src/programs/test_client/CMakeFiles/test_client.dir/build.make src/programs/test_client/CMakeFiles/test_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target test_client"
+.PHONY : src/programs/test_client/CMakeFiles/test_client.dir/all
+
+# Include target in all.
+all: src/programs/test_client/CMakeFiles/test_client.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/programs/test_client/CMakeFiles/test_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 15
+	$(MAKE) -f CMakeFiles/Makefile2 src/programs/test_client/CMakeFiles/test_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles 0
+.PHONY : src/programs/test_client/CMakeFiles/test_client.dir/rule
+
+# Convenience name for target.
+test_client: src/programs/test_client/CMakeFiles/test_client.dir/rule
+
+.PHONY : test_client
+
+# clean rule for target.
+src/programs/test_client/CMakeFiles/test_client.dir/clean:
+	$(MAKE) -f src/programs/test_client/CMakeFiles/test_client.dir/build.make src/programs/test_client/CMakeFiles/test_client.dir/clean
+.PHONY : src/programs/test_client/CMakeFiles/test_client.dir/clean
+
+# clean rule for target.
+clean: src/programs/test_client/CMakeFiles/test_client.dir/clean
 
 .PHONY : clean
 

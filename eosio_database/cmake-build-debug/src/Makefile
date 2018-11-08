@@ -110,48 +110,6 @@ depend:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-src/CMakeFiles/eosio_database_application.dir/rule:
-	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/eosio_database_application.dir/rule
-.PHONY : src/CMakeFiles/eosio_database_application.dir/rule
-
-# Convenience name for target.
-eosio_database_application: src/CMakeFiles/eosio_database_application.dir/rule
-
-.PHONY : eosio_database_application
-
-# fast build rule for target.
-eosio_database_application/fast:
-	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/build
-.PHONY : eosio_database_application/fast
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,10 +118,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... eosio_database_application"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

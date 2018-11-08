@@ -36,6 +36,10 @@ public:
         return _body_length;
     }
 
+    connection_ptr connection() const {
+        return _conn;
+    }
+
 private:
     char _data[max_message_length + sizeof(int32_t)];
     std::size_t _body_length {0};

@@ -5,7 +5,7 @@
 		<Option title="eosio_database_application"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\protocol\;CMake Files\src\rpc_service\;CMake Files\src\network\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\protocol\;CMake Files\src\network\;CMake Files\src\programs\;CMake Files\src\programs\server_app\;CMake Files\src\programs\test_client\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug"/>
@@ -35,54 +35,6 @@
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="eosio_database_application">
-				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/eosio_database_application" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 eosio_database_application"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="eosio_database_application/fast">
-				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/eosio_database_application" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 eosio_database_application/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="protocol">
@@ -133,54 +85,6 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/protocol/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rpc_service">
-				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/librpc_service.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 rpc_service"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rpc_service/fast">
-				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/librpc_service.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
-					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 rpc_service/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/rpc_service/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="network">
 				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network/libnetwork.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network"/>
@@ -229,18 +133,129 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="eosio_database_application">
+				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/eosio_database_application" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 eosio_database_application"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eosio_database_application/fast">
+				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/eosio_database_application" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 eosio_database_application/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_client">
+				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/test_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 test_client"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_client/fast">
+				<Option output="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/test_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/boost/1.67.0_1/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/include"/>
+					<Add directory="/Users/yangwenyu/workspace/eosex/eosio_database/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 test_client/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
-		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/main.cpp">
-			<Option target="eosio_database_application"/>
-		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection.cpp">
 			<Option target="network"/>
 		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/connection_manager.cpp">
 			<Option target="network"/>
 		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/dispatcher.cpp">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/fork_database_message_handlers.cpp">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/fork_db_message_dispatcher.cpp">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/message_handlers.cpp">
+			<Option target="network"/>
+		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/tcp_server.cpp">
 			<Option target="network"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/programs/server_app/main.cpp">
+			<Option target="eosio_database_application"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/programs/test_client/main.cpp">
+			<Option target="test_client"/>
 		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.cc">
 			<Option target="protocol"/>
@@ -248,14 +263,14 @@
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.cc">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/sample.pb.cc">
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message_factory.cpp">
 			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/rpc_service.cpp">
-			<Option target="rpc_service"/>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message_factory.hpp">
+			<Option target="protocol"/>
 		</Unit>
-		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/service_manager.cpp">
-			<Option target="rpc_service"/>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/sample.pb.cc">
+			<Option target="protocol"/>
 		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -266,11 +281,17 @@
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\protocol\"/>
 		</Unit>
-		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/rpc_service/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\rpc_service\"/>
-		</Unit>
 		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/network/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\network\"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/programs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\programs\"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/programs/server_app/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\programs\server_app\"/>
+		</Unit>
+		<Unit filename="/Users/yangwenyu/workspace/eosex/eosio_database/src/programs/test_client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\programs\test_client\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

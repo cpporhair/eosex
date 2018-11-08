@@ -5,6 +5,7 @@
 
 void connection_manager::add(const std::string &name, connection_ptr conn) {
     if(_connections.find(name) == _connections.end()) {
+        conn->name(name);
         conn->start();
         _connections.emplace(std::make_pair(name,conn));
     }

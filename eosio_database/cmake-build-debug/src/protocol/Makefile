@@ -179,6 +179,33 @@ message.pb.cc.s:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+message_factory.o: message_factory.cpp.o
+
+.PHONY : message_factory.o
+
+# target to build an object file
+message_factory.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o
+.PHONY : message_factory.cpp.o
+
+message_factory.i: message_factory.cpp.i
+
+.PHONY : message_factory.i
+
+# target to preprocess a source file
+message_factory.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.i
+.PHONY : message_factory.cpp.i
+
+message_factory.s: message_factory.cpp.s
+
+.PHONY : message_factory.s
+
+# target to generate assembly for a file
+message_factory.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.s
+.PHONY : message_factory.cpp.s
+
 sample.pb.o: sample.pb.cc.o
 
 .PHONY : sample.pb.o
@@ -221,6 +248,9 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... message_factory.o"
+	@echo "... message_factory.i"
+	@echo "... message_factory.s"
 	@echo "... sample.pb.o"
 	@echo "... sample.pb.i"
 	@echo "... sample.pb.s"

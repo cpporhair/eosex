@@ -28,7 +28,7 @@ public:
         _queue.pop();
     }
     T wait_and_pop() {
-        std::unique_ptr<std::mutex> lock(_mutex);
+        std::unique_lock<std::mutex> lock(_mutex);
         _cond.wait(lock,[&]{ return !_queue.empty(); });
         auto res = _queue.front();
         _queue.pop();

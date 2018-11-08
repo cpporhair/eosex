@@ -45,8 +45,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.12.3/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
   "../src/network/CMakeLists.txt"
+  "../src/programs/CMakeLists.txt"
+  "../src/programs/server_app/CMakeLists.txt"
+  "../src/programs/test_client/CMakeLists.txt"
   "../src/protocol/CMakeLists.txt"
-  "../src/rpc_service/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -60,14 +62,16 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/protocol/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/rpc_service/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/network/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/programs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/programs/server_app/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/programs/test_client/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/eosio_database_application.dir/DependInfo.cmake"
   "src/protocol/CMakeFiles/protocol.dir/DependInfo.cmake"
-  "src/rpc_service/CMakeFiles/rpc_service.dir/DependInfo.cmake"
   "src/network/CMakeFiles/network.dir/DependInfo.cmake"
+  "src/programs/server_app/CMakeFiles/eosio_database_application.dir/DependInfo.cmake"
+  "src/programs/test_client/CMakeFiles/test_client.dir/DependInfo.cmake"
   )

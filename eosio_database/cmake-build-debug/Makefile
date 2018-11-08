@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named eosio_database_application
-
-# Build rule for target.
-eosio_database_application: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eosio_database_application
-.PHONY : eosio_database_application
-
-# fast build rule for target.
-eosio_database_application/fast:
-	$(MAKE) -f src/CMakeFiles/eosio_database_application.dir/build.make src/CMakeFiles/eosio_database_application.dir/build
-.PHONY : eosio_database_application/fast
-
-#=============================================================================
 # Target rules for targets named protocol
 
 # Build rule for target.
@@ -135,19 +122,6 @@ protocol: cmake_check_build_system
 protocol/fast:
 	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
 .PHONY : protocol/fast
-
-#=============================================================================
-# Target rules for targets named rpc_service
-
-# Build rule for target.
-rpc_service: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rpc_service
-.PHONY : rpc_service
-
-# fast build rule for target.
-rpc_service/fast:
-	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/build
-.PHONY : rpc_service/fast
 
 #=============================================================================
 # Target rules for targets named network
@@ -162,6 +136,32 @@ network/fast:
 	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
 .PHONY : network/fast
 
+#=============================================================================
+# Target rules for targets named eosio_database_application
+
+# Build rule for target.
+eosio_database_application: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eosio_database_application
+.PHONY : eosio_database_application
+
+# fast build rule for target.
+eosio_database_application/fast:
+	$(MAKE) -f src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make src/programs/server_app/CMakeFiles/eosio_database_application.dir/build
+.PHONY : eosio_database_application/fast
+
+#=============================================================================
+# Target rules for targets named test_client
+
+# Build rule for target.
+test_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_client
+.PHONY : test_client
+
+# fast build rule for target.
+test_client/fast:
+	$(MAKE) -f src/programs/test_client/CMakeFiles/test_client.dir/build.make src/programs/test_client/CMakeFiles/test_client.dir/build
+.PHONY : test_client/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,10 +170,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... eosio_database_application"
 	@echo "... protocol"
-	@echo "... rpc_service"
 	@echo "... network"
+	@echo "... eosio_database_application"
+	@echo "... test_client"
 .PHONY : help
 
 

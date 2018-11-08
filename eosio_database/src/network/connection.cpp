@@ -4,8 +4,9 @@
 #include <boost/bind.hpp>
 #include <network/connection.hpp>
 #include <network/message.hpp>
+#include <network/connection_manager.hpp>
 
-connection::connection(io_context &io):_socket{io} {}
+connection::connection(tcp::socket socket,queue<std::shared_ptr<message>>* q):_socket{std::move(socket)},_queue{q} {}
 
 void connection::start() {
     _message.reset(new message{shared_from_this()});
@@ -20,7 +21,8 @@ void connection::read_message_length() {
                     _message->read_body_length();
                     read_message_body();
                 } else {
-
+                    _socket.close();
+                    _manager->remove(_name);
                 }
             }
     );
@@ -31,10 +33,12 @@ void connection::read_message_body() {
     boost::asio::async_read(_socket,boost::asio::buffer(_message->body(),_message->body_length()),
             [this,self](boost::system::error_code ec,std::size_t /*bytes_transferred*/) {
                 if(!ec) {
+                    _queue->push(_message);
                     _message.reset(new message{shared_from_this()});
                     read_message_length();
                 } else {
-
+                    _socket.close();
+                    _manager->remove(_name);
                 }
             }
     );

@@ -46,15 +46,21 @@ message meta {
     optional uint32 method_id   = 3;
 }
 
+message branch_data {
+    optional bytes data       = 1;
+    optional uint32 data_len  = 2;
+}
+
 message branch_t {
-    repeated bytes first = 1;
-    repeated bytes second = 2;
+    repeated branch_data first  = 1;
+    repeated branch_data second = 2;
 }
 
 message rpc_request {
-    optional meta        head    = 1;
-    optional message_id  msg_id  = 2;
-    optional bytes       data    = 3;
+    optional meta        head     = 1;
+    optional message_id  msg_id   = 2;
+    optional bytes       data     = 3;
+    optional uint32      data_len = 4;
 }
 
 message rpc_response {

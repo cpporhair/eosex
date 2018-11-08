@@ -1,0 +1,11 @@
+add_subdirectory(protocol)
+#add_subdirectory(rpc_service)
+add_subdirectory(network)
+add_subdirectory(programs)
+
+find_package(Protobuf REQUIRED)
+if(PROTOBUF_FOUND)
+    message(STATUS "protobuf library found")
+else()
+    message(FATAL_ERROR "protobuf library is needed but can not be found")
+endif()
