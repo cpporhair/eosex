@@ -1,0 +1,2 @@
+/usr/bin/ar qc libchain_plugin.a  CMakeFiles/chain_plugin.dir/chain_plugin.cpp.o
+/usr/bin/ranlib libchain_plugin.a

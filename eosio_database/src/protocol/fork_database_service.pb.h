@@ -668,6 +668,36 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
 
+  // optional bytes first = 5;
+  bool has_first() const;
+  void clear_first();
+  static const int kFirstFieldNumber = 5;
+  const ::std::string& first() const;
+  void set_first(const ::std::string& value);
+  #if LANG_CXX11
+  void set_first(::std::string&& value);
+  #endif
+  void set_first(const char* value);
+  void set_first(const void* value, size_t size);
+  ::std::string* mutable_first();
+  ::std::string* release_first();
+  void set_allocated_first(::std::string* first);
+
+  // optional bytes second = 6;
+  bool has_second() const;
+  void clear_second();
+  static const int kSecondFieldNumber = 6;
+  const ::std::string& second() const;
+  void set_second(const ::std::string& value);
+  #if LANG_CXX11
+  void set_second(::std::string&& value);
+  #endif
+  void set_second(const char* value);
+  void set_second(const void* value, size_t size);
+  ::std::string* mutable_second();
+  ::std::string* release_second();
+  void set_allocated_second(::std::string* second);
+
   // optional .fork_db_message.meta head = 1;
   bool has_head() const;
   void clear_head();
@@ -676,6 +706,13 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::fork_db_message::meta* release_head();
   ::fork_db_message::meta* mutable_head();
   void set_allocated_head(::fork_db_message::meta* head);
+
+  // optional bool trust = 4;
+  bool has_trust() const;
+  void clear_trust();
+  static const int kTrustFieldNumber = 4;
+  bool trust() const;
+  void set_trust(bool value);
 
   // optional .fork_db_message.message_id msg_id = 2;
   bool has_msg_id() const;
@@ -692,7 +729,10 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::internal::ArenaStringPtr first_;
+  ::google::protobuf::internal::ArenaStringPtr second_;
   ::fork_db_message::meta* head_;
+  bool trust_;
   int msg_id_;
   friend struct ::TableStruct_fork_5fdatabase_5fservice_2eproto;
 };
@@ -1147,11 +1187,11 @@ branch_t::mutable_second() {
 
 // optional .fork_db_message.meta head = 1;
 inline bool rpc_request::has_head() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 inline void rpc_request::clear_head() {
   if (head_ != NULL) head_->Clear();
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 inline const ::fork_db_message::meta& rpc_request::head() const {
   const ::fork_db_message::meta* p = head_;
@@ -1161,13 +1201,13 @@ inline const ::fork_db_message::meta& rpc_request::head() const {
 }
 inline ::fork_db_message::meta* rpc_request::release_head() {
   // @@protoc_insertion_point(field_release:fork_db_message.rpc_request.head)
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000008u;
   ::fork_db_message::meta* temp = head_;
   head_ = NULL;
   return temp;
 }
 inline ::fork_db_message::meta* rpc_request::mutable_head() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000008u;
   if (head_ == NULL) {
     auto* p = CreateMaybeMessage<::fork_db_message::meta>(GetArenaNoVirtual());
     head_ = p;
@@ -1186,9 +1226,9 @@ inline void rpc_request::set_allocated_head(::fork_db_message::meta* head) {
       head = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, head, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000002u;
+    _has_bits_[0] |= 0x00000008u;
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    _has_bits_[0] &= ~0x00000008u;
   }
   head_ = head;
   // @@protoc_insertion_point(field_set_allocated:fork_db_message.rpc_request.head)
@@ -1196,11 +1236,11 @@ inline void rpc_request::set_allocated_head(::fork_db_message::meta* head) {
 
 // optional .fork_db_message.message_id msg_id = 2;
 inline bool rpc_request::has_msg_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void rpc_request::clear_msg_id() {
   msg_id_ = 3000;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::fork_db_message::message_id rpc_request::msg_id() const {
   // @@protoc_insertion_point(field_get:fork_db_message.rpc_request.msg_id)
@@ -1208,7 +1248,7 @@ inline ::fork_db_message::message_id rpc_request::msg_id() const {
 }
 inline void rpc_request::set_msg_id(::fork_db_message::message_id value) {
   assert(::fork_db_message::message_id_IsValid(value));
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000020u;
   msg_id_ = value;
   // @@protoc_insertion_point(field_set:fork_db_message.rpc_request.msg_id)
 }
@@ -1271,6 +1311,144 @@ inline void rpc_request::set_allocated_data(::std::string* data) {
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
   // @@protoc_insertion_point(field_set_allocated:fork_db_message.rpc_request.data)
+}
+
+// optional bool trust = 4;
+inline bool rpc_request::has_trust() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void rpc_request::clear_trust() {
+  trust_ = false;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline bool rpc_request::trust() const {
+  // @@protoc_insertion_point(field_get:fork_db_message.rpc_request.trust)
+  return trust_;
+}
+inline void rpc_request::set_trust(bool value) {
+  _has_bits_[0] |= 0x00000010u;
+  trust_ = value;
+  // @@protoc_insertion_point(field_set:fork_db_message.rpc_request.trust)
+}
+
+// optional bytes first = 5;
+inline bool rpc_request::has_first() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void rpc_request::clear_first() {
+  first_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::std::string& rpc_request::first() const {
+  // @@protoc_insertion_point(field_get:fork_db_message.rpc_request.first)
+  return first_.GetNoArena();
+}
+inline void rpc_request::set_first(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  first_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:fork_db_message.rpc_request.first)
+}
+#if LANG_CXX11
+inline void rpc_request::set_first(::std::string&& value) {
+  _has_bits_[0] |= 0x00000002u;
+  first_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:fork_db_message.rpc_request.first)
+}
+#endif
+inline void rpc_request::set_first(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000002u;
+  first_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:fork_db_message.rpc_request.first)
+}
+inline void rpc_request::set_first(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000002u;
+  first_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:fork_db_message.rpc_request.first)
+}
+inline ::std::string* rpc_request::mutable_first() {
+  _has_bits_[0] |= 0x00000002u;
+  // @@protoc_insertion_point(field_mutable:fork_db_message.rpc_request.first)
+  return first_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* rpc_request::release_first() {
+  // @@protoc_insertion_point(field_release:fork_db_message.rpc_request.first)
+  if (!has_first()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return first_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void rpc_request::set_allocated_first(::std::string* first) {
+  if (first != NULL) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  first_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), first);
+  // @@protoc_insertion_point(field_set_allocated:fork_db_message.rpc_request.first)
+}
+
+// optional bytes second = 6;
+inline bool rpc_request::has_second() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void rpc_request::clear_second() {
+  second_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const ::std::string& rpc_request::second() const {
+  // @@protoc_insertion_point(field_get:fork_db_message.rpc_request.second)
+  return second_.GetNoArena();
+}
+inline void rpc_request::set_second(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  second_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:fork_db_message.rpc_request.second)
+}
+#if LANG_CXX11
+inline void rpc_request::set_second(::std::string&& value) {
+  _has_bits_[0] |= 0x00000004u;
+  second_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:fork_db_message.rpc_request.second)
+}
+#endif
+inline void rpc_request::set_second(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000004u;
+  second_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:fork_db_message.rpc_request.second)
+}
+inline void rpc_request::set_second(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000004u;
+  second_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:fork_db_message.rpc_request.second)
+}
+inline ::std::string* rpc_request::mutable_second() {
+  _has_bits_[0] |= 0x00000004u;
+  // @@protoc_insertion_point(field_mutable:fork_db_message.rpc_request.second)
+  return second_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* rpc_request::release_second() {
+  // @@protoc_insertion_point(field_release:fork_db_message.rpc_request.second)
+  if (!has_second()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  return second_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void rpc_request::set_allocated_second(::std::string* second) {
+  if (second != NULL) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  second_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), second);
+  // @@protoc_insertion_point(field_set_allocated:fork_db_message.rpc_request.second)
 }
 
 // -------------------------------------------------------------------

@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/yangwenyu/workspace/eosex/eosio_database/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -152,6 +198,60 @@ fork_database_service.pb.cc.s:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.s
 .PHONY : fork_database_service.pb.cc.s
 
+message.pb.o: message.pb.cc.o
+
+.PHONY : message.pb.o
+
+# target to build an object file
+message.pb.cc.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
+
+message.pb.i: message.pb.cc.i
+
+.PHONY : message.pb.i
+
+# target to preprocess a source file
+message.pb.cc.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
+
+message.pb.s: message.pb.cc.s
+
+.PHONY : message.pb.s
+
+# target to generate assembly for a file
+message.pb.cc.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
+
+message_factory.o: message_factory.cpp.o
+
+.PHONY : message_factory.o
+
+# target to build an object file
+message_factory.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o
+.PHONY : message_factory.cpp.o
+
+message_factory.i: message_factory.cpp.i
+
+.PHONY : message_factory.i
+
+# target to preprocess a source file
+message_factory.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.i
+.PHONY : message_factory.cpp.i
+
+message_factory.s: message_factory.cpp.s
+
+.PHONY : message_factory.s
+
+# target to generate assembly for a file
+message_factory.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.s
+.PHONY : message_factory.cpp.s
+
 sample.pb.o: sample.pb.cc.o
 
 .PHONY : sample.pb.o
@@ -185,12 +285,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... protocol"
 	@echo "... fork_database_service.pb.o"
 	@echo "... fork_database_service.pb.i"
 	@echo "... fork_database_service.pb.s"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
+	@echo "... message_factory.o"
+	@echo "... message_factory.i"
+	@echo "... message_factory.s"
 	@echo "... sample.pb.o"
 	@echo "... sample.pb.i"
 	@echo "... sample.pb.s"

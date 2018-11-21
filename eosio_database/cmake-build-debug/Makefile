@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-d
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,17 +157,95 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named protocol
+# Target rules for targets named fc
 
 # Build rule for target.
-protocol: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 protocol
-.PHONY : protocol
+fc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fc
+.PHONY : fc
 
 # fast build rule for target.
-protocol/fast:
-	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
-.PHONY : protocol/fast
+fc/fast:
+	$(MAKE) -f src/fc/CMakeFiles/fc.dir/build.make src/fc/CMakeFiles/fc.dir/build
+.PHONY : fc/fast
+
+#=============================================================================
+# Target rules for targets named eosio_chain
+
+# Build rule for target.
+eosio_chain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eosio_chain
+.PHONY : eosio_chain
+
+# fast build rule for target.
+eosio_chain/fast:
+	$(MAKE) -f src/chain/CMakeFiles/eosio_chain.dir/build.make src/chain/CMakeFiles/eosio_chain.dir/build
+.PHONY : eosio_chain/fast
+
+#=============================================================================
+# Target rules for targets named softfloat
+
+# Build rule for target.
+softfloat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 softfloat
+.PHONY : softfloat
+
+# fast build rule for target.
+softfloat/fast:
+	$(MAKE) -f src/softfloat/CMakeFiles/softfloat.dir/build.make src/softfloat/CMakeFiles/softfloat.dir/build
+.PHONY : softfloat/fast
+
+#=============================================================================
+# Target rules for targets named chainbase
+
+# Build rule for target.
+chainbase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chainbase
+.PHONY : chainbase
+
+# fast build rule for target.
+chainbase/fast:
+	$(MAKE) -f src/chainbase/CMakeFiles/chainbase.dir/build.make src/chainbase/CMakeFiles/chainbase.dir/build
+.PHONY : chainbase/fast
+
+#=============================================================================
+# Target rules for targets named chainbase_test
+
+# Build rule for target.
+chainbase_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chainbase_test
+.PHONY : chainbase_test
+
+# fast build rule for target.
+chainbase_test/fast:
+	$(MAKE) -f src/chainbase/test/CMakeFiles/chainbase_test.dir/build.make src/chainbase/test/CMakeFiles/chainbase_test.dir/build
+.PHONY : chainbase_test/fast
+
+#=============================================================================
+# Target rules for targets named builtins
+
+# Build rule for target.
+builtins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 builtins
+.PHONY : builtins
+
+# fast build rule for target.
+builtins/fast:
+	$(MAKE) -f src/builtins/CMakeFiles/builtins.dir/build.make src/builtins/CMakeFiles/builtins.dir/build
+.PHONY : builtins/fast
+
+#=============================================================================
+# Target rules for targets named eos_utilities
+
+# Build rule for target.
+eos_utilities: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eos_utilities
+.PHONY : eos_utilities
+
+# fast build rule for target.
+eos_utilities/fast:
+	$(MAKE) -f src/utilities/CMakeFiles/eos_utilities.dir/build.make src/utilities/CMakeFiles/eos_utilities.dir/build
+.PHONY : eos_utilities/fast
 
 #=============================================================================
 # Target rules for targets named network
@@ -137,6 +261,45 @@ network/fast:
 .PHONY : network/fast
 
 #=============================================================================
+# Target rules for targets named protocol
+
+# Build rule for target.
+protocol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 protocol
+.PHONY : protocol
+
+# fast build rule for target.
+protocol/fast:
+	$(MAKE) -f src/protocol/CMakeFiles/protocol.dir/build.make src/protocol/CMakeFiles/protocol.dir/build
+.PHONY : protocol/fast
+
+#=============================================================================
+# Target rules for targets named rpc_service
+
+# Build rule for target.
+rpc_service: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rpc_service
+.PHONY : rpc_service
+
+# fast build rule for target.
+rpc_service/fast:
+	$(MAKE) -f src/rpc_service/CMakeFiles/rpc_service.dir/build.make src/rpc_service/CMakeFiles/rpc_service.dir/build
+.PHONY : rpc_service/fast
+
+#=============================================================================
+# Target rules for targets named database_controller
+
+# Build rule for target.
+database_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 database_controller
+.PHONY : database_controller
+
+# fast build rule for target.
+database_controller/fast:
+	$(MAKE) -f src/database_controller/CMakeFiles/database_controller.dir/build.make src/database_controller/CMakeFiles/database_controller.dir/build
+.PHONY : database_controller/fast
+
+#=============================================================================
 # Target rules for targets named eosio_database_application
 
 # Build rule for target.
@@ -149,31 +312,30 @@ eosio_database_application/fast:
 	$(MAKE) -f src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make src/programs/server_app/CMakeFiles/eosio_database_application.dir/build
 .PHONY : eosio_database_application/fast
 
-#=============================================================================
-# Target rules for targets named test_client
-
-# Build rule for target.
-test_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_client
-.PHONY : test_client
-
-# fast build rule for target.
-test_client/fast:
-	$(MAKE) -f src/programs/test_client/CMakeFiles/test_client.dir/build.make src/programs/test_client/CMakeFiles/test_client.dir/build
-.PHONY : test_client/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... protocol"
+	@echo "... fc"
+	@echo "... eosio_chain"
+	@echo "... softfloat"
+	@echo "... chainbase"
+	@echo "... chainbase_test"
+	@echo "... builtins"
+	@echo "... eos_utilities"
 	@echo "... network"
+	@echo "... protocol"
+	@echo "... rpc_service"
+	@echo "... database_controller"
 	@echo "... eosio_database_application"
-	@echo "... test_client"
 .PHONY : help
 
 

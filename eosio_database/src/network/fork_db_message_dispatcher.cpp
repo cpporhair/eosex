@@ -21,10 +21,12 @@ void fork_db_message_dispatcher::start() {
 void fork_db_message_dispatcher::run() {
 
     for (;;) {
+
         auto msg = _queue->wait_and_pop();
         rpc_request req;
         req.ParseFromArray(msg->body(),msg->body_length());
-        _handlers[req.msg_id()]->handle_message(req,msg);
+        _handlers[req.msg_id()]->handle(req,msg->connection());
+
     }
 }
 

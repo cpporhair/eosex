@@ -80,8 +80,30 @@ eosio_database_application_EXTERNAL_OBJECTS =
 src/programs/server_app/eosio_database_application: src/programs/server_app/CMakeFiles/eosio_database_application.dir/main.cpp.o
 src/programs/server_app/eosio_database_application: src/programs/server_app/CMakeFiles/eosio_database_application.dir/build.make
 src/programs/server_app/eosio_database_application: src/protocol/libprotocol.a
+src/programs/server_app/eosio_database_application: src/chainbase/libchainbase.a
+src/programs/server_app/eosio_database_application: src/fc/libfc_debug.a
+src/programs/server_app/eosio_database_application: src/chain/libeosio_chain.a
 src/programs/server_app/eosio_database_application: /usr/local/lib/libprotobuf.dylib
 src/programs/server_app/eosio_database_application: src/network/libnetwork.a
+src/programs/server_app/eosio_database_application: src/softfloat/libsoftfloat.a
+src/programs/server_app/eosio_database_application: src/utilities/libeos_utilities.a
+src/programs/server_app/eosio_database_application: src/database_controller/libdatabase_controller.a
+src/programs/server_app/eosio_database_application: src/chainbase/libchainbase.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_thread-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_date_time-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_filesystem-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_system-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_chrono-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_unit_test_framework-mt.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libboost_locale-mt.a
+src/programs/server_app/eosio_database_application: /usr/lib/libpthread.dylib
+src/programs/server_app/eosio_database_application: src/fc/libfc_debug.a
+src/programs/server_app/eosio_database_application: /usr/lib/libssl.dylib
+src/programs/server_app/eosio_database_application: /usr/lib/libcrypto.dylib
+src/programs/server_app/eosio_database_application: /usr/lib/libz.dylib
+src/programs/server_app/eosio_database_application: /usr/local/lib/libsecp256k1.a
+src/programs/server_app/eosio_database_application: /usr/local/lib/libgmp.a
+src/programs/server_app/eosio_database_application: src/builtins/libbuiltins.a
 src/programs/server_app/eosio_database_application: src/programs/server_app/CMakeFiles/eosio_database_application.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable eosio_database_application"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eosio_database_application.dir/link.txt --verbose=$(VERBOSE)

@@ -1,19 +1,46 @@
-cmake_minimum_required( VERSION 3.10 )
-
-project(eosio_database_application)
+cmake_minimum_required(VERSION 3.10)
+project(eos_database_application)
 
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(
-    /usr/include
-    /usr/local/include
-    /usr/local/Cellar/boost/1.67.0_1/include
     include
     src
+    src/softfloat/source/include
+    /usr/local/Cellar/boost/1.67.0_1/include
+    /usr/local/include
+    /usr/local/opt/openssl/include
 )
 
 link_directories(
     /usr/local/Cellar/boost/1.67.0_1/lib
 )
+
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/fc/CMakeModules)
+
+include( GNUInstallDirs )
+include( VersionMacros )
+include( SetupTargetMacros )
+
+
+
+
+
+if ("${OPENSSL_ROOT_DIR}" STREQUAL "")
+    if (NOT "$ENV{OPENSSL_ROOT_DIR}" STREQUAL "")
+        set(OPENSSL_ROOT_DIR $ENV{OPENSSL_ROOT_DIR})
+        set(OPENSSL_INCLUDE_DIR ${OPENSSL_ROOT_DIR}/include)
+    elseif (APPLE)
+        set(OPENSSL_ROOT_DIR "/usr/local/opt/openssl")
+        set(OPENSSL_INCLUDE_DIR "/usr/local/opt/openssl/include")
+    elseif(UNIX AND NOT APPLE)
+        set(OPENSSL_ROOT_DIR "/usr/include/openssl")
+        set(OPENSSL_INCLUDE_DIR "/usr/include/openssl/include")
+    else()
+        message(FATAL_ERROR "openssl not found and don't know where to look, please specify OPENSSL_ROOT_DIR")
+    endif()
+endif()
+
+
 
 add_subdirectory(src)

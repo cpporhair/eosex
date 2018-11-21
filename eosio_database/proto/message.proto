@@ -264,6 +264,8 @@ enum message_id {
     reversible_block_update_response                         = 1215;
     reversible_block_remove_request                          = 1216;
     reversible_block_remove_response                         = 1217;
+    reversible_block_multi_remove_request                    = 1218;
+    reversible_block_multi_remove_response                   = 1219;
 
 
     db_store_i64_request                                     = 2000;
@@ -404,10 +406,31 @@ enum message_id {
     get_permission_last_used_response                        = 3007;
     get_account_creation_time_request                        = 3008;
     get_account_creation_time_response                       = 3009;
+
+    session_push_request                                     = 4000;
+    session_push_response                                    = 4001;
+    session_squash_request                                   = 4002;
+    session_squash_response                                  = 4003;
+    session_undo_request                                     = 4004;
+    session_undo_response                                    = 4005;
+    session_revision_request                                 = 4006;
+    session_revision_response                                = 4007;
+    session_commit_request                                   = 4008;
+    session_commit_response                                  = 4009;
+    session_undo_all_request                                 = 4010;
+    session_undo_all_response                                = 4011;
+    session_type_id_request                                  = 4012;
+    session_type_id_response                                 = 4013;
+    session_row_count_request                                = 4014;
+    session_row_count_response                               = 4015;
+    session_type_name_request                                = 4016;
+    session_type_name_response                               = 4017;
+    session_remove_object_request                            = 4018;
+    session_remove_object_response                           = 4019;
 }
 
 message error {
-    optional uint32 code = 1;
+    optional uint64 code = 1;
     optional string msg  = 2;
 }
 
@@ -415,6 +438,12 @@ message meta {
     optional uint32 id          = 1;
     optional uint32 service_id  = 2;
     optional uint32 method_id   = 3;
+}
+
+message account_object {
+    optional bytes    account_name = 1;
+    optional int32     vm_type = 2;
+    optional int32     vm_version = 3;
 }
 
 message db_store_i64 {
@@ -839,14 +868,28 @@ message get_account_creation_time {
     optional bytes    account  = 1;
 }
 
+message reversible_block {
+    optional uint32  block_num = 1;
+    optional bytes   data      = 2;
+}
+
+message global_property_object {
+    optional uint32   proposed_schedule_block_num = 1;
+    optional bytes    propose_schedule = 2;
+    optional bytes    configuration = 3;
+}
 
 message rpc_request {
     optional message_id   msg_id = 1;
-    optional bytes        data   = 2;
+    optional uint64        receiver = 2;
+    optional bytes        data   = 3;
 }
 
 message rpc_response {
     optional message_id   msg_id = 1;
     optional error        err = 2;
     optional bytes        data = 3;
+    optional uint32       result = 4;
+    optional uint64       result_primary = 5;
+    optional uint64       result_secondary = 6;
 }

@@ -164,9 +164,15 @@ const ::google::protobuf::uint32 TableStruct_fork_5fdatabase_5fservice_2eproto::
   PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, head_),
   PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, msg_id_),
   PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, data_),
+  PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, trust_),
+  PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, first_),
+  PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_request, second_),
+  3,
+  5,
+  0,
+  4,
   1,
   2,
-  0,
   PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_response, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::fork_db_message::rpc_response, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -185,8 +191,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 0, 7, sizeof(::fork_db_message::error)},
   { 9, 17, sizeof(::fork_db_message::meta)},
   { 20, 27, sizeof(::fork_db_message::branch_t)},
-  { 29, 37, sizeof(::fork_db_message::rpc_request)},
-  { 40, 49, sizeof(::fork_db_message::rpc_response)},
+  { 29, 40, sizeof(::fork_db_message::rpc_request)},
+  { 46, 55, sizeof(::fork_db_message::rpc_response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -209,38 +215,39 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   "essage\"\"\n\005error\022\014\n\004code\030\001 \001(\r\022\013\n\003msg\030\002 \001"
   "(\t\"9\n\004meta\022\n\n\002id\030\001 \001(\r\022\022\n\nservice_id\030\002 \001"
   "(\r\022\021\n\tmethod_id\030\003 \001(\r\")\n\010branch_t\022\r\n\005fir"
-  "st\030\001 \003(\014\022\016\n\006second\030\002 \003(\014\"m\n\013rpc_request\022"
-  "#\n\004head\030\001 \001(\0132\025.fork_db_message.meta\022+\n\006"
-  "msg_id\030\002 \001(\0162\033.fork_db_message.message_i"
-  "d\022\014\n\004data\030\003 \001(\014\"\231\001\n\014rpc_response\022+\n\006msg_"
-  "id\030\001 \001(\0162\033.fork_db_message.message_id\022#\n"
-  "\003err\030\002 \001(\0132\026.fork_db_message.error\022\014\n\004da"
-  "ta\030\003 \001(\014\022)\n\006branch\030\004 \001(\0132\031.fork_db_messa"
-  "ge.branch_t*\375\006\n\nmessage_id\022\026\n\021block_get_"
-  "request\020\270\027\022\027\n\022block_get_response\020\271\027\022\035\n\030b"
-  "lock_get_by_num_request\020\272\027\022\036\n\031block_get_"
-  "by_num_response\020\273\027\022\026\n\021block_set_request\020"
-  "\274\027\022\027\n\022block_set_response\020\275\027\022&\n!block_add"
-  "_by_signed_block_request\020\276\027\022\'\n\"block_add"
-  "_by_signed_block_response\020\277\027\022%\n block_ad"
-  "d_by_block_state_request\020\300\027\022&\n!block_add"
-  "_by_block_state_response\020\301\027\022\037\n\032block_rem"
-  "ove_by_id_request\020\302\027\022 \n\033block_remove_by_"
-  "id_response\020\303\027\022-\n(block_add_by_header_co"
-  "nfirmation_request\020\304\027\022.\n)block_add_by_he"
-  "ader_confirmation_response\020\305\027\022\033\n\026block_g"
-  "et_head_request\020\306\027\022\034\n\027block_get_head_res"
-  "ponse\020\307\027\022\037\n\032block_fetch_branch_request\020\310"
-  "\027\022 \n\033block_fetch_branch_response\020\311\027\022\037\n\032b"
-  "lock_set_validity_request\020\312\027\022 \n\033block_se"
-  "t_validity_response\020\313\027\022(\n#block_mark_in_"
-  "current_chain_request\020\314\027\022)\n$block_mark_i"
-  "n_current_chain_response\020\315\027\022\030\n\023block_pru"
-  "ne_request\020\316\027\022\031\n\024block_prune_response\020\317\027"
-  "\022!\n\034block_irreversible_broadcast\020\240\037\022\036\n\031b"
-  "lock_irreversible_notify\020\241\037"
+  "st\030\001 \003(\014\022\016\n\006second\030\002 \003(\014\"\233\001\n\013rpc_request"
+  "\022#\n\004head\030\001 \001(\0132\025.fork_db_message.meta\022+\n"
+  "\006msg_id\030\002 \001(\0162\033.fork_db_message.message_"
+  "id\022\014\n\004data\030\003 \001(\014\022\r\n\005trust\030\004 \001(\010\022\r\n\005first"
+  "\030\005 \001(\014\022\016\n\006second\030\006 \001(\014\"\231\001\n\014rpc_response\022"
+  "+\n\006msg_id\030\001 \001(\0162\033.fork_db_message.messag"
+  "e_id\022#\n\003err\030\002 \001(\0132\026.fork_db_message.erro"
+  "r\022\014\n\004data\030\003 \001(\014\022)\n\006branch\030\004 \001(\0132\031.fork_d"
+  "b_message.branch_t*\375\006\n\nmessage_id\022\026\n\021blo"
+  "ck_get_request\020\270\027\022\027\n\022block_get_response\020"
+  "\271\027\022\035\n\030block_get_by_num_request\020\272\027\022\036\n\031blo"
+  "ck_get_by_num_response\020\273\027\022\026\n\021block_set_r"
+  "equest\020\274\027\022\027\n\022block_set_response\020\275\027\022&\n!bl"
+  "ock_add_by_signed_block_request\020\276\027\022\'\n\"bl"
+  "ock_add_by_signed_block_response\020\277\027\022%\n b"
+  "lock_add_by_block_state_request\020\300\027\022&\n!bl"
+  "ock_add_by_block_state_response\020\301\027\022\037\n\032bl"
+  "ock_remove_by_id_request\020\302\027\022 \n\033block_rem"
+  "ove_by_id_response\020\303\027\022-\n(block_add_by_he"
+  "ader_confirmation_request\020\304\027\022.\n)block_ad"
+  "d_by_header_confirmation_response\020\305\027\022\033\n\026"
+  "block_get_head_request\020\306\027\022\034\n\027block_get_h"
+  "ead_response\020\307\027\022\037\n\032block_fetch_branch_re"
+  "quest\020\310\027\022 \n\033block_fetch_branch_response\020"
+  "\311\027\022\037\n\032block_set_validity_request\020\312\027\022 \n\033b"
+  "lock_set_validity_response\020\313\027\022(\n#block_m"
+  "ark_in_current_chain_request\020\314\027\022)\n$block"
+  "_mark_in_current_chain_response\020\315\027\022\030\n\023bl"
+  "ock_prune_request\020\316\027\022\031\n\024block_prune_resp"
+  "onse\020\317\027\022!\n\034block_irreversible_broadcast\020"
+  "\240\037\022\036\n\031block_irreversible_notify\020\241\037"
 ,
-  "fork_database_service.proto", &assign_descriptors_table_fork_5fdatabase_5fservice_2eproto, 1347,
+  "fork_database_service.proto", &assign_descriptors_table_fork_5fdatabase_5fservice_2eproto, 1394,
 };
 
 void AddDescriptors_fork_5fdatabase_5fservice_2eproto() {
@@ -1394,13 +1401,22 @@ class rpc_request::HasBitSetters {
  public:
   static const ::fork_db_message::meta& head(const rpc_request* msg);
   static void set_has_head(rpc_request* msg) {
-    msg->_has_bits_[0] |= 0x00000002u;
+    msg->_has_bits_[0] |= 0x00000008u;
   }
   static void set_has_msg_id(rpc_request* msg) {
-    msg->_has_bits_[0] |= 0x00000004u;
+    msg->_has_bits_[0] |= 0x00000020u;
   }
   static void set_has_data(rpc_request* msg) {
     msg->_has_bits_[0] |= 0x00000001u;
+  }
+  static void set_has_trust(rpc_request* msg) {
+    msg->_has_bits_[0] |= 0x00000010u;
+  }
+  static void set_has_first(rpc_request* msg) {
+    msg->_has_bits_[0] |= 0x00000002u;
+  }
+  static void set_has_second(rpc_request* msg) {
+    msg->_has_bits_[0] |= 0x00000004u;
   }
 };
 
@@ -1412,6 +1428,9 @@ rpc_request::HasBitSetters::head(const rpc_request* msg) {
 const int rpc_request::kHeadFieldNumber;
 const int rpc_request::kMsgIdFieldNumber;
 const int rpc_request::kDataFieldNumber;
+const int rpc_request::kTrustFieldNumber;
+const int rpc_request::kFirstFieldNumber;
+const int rpc_request::kSecondFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 rpc_request::rpc_request()
@@ -1428,12 +1447,22 @@ rpc_request::rpc_request(const rpc_request& from)
   if (from.has_data()) {
     data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
+  first_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_first()) {
+    first_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_);
+  }
+  second_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_second()) {
+    second_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.second_);
+  }
   if (from.has_head()) {
     head_ = new ::fork_db_message::meta(*from.head_);
   } else {
     head_ = NULL;
   }
-  msg_id_ = from.msg_id_;
+  ::memcpy(&trust_, &from.trust_,
+    static_cast<size_t>(reinterpret_cast<char*>(&msg_id_) -
+    reinterpret_cast<char*>(&trust_)) + sizeof(msg_id_));
   // @@protoc_insertion_point(copy_constructor:fork_db_message.rpc_request)
 }
 
@@ -1441,7 +1470,11 @@ void rpc_request::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_rpc_request_fork_5fdatabase_5fservice_2eproto.base);
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  head_ = NULL;
+  first_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  second_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&head_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&trust_) -
+      reinterpret_cast<char*>(&head_)) + sizeof(trust_));
   msg_id_ = 3000;
 }
 
@@ -1452,6 +1485,8 @@ rpc_request::~rpc_request() {
 
 void rpc_request::SharedDtor() {
   data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  second_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete head_;
 }
 
@@ -1471,14 +1506,23 @@ void rpc_request::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
       data_.ClearNonDefaultToEmptyNoArena();
     }
     if (cached_has_bits & 0x00000002u) {
+      first_.ClearNonDefaultToEmptyNoArena();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      second_.ClearNonDefaultToEmptyNoArena();
+    }
+    if (cached_has_bits & 0x00000008u) {
       GOOGLE_DCHECK(head_ != NULL);
       head_->Clear();
     }
+  }
+  if (cached_has_bits & 0x00000030u) {
+    trust_ = false;
     msg_id_ = 3000;
   }
   _has_bits_.Clear();
@@ -1534,6 +1578,44 @@ const char* rpc_request::_InternalParse(const char* begin, const char* end, void
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         parser_till_end = ::google::protobuf::internal::StringParser;
         ::std::string* str = msg->mutable_data();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      // optional bool trust = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        bool value = val;
+        msg->set_trust(value);
+        break;
+      }
+      // optional bytes first = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_first();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      // optional bytes second = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_second();
         str->clear();
         object = str;
         if (size > end - ptr) goto len_delim_till_end;
@@ -1616,6 +1698,41 @@ bool rpc_request::MergePartialFromCodedStream(
         break;
       }
 
+      // optional bool trust = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+          HasBitSetters::set_has_trust(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &trust_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes first = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_first()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes second = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_second()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -1645,13 +1762,13 @@ void rpc_request::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .fork_db_message.meta head = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::head(this), output);
   }
 
   // optional .fork_db_message.message_id msg_id = 2;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       2, this->msg_id(), output);
   }
@@ -1660,6 +1777,23 @@ void rpc_request::SerializeWithCachedSizes(
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       3, this->data(), output);
+  }
+
+  // optional bool trust = 4;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->trust(), output);
+  }
+
+  // optional bytes first = 5;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      5, this->first(), output);
+  }
+
+  // optional bytes second = 6;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      6, this->second(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1678,14 +1812,14 @@ void rpc_request::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .fork_db_message.meta head = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::head(this), deterministic, target);
   }
 
   // optional .fork_db_message.message_id msg_id = 2;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       2, this->msg_id(), target);
   }
@@ -1695,6 +1829,25 @@ void rpc_request::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
         3, this->data(), target);
+  }
+
+  // optional bool trust = 4;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->trust(), target);
+  }
+
+  // optional bytes first = 5;
+  if (cached_has_bits & 0x00000002u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        5, this->first(), target);
+  }
+
+  // optional bytes second = 6;
+  if (cached_has_bits & 0x00000004u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        6, this->second(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1719,7 +1872,7 @@ size_t rpc_request::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000003fu) {
     // optional bytes data = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -1727,15 +1880,34 @@ size_t rpc_request::ByteSizeLong() const {
           this->data());
     }
 
-    // optional .fork_db_message.meta head = 1;
+    // optional bytes first = 5;
     if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->first());
+    }
+
+    // optional bytes second = 6;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->second());
+    }
+
+    // optional .fork_db_message.meta head = 1;
+    if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *head_);
     }
 
+    // optional bool trust = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 + 1;
+    }
+
     // optional .fork_db_message.message_id msg_id = 2;
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000020u) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msg_id());
     }
@@ -1769,15 +1941,26 @@ void rpc_request::MergeFrom(const rpc_request& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
       _has_bits_[0] |= 0x00000001u;
       data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
     }
     if (cached_has_bits & 0x00000002u) {
-      mutable_head()->::fork_db_message::meta::MergeFrom(from.head());
+      _has_bits_[0] |= 0x00000002u;
+      first_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_);
     }
     if (cached_has_bits & 0x00000004u) {
+      _has_bits_[0] |= 0x00000004u;
+      second_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.second_);
+    }
+    if (cached_has_bits & 0x00000008u) {
+      mutable_head()->::fork_db_message::meta::MergeFrom(from.head());
+    }
+    if (cached_has_bits & 0x00000010u) {
+      trust_ = from.trust_;
+    }
+    if (cached_has_bits & 0x00000020u) {
       msg_id_ = from.msg_id_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -1812,7 +1995,12 @@ void rpc_request::InternalSwap(rpc_request* other) {
   swap(_has_bits_[0], other->_has_bits_[0]);
   data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  first_.Swap(&other->first_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  second_.Swap(&other->second_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(head_, other->head_);
+  swap(trust_, other->trust_);
   swap(msg_id_, other->msg_id_);
 }
 

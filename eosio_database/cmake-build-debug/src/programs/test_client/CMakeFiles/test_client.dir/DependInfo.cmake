@@ -10,9 +10,9 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/Cellar/boost/1.67.0_1/include"
   "../include"
+  "/usr/local/Cellar/boost/1.67.0_1/include"
+  "/usr/local/include"
   "../src"
   )
 

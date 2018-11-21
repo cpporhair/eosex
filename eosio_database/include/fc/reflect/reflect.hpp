@@ -29,87 +29,87 @@ namespace fc {
  *  The @ref FC_REFLECT(TYPE,MEMBERS) or FC_STATIC_REFLECT_DERIVED(TYPE,BASES,MEMBERS) macro is used to specialize this
  *  class for your type.
  */
-    template<typename T>
-    struct reflector{
-        typedef T type;
-        typedef fc::false_type is_defined;
-        typedef fc::false_type is_enum;
+template<typename T>
+struct reflector{
+    typedef T type;
+    typedef fc::false_type is_defined;
+    typedef fc::false_type is_enum;
 
-        /**
-         *  @tparam Visitor a function object of the form:
-         *
-         *    @code
-         *     struct functor {
-         *        template<typename Member, class Class, Member (Class::*member)>
-         *        void operator()( const char* name )const;
-         *     };
-         *    @endcode
-         *
-         *  If reflection requires a verification (what a constructor might normally assert) then
-         *  derive your Visitor from reflector_verifier_visitor and implement a reflector_verify()
-         *  on your reflected type.
-         *
-         *    @code
-         *     template<typename Class>
-         *     struct functor : reflector_verifier_visitor<Class>  {
-         *        functor(Class& _c)
-         *        : fc::reflector_verifier_visitor<Class>(_c) {}
-         *
-         *        template<typename Member, class Class, Member (Class::*member)>
-         *        void operator()( const char* name )const;
-         *     };
-         *    @endcode
-         *
-         *  If T is an enum then the functor has the following form:
-         *    @code
-         *     struct functor {
-         *        template<int Value>
-         *        void operator()( const char* name )const;
-         *     };
-         *    @endcode
-         *
-         *  @param v a functor that will be called for each member on T
-         *
-         *  @note - this method is not defined for non-reflected types.
-         */
-#ifdef DOXYGEN
-        template<typename Visitor>
+    /**
+     *  @tparam Visitor a function object of the form:
+     *
+     *    @code
+     *     struct functor {
+     *        template<typename Member, class Class, Member (Class::*member)>
+     *        void operator()( const char* name )const;
+     *     };
+     *    @endcode
+     *
+     *  If reflection requires a verification (what a constructor might normally assert) then
+     *  derive your Visitor from reflector_verifier_visitor and implement a reflector_verify()
+     *  on your reflected type.
+     *
+     *    @code
+     *     template<typename Class>
+     *     struct functor : reflector_verifier_visitor<Class>  {
+     *        functor(Class& _c)
+     *        : fc::reflector_verifier_visitor<Class>(_c) {}
+     *
+     *        template<typename Member, class Class, Member (Class::*member)>
+     *        void operator()( const char* name )const;
+     *     };
+     *    @endcode
+     *
+     *  If T is an enum then the functor has the following form:
+     *    @code
+     *     struct functor {
+     *        template<int Value>
+     *        void operator()( const char* name )const;
+     *     };
+     *    @endcode
+     *
+     *  @param v a functor that will be called for each member on T
+     *
+     *  @note - this method is not defined for non-reflected types.
+     */
+    #ifdef DOXYGEN
+    template<typename Visitor>
     static inline void visit( const Visitor& v );
-#endif // DOXYGEN
-    };
+    #endif // DOXYGEN
+};
 
-    void throw_bad_enum_cast( int64_t i, const char* e );
-    void throw_bad_enum_cast( const char* k, const char* e );
+void throw_bad_enum_cast( int64_t i, const char* e );
+void throw_bad_enum_cast( const char* k, const char* e );
 
-    template <typename Class>
-    struct reflector_verifier_visitor {
-        explicit reflector_verifier_visitor( Class& c )
-                : obj(c) {}
+template <typename Class>
+struct reflector_verifier_visitor {
+   explicit reflector_verifier_visitor( Class& c )
+     : obj(c) {}
 
-        void reflector_verify() {
-            reflect_verify( obj );
-        }
+   void reflector_verify() {
+      reflect_verify( obj );
+   }
 
-    private:
+ private:
 
-        // int matches 0 if reflector_verify exists SFINAE
-        template<class T>
-        auto verify_imp(const T& t, int) -> decltype(t.reflector_verify(), void()) {
-            t.reflector_verify();
-        }
+   // int matches 0 if reflector_verify exists SFINAE
+   template<class T>
+   auto verify_imp(const T& t, int) -> decltype(t.reflector_verify(), void()) {
+      t.reflector_verify();
+   }
 
-        // if no reflector_verify method exists (SFINAE), 0 matches long
-        template<class T>
-        auto verify_imp(const T& t, long) -> decltype(t, void()) {}
+   // if no reflector_verify method exists (SFINAE), 0 matches long
+   template<class T>
+   auto verify_imp(const T& t, long) -> decltype(t, void()) {}
 
-        template<typename T>
-        auto reflect_verify(const T& t) -> decltype(verify_imp(t, 0), void()) {
-            verify_imp(t, 0);
-        }
+   template<typename T>
+   auto reflect_verify(const T& t) -> decltype(verify_imp(t, 0), void()) {
+      verify_imp(t, 0);
+   }
 
-    protected:
-        Class& obj;
-    };
+ protected:
+   Class& obj;
+};
 
 } // namespace fc
 
@@ -121,9 +121,9 @@ namespace fc {
 
 
 #ifndef _MSC_VER
-#define FC_TEMPLATE template
+  #define FC_TEMPLATE template
 #else
-// Disable warning C4482: nonstandard extention used: enum 'enum_type::enum_value' used in qualified name
+  // Disable warning C4482: nonstandard extention used: enum 'enum_type::enum_value' used in qualified name
   #pragma warning( disable: 4482 )
   #define FC_TEMPLATE
 #endif

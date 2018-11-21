@@ -10,7 +10,14 @@ endif()
 target_link_libraries(
     eosio_database_application
     protocol
+    chainbase
+    fc
+    eosio_chain
     ${PROTOBUF_LIBRARIES}
     network
+    softfloat
+    eos_utilities
+    database_controller
     boost_system
+    boost_filesystem
 )

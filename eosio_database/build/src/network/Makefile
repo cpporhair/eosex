@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /Users/yangwenyu/workspace/eosex/eosio_database/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/Cellar/cmake/3.12.1/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -179,6 +225,114 @@ connection_manager.cpp.s:
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/connection_manager.cpp.s
 .PHONY : connection_manager.cpp.s
 
+dispatcher.o: dispatcher.cpp.o
+
+.PHONY : dispatcher.o
+
+# target to build an object file
+dispatcher.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/dispatcher.cpp.o
+.PHONY : dispatcher.cpp.o
+
+dispatcher.i: dispatcher.cpp.i
+
+.PHONY : dispatcher.i
+
+# target to preprocess a source file
+dispatcher.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/dispatcher.cpp.i
+.PHONY : dispatcher.cpp.i
+
+dispatcher.s: dispatcher.cpp.s
+
+.PHONY : dispatcher.s
+
+# target to generate assembly for a file
+dispatcher.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/dispatcher.cpp.s
+.PHONY : dispatcher.cpp.s
+
+fork_database_message_handlers.o: fork_database_message_handlers.cpp.o
+
+.PHONY : fork_database_message_handlers.o
+
+# target to build an object file
+fork_database_message_handlers.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_database_message_handlers.cpp.o
+.PHONY : fork_database_message_handlers.cpp.o
+
+fork_database_message_handlers.i: fork_database_message_handlers.cpp.i
+
+.PHONY : fork_database_message_handlers.i
+
+# target to preprocess a source file
+fork_database_message_handlers.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_database_message_handlers.cpp.i
+.PHONY : fork_database_message_handlers.cpp.i
+
+fork_database_message_handlers.s: fork_database_message_handlers.cpp.s
+
+.PHONY : fork_database_message_handlers.s
+
+# target to generate assembly for a file
+fork_database_message_handlers.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_database_message_handlers.cpp.s
+.PHONY : fork_database_message_handlers.cpp.s
+
+fork_db_message_dispatcher.o: fork_db_message_dispatcher.cpp.o
+
+.PHONY : fork_db_message_dispatcher.o
+
+# target to build an object file
+fork_db_message_dispatcher.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_db_message_dispatcher.cpp.o
+.PHONY : fork_db_message_dispatcher.cpp.o
+
+fork_db_message_dispatcher.i: fork_db_message_dispatcher.cpp.i
+
+.PHONY : fork_db_message_dispatcher.i
+
+# target to preprocess a source file
+fork_db_message_dispatcher.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_db_message_dispatcher.cpp.i
+.PHONY : fork_db_message_dispatcher.cpp.i
+
+fork_db_message_dispatcher.s: fork_db_message_dispatcher.cpp.s
+
+.PHONY : fork_db_message_dispatcher.s
+
+# target to generate assembly for a file
+fork_db_message_dispatcher.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/fork_db_message_dispatcher.cpp.s
+.PHONY : fork_db_message_dispatcher.cpp.s
+
+message_handlers.o: message_handlers.cpp.o
+
+.PHONY : message_handlers.o
+
+# target to build an object file
+message_handlers.cpp.o:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/message_handlers.cpp.o
+.PHONY : message_handlers.cpp.o
+
+message_handlers.i: message_handlers.cpp.i
+
+.PHONY : message_handlers.i
+
+# target to preprocess a source file
+message_handlers.cpp.i:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/message_handlers.cpp.i
+.PHONY : message_handlers.cpp.i
+
+message_handlers.s: message_handlers.cpp.s
+
+.PHONY : message_handlers.s
+
+# target to generate assembly for a file
+message_handlers.cpp.s:
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/message_handlers.cpp.s
+.PHONY : message_handlers.cpp.s
+
 tcp_server.o: tcp_server.cpp.o
 
 .PHONY : tcp_server.o
@@ -212,15 +366,31 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... network"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... network"
 	@echo "... connection.o"
 	@echo "... connection.i"
 	@echo "... connection.s"
 	@echo "... connection_manager.o"
 	@echo "... connection_manager.i"
 	@echo "... connection_manager.s"
+	@echo "... dispatcher.o"
+	@echo "... dispatcher.i"
+	@echo "... dispatcher.s"
+	@echo "... fork_database_message_handlers.o"
+	@echo "... fork_database_message_handlers.i"
+	@echo "... fork_database_message_handlers.s"
+	@echo "... fork_db_message_dispatcher.o"
+	@echo "... fork_db_message_dispatcher.i"
+	@echo "... fork_db_message_dispatcher.s"
+	@echo "... message_handlers.o"
+	@echo "... message_handlers.i"
+	@echo "... message_handlers.s"
 	@echo "... tcp_server.o"
 	@echo "... tcp_server.i"
 	@echo "... tcp_server.s"

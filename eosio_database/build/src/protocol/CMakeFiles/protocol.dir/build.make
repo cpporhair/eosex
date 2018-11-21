@@ -70,9 +70,22 @@ src/protocol/CMakeFiles/protocol.dir/sample.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/sample.pb.cc.s"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/sample.pb.cc -o CMakeFiles/protocol.dir/sample.pb.cc.s
 
+src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o: src/protocol/CMakeFiles/protocol.dir/flags.make
+src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o: ../src/protocol/message.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/message.pb.cc.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.cc
+
+src/protocol/CMakeFiles/protocol.dir/message.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protocol.dir/message.pb.cc.i"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.cc > CMakeFiles/protocol.dir/message.pb.cc.i
+
+src/protocol/CMakeFiles/protocol.dir/message.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/message.pb.cc.s"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message.pb.cc -o CMakeFiles/protocol.dir/message.pb.cc.s
+
 src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o: src/protocol/CMakeFiles/protocol.dir/flags.make
 src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o: ../src/protocol/fork_database_service.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/fork_database_service.pb.cc.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.cc
 
 src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.i: cmake_force
@@ -83,19 +96,36 @@ src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/fork_database_service.pb.cc.s"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/fork_database_service.pb.cc -o CMakeFiles/protocol.dir/fork_database_service.pb.cc.s
 
+src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o: src/protocol/CMakeFiles/protocol.dir/flags.make
+src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o: ../src/protocol/message_factory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/protocol.dir/message_factory.cpp.o -c /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message_factory.cpp
+
+src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/protocol.dir/message_factory.cpp.i"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message_factory.cpp > CMakeFiles/protocol.dir/message_factory.cpp.i
+
+src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/protocol.dir/message_factory.cpp.s"
+	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yangwenyu/workspace/eosex/eosio_database/src/protocol/message_factory.cpp -o CMakeFiles/protocol.dir/message_factory.cpp.s
+
 # Object files for target protocol
 protocol_OBJECTS = \
 "CMakeFiles/protocol.dir/sample.pb.cc.o" \
-"CMakeFiles/protocol.dir/fork_database_service.pb.cc.o"
+"CMakeFiles/protocol.dir/message.pb.cc.o" \
+"CMakeFiles/protocol.dir/fork_database_service.pb.cc.o" \
+"CMakeFiles/protocol.dir/message_factory.cpp.o"
 
 # External object files for target protocol
 protocol_EXTERNAL_OBJECTS =
 
 src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/sample.pb.cc.o
+src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/message.pb.cc.o
 src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/fork_database_service.pb.cc.o
+src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/message_factory.cpp.o
 src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/build.make
 src/protocol/libprotocol.a: src/protocol/CMakeFiles/protocol.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libprotocol.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yangwenyu/workspace/eosex/eosio_database/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libprotocol.a"
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && $(CMAKE_COMMAND) -P CMakeFiles/protocol.dir/cmake_clean_target.cmake
 	cd /Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/protocol.dir/link.txt --verbose=$(VERBOSE)
 

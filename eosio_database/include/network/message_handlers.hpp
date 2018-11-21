@@ -21,7 +21,7 @@ public:
     virtual void handle_message(rpc_request &req,rpc_response &resp) = 0;
 
 protected:
-    void send_response(rpc_response resp,connection_ptr conn );
+    void send_response(rpc_response &resp,connection_ptr conn );
 };
 
 class db_store_i64_handler : public handler {
@@ -340,6 +340,56 @@ public:
 };
 
 class get_account_creation_time_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_push_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_squash_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_undo_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_revision_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_commit_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_undo_all_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_type_id_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_row_count_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_type_name_handler : public handler {
+public:
+    virtual void handle_message(rpc_request &req,rpc_response &resp);
+};
+
+class session_remove_object_handler : public handler {
 public:
     virtual void handle_message(rpc_request &req,rpc_response &resp);
 };

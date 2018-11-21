@@ -42,7 +42,7 @@ struct TableStruct_message_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[68]
+  static const ::google::protobuf::internal::ParseTable schema[71]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -50,6 +50,9 @@ struct TableStruct_message_2eproto {
 };
 void AddDescriptors_message_2eproto();
 namespace action_message {
+class account_object;
+class account_objectDefaultTypeInternal;
+extern account_objectDefaultTypeInternal _account_object_default_instance_;
 class check_permission_authorization;
 class check_permission_authorizationDefaultTypeInternal;
 extern check_permission_authorizationDefaultTypeInternal _check_permission_authorization_default_instance_;
@@ -245,9 +248,15 @@ extern get_account_creation_timeDefaultTypeInternal _get_account_creation_time_d
 class get_permission_last_used;
 class get_permission_last_usedDefaultTypeInternal;
 extern get_permission_last_usedDefaultTypeInternal _get_permission_last_used_default_instance_;
+class global_property_object;
+class global_property_objectDefaultTypeInternal;
+extern global_property_objectDefaultTypeInternal _global_property_object_default_instance_;
 class meta;
 class metaDefaultTypeInternal;
 extern metaDefaultTypeInternal _meta_default_instance_;
+class reversible_block;
+class reversible_blockDefaultTypeInternal;
+extern reversible_blockDefaultTypeInternal _reversible_block_default_instance_;
 class rpc_request;
 class rpc_requestDefaultTypeInternal;
 extern rpc_requestDefaultTypeInternal _rpc_request_default_instance_;
@@ -257,6 +266,7 @@ extern rpc_responseDefaultTypeInternal _rpc_response_default_instance_;
 }  // namespace action_message
 namespace google {
 namespace protobuf {
+template<> ::action_message::account_object* Arena::CreateMaybeMessage<::action_message::account_object>(Arena*);
 template<> ::action_message::check_permission_authorization* Arena::CreateMaybeMessage<::action_message::check_permission_authorization>(Arena*);
 template<> ::action_message::check_transaction_authorization* Arena::CreateMaybeMessage<::action_message::check_transaction_authorization>(Arena*);
 template<> ::action_message::db_end_i64* Arena::CreateMaybeMessage<::action_message::db_end_i64>(Arena*);
@@ -322,7 +332,9 @@ template<> ::action_message::db_upperbound_i64* Arena::CreateMaybeMessage<::acti
 template<> ::action_message::error* Arena::CreateMaybeMessage<::action_message::error>(Arena*);
 template<> ::action_message::get_account_creation_time* Arena::CreateMaybeMessage<::action_message::get_account_creation_time>(Arena*);
 template<> ::action_message::get_permission_last_used* Arena::CreateMaybeMessage<::action_message::get_permission_last_used>(Arena*);
+template<> ::action_message::global_property_object* Arena::CreateMaybeMessage<::action_message::global_property_object>(Arena*);
 template<> ::action_message::meta* Arena::CreateMaybeMessage<::action_message::meta>(Arena*);
+template<> ::action_message::reversible_block* Arena::CreateMaybeMessage<::action_message::reversible_block>(Arena*);
 template<> ::action_message::rpc_request* Arena::CreateMaybeMessage<::action_message::rpc_request>(Arena*);
 template<> ::action_message::rpc_response* Arena::CreateMaybeMessage<::action_message::rpc_response>(Arena*);
 }  // namespace protobuf
@@ -603,6 +615,8 @@ enum message_id {
   reversible_block_update_response = 1215,
   reversible_block_remove_request = 1216,
   reversible_block_remove_response = 1217,
+  reversible_block_multi_remove_request = 1218,
+  reversible_block_multi_remove_response = 1219,
   db_store_i64_request = 2000,
   db_store_i64_response = 2001,
   db_update_i64_request = 2002,
@@ -732,11 +746,31 @@ enum message_id {
   get_permission_last_used_request = 3006,
   get_permission_last_used_response = 3007,
   get_account_creation_time_request = 3008,
-  get_account_creation_time_response = 3009
+  get_account_creation_time_response = 3009,
+  session_push_request = 4000,
+  session_push_response = 4001,
+  session_squash_request = 4002,
+  session_squash_response = 4003,
+  session_undo_request = 4004,
+  session_undo_response = 4005,
+  session_revision_request = 4006,
+  session_revision_response = 4007,
+  session_commit_request = 4008,
+  session_commit_response = 4009,
+  session_undo_all_request = 4010,
+  session_undo_all_response = 4011,
+  session_type_id_request = 4012,
+  session_type_id_response = 4013,
+  session_row_count_request = 4014,
+  session_row_count_response = 4015,
+  session_type_name_request = 4016,
+  session_type_name_response = 4017,
+  session_remove_object_request = 4018,
+  session_remove_object_response = 4019
 };
 bool message_id_IsValid(int value);
 const message_id message_id_MIN = account_create_request;
-const message_id message_id_MAX = get_account_creation_time_response;
+const message_id message_id_MAX = session_remove_object_response;
 const int message_id_ARRAYSIZE = message_id_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* message_id_descriptor();
@@ -867,12 +901,12 @@ class error : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::std::string* release_msg();
   void set_allocated_msg(::std::string* msg);
 
-  // optional uint32 code = 1;
+  // optional uint64 code = 1;
   bool has_code() const;
   void clear_code();
   static const int kCodeFieldNumber = 1;
-  ::google::protobuf::uint32 code() const;
-  void set_code(::google::protobuf::uint32 value);
+  ::google::protobuf::uint64 code() const;
+  void set_code(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:action_message.error)
  private:
@@ -882,7 +916,7 @@ class error : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr msg_;
-  ::google::protobuf::uint32 code_;
+  ::google::protobuf::uint64 code_;
   friend struct ::TableStruct_message_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1023,6 +1057,150 @@ class meta : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 };
 // -------------------------------------------------------------------
 
+class account_object : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.account_object) */ {
+ public:
+  account_object();
+  virtual ~account_object();
+
+  account_object(const account_object& from);
+
+  inline account_object& operator=(const account_object& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  account_object(account_object&& from) noexcept
+    : account_object() {
+    *this = ::std::move(from);
+  }
+
+  inline account_object& operator=(account_object&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const account_object& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const account_object* internal_default_instance() {
+    return reinterpret_cast<const account_object*>(
+               &_account_object_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(account_object* other);
+  friend void swap(account_object& a, account_object& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline account_object* New() const final {
+    return CreateMaybeMessage<account_object>(NULL);
+  }
+
+  account_object* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<account_object>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const account_object& from);
+  void MergeFrom(const account_object& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(account_object* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes account_name = 1;
+  bool has_account_name() const;
+  void clear_account_name();
+  static const int kAccountNameFieldNumber = 1;
+  const ::std::string& account_name() const;
+  void set_account_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_account_name(::std::string&& value);
+  #endif
+  void set_account_name(const char* value);
+  void set_account_name(const void* value, size_t size);
+  ::std::string* mutable_account_name();
+  ::std::string* release_account_name();
+  void set_allocated_account_name(::std::string* account_name);
+
+  // optional int32 vm_type = 2;
+  bool has_vm_type() const;
+  void clear_vm_type();
+  static const int kVmTypeFieldNumber = 2;
+  ::google::protobuf::int32 vm_type() const;
+  void set_vm_type(::google::protobuf::int32 value);
+
+  // optional int32 vm_version = 3;
+  bool has_vm_version() const;
+  void clear_vm_version();
+  static const int kVmVersionFieldNumber = 3;
+  ::google::protobuf::int32 vm_version() const;
+  void set_vm_version(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.account_object)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr account_name_;
+  ::google::protobuf::int32 vm_type_;
+  ::google::protobuf::int32 vm_version_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
 class db_store_i64 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.db_store_i64) */ {
  public:
   db_store_i64();
@@ -1067,7 +1245,7 @@ class db_store_i64 : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_db_store_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   void Swap(db_store_i64* other);
   friend void swap(db_store_i64& a, db_store_i64& b) {
@@ -1235,7 +1413,7 @@ class db_update_i64 : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_db_update_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(db_update_i64* other);
   friend void swap(db_update_i64& a, db_update_i64& b) {
@@ -1387,7 +1565,7 @@ class db_remove_i64 : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_db_remove_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   void Swap(db_remove_i64* other);
   friend void swap(db_remove_i64& a, db_remove_i64& b) {
@@ -1507,7 +1685,7 @@ class db_get_i64 : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_db_get_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(db_get_i64* other);
   friend void swap(db_get_i64& a, db_get_i64& b) {
@@ -1651,7 +1829,7 @@ class db_next_64 : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_db_next_64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   void Swap(db_next_64* other);
   friend void swap(db_next_64& a, db_next_64& b) {
@@ -1779,7 +1957,7 @@ class db_previous_i64 : public ::google::protobuf::Message /* @@protoc_insertion
                &_db_previous_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   void Swap(db_previous_i64* other);
   friend void swap(db_previous_i64& a, db_previous_i64& b) {
@@ -1907,7 +2085,7 @@ class db_find_i64 : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_db_find_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   void Swap(db_find_i64* other);
   friend void swap(db_find_i64& a, db_find_i64& b) {
@@ -2051,7 +2229,7 @@ class db_lowerbound_i64 : public ::google::protobuf::Message /* @@protoc_inserti
                &_db_lowerbound_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   void Swap(db_lowerbound_i64* other);
   friend void swap(db_lowerbound_i64& a, db_lowerbound_i64& b) {
@@ -2195,7 +2373,7 @@ class db_upperbound_i64 : public ::google::protobuf::Message /* @@protoc_inserti
                &_db_upperbound_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   void Swap(db_upperbound_i64* other);
   friend void swap(db_upperbound_i64& a, db_upperbound_i64& b) {
@@ -2339,7 +2517,7 @@ class db_end_i64 : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_db_end_i64_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   void Swap(db_end_i64* other);
   friend void swap(db_end_i64& a, db_end_i64& b) {
@@ -2475,7 +2653,7 @@ class db_idx64_store : public ::google::protobuf::Message /* @@protoc_insertion_
                &_db_idx64_store_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   void Swap(db_idx64_store* other);
   friend void swap(db_idx64_store& a, db_idx64_store& b) {
@@ -2627,7 +2805,7 @@ class db_idx64_update : public ::google::protobuf::Message /* @@protoc_insertion
                &_db_idx64_update_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   void Swap(db_idx64_update* other);
   friend void swap(db_idx64_update& a, db_idx64_update& b) {
@@ -2763,7 +2941,7 @@ class db_idx64_remove : public ::google::protobuf::Message /* @@protoc_insertion
                &_db_idx64_remove_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   void Swap(db_idx64_remove* other);
   friend void swap(db_idx64_remove& a, db_idx64_remove& b) {
@@ -2883,7 +3061,7 @@ class db_idx64_find_secondary : public ::google::protobuf::Message /* @@protoc_i
                &_db_idx64_find_secondary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    16;
 
   void Swap(db_idx64_find_secondary* other);
   friend void swap(db_idx64_find_secondary& a, db_idx64_find_secondary& b) {
@@ -3035,7 +3213,7 @@ class db_idx64_find_primary : public ::google::protobuf::Message /* @@protoc_ins
                &_db_idx64_find_primary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    17;
 
   void Swap(db_idx64_find_primary* other);
   friend void swap(db_idx64_find_primary& a, db_idx64_find_primary& b) {
@@ -3187,7 +3365,7 @@ class db_idx64_lowerbound : public ::google::protobuf::Message /* @@protoc_inser
                &_db_idx64_lowerbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   void Swap(db_idx64_lowerbound* other);
   friend void swap(db_idx64_lowerbound& a, db_idx64_lowerbound& b) {
@@ -3339,7 +3517,7 @@ class db_idx64_upperbound : public ::google::protobuf::Message /* @@protoc_inser
                &_db_idx64_upperbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    19;
 
   void Swap(db_idx64_upperbound* other);
   friend void swap(db_idx64_upperbound& a, db_idx64_upperbound& b) {
@@ -3491,7 +3669,7 @@ class db_idx64_end : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_db_idx64_end_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    20;
 
   void Swap(db_idx64_end* other);
   friend void swap(db_idx64_end& a, db_idx64_end& b) {
@@ -3627,7 +3805,7 @@ class db_idx64_next : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_db_idx64_next_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    21;
 
   void Swap(db_idx64_next* other);
   friend void swap(db_idx64_next& a, db_idx64_next& b) {
@@ -3755,7 +3933,7 @@ class db_idx64_previous : public ::google::protobuf::Message /* @@protoc_inserti
                &_db_idx64_previous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    22;
 
   void Swap(db_idx64_previous* other);
   friend void swap(db_idx64_previous& a, db_idx64_previous& b) {
@@ -3883,7 +4061,7 @@ class db_idx128_store : public ::google::protobuf::Message /* @@protoc_insertion
                &_db_idx128_store_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    23;
 
   void Swap(db_idx128_store* other);
   friend void swap(db_idx128_store& a, db_idx128_store& b) {
@@ -4043,7 +4221,7 @@ class db_idx128_update : public ::google::protobuf::Message /* @@protoc_insertio
                &_db_idx128_update_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    24;
 
   void Swap(db_idx128_update* other);
   friend void swap(db_idx128_update& a, db_idx128_update& b) {
@@ -4187,7 +4365,7 @@ class db_idx128_remove : public ::google::protobuf::Message /* @@protoc_insertio
                &_db_idx128_remove_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    25;
 
   void Swap(db_idx128_remove* other);
   friend void swap(db_idx128_remove& a, db_idx128_remove& b) {
@@ -4307,7 +4485,7 @@ class db_idx128_find_secondary : public ::google::protobuf::Message /* @@protoc_
                &_db_idx128_find_secondary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    26;
 
   void Swap(db_idx128_find_secondary* other);
   friend void swap(db_idx128_find_secondary& a, db_idx128_find_secondary& b) {
@@ -4467,7 +4645,7 @@ class db_idx128_find_primary : public ::google::protobuf::Message /* @@protoc_in
                &_db_idx128_find_primary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    27;
 
   void Swap(db_idx128_find_primary* other);
   friend void swap(db_idx128_find_primary& a, db_idx128_find_primary& b) {
@@ -4627,7 +4805,7 @@ class db_idx128_lowerbound : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx128_lowerbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    28;
 
   void Swap(db_idx128_lowerbound* other);
   friend void swap(db_idx128_lowerbound& a, db_idx128_lowerbound& b) {
@@ -4787,7 +4965,7 @@ class db_idx128_upperbound : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx128_upperbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    29;
 
   void Swap(db_idx128_upperbound* other);
   friend void swap(db_idx128_upperbound& a, db_idx128_upperbound& b) {
@@ -4947,7 +5125,7 @@ class db_idx128_end : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_db_idx128_end_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    30;
 
   void Swap(db_idx128_end* other);
   friend void swap(db_idx128_end& a, db_idx128_end& b) {
@@ -5083,7 +5261,7 @@ class db_idx128_next : public ::google::protobuf::Message /* @@protoc_insertion_
                &_db_idx128_next_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    31;
 
   void Swap(db_idx128_next* other);
   friend void swap(db_idx128_next& a, db_idx128_next& b) {
@@ -5211,7 +5389,7 @@ class db_idx128_previous : public ::google::protobuf::Message /* @@protoc_insert
                &_db_idx128_previous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    32;
 
   void Swap(db_idx128_previous* other);
   friend void swap(db_idx128_previous& a, db_idx128_previous& b) {
@@ -5339,7 +5517,7 @@ class db_idx256_store : public ::google::protobuf::Message /* @@protoc_insertion
                &_db_idx256_store_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    33;
 
   void Swap(db_idx256_store* other);
   friend void swap(db_idx256_store& a, db_idx256_store& b) {
@@ -5507,7 +5685,7 @@ class db_idx256_update : public ::google::protobuf::Message /* @@protoc_insertio
                &_db_idx256_update_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    34;
 
   void Swap(db_idx256_update* other);
   friend void swap(db_idx256_update& a, db_idx256_update& b) {
@@ -5659,7 +5837,7 @@ class db_idx256_remove : public ::google::protobuf::Message /* @@protoc_insertio
                &_db_idx256_remove_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    35;
 
   void Swap(db_idx256_remove* other);
   friend void swap(db_idx256_remove& a, db_idx256_remove& b) {
@@ -5779,7 +5957,7 @@ class db_idx256_find_secondary : public ::google::protobuf::Message /* @@protoc_
                &_db_idx256_find_secondary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    36;
 
   void Swap(db_idx256_find_secondary* other);
   friend void swap(db_idx256_find_secondary& a, db_idx256_find_secondary& b) {
@@ -5947,7 +6125,7 @@ class db_idx256_find_primary : public ::google::protobuf::Message /* @@protoc_in
                &_db_idx256_find_primary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    37;
 
   void Swap(db_idx256_find_primary* other);
   friend void swap(db_idx256_find_primary& a, db_idx256_find_primary& b) {
@@ -6115,7 +6293,7 @@ class db_idx256_lowerbound : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx256_lowerbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    38;
 
   void Swap(db_idx256_lowerbound* other);
   friend void swap(db_idx256_lowerbound& a, db_idx256_lowerbound& b) {
@@ -6283,7 +6461,7 @@ class db_idx256_upperbound : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx256_upperbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    39;
 
   void Swap(db_idx256_upperbound* other);
   friend void swap(db_idx256_upperbound& a, db_idx256_upperbound& b) {
@@ -6451,7 +6629,7 @@ class db_idx256_end : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_db_idx256_end_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    40;
 
   void Swap(db_idx256_end* other);
   friend void swap(db_idx256_end& a, db_idx256_end& b) {
@@ -6587,7 +6765,7 @@ class db_idx256_next : public ::google::protobuf::Message /* @@protoc_insertion_
                &_db_idx256_next_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    41;
 
   void Swap(db_idx256_next* other);
   friend void swap(db_idx256_next& a, db_idx256_next& b) {
@@ -6715,7 +6893,7 @@ class db_idx256_previous : public ::google::protobuf::Message /* @@protoc_insert
                &_db_idx256_previous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    42;
 
   void Swap(db_idx256_previous* other);
   friend void swap(db_idx256_previous& a, db_idx256_previous& b) {
@@ -6843,7 +7021,7 @@ class db_idx_double_store : public ::google::protobuf::Message /* @@protoc_inser
                &_db_idx_double_store_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    43;
 
   void Swap(db_idx_double_store* other);
   friend void swap(db_idx_double_store& a, db_idx_double_store& b) {
@@ -7003,7 +7181,7 @@ class db_idx_double_update : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx_double_update_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    44;
 
   void Swap(db_idx_double_update* other);
   friend void swap(db_idx_double_update& a, db_idx_double_update& b) {
@@ -7147,7 +7325,7 @@ class db_idx_double_remove : public ::google::protobuf::Message /* @@protoc_inse
                &_db_idx_double_remove_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    45;
 
   void Swap(db_idx_double_remove* other);
   friend void swap(db_idx_double_remove& a, db_idx_double_remove& b) {
@@ -7267,7 +7445,7 @@ class db_idx_double_find_secondary : public ::google::protobuf::Message /* @@pro
                &_db_idx_double_find_secondary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    46;
 
   void Swap(db_idx_double_find_secondary* other);
   friend void swap(db_idx_double_find_secondary& a, db_idx_double_find_secondary& b) {
@@ -7427,7 +7605,7 @@ class db_idx_double_find_primary : public ::google::protobuf::Message /* @@proto
                &_db_idx_double_find_primary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    47;
 
   void Swap(db_idx_double_find_primary* other);
   friend void swap(db_idx_double_find_primary& a, db_idx_double_find_primary& b) {
@@ -7587,7 +7765,7 @@ class db_idx_double_lowerbound : public ::google::protobuf::Message /* @@protoc_
                &_db_idx_double_lowerbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    48;
 
   void Swap(db_idx_double_lowerbound* other);
   friend void swap(db_idx_double_lowerbound& a, db_idx_double_lowerbound& b) {
@@ -7747,7 +7925,7 @@ class db_idx_double_upperbound : public ::google::protobuf::Message /* @@protoc_
                &_db_idx_double_upperbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    49;
 
   void Swap(db_idx_double_upperbound* other);
   friend void swap(db_idx_double_upperbound& a, db_idx_double_upperbound& b) {
@@ -7907,7 +8085,7 @@ class db_idx_double_end : public ::google::protobuf::Message /* @@protoc_inserti
                &_db_idx_double_end_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    50;
 
   void Swap(db_idx_double_end* other);
   friend void swap(db_idx_double_end& a, db_idx_double_end& b) {
@@ -8043,7 +8221,7 @@ class db_idx_double_next : public ::google::protobuf::Message /* @@protoc_insert
                &_db_idx_double_next_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    51;
 
   void Swap(db_idx_double_next* other);
   friend void swap(db_idx_double_next& a, db_idx_double_next& b) {
@@ -8171,7 +8349,7 @@ class db_idx_double_previous : public ::google::protobuf::Message /* @@protoc_in
                &_db_idx_double_previous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    52;
 
   void Swap(db_idx_double_previous* other);
   friend void swap(db_idx_double_previous& a, db_idx_double_previous& b) {
@@ -8299,7 +8477,7 @@ class db_idx_long_double_store : public ::google::protobuf::Message /* @@protoc_
                &_db_idx_long_double_store_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    53;
 
   void Swap(db_idx_long_double_store* other);
   friend void swap(db_idx_long_double_store& a, db_idx_long_double_store& b) {
@@ -8459,7 +8637,7 @@ class db_idx_long_double_update : public ::google::protobuf::Message /* @@protoc
                &_db_idx_long_double_update_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    54;
 
   void Swap(db_idx_long_double_update* other);
   friend void swap(db_idx_long_double_update& a, db_idx_long_double_update& b) {
@@ -8603,7 +8781,7 @@ class db_idx_long_double_remove : public ::google::protobuf::Message /* @@protoc
                &_db_idx_long_double_remove_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    55;
 
   void Swap(db_idx_long_double_remove* other);
   friend void swap(db_idx_long_double_remove& a, db_idx_long_double_remove& b) {
@@ -8723,7 +8901,7 @@ class db_idx_long_double_find_secondary : public ::google::protobuf::Message /* 
                &_db_idx_long_double_find_secondary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    56;
 
   void Swap(db_idx_long_double_find_secondary* other);
   friend void swap(db_idx_long_double_find_secondary& a, db_idx_long_double_find_secondary& b) {
@@ -8883,7 +9061,7 @@ class db_idx_long_double_find_primary : public ::google::protobuf::Message /* @@
                &_db_idx_long_double_find_primary_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    57;
 
   void Swap(db_idx_long_double_find_primary* other);
   friend void swap(db_idx_long_double_find_primary& a, db_idx_long_double_find_primary& b) {
@@ -9043,7 +9221,7 @@ class db_idx_long_double_lowerbound : public ::google::protobuf::Message /* @@pr
                &_db_idx_long_double_lowerbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    58;
 
   void Swap(db_idx_long_double_lowerbound* other);
   friend void swap(db_idx_long_double_lowerbound& a, db_idx_long_double_lowerbound& b) {
@@ -9203,7 +9381,7 @@ class db_idx_long_double_upperbound : public ::google::protobuf::Message /* @@pr
                &_db_idx_long_double_upperbound_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    59;
 
   void Swap(db_idx_long_double_upperbound* other);
   friend void swap(db_idx_long_double_upperbound& a, db_idx_long_double_upperbound& b) {
@@ -9363,7 +9541,7 @@ class db_idx_long_double_end : public ::google::protobuf::Message /* @@protoc_in
                &_db_idx_long_double_end_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    60;
 
   void Swap(db_idx_long_double_end* other);
   friend void swap(db_idx_long_double_end& a, db_idx_long_double_end& b) {
@@ -9499,7 +9677,7 @@ class db_idx_long_double_next : public ::google::protobuf::Message /* @@protoc_i
                &_db_idx_long_double_next_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    61;
 
   void Swap(db_idx_long_double_next* other);
   friend void swap(db_idx_long_double_next& a, db_idx_long_double_next& b) {
@@ -9627,7 +9805,7 @@ class db_idx_long_double_previous : public ::google::protobuf::Message /* @@prot
                &_db_idx_long_double_previous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    62;
 
   void Swap(db_idx_long_double_previous* other);
   friend void swap(db_idx_long_double_previous& a, db_idx_long_double_previous& b) {
@@ -9755,7 +9933,7 @@ class check_transaction_authorization : public ::google::protobuf::Message /* @@
                &_check_transaction_authorization_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    63;
 
   void Swap(check_transaction_authorization* other);
   friend void swap(check_transaction_authorization& a, check_transaction_authorization& b) {
@@ -9915,7 +10093,7 @@ class check_permission_authorization : public ::google::protobuf::Message /* @@p
                &_check_permission_authorization_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    64;
 
   void Swap(check_permission_authorization* other);
   friend void swap(check_permission_authorization& a, check_permission_authorization& b) {
@@ -10099,7 +10277,7 @@ class get_permission_last_used : public ::google::protobuf::Message /* @@protoc_
                &_get_permission_last_used_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    65;
 
   void Swap(get_permission_last_used* other);
   friend void swap(get_permission_last_used& a, get_permission_last_used& b) {
@@ -10243,7 +10421,7 @@ class get_account_creation_time : public ::google::protobuf::Message /* @@protoc
                &_get_account_creation_time_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    66;
 
   void Swap(get_account_creation_time* other);
   friend void swap(get_account_creation_time& a, get_account_creation_time& b) {
@@ -10327,6 +10505,294 @@ class get_account_creation_time : public ::google::protobuf::Message /* @@protoc
 };
 // -------------------------------------------------------------------
 
+class reversible_block : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.reversible_block) */ {
+ public:
+  reversible_block();
+  virtual ~reversible_block();
+
+  reversible_block(const reversible_block& from);
+
+  inline reversible_block& operator=(const reversible_block& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  reversible_block(reversible_block&& from) noexcept
+    : reversible_block() {
+    *this = ::std::move(from);
+  }
+
+  inline reversible_block& operator=(reversible_block&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const reversible_block& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const reversible_block* internal_default_instance() {
+    return reinterpret_cast<const reversible_block*>(
+               &_reversible_block_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    67;
+
+  void Swap(reversible_block* other);
+  friend void swap(reversible_block& a, reversible_block& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline reversible_block* New() const final {
+    return CreateMaybeMessage<reversible_block>(NULL);
+  }
+
+  reversible_block* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<reversible_block>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const reversible_block& from);
+  void MergeFrom(const reversible_block& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(reversible_block* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes data = 2;
+  bool has_data() const;
+  void clear_data();
+  static const int kDataFieldNumber = 2;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
+  // optional uint32 block_num = 1;
+  bool has_block_num() const;
+  void clear_block_num();
+  static const int kBlockNumFieldNumber = 1;
+  ::google::protobuf::uint32 block_num() const;
+  void set_block_num(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.reversible_block)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint32 block_num_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
+class global_property_object : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.global_property_object) */ {
+ public:
+  global_property_object();
+  virtual ~global_property_object();
+
+  global_property_object(const global_property_object& from);
+
+  inline global_property_object& operator=(const global_property_object& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  global_property_object(global_property_object&& from) noexcept
+    : global_property_object() {
+    *this = ::std::move(from);
+  }
+
+  inline global_property_object& operator=(global_property_object&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const global_property_object& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const global_property_object* internal_default_instance() {
+    return reinterpret_cast<const global_property_object*>(
+               &_global_property_object_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    68;
+
+  void Swap(global_property_object* other);
+  friend void swap(global_property_object& a, global_property_object& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline global_property_object* New() const final {
+    return CreateMaybeMessage<global_property_object>(NULL);
+  }
+
+  global_property_object* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<global_property_object>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const global_property_object& from);
+  void MergeFrom(const global_property_object& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(global_property_object* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional bytes propose_schedule = 2;
+  bool has_propose_schedule() const;
+  void clear_propose_schedule();
+  static const int kProposeScheduleFieldNumber = 2;
+  const ::std::string& propose_schedule() const;
+  void set_propose_schedule(const ::std::string& value);
+  #if LANG_CXX11
+  void set_propose_schedule(::std::string&& value);
+  #endif
+  void set_propose_schedule(const char* value);
+  void set_propose_schedule(const void* value, size_t size);
+  ::std::string* mutable_propose_schedule();
+  ::std::string* release_propose_schedule();
+  void set_allocated_propose_schedule(::std::string* propose_schedule);
+
+  // optional bytes configuration = 3;
+  bool has_configuration() const;
+  void clear_configuration();
+  static const int kConfigurationFieldNumber = 3;
+  const ::std::string& configuration() const;
+  void set_configuration(const ::std::string& value);
+  #if LANG_CXX11
+  void set_configuration(::std::string&& value);
+  #endif
+  void set_configuration(const char* value);
+  void set_configuration(const void* value, size_t size);
+  ::std::string* mutable_configuration();
+  ::std::string* release_configuration();
+  void set_allocated_configuration(::std::string* configuration);
+
+  // optional uint32 proposed_schedule_block_num = 1;
+  bool has_proposed_schedule_block_num() const;
+  void clear_proposed_schedule_block_num();
+  static const int kProposedScheduleBlockNumFieldNumber = 1;
+  ::google::protobuf::uint32 proposed_schedule_block_num() const;
+  void set_proposed_schedule_block_num(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:action_message.global_property_object)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::internal::ArenaStringPtr propose_schedule_;
+  ::google::protobuf::internal::ArenaStringPtr configuration_;
+  ::google::protobuf::uint32 proposed_schedule_block_num_;
+  friend struct ::TableStruct_message_2eproto;
+};
+// -------------------------------------------------------------------
+
 class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:action_message.rpc_request) */ {
  public:
   rpc_request();
@@ -10371,7 +10837,7 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_rpc_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    69;
 
   void Swap(rpc_request* other);
   friend void swap(rpc_request& a, rpc_request& b) {
@@ -10428,10 +10894,10 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // optional bytes data = 2;
+  // optional bytes data = 3;
   bool has_data() const;
   void clear_data();
-  static const int kDataFieldNumber = 2;
+  static const int kDataFieldNumber = 3;
   const ::std::string& data() const;
   void set_data(const ::std::string& value);
   #if LANG_CXX11
@@ -10442,6 +10908,13 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* mutable_data();
   ::std::string* release_data();
   void set_allocated_data(::std::string* data);
+
+  // optional uint64 receiver = 2;
+  bool has_receiver() const;
+  void clear_receiver();
+  static const int kReceiverFieldNumber = 2;
+  ::google::protobuf::uint64 receiver() const;
+  void set_receiver(::google::protobuf::uint64 value);
 
   // optional .action_message.message_id msg_id = 1;
   bool has_msg_id() const;
@@ -10458,6 +10931,7 @@ class rpc_request : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
+  ::google::protobuf::uint64 receiver_;
   int msg_id_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -10507,7 +10981,7 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_rpc_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    70;
 
   void Swap(rpc_response* other);
   friend void swap(rpc_response& a, rpc_response& b) {
@@ -10588,6 +11062,27 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::action_message::error* mutable_err();
   void set_allocated_err(::action_message::error* err);
 
+  // optional uint64 result_primary = 5;
+  bool has_result_primary() const;
+  void clear_result_primary();
+  static const int kResultPrimaryFieldNumber = 5;
+  ::google::protobuf::uint64 result_primary() const;
+  void set_result_primary(::google::protobuf::uint64 value);
+
+  // optional uint64 result_secondary = 6;
+  bool has_result_secondary() const;
+  void clear_result_secondary();
+  static const int kResultSecondaryFieldNumber = 6;
+  ::google::protobuf::uint64 result_secondary() const;
+  void set_result_secondary(::google::protobuf::uint64 value);
+
+  // optional uint32 result = 4;
+  bool has_result() const;
+  void clear_result();
+  static const int kResultFieldNumber = 4;
+  ::google::protobuf::uint32 result() const;
+  void set_result(::google::protobuf::uint32 value);
+
   // optional .action_message.message_id msg_id = 1;
   bool has_msg_id() const;
   void clear_msg_id();
@@ -10604,6 +11099,9 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr data_;
   ::action_message::error* err_;
+  ::google::protobuf::uint64 result_primary_;
+  ::google::protobuf::uint64 result_secondary_;
+  ::google::protobuf::uint32 result_;
   int msg_id_;
   friend struct ::TableStruct_message_2eproto;
 };
@@ -10618,19 +11116,19 @@ class rpc_response : public ::google::protobuf::Message /* @@protoc_insertion_po
 #endif  // __GNUC__
 // error
 
-// optional uint32 code = 1;
+// optional uint64 code = 1;
 inline bool error::has_code() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
 inline void error::clear_code() {
-  code_ = 0u;
+  code_ = PROTOBUF_ULONGLONG(0);
   _has_bits_[0] &= ~0x00000002u;
 }
-inline ::google::protobuf::uint32 error::code() const {
+inline ::google::protobuf::uint64 error::code() const {
   // @@protoc_insertion_point(field_get:action_message.error.code)
   return code_;
 }
-inline void error::set_code(::google::protobuf::uint32 value) {
+inline void error::set_code(::google::protobuf::uint64 value) {
   _has_bits_[0] |= 0x00000002u;
   code_ = value;
   // @@protoc_insertion_point(field_set:action_message.error.code)
@@ -10752,6 +11250,106 @@ inline void meta::set_method_id(::google::protobuf::uint32 value) {
   _has_bits_[0] |= 0x00000004u;
   method_id_ = value;
   // @@protoc_insertion_point(field_set:action_message.meta.method_id)
+}
+
+// -------------------------------------------------------------------
+
+// account_object
+
+// optional bytes account_name = 1;
+inline bool account_object::has_account_name() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void account_object::clear_account_name() {
+  account_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& account_object::account_name() const {
+  // @@protoc_insertion_point(field_get:action_message.account_object.account_name)
+  return account_name_.GetNoArena();
+}
+inline void account_object::set_account_name(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.account_object.account_name)
+}
+#if LANG_CXX11
+inline void account_object::set_account_name(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  account_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.account_object.account_name)
+}
+#endif
+inline void account_object::set_account_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.account_object.account_name)
+}
+inline void account_object::set_account_name(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  account_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.account_object.account_name)
+}
+inline ::std::string* account_object::mutable_account_name() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.account_object.account_name)
+  return account_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* account_object::release_account_name() {
+  // @@protoc_insertion_point(field_release:action_message.account_object.account_name)
+  if (!has_account_name()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return account_name_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void account_object::set_allocated_account_name(::std::string* account_name) {
+  if (account_name != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  account_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account_name);
+  // @@protoc_insertion_point(field_set_allocated:action_message.account_object.account_name)
+}
+
+// optional int32 vm_type = 2;
+inline bool account_object::has_vm_type() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void account_object::clear_vm_type() {
+  vm_type_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::int32 account_object::vm_type() const {
+  // @@protoc_insertion_point(field_get:action_message.account_object.vm_type)
+  return vm_type_;
+}
+inline void account_object::set_vm_type(::google::protobuf::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  vm_type_ = value;
+  // @@protoc_insertion_point(field_set:action_message.account_object.vm_type)
+}
+
+// optional int32 vm_version = 3;
+inline bool account_object::has_vm_version() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void account_object::clear_vm_version() {
+  vm_version_ = 0;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::int32 account_object::vm_version() const {
+  // @@protoc_insertion_point(field_get:action_message.account_object.vm_version)
+  return vm_version_;
+}
+inline void account_object::set_vm_version(::google::protobuf::int32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  vm_version_ = value;
+  // @@protoc_insertion_point(field_set:action_message.account_object.vm_version)
 }
 
 // -------------------------------------------------------------------
@@ -16706,15 +17304,239 @@ inline void get_account_creation_time::set_allocated_account(::std::string* acco
 
 // -------------------------------------------------------------------
 
+// reversible_block
+
+// optional uint32 block_num = 1;
+inline bool reversible_block::has_block_num() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void reversible_block::clear_block_num() {
+  block_num_ = 0u;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint32 reversible_block::block_num() const {
+  // @@protoc_insertion_point(field_get:action_message.reversible_block.block_num)
+  return block_num_;
+}
+inline void reversible_block::set_block_num(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  block_num_ = value;
+  // @@protoc_insertion_point(field_set:action_message.reversible_block.block_num)
+}
+
+// optional bytes data = 2;
+inline bool reversible_block::has_data() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void reversible_block::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& reversible_block::data() const {
+  // @@protoc_insertion_point(field_get:action_message.reversible_block.data)
+  return data_.GetNoArena();
+}
+inline void reversible_block::set_data(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.reversible_block.data)
+}
+#if LANG_CXX11
+inline void reversible_block::set_data(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.reversible_block.data)
+}
+#endif
+inline void reversible_block::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.reversible_block.data)
+}
+inline void reversible_block::set_data(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.reversible_block.data)
+}
+inline ::std::string* reversible_block::mutable_data() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.reversible_block.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* reversible_block::release_data() {
+  // @@protoc_insertion_point(field_release:action_message.reversible_block.data)
+  if (!has_data()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return data_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void reversible_block::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:action_message.reversible_block.data)
+}
+
+// -------------------------------------------------------------------
+
+// global_property_object
+
+// optional uint32 proposed_schedule_block_num = 1;
+inline bool global_property_object::has_proposed_schedule_block_num() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void global_property_object::clear_proposed_schedule_block_num() {
+  proposed_schedule_block_num_ = 0u;
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint32 global_property_object::proposed_schedule_block_num() const {
+  // @@protoc_insertion_point(field_get:action_message.global_property_object.proposed_schedule_block_num)
+  return proposed_schedule_block_num_;
+}
+inline void global_property_object::set_proposed_schedule_block_num(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000004u;
+  proposed_schedule_block_num_ = value;
+  // @@protoc_insertion_point(field_set:action_message.global_property_object.proposed_schedule_block_num)
+}
+
+// optional bytes propose_schedule = 2;
+inline bool global_property_object::has_propose_schedule() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void global_property_object::clear_propose_schedule() {
+  propose_schedule_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const ::std::string& global_property_object::propose_schedule() const {
+  // @@protoc_insertion_point(field_get:action_message.global_property_object.propose_schedule)
+  return propose_schedule_.GetNoArena();
+}
+inline void global_property_object::set_propose_schedule(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  propose_schedule_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.global_property_object.propose_schedule)
+}
+#if LANG_CXX11
+inline void global_property_object::set_propose_schedule(::std::string&& value) {
+  _has_bits_[0] |= 0x00000001u;
+  propose_schedule_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.global_property_object.propose_schedule)
+}
+#endif
+inline void global_property_object::set_propose_schedule(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000001u;
+  propose_schedule_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.global_property_object.propose_schedule)
+}
+inline void global_property_object::set_propose_schedule(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000001u;
+  propose_schedule_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.global_property_object.propose_schedule)
+}
+inline ::std::string* global_property_object::mutable_propose_schedule() {
+  _has_bits_[0] |= 0x00000001u;
+  // @@protoc_insertion_point(field_mutable:action_message.global_property_object.propose_schedule)
+  return propose_schedule_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* global_property_object::release_propose_schedule() {
+  // @@protoc_insertion_point(field_release:action_message.global_property_object.propose_schedule)
+  if (!has_propose_schedule()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  return propose_schedule_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void global_property_object::set_allocated_propose_schedule(::std::string* propose_schedule) {
+  if (propose_schedule != NULL) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  propose_schedule_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), propose_schedule);
+  // @@protoc_insertion_point(field_set_allocated:action_message.global_property_object.propose_schedule)
+}
+
+// optional bytes configuration = 3;
+inline bool global_property_object::has_configuration() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void global_property_object::clear_configuration() {
+  configuration_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::std::string& global_property_object::configuration() const {
+  // @@protoc_insertion_point(field_get:action_message.global_property_object.configuration)
+  return configuration_.GetNoArena();
+}
+inline void global_property_object::set_configuration(const ::std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  configuration_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:action_message.global_property_object.configuration)
+}
+#if LANG_CXX11
+inline void global_property_object::set_configuration(::std::string&& value) {
+  _has_bits_[0] |= 0x00000002u;
+  configuration_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:action_message.global_property_object.configuration)
+}
+#endif
+inline void global_property_object::set_configuration(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  _has_bits_[0] |= 0x00000002u;
+  configuration_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:action_message.global_property_object.configuration)
+}
+inline void global_property_object::set_configuration(const void* value, size_t size) {
+  _has_bits_[0] |= 0x00000002u;
+  configuration_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:action_message.global_property_object.configuration)
+}
+inline ::std::string* global_property_object::mutable_configuration() {
+  _has_bits_[0] |= 0x00000002u;
+  // @@protoc_insertion_point(field_mutable:action_message.global_property_object.configuration)
+  return configuration_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* global_property_object::release_configuration() {
+  // @@protoc_insertion_point(field_release:action_message.global_property_object.configuration)
+  if (!has_configuration()) {
+    return NULL;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  return configuration_.ReleaseNonDefaultNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void global_property_object::set_allocated_configuration(::std::string* configuration) {
+  if (configuration != NULL) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  configuration_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), configuration);
+  // @@protoc_insertion_point(field_set_allocated:action_message.global_property_object.configuration)
+}
+
+// -------------------------------------------------------------------
+
 // rpc_request
 
 // optional .action_message.message_id msg_id = 1;
 inline bool rpc_request::has_msg_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 inline void rpc_request::clear_msg_id() {
   msg_id_ = 1000;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 inline ::action_message::message_id rpc_request::msg_id() const {
   // @@protoc_insertion_point(field_get:action_message.rpc_request.msg_id)
@@ -16722,12 +17544,30 @@ inline ::action_message::message_id rpc_request::msg_id() const {
 }
 inline void rpc_request::set_msg_id(::action_message::message_id value) {
   assert(::action_message::message_id_IsValid(value));
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000004u;
   msg_id_ = value;
   // @@protoc_insertion_point(field_set:action_message.rpc_request.msg_id)
 }
 
-// optional bytes data = 2;
+// optional uint64 receiver = 2;
+inline bool rpc_request::has_receiver() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void rpc_request::clear_receiver() {
+  receiver_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::protobuf::uint64 rpc_request::receiver() const {
+  // @@protoc_insertion_point(field_get:action_message.rpc_request.receiver)
+  return receiver_;
+}
+inline void rpc_request::set_receiver(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000002u;
+  receiver_ = value;
+  // @@protoc_insertion_point(field_set:action_message.rpc_request.receiver)
+}
+
+// optional bytes data = 3;
 inline bool rpc_request::has_data() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -16793,11 +17633,11 @@ inline void rpc_request::set_allocated_data(::std::string* data) {
 
 // optional .action_message.message_id msg_id = 1;
 inline bool rpc_response::has_msg_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 inline void rpc_response::clear_msg_id() {
   msg_id_ = 1000;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::action_message::message_id rpc_response::msg_id() const {
   // @@protoc_insertion_point(field_get:action_message.rpc_response.msg_id)
@@ -16805,7 +17645,7 @@ inline ::action_message::message_id rpc_response::msg_id() const {
 }
 inline void rpc_response::set_msg_id(::action_message::message_id value) {
   assert(::action_message::message_id_IsValid(value));
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000020u;
   msg_id_ = value;
   // @@protoc_insertion_point(field_set:action_message.rpc_response.msg_id)
 }
@@ -16919,9 +17759,69 @@ inline void rpc_response::set_allocated_data(::std::string* data) {
   // @@protoc_insertion_point(field_set_allocated:action_message.rpc_response.data)
 }
 
+// optional uint32 result = 4;
+inline bool rpc_response::has_result() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void rpc_response::clear_result() {
+  result_ = 0u;
+  _has_bits_[0] &= ~0x00000010u;
+}
+inline ::google::protobuf::uint32 rpc_response::result() const {
+  // @@protoc_insertion_point(field_get:action_message.rpc_response.result)
+  return result_;
+}
+inline void rpc_response::set_result(::google::protobuf::uint32 value) {
+  _has_bits_[0] |= 0x00000010u;
+  result_ = value;
+  // @@protoc_insertion_point(field_set:action_message.rpc_response.result)
+}
+
+// optional uint64 result_primary = 5;
+inline bool rpc_response::has_result_primary() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void rpc_response::clear_result_primary() {
+  result_primary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline ::google::protobuf::uint64 rpc_response::result_primary() const {
+  // @@protoc_insertion_point(field_get:action_message.rpc_response.result_primary)
+  return result_primary_;
+}
+inline void rpc_response::set_result_primary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000004u;
+  result_primary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.rpc_response.result_primary)
+}
+
+// optional uint64 result_secondary = 6;
+inline bool rpc_response::has_result_secondary() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+inline void rpc_response::clear_result_secondary() {
+  result_secondary_ = PROTOBUF_ULONGLONG(0);
+  _has_bits_[0] &= ~0x00000008u;
+}
+inline ::google::protobuf::uint64 rpc_response::result_secondary() const {
+  // @@protoc_insertion_point(field_get:action_message.rpc_response.result_secondary)
+  return result_secondary_;
+}
+inline void rpc_response::set_result_secondary(::google::protobuf::uint64 value) {
+  _has_bits_[0] |= 0x00000008u;
+  result_secondary_ = value;
+  // @@protoc_insertion_point(field_set:action_message.rpc_response.result_secondary)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

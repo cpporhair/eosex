@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src 
+CXX_INCLUDES = -I/Users/yangwenyu/workspace/eosex/eosio_database/include -I/Users/yangwenyu/workspace/eosex/eosio_database/src -I/Users/yangwenyu/workspace/eosex/eosio_database/src/softfloat/source/include -I/usr/local/Cellar/boost/1.67.0_1/include -I/usr/local/include -I/usr/local/opt/openssl/include 
 

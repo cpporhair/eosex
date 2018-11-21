@@ -1,2 +1,1 @@
 add_subdirectory(server_app)
-add_subdirectory(test_client)

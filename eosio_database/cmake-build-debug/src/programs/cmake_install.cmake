@@ -35,7 +35,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/server_app/cmake_install.cmake")
-  include("/Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug/src/programs/test_client/cmake_install.cmake")
 
 endif()
 

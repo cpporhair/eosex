@@ -26,6 +26,10 @@ class metaDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<meta> _instance;
 } _meta_default_instance_;
+class account_objectDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<account_object> _instance;
+} _account_object_default_instance_;
 class db_store_i64DefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<db_store_i64> _instance;
@@ -282,6 +286,14 @@ class get_account_creation_timeDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<get_account_creation_time> _instance;
 } _get_account_creation_time_default_instance_;
+class reversible_blockDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<reversible_block> _instance;
+} _reversible_block_default_instance_;
+class global_property_objectDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<global_property_object> _instance;
+} _global_property_object_default_instance_;
 class rpc_requestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<rpc_request> _instance;
@@ -318,6 +330,20 @@ static void InitDefaultsmeta_message_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_meta_message_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsmeta_message_2eproto}, {}};
+
+static void InitDefaultsaccount_object_message_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::action_message::_account_object_default_instance_;
+    new (ptr) ::action_message::account_object();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::action_message::account_object::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_account_object_message_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsaccount_object_message_2eproto}, {}};
 
 static void InitDefaultsdb_store_i64_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -1215,6 +1241,34 @@ static void InitDefaultsget_account_creation_time_message_2eproto() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_get_account_creation_time_message_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsget_account_creation_time_message_2eproto}, {}};
 
+static void InitDefaultsreversible_block_message_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::action_message::_reversible_block_default_instance_;
+    new (ptr) ::action_message::reversible_block();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::action_message::reversible_block::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_reversible_block_message_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsreversible_block_message_2eproto}, {}};
+
+static void InitDefaultsglobal_property_object_message_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::action_message::_global_property_object_default_instance_;
+    new (ptr) ::action_message::global_property_object();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::action_message::global_property_object::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_global_property_object_message_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsglobal_property_object_message_2eproto}, {}};
+
 static void InitDefaultsrpc_request_message_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -1247,6 +1301,7 @@ static void InitDefaultsrpc_response_message_2eproto() {
 void InitDefaults_message_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_error_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_meta_message_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_account_object_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_store_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_update_i64_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_db_remove_i64_message_2eproto.base);
@@ -1311,11 +1366,13 @@ void InitDefaults_message_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_check_permission_authorization_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_get_permission_last_used_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_get_account_creation_time_message_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_reversible_block_message_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_global_property_object_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_rpc_request_message_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_rpc_response_message_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_message_2eproto[68];
+::google::protobuf::Metadata file_level_metadata_message_2eproto[71];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_message_2eproto[2];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_message_2eproto = nullptr;
 
@@ -1337,6 +1394,17 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::action_message::meta, id_),
   PROTOBUF_FIELD_OFFSET(::action_message::meta, service_id_),
   PROTOBUF_FIELD_OFFSET(::action_message::meta, method_id_),
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::action_message::account_object, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::action_message::account_object, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::action_message::account_object, account_name_),
+  PROTOBUF_FIELD_OFFSET(::action_message::account_object, vm_type_),
+  PROTOBUF_FIELD_OFFSET(::action_message::account_object, vm_version_),
   0,
   1,
   2,
@@ -2120,13 +2188,35 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::action_message::get_account_creation_time, account_),
   0,
+  PROTOBUF_FIELD_OFFSET(::action_message::reversible_block, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::action_message::reversible_block, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::action_message::reversible_block, block_num_),
+  PROTOBUF_FIELD_OFFSET(::action_message::reversible_block, data_),
+  1,
+  0,
+  PROTOBUF_FIELD_OFFSET(::action_message::global_property_object, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::action_message::global_property_object, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::action_message::global_property_object, proposed_schedule_block_num_),
+  PROTOBUF_FIELD_OFFSET(::action_message::global_property_object, propose_schedule_),
+  PROTOBUF_FIELD_OFFSET(::action_message::global_property_object, configuration_),
+  2,
+  0,
+  1,
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_request, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_request, msg_id_),
+  PROTOBUF_FIELD_OFFSET(::action_message::rpc_request, receiver_),
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_request, data_),
+  2,
   1,
   0,
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, _has_bits_),
@@ -2137,84 +2227,94 @@ const ::google::protobuf::uint32 TableStruct_message_2eproto::offsets[] PROTOBUF
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, msg_id_),
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, err_),
   PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, data_),
-  2,
+  PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, result_),
+  PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, result_primary_),
+  PROTOBUF_FIELD_OFFSET(::action_message::rpc_response, result_secondary_),
+  5,
   1,
   0,
+  4,
+  2,
+  3,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, sizeof(::action_message::error)},
   { 9, 17, sizeof(::action_message::meta)},
-  { 20, 31, sizeof(::action_message::db_store_i64)},
-  { 37, 46, sizeof(::action_message::db_update_i64)},
-  { 50, 56, sizeof(::action_message::db_remove_i64)},
-  { 57, 65, sizeof(::action_message::db_get_i64)},
-  { 68, 75, sizeof(::action_message::db_next_64)},
-  { 77, 84, sizeof(::action_message::db_previous_i64)},
-  { 86, 95, sizeof(::action_message::db_find_i64)},
-  { 99, 108, sizeof(::action_message::db_lowerbound_i64)},
-  { 112, 121, sizeof(::action_message::db_upperbound_i64)},
-  { 125, 133, sizeof(::action_message::db_end_i64)},
-  { 136, 146, sizeof(::action_message::db_idx64_store)},
-  { 151, 159, sizeof(::action_message::db_idx64_update)},
-  { 162, 168, sizeof(::action_message::db_idx64_remove)},
-  { 169, 179, sizeof(::action_message::db_idx64_find_secondary)},
-  { 184, 194, sizeof(::action_message::db_idx64_find_primary)},
-  { 199, 209, sizeof(::action_message::db_idx64_lowerbound)},
-  { 214, 224, sizeof(::action_message::db_idx64_upperbound)},
-  { 229, 237, sizeof(::action_message::db_idx64_end)},
-  { 240, 247, sizeof(::action_message::db_idx64_next)},
-  { 249, 256, sizeof(::action_message::db_idx64_previous)},
-  { 258, 268, sizeof(::action_message::db_idx128_store)},
-  { 273, 281, sizeof(::action_message::db_idx128_update)},
-  { 284, 290, sizeof(::action_message::db_idx128_remove)},
-  { 291, 301, sizeof(::action_message::db_idx128_find_secondary)},
-  { 306, 316, sizeof(::action_message::db_idx128_find_primary)},
-  { 321, 331, sizeof(::action_message::db_idx128_lowerbound)},
-  { 336, 346, sizeof(::action_message::db_idx128_upperbound)},
-  { 351, 359, sizeof(::action_message::db_idx128_end)},
-  { 362, 369, sizeof(::action_message::db_idx128_next)},
-  { 371, 378, sizeof(::action_message::db_idx128_previous)},
-  { 380, 391, sizeof(::action_message::db_idx256_store)},
-  { 397, 406, sizeof(::action_message::db_idx256_update)},
-  { 410, 416, sizeof(::action_message::db_idx256_remove)},
-  { 417, 428, sizeof(::action_message::db_idx256_find_secondary)},
-  { 434, 445, sizeof(::action_message::db_idx256_find_primary)},
-  { 451, 462, sizeof(::action_message::db_idx256_lowerbound)},
-  { 468, 479, sizeof(::action_message::db_idx256_upperbound)},
-  { 485, 493, sizeof(::action_message::db_idx256_end)},
-  { 496, 503, sizeof(::action_message::db_idx256_next)},
-  { 505, 512, sizeof(::action_message::db_idx256_previous)},
-  { 514, 524, sizeof(::action_message::db_idx_double_store)},
-  { 529, 537, sizeof(::action_message::db_idx_double_update)},
-  { 540, 546, sizeof(::action_message::db_idx_double_remove)},
-  { 547, 557, sizeof(::action_message::db_idx_double_find_secondary)},
-  { 562, 572, sizeof(::action_message::db_idx_double_find_primary)},
-  { 577, 587, sizeof(::action_message::db_idx_double_lowerbound)},
-  { 592, 602, sizeof(::action_message::db_idx_double_upperbound)},
-  { 607, 615, sizeof(::action_message::db_idx_double_end)},
-  { 618, 625, sizeof(::action_message::db_idx_double_next)},
-  { 627, 634, sizeof(::action_message::db_idx_double_previous)},
-  { 636, 646, sizeof(::action_message::db_idx_long_double_store)},
-  { 651, 659, sizeof(::action_message::db_idx_long_double_update)},
-  { 662, 668, sizeof(::action_message::db_idx_long_double_remove)},
-  { 669, 679, sizeof(::action_message::db_idx_long_double_find_secondary)},
-  { 684, 694, sizeof(::action_message::db_idx_long_double_find_primary)},
-  { 699, 709, sizeof(::action_message::db_idx_long_double_lowerbound)},
-  { 714, 724, sizeof(::action_message::db_idx_long_double_upperbound)},
-  { 729, 737, sizeof(::action_message::db_idx_long_double_end)},
-  { 740, 747, sizeof(::action_message::db_idx_long_double_next)},
-  { 749, 756, sizeof(::action_message::db_idx_long_double_previous)},
-  { 758, 766, sizeof(::action_message::check_transaction_authorization)},
-  { 769, 779, sizeof(::action_message::check_permission_authorization)},
-  { 784, 791, sizeof(::action_message::get_permission_last_used)},
-  { 793, 799, sizeof(::action_message::get_account_creation_time)},
-  { 800, 807, sizeof(::action_message::rpc_request)},
-  { 809, 817, sizeof(::action_message::rpc_response)},
+  { 20, 28, sizeof(::action_message::account_object)},
+  { 31, 42, sizeof(::action_message::db_store_i64)},
+  { 48, 57, sizeof(::action_message::db_update_i64)},
+  { 61, 67, sizeof(::action_message::db_remove_i64)},
+  { 68, 76, sizeof(::action_message::db_get_i64)},
+  { 79, 86, sizeof(::action_message::db_next_64)},
+  { 88, 95, sizeof(::action_message::db_previous_i64)},
+  { 97, 106, sizeof(::action_message::db_find_i64)},
+  { 110, 119, sizeof(::action_message::db_lowerbound_i64)},
+  { 123, 132, sizeof(::action_message::db_upperbound_i64)},
+  { 136, 144, sizeof(::action_message::db_end_i64)},
+  { 147, 157, sizeof(::action_message::db_idx64_store)},
+  { 162, 170, sizeof(::action_message::db_idx64_update)},
+  { 173, 179, sizeof(::action_message::db_idx64_remove)},
+  { 180, 190, sizeof(::action_message::db_idx64_find_secondary)},
+  { 195, 205, sizeof(::action_message::db_idx64_find_primary)},
+  { 210, 220, sizeof(::action_message::db_idx64_lowerbound)},
+  { 225, 235, sizeof(::action_message::db_idx64_upperbound)},
+  { 240, 248, sizeof(::action_message::db_idx64_end)},
+  { 251, 258, sizeof(::action_message::db_idx64_next)},
+  { 260, 267, sizeof(::action_message::db_idx64_previous)},
+  { 269, 279, sizeof(::action_message::db_idx128_store)},
+  { 284, 292, sizeof(::action_message::db_idx128_update)},
+  { 295, 301, sizeof(::action_message::db_idx128_remove)},
+  { 302, 312, sizeof(::action_message::db_idx128_find_secondary)},
+  { 317, 327, sizeof(::action_message::db_idx128_find_primary)},
+  { 332, 342, sizeof(::action_message::db_idx128_lowerbound)},
+  { 347, 357, sizeof(::action_message::db_idx128_upperbound)},
+  { 362, 370, sizeof(::action_message::db_idx128_end)},
+  { 373, 380, sizeof(::action_message::db_idx128_next)},
+  { 382, 389, sizeof(::action_message::db_idx128_previous)},
+  { 391, 402, sizeof(::action_message::db_idx256_store)},
+  { 408, 417, sizeof(::action_message::db_idx256_update)},
+  { 421, 427, sizeof(::action_message::db_idx256_remove)},
+  { 428, 439, sizeof(::action_message::db_idx256_find_secondary)},
+  { 445, 456, sizeof(::action_message::db_idx256_find_primary)},
+  { 462, 473, sizeof(::action_message::db_idx256_lowerbound)},
+  { 479, 490, sizeof(::action_message::db_idx256_upperbound)},
+  { 496, 504, sizeof(::action_message::db_idx256_end)},
+  { 507, 514, sizeof(::action_message::db_idx256_next)},
+  { 516, 523, sizeof(::action_message::db_idx256_previous)},
+  { 525, 535, sizeof(::action_message::db_idx_double_store)},
+  { 540, 548, sizeof(::action_message::db_idx_double_update)},
+  { 551, 557, sizeof(::action_message::db_idx_double_remove)},
+  { 558, 568, sizeof(::action_message::db_idx_double_find_secondary)},
+  { 573, 583, sizeof(::action_message::db_idx_double_find_primary)},
+  { 588, 598, sizeof(::action_message::db_idx_double_lowerbound)},
+  { 603, 613, sizeof(::action_message::db_idx_double_upperbound)},
+  { 618, 626, sizeof(::action_message::db_idx_double_end)},
+  { 629, 636, sizeof(::action_message::db_idx_double_next)},
+  { 638, 645, sizeof(::action_message::db_idx_double_previous)},
+  { 647, 657, sizeof(::action_message::db_idx_long_double_store)},
+  { 662, 670, sizeof(::action_message::db_idx_long_double_update)},
+  { 673, 679, sizeof(::action_message::db_idx_long_double_remove)},
+  { 680, 690, sizeof(::action_message::db_idx_long_double_find_secondary)},
+  { 695, 705, sizeof(::action_message::db_idx_long_double_find_primary)},
+  { 710, 720, sizeof(::action_message::db_idx_long_double_lowerbound)},
+  { 725, 735, sizeof(::action_message::db_idx_long_double_upperbound)},
+  { 740, 748, sizeof(::action_message::db_idx_long_double_end)},
+  { 751, 758, sizeof(::action_message::db_idx_long_double_next)},
+  { 760, 767, sizeof(::action_message::db_idx_long_double_previous)},
+  { 769, 777, sizeof(::action_message::check_transaction_authorization)},
+  { 780, 790, sizeof(::action_message::check_permission_authorization)},
+  { 795, 802, sizeof(::action_message::get_permission_last_used)},
+  { 804, 810, sizeof(::action_message::get_account_creation_time)},
+  { 811, 818, sizeof(::action_message::reversible_block)},
+  { 820, 828, sizeof(::action_message::global_property_object)},
+  { 831, 839, sizeof(::action_message::rpc_request)},
+  { 842, 853, sizeof(::action_message::rpc_response)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_error_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_meta_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_account_object_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_store_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_update_i64_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_db_remove_i64_default_instance_),
@@ -2279,6 +2379,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_check_permission_authorization_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_get_permission_last_used_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_get_account_creation_time_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_reversible_block_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_global_property_object_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_rpc_request_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::action_message::_rpc_response_default_instance_),
 };
@@ -2286,493 +2388,519 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_message_2eproto = {
   {}, AddDescriptors_message_2eproto, "message.proto", schemas,
   file_default_instances, TableStruct_message_2eproto::offsets,
-  file_level_metadata_message_2eproto, 68, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
+  file_level_metadata_message_2eproto, 71, file_level_enum_descriptors_message_2eproto, file_level_service_descriptors_message_2eproto,
 };
 
 ::google::protobuf::internal::DescriptorTable descriptor_table_message_2eproto = {
   false, InitDefaults_message_2eproto, 
   "\n\rmessage.proto\022\016action_message\"\"\n\005error"
-  "\022\014\n\004code\030\001 \001(\r\022\013\n\003msg\030\002 \001(\t\"9\n\004meta\022\n\n\002i"
+  "\022\014\n\004code\030\001 \001(\004\022\013\n\003msg\030\002 \001(\t\"9\n\004meta\022\n\n\002i"
   "d\030\001 \001(\r\022\022\n\nservice_id\030\002 \001(\r\022\021\n\tmethod_id"
-  "\030\003 \001(\r\"l\n\014db_store_i64\022\r\n\005scope\030\001 \001(\004\022\r\n"
-  "\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022"
-  "\016\n\006buffer\030\005 \001(\014\022\023\n\013buffer_size\030\006 \001(\004\"P\n\r"
-  "db_update_i64\022\013\n\003itr\030\001 \001(\r\022\r\n\005payer\030\002 \001("
-  "\004\022\016\n\006buffer\030\003 \001(\014\022\023\n\013buffer_size\030\004 \001(\004\"\034"
-  "\n\rdb_remove_i64\022\013\n\003itr\030\001 \001(\r\">\n\ndb_get_i"
-  "64\022\013\n\003itr\030\001 \001(\r\022\016\n\006buffer\030\002 \001(\014\022\023\n\013buffe"
-  "r_size\030\003 \001(\004\"*\n\ndb_next_64\022\013\n\003itr\030\001 \001(\r\022"
-  "\017\n\007primary\030\002 \001(\004\"/\n\017db_previous_i64\022\013\n\003i"
-  "tr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"E\n\013db_find_i64"
-  "\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003"
-  " \001(\004\022\n\n\002id\030\004 \001(\004\"K\n\021db_lowerbound_i64\022\014\n"
+  "\030\003 \001(\r\"K\n\016account_object\022\024\n\014account_name"
+  "\030\001 \001(\014\022\017\n\007vm_type\030\002 \001(\005\022\022\n\nvm_version\030\003 "
+  "\001(\005\"l\n\014db_store_i64\022\r\n\005scope\030\001 \001(\004\022\r\n\005ta"
+  "ble\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\016\n\006"
+  "buffer\030\005 \001(\014\022\023\n\013buffer_size\030\006 \001(\004\"P\n\rdb_"
+  "update_i64\022\013\n\003itr\030\001 \001(\r\022\r\n\005payer\030\002 \001(\004\022\016"
+  "\n\006buffer\030\003 \001(\014\022\023\n\013buffer_size\030\004 \001(\004\"\034\n\rd"
+  "b_remove_i64\022\013\n\003itr\030\001 \001(\r\">\n\ndb_get_i64\022"
+  "\013\n\003itr\030\001 \001(\r\022\016\n\006buffer\030\002 \001(\014\022\023\n\013buffer_s"
+  "ize\030\003 \001(\004\"*\n\ndb_next_64\022\013\n\003itr\030\001 \001(\r\022\017\n\007"
+  "primary\030\002 \001(\004\"/\n\017db_previous_i64\022\013\n\003itr\030"
+  "\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"E\n\013db_find_i64\022\014\n"
   "\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001("
-  "\004\022\n\n\002id\030\004 \001(\004\"K\n\021db_upperbound_i64\022\014\n\004co"
+  "\004\022\n\n\002id\030\004 \001(\004\"K\n\021db_lowerbound_i64\022\014\n\004co"
   "de\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\n"
-  "\n\002id\030\004 \001(\004\"8\n\ndb_end_i64\022\014\n\004code\030\001 \001(\004\022\r"
-  "\n\005table\030\002 \001(\004\022\r\n\005scope\030\003 \001(\004\"\\\n\016db_idx64"
-  "_store\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005"
-  "payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tsecondary\030\005 \001"
-  "(\004\"@\n\017db_idx64_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005pa"
-  "yer\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\004\"\036\n\017db_idx64"
-  "_remove\022\013\n\003itr\030\001 \001(\r\"i\n\027db_idx64_find_se"
-  "condary\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005"
-  "table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\004\022\017\n\007primar"
-  "y\030\005 \001(\004\"g\n\025db_idx64_find_primary\022\014\n\004code"
-  "\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\t"
-  "secondary\030\004 \001(\004\022\017\n\007primary\030\005 \001(\004\"e\n\023db_i"
-  "dx64_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002"
-  " \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\004\022\017"
-  "\n\007primary\030\005 \001(\004\"e\n\023db_idx64_upperbound\022\014"
-  "\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001"
-  "(\004\022\021\n\tsecondary\030\004 \001(\004\022\017\n\007primary\030\005 \001(\004\":"
-  "\n\014db_idx64_end\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 "
-  "\001(\004\022\r\n\005table\030\003 \001(\004\"-\n\rdb_idx64_next\022\013\n\003i"
-  "tr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"1\n\021db_idx64_pr"
-  "evious\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"]\n\017"
-  "db_idx128_store\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030"
-  "\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tseco"
-  "ndary\030\005 \001(\014\"A\n\020db_idx128_update\022\013\n\003itr\030\001"
-  " \001(\r\022\r\n\005payer\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\"\037"
-  "\n\020db_idx128_remove\022\013\n\003itr\030\001 \001(\r\"j\n\030db_id"
-  "x128_find_secondary\022\014\n\004code\030\001 \001(\004\022\r\n\005sco"
-  "pe\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001"
-  "(\014\022\017\n\007primary\030\005 \001(\004\"h\n\026db_idx128_find_pr"
-  "imary\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005ta"
-  "ble\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primary\030"
-  "\005 \001(\004\"f\n\024db_idx128_lowerbound\022\014\n\004code\030\001 "
+  "\n\002id\030\004 \001(\004\"K\n\021db_upperbound_i64\022\014\n\004code\030"
+  "\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\n\n\002i"
+  "d\030\004 \001(\004\"8\n\ndb_end_i64\022\014\n\004code\030\001 \001(\004\022\r\n\005t"
+  "able\030\002 \001(\004\022\r\n\005scope\030\003 \001(\004\"\\\n\016db_idx64_st"
+  "ore\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005pay"
+  "er\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tsecondary\030\005 \001(\004\""
+  "@\n\017db_idx64_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005payer"
+  "\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\004\"\036\n\017db_idx64_re"
+  "move\022\013\n\003itr\030\001 \001(\r\"i\n\027db_idx64_find_secon"
+  "dary\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005tab"
+  "le\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\004\022\017\n\007primary\030\005"
+  " \001(\004\"g\n\025db_idx64_find_primary\022\014\n\004code\030\001 "
   "\001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsec"
-  "ondary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"f\n\024db_idx1"
-  "28_upperbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001"
-  "(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007"
-  "primary\030\005 \001(\004\";\n\rdb_idx128_end\022\014\n\004code\030\001"
-  " \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\".\n\016db"
-  "_idx128_next\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001"
-  "(\004\"2\n\022db_idx128_previous\022\013\n\003itr\030\001 \001(\r\022\017\n"
-  "\007primary\030\002 \001(\004\"j\n\017db_idx256_store\022\r\n\005sco"
-  "pe\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n"
-  "\n\002id\030\004 \001(\004\022\014\n\004data\030\005 \001(\014\022\020\n\010data_len\030\006 \001"
-  "(\004\"N\n\020db_idx256_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005p"
-  "ayer\030\002 \001(\004\022\014\n\004data\030\003 \001(\014\022\020\n\010data_len\030\004 \001"
-  "(\004\"\036\n\020db_idx256_remove\022\n\n\002id\030\001 \001(\r\"w\n\030db"
-  "_idx256_find_secondary\022\014\n\004code\030\001 \001(\004\022\r\n\005"
-  "scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014"
-  "\022\020\n\010data_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\"u\n\026d"
-  "b_idx256_find_primary\022\014\n\004code\030\001 \001(\004\022\r\n\005s"
-  "cope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014\022"
-  "\020\n\010data_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\"s\n\024db"
-  "_idx256_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scop"
+  "ondary\030\004 \001(\004\022\017\n\007primary\030\005 \001(\004\"e\n\023db_idx6"
+  "4_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001("
+  "\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\004\022\017\n\007p"
+  "rimary\030\005 \001(\004\"e\n\023db_idx64_upperbound\022\014\n\004c"
+  "ode\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022"
+  "\021\n\tsecondary\030\004 \001(\004\022\017\n\007primary\030\005 \001(\004\":\n\014d"
+  "b_idx64_end\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004"
+  "\022\r\n\005table\030\003 \001(\004\"-\n\rdb_idx64_next\022\013\n\003itr\030"
+  "\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"1\n\021db_idx64_previ"
+  "ous\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"]\n\017db_"
+  "idx128_store\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030\002 \001"
+  "(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tseconda"
+  "ry\030\005 \001(\014\"A\n\020db_idx128_update\022\013\n\003itr\030\001 \001("
+  "\r\022\r\n\005payer\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\"\037\n\020d"
+  "b_idx128_remove\022\013\n\003itr\030\001 \001(\r\"j\n\030db_idx12"
+  "8_find_secondary\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030"
+  "\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022"
+  "\017\n\007primary\030\005 \001(\004\"h\n\026db_idx128_find_prima"
+  "ry\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table"
+  "\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primary\030\005 \001"
+  "(\004\"f\n\024db_idx128_lowerbound\022\014\n\004code\030\001 \001(\004"
+  "\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecond"
+  "ary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"f\n\024db_idx128_"
+  "upperbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022"
+  "\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007pri"
+  "mary\030\005 \001(\004\";\n\rdb_idx128_end\022\014\n\004code\030\001 \001("
+  "\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\".\n\016db_id"
+  "x128_next\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\""
+  "2\n\022db_idx128_previous\022\013\n\003itr\030\001 \001(\r\022\017\n\007pr"
+  "imary\030\002 \001(\004\"j\n\017db_idx256_store\022\r\n\005scope\030"
+  "\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002i"
+  "d\030\004 \001(\004\022\014\n\004data\030\005 \001(\014\022\020\n\010data_len\030\006 \001(\004\""
+  "N\n\020db_idx256_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005paye"
+  "r\030\002 \001(\004\022\014\n\004data\030\003 \001(\014\022\020\n\010data_len\030\004 \001(\004\""
+  "\036\n\020db_idx256_remove\022\n\n\002id\030\001 \001(\r\"w\n\030db_id"
+  "x256_find_secondary\022\014\n\004code\030\001 \001(\004\022\r\n\005sco"
+  "pe\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014\022\020\n"
+  "\010data_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\"u\n\026db_i"
+  "dx256_find_primary\022\014\n\004code\030\001 \001(\004\022\r\n\005scop"
   "e\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014\022\020\n\010"
   "data_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\"s\n\024db_id"
-  "x256_upperbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002"
+  "x256_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002"
   " \001(\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014\022\020\n\010dat"
-  "a_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\";\n\rdb_idx25"
-  "6_end\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005ta"
-  "ble\030\003 \001(\004\".\n\016db_idx256_next\022\013\n\003itr\030\001 \001(\r"
-  "\022\017\n\007primary\030\002 \001(\004\"2\n\022db_idx256_previous\022"
-  "\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"a\n\023db_idx_"
-  "double_store\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030\002 \001"
-  "(\004\022\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tseconda"
-  "ry\030\005 \001(\014\"E\n\024db_idx_double_update\022\013\n\003itr\030"
-  "\001 \001(\r\022\r\n\005payer\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\""
-  "#\n\024db_idx_double_remove\022\013\n\003itr\030\001 \001(\r\"n\n\034"
-  "db_idx_double_find_secondary\022\014\n\004code\030\001 \001"
-  "(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tseco"
-  "ndary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"l\n\032db_idx_d"
+  "a_len\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\"s\n\024db_idx25"
+  "6_upperbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001("
+  "\004\022\r\n\005table\030\003 \001(\004\022\014\n\004data\030\004 \001(\014\022\020\n\010data_l"
+  "en\030\005 \001(\004\022\017\n\007primary\030\006 \001(\004\";\n\rdb_idx256_e"
+  "nd\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table"
+  "\030\003 \001(\004\".\n\016db_idx256_next\022\013\n\003itr\030\001 \001(\r\022\017\n"
+  "\007primary\030\002 \001(\004\"2\n\022db_idx256_previous\022\013\n\003"
+  "itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"a\n\023db_idx_dou"
+  "ble_store\022\r\n\005scope\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022"
+  "\r\n\005payer\030\003 \001(\004\022\n\n\002id\030\004 \001(\004\022\021\n\tsecondary\030"
+  "\005 \001(\014\"E\n\024db_idx_double_update\022\013\n\003itr\030\001 \001"
+  "(\r\022\r\n\005payer\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\"#\n\024"
+  "db_idx_double_remove\022\013\n\003itr\030\001 \001(\r\"n\n\034db_"
+  "idx_double_find_secondary\022\014\n\004code\030\001 \001(\004\022"
+  "\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tseconda"
+  "ry\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"l\n\032db_idx_doub"
+  "le_find_primary\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002"
+  " \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017"
+  "\n\007primary\030\005 \001(\004\"j\n\030db_idx_double_lowerbo"
+  "und\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005tabl"
+  "e\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primary\030\005 "
+  "\001(\004\"j\n\030db_idx_double_upperbound\022\014\n\004code\030"
+  "\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\ts"
+  "econdary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"\?\n\021db_id"
+  "x_double_end\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001("
+  "\004\022\r\n\005table\030\003 \001(\004\"2\n\022db_idx_double_next\022\013"
+  "\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"6\n\026db_idx_d"
+  "ouble_previous\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002"
+  " \001(\004\"f\n\030db_idx_long_double_store\022\r\n\005scop"
+  "e\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004\022\n\n"
+  "\002id\030\004 \001(\004\022\021\n\tsecondary\030\005 \001(\014\"J\n\031db_idx_l"
+  "ong_double_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005payer\030"
+  "\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\"(\n\031db_idx_long_"
+  "double_remove\022\013\n\003itr\030\001 \001(\r\"s\n!db_idx_lon"
+  "g_double_find_secondary\022\014\n\004code\030\001 \001(\004\022\r\n"
+  "\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary"
+  "\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"q\n\037db_idx_long_d"
   "ouble_find_primary\022\014\n\004code\030\001 \001(\004\022\r\n\005scop"
   "e\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001("
-  "\014\022\017\n\007primary\030\005 \001(\004\"j\n\030db_idx_double_lowe"
-  "rbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005t"
-  "able\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primary"
-  "\030\005 \001(\004\"j\n\030db_idx_double_upperbound\022\014\n\004co"
-  "de\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021"
-  "\n\tsecondary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"\?\n\021db"
-  "_idx_double_end\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002"
-  " \001(\004\022\r\n\005table\030\003 \001(\004\"2\n\022db_idx_double_nex"
-  "t\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"6\n\026db_id"
-  "x_double_previous\022\013\n\003itr\030\001 \001(\r\022\017\n\007primar"
-  "y\030\002 \001(\004\"f\n\030db_idx_long_double_store\022\r\n\005s"
-  "cope\030\001 \001(\004\022\r\n\005table\030\002 \001(\004\022\r\n\005payer\030\003 \001(\004"
-  "\022\n\n\002id\030\004 \001(\004\022\021\n\tsecondary\030\005 \001(\014\"J\n\031db_id"
-  "x_long_double_update\022\013\n\003itr\030\001 \001(\r\022\r\n\005pay"
-  "er\030\002 \001(\004\022\021\n\tsecondary\030\003 \001(\014\"(\n\031db_idx_lo"
-  "ng_double_remove\022\013\n\003itr\030\001 \001(\r\"s\n!db_idx_"
-  "long_double_find_secondary\022\014\n\004code\030\001 \001(\004"
-  "\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecond"
-  "ary\030\004 \001(\014\022\017\n\007primary\030\005 \001(\004\"q\n\037db_idx_lon"
-  "g_double_find_primary\022\014\n\004code\030\001 \001(\004\022\r\n\005s"
-  "cope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004"
-  " \001(\014\022\017\n\007primary\030\005 \001(\004\"o\n\035db_idx_long_dou"
-  "ble_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 "
-  "\001(\004\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n"
-  "\007primary\030\005 \001(\004\"o\n\035db_idx_long_double_upp"
-  "erbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005"
-  "table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primar"
-  "y\030\005 \001(\004\"D\n\026db_idx_long_double_end\022\014\n\004cod"
-  "e\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\"7\n"
-  "\027db_idx_long_double_next\022\013\n\003itr\030\001 \001(\r\022\017\n"
-  "\007primary\030\002 \001(\004\";\n\033db_idx_long_double_pre"
-  "vious\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"]\n\037c"
-  "heck_transaction_authorization\022\020\n\010trx_da"
-  "ta\030\001 \001(\014\022\024\n\014pubkeys_data\030\002 \001(\014\022\022\n\nperms_"
-  "data\030\003 \001(\014\"\201\001\n\036check_permission_authoriz"
-  "ation\022\017\n\007account\030\001 \001(\014\022\022\n\npermission\030\002 \001"
-  "(\014\022\024\n\014pubkeys_data\030\003 \001(\014\022\022\n\nperms_data\030\004"
-  " \001(\014\022\020\n\010delay_us\030\005 \001(\004\"\?\n\030get_permission"
-  "_last_used\022\017\n\007account\030\001 \001(\014\022\022\n\npermissio"
-  "n\030\002 \001(\014\",\n\031get_account_creation_time\022\017\n\007"
-  "account\030\001 \001(\014\"G\n\013rpc_request\022*\n\006msg_id\030\001"
-  " \001(\0162\032.action_message.message_id\022\014\n\004data"
-  "\030\002 \001(\014\"l\n\014rpc_response\022*\n\006msg_id\030\001 \001(\0162\032"
-  ".action_message.message_id\022\"\n\003err\030\002 \001(\0132"
-  "\025.action_message.error\022\014\n\004data\030\003 \001(\014*\317\n\n"
-  "\013object_type\022\024\n\020null_object_type\020\000\022\027\n\023ac"
-  "count_object_type\020\001\022 \n\034account_sequence_"
-  "object_type\020\002\022\032\n\026permission_object_type\020"
-  "\003\022 \n\034permission_usage_object_type\020\004\022\037\n\033p"
-  "ermission_link_object_type\020\005\022\"\n\036UNUSED_a"
-  "ction_code_object_type\020\006\022\031\n\025key_value_ob"
-  "ject_type\020\007\022\027\n\023index64_object_type\020\010\022\030\n\024"
-  "index128_object_type\020\t\022\030\n\024index256_objec"
-  "t_type\020\n\022\034\n\030index_double_object_type\020\013\022!"
-  "\n\035index_long_double_object_type\020\014\022\037\n\033glo"
-  "bal_property_object_type\020\r\022\'\n#dynamic_gl"
-  "obal_property_object_type\020\016\022\035\n\031block_sum"
-  "mary_object_type\020\017\022\033\n\027transaction_object"
-  "_type\020\020\022%\n!generated_transaction_object_"
-  "type\020\021\022\030\n\024producer_object_type\020\022\022%\n!UNUS"
-  "ED_chain_property_object_type\020\023\022\'\n#accou"
-  "nt_control_history_object_type\020\024\0222\n.UNUS"
-  "ED_account_transaction_history_object_ty"
-  "pe\020\025\022*\n&UNUSED_transaction_history_objec"
-  "t_type\020\026\022\"\n\036public_key_history_object_ty"
-  "pe\020\027\022\036\n\032UNUSED_balance_object_type\020\030\022%\n!"
-  "UNUSED_staked_balance_object_type\020\031\022%\n!U"
-  "NUSED_producer_votes_object_type\020\032\022(\n$UN"
-  "USED_producer_schedule_object_type\020\033\022!\n\035"
-  "UNUSED_proxy_vote_object_type\020\034\022%\n!UNUSE"
-  "D_scope_sequence_object_type\020\035\022\030\n\024table_"
-  "id_object_type\020\036\022\037\n\033resource_limits_obje"
-  "ct_type\020\037\022\036\n\032resource_usage_object_type\020"
-  " \022%\n!resource_limits_state_object_type\020!"
-  "\022&\n\"resource_limits_config_object_type\020\""
-  "\022\037\n\033account_history_object_type\020#\022\036\n\032act"
-  "ion_history_object_type\020$\022 \n\034reversible_"
-  "block_object_type\020%\022\034\n\030signed_block_obje"
-  "ct_type\020(\022\033\n\027block_state_object_type\020)*\217"
-  "a\n\nmessage_id\022\033\n\026account_create_request\020"
-  "\350\007\022\034\n\027account_create_response\020\351\007\022\032\n\025acco"
-  "unt_guery_request\020\352\007\022\033\n\026account_query_re"
-  "sponse\020\353\007\022\033\n\026account_update_request\020\354\007\022\034"
-  "\n\027account_update_response\020\355\007\022\033\n\026account_"
-  "remove_request\020\356\007\022\034\n\027account_remove_resp"
-  "onse\020\357\007\022$\n\037account_sequence_create_reque"
-  "st\020\360\007\022%\n account_sequence_create_respons"
-  "e\020\361\007\022#\n\036account_sequence_query_request\020\362"
-  "\007\022$\n\037account_sequence_query_response\020\363\007\022"
-  "$\n\037account_sequence_update_request\020\364\007\022%\n"
-  " account_sequence_update_response\020\365\007\022$\n\037"
-  "account_sequence_remove_request\020\366\007\022%\n ac"
-  "count_sequence_remove_response\020\367\007\022\036\n\031per"
-  "mission_create_request\020\370\007\022\037\n\032permission_"
-  "create_response\020\371\007\022\035\n\030permission_query_r"
-  "equest\020\372\007\022\036\n\031permission_query_response\020\373"
-  "\007\022\036\n\031permission_update_request\020\374\007\022\037\n\032per"
-  "mission_update_response\020\375\007\022\036\n\031permission"
-  "_remove_request\020\376\007\022\037\n\032permission_remove_"
-  "response\020\377\007\022$\n\037permission_usage_create_r"
-  "equest\020\200\010\022%\n permission_usage_create_res"
-  "ponse\020\201\010\022#\n\036permission_usage_query_reque"
-  "st\020\202\010\022$\n\037permission_usage_query_response"
-  "\020\203\010\022$\n\037permission_usage_update_request\020\204"
-  "\010\022%\n permission_usage_update_response\020\205\010"
-  "\022$\n\037permission_usage_remove_request\020\206\010\022%"
-  "\n permission_usage_remove_response\020\207\010\022#\n"
-  "\036permission_link_create_request\020\210\010\022$\n\037pe"
-  "rmission_link_create_response\020\211\010\022\"\n\035perm"
-  "ission_link_query_request\020\212\010\022#\n\036permissi"
-  "on_link_query_response\020\213\010\022#\n\036permission_"
-  "link_update_request\020\214\010\022$\n\037permission_lin"
-  "k_update_response\020\215\010\022#\n\036permission_link_"
-  "remove_request\020\216\010\022$\n\037permission_link_rem"
-  "ove_response\020\220\010\022\035\n\030key_value_create_requ"
-  "est\020\221\010\022\036\n\031key_value_create_response\020\222\010\022\034"
-  "\n\027key_value_query_request\020\223\010\022\035\n\030key_valu"
-  "e_query_response\020\224\010\022\035\n\030key_value_update_"
-  "request\020\225\010\022\036\n\031key_value_update_response\020"
-  "\226\010\022\035\n\030key_value_remove_request\020\227\010\022\036\n\031key"
-  "_value_remove_response\020\230\010\022\033\n\026index64_cre"
-  "ate_request\020\231\010\022\034\n\027index64_create_respons"
-  "e\020\232\010\022\032\n\025index64_query_request\020\233\010\022\033\n\026inde"
-  "x64_query_response\020\234\010\022\033\n\026index64_update_"
-  "request\020\235\010\022\034\n\027index64_update_response\020\236\010"
-  "\022\033\n\026index64_remove_request\020\237\010\022\034\n\027index64"
-  "_remove_response\020\240\010\022\034\n\027index128_create_r"
-  "equest\020\241\010\022\035\n\030index128_create_response\020\242\010"
-  "\022\033\n\026index128_query_request\020\244\010\022\034\n\027index12"
-  "8_query_response\020\245\010\022\034\n\027index128_update_r"
-  "equest\020\246\010\022\035\n\030index128_update_response\020\247\010"
-  "\022\034\n\027index128_remove_request\020\250\010\022\035\n\030index1"
-  "28_remove_response\020\251\010\022\034\n\027index256_create"
-  "_request\020\252\010\022\035\n\030index256_create_response\020"
-  "\253\010\022\033\n\026index256_query_request\020\254\010\022\034\n\027index"
-  "256_query_response\020\255\010\022\034\n\027index256_update"
-  "_request\020\256\010\022\035\n\030index256_update_response\020"
-  "\257\010\022\034\n\027index256_remove_request\020\260\010\022\035\n\030inde"
-  "x256_remove_response\020\261\010\022 \n\033index_double_"
-  "create_request\020\262\010\022!\n\034index_double_create"
-  "_response\020\263\010\022\037\n\032index_double_query_reque"
-  "st\020\264\010\022 \n\033index_double_query_response\020\265\010\022"
-  " \n\033index_double_update_request\020\266\010\022!\n\034ind"
-  "ex_double_update_response\020\267\010\022 \n\033index_do"
-  "uble_remove_request\020\270\010\022!\n\034index_double_r"
-  "emove_response\020\271\010\022%\n index_long_double_c"
-  "reate_request\020\272\010\022&\n!index_long_double_cr"
-  "eate_response\020\273\010\022$\n\037index_long_double_qu"
-  "ery_request\020\274\010\022%\n index_long_double_quer"
-  "y_response\020\275\010\022%\n index_long_double_updat"
-  "e_request\020\276\010\022&\n!index_long_double_update"
-  "_response\020\277\010\022%\n index_long_double_remove"
-  "_request\020\300\010\022&\n!index_long_double_remove_"
-  "response\020\301\010\022#\n\036global_property_create_re"
-  "quest\020\302\010\022$\n\037global_property_create_respo"
-  "nse\020\303\010\022\"\n\035global_property_query_request\020"
-  "\304\010\022#\n\036global_property_query_response\020\305\010\022"
-  "#\n\036global_property_update_request\020\306\010\022$\n\037"
-  "global_property_update_response\020\307\010\022#\n\036gl"
-  "obal_property_remove_request\020\310\010\022$\n\037globa"
-  "l_property_remove_response\020\311\010\022+\n&dynamic"
-  "_global_property_create_request\020\312\010\022,\n\'dy"
-  "namic_global_property_create_response\020\313\010"
-  "\022*\n%dynamic_global_property_query_reques"
-  "t\020\314\010\022+\n&dynamic_global_property_query_re"
-  "sponse\020\315\010\022+\n&dynamic_global_property_upd"
-  "ate_request\020\316\010\022,\n\'dynamic_global_propert"
-  "y_update_response\020\317\010\022+\n&dynamic_global_p"
-  "roperty_remove_request\020\320\010\022,\n\'dynamic_glo"
-  "bal_property_remove_response\020\321\010\022!\n\034block"
-  "_summary_create_request\020\322\010\022\"\n\035block_summ"
-  "ary_create_response\020\323\010\022 \n\033block_summary_"
-  "query_request\020\324\010\022!\n\034block_summary_query_"
-  "response\020\325\010\022!\n\034block_summary_update_requ"
-  "est\020\326\010\022\"\n\035block_summary_update_response\020"
-  "\327\010\022!\n\034block_summary_remove_request\020\330\010\022\"\n"
-  "\035block_summary_remove_response\020\331\010\022\037\n\032tra"
-  "nsaction_create_request\020\332\010\022 \n\033transactio"
-  "n_create_response\020\333\010\022\036\n\031transaction_quer"
-  "y_request\020\334\010\022\037\n\032transaction_query_respon"
-  "se\020\335\010\022\037\n\032transaction_update_request\020\336\010\022 "
-  "\n\033transaction_update_response\020\337\010\022\037\n\032tran"
-  "saction_remove_request\020\340\010\022 \n\033transaction"
-  "_remove_response\020\341\010\022)\n$generated_transac"
-  "tion_create_request\020\342\010\022*\n%generated_tran"
-  "saction_create_response\020\343\010\022(\n#generated_"
-  "transaction_query_request\020\344\010\022)\n$generate"
-  "d_transaction_query_response\020\345\010\022)\n$gener"
-  "ated_transaction_update_request\020\346\010\022*\n%ge"
-  "nerated_transaction_update_response\020\347\010\022)"
-  "\n$generated_transaction_remove_request\020\350"
-  "\010\022*\n%generated_transaction_remove_respon"
-  "se\020\351\010\022\034\n\027producer_create_request\020\352\010\022\035\n\030p"
-  "roducer_create_response\020\353\010\022\033\n\026producer_q"
-  "uery_request\020\354\010\022\034\n\027producer_query_respon"
-  "se\020\355\010\022\034\n\027producer_update_request\020\356\010\022\035\n\030p"
-  "roducer_update_response\020\357\010\022\034\n\027producer_r"
-  "emove_request\020\360\010\022\035\n\030producer_remove_resp"
-  "onse\020\361\010\022+\n&account_control_history_creat"
-  "e_request\020\362\010\022,\n\'account_control_history_"
-  "create_response\020\363\010\022*\n%account_control_hi"
-  "story_query_request\020\364\010\022+\n&account_contro"
-  "l_history_query_response\020\365\010\022+\n&account_c"
-  "ontrol_history_update_request\020\366\010\022,\n\'acco"
-  "unt_control_history_update_response\020\367\010\022+"
-  "\n&account_control_history_remove_request"
-  "\020\370\010\022,\n\'account_control_history_remove_re"
-  "sponse\020\371\010\022&\n!public_key_history_create_r"
-  "equest\020\372\010\022\'\n\"public_key_history_create_r"
-  "esponse\020\373\010\022%\n public_key_history_query_r"
-  "equest\020\374\010\022&\n!public_key_history_query_re"
-  "sponse\020\375\010\022&\n!public_key_history_update_r"
-  "equest\020\376\010\022\'\n\"public_key_history_update_r"
-  "esponse\020\377\010\022&\n!public_key_history_remove_"
-  "request\020\200\t\022\'\n\"public_key_history_remove_"
-  "response\020\201\t\022\034\n\027table_id_create_request\020\202"
-  "\t\022\035\n\030table_id_create_response\020\203\t\022\033\n\026tabl"
-  "e_id_query_request\020\204\t\022\034\n\027table_id_query_"
-  "response\020\205\t\022\034\n\027table_id_update_request\020\206"
-  "\t\022\035\n\030table_id_update_response\020\207\t\022\034\n\027tabl"
-  "e_id_remove_request\020\210\t\022\035\n\030table_id_remov"
-  "e_response\020\211\t\022#\n\036resource_limits_create_"
-  "request\020\212\t\022$\n\037resource_limits_create_res"
-  "ponse\020\213\t\022\"\n\035resource_limits_query_reques"
-  "t\020\214\t\022#\n\036resource_limits_query_response\020\215"
-  "\t\022#\n\036resource_limits_update_request\020\216\t\022$"
-  "\n\037resource_limits_update_response\020\217\t\022#\n\036"
-  "resource_limits_remove_request\020\220\t\022$\n\037res"
-  "ource_limits_remove_response\020\221\t\022\"\n\035resou"
-  "rce_usage_create_request\020\222\t\022#\n\036resource_"
-  "usage_create_response\020\223\t\022!\n\034resource_usa"
-  "ge_query_request\020\224\t\022\"\n\035resource_usage_qu"
-  "ery_response\020\225\t\022\"\n\035resource_usage_update"
-  "_request\020\226\t\022#\n\036resource_usage_update_res"
-  "ponse\020\227\t\022\"\n\035resource_usage_remove_reques"
-  "t\020\230\t\022#\n\036resource_usage_remove_response\020\231"
-  "\t\022)\n$resource_limits_state_create_reques"
-  "t\020\232\t\022*\n%resource_limits_state_create_res"
-  "ponse\020\233\t\022(\n#resource_limits_state_query_"
-  "request\020\234\t\022)\n$resource_limits_state_quer"
-  "y_response\020\235\t\022)\n$resource_limits_state_u"
-  "pdate_request\020\236\t\022*\n%resource_limits_stat"
-  "e_update_response\020\237\t\022)\n$resource_limits_"
-  "state_remove_request\020\240\t\022*\n%resource_limi"
-  "ts_state_remove_response\020\241\t\022*\n%resource_"
-  "limits_config_create_request\020\242\t\022+\n&resou"
-  "rce_limits_config_create_response\020\243\t\022)\n$"
-  "resource_limits_config_query_request\020\244\t\022"
-  "*\n%resource_limits_config_query_response"
-  "\020\245\t\022*\n%resource_limits_config_update_req"
-  "uest\020\246\t\022+\n&resource_limits_config_update"
-  "_response\020\247\t\022*\n%resource_limits_config_r"
-  "emove_request\020\250\t\022+\n&resource_limits_conf"
-  "ig_remove_response\020\251\t\022#\n\036account_history"
-  "_create_request\020\252\t\022$\n\037account_history_cr"
-  "eate_response\020\253\t\022\"\n\035account_history_quer"
-  "y_request\020\254\t\022#\n\036account_history_query_re"
-  "sponse\020\255\t\022#\n\036account_history_update_requ"
-  "est\020\256\t\022$\n\037account_history_update_respons"
-  "e\020\257\t\022#\n\036account_history_remove_request\020\260"
-  "\t\022$\n\037account_history_remove_response\020\261\t\022"
-  "\"\n\035action_history_create_request\020\262\t\022#\n\036a"
-  "ction_history_create_response\020\263\t\022!\n\034acti"
-  "on_history_query_request\020\264\t\022\"\n\035action_hi"
-  "story_query_response\020\265\t\022\"\n\035action_histor"
-  "y_update_request\020\266\t\022#\n\036action_history_up"
-  "date_response\020\267\t\022\"\n\035action_history_remov"
-  "e_request\020\270\t\022#\n\036action_history_remove_re"
-  "sponse\020\271\t\022$\n\037reversible_block_create_req"
-  "uest\020\272\t\022%\n reversible_block_create_respo"
-  "nse\020\273\t\022#\n\036reversible_block_query_request"
-  "\020\274\t\022$\n\037reversible_block_query_response\020\275"
-  "\t\022$\n\037reversible_block_update_request\020\276\t\022"
-  "%\n reversible_block_update_response\020\277\t\022$"
-  "\n\037reversible_block_remove_request\020\300\t\022%\n "
-  "reversible_block_remove_response\020\301\t\022\031\n\024d"
-  "b_store_i64_request\020\320\017\022\032\n\025db_store_i64_r"
-  "esponse\020\321\017\022\032\n\025db_update_i64_request\020\322\017\022\033"
-  "\n\026db_update_i64_response\020\323\017\022\032\n\025db_remove"
-  "_i64_request\020\324\017\022\033\n\026db_remove_i64_respons"
-  "e\020\325\017\022\027\n\022db_get_i64_request\020\326\017\022\030\n\023db_get_"
-  "i64_response\020\327\017\022\030\n\023db_next_i64_request\020\330"
-  "\017\022\031\n\024db_next_i64_response\020\331\017\022\034\n\027db_previ"
-  "ous_i64_request\020\332\017\022\035\n\030db_previous_i64_re"
-  "sponse\020\333\017\022\030\n\023db_find_i64_request\020\334\017\022\031\n\024d"
-  "b_find_i64_response\020\335\017\022\036\n\031db_lowerbound_"
-  "i64_request\020\336\017\022\037\n\032db_lowerbound_i64_resp"
-  "onse\020\337\017\022\036\n\031db_upperbound_i64_request\020\340\017\022"
-  "\037\n\032db_upperbound_i64_response\020\341\017\022\027\n\022db_e"
-  "nd_i64_request\020\342\017\022\030\n\023db_end_i64_response"
-  "\020\343\017\022\033\n\026db_idx64_store_request\020\344\017\022\034\n\027db_i"
-  "dx64_store_response\020\345\017\022\034\n\027db_idx64_updat"
-  "e_request\020\346\017\022\035\n\030db_idx64_update_response"
-  "\020\347\017\022\034\n\027db_idx64_remove_request\020\350\017\022\035\n\030db_"
-  "idx64_remove_response\020\351\017\022$\n\037db_idx64_fin"
-  "d_secondary_request\020\352\017\022%\n db_idx64_find_"
-  "secondary_response\020\353\017\022\"\n\035db_idx64_find_p"
-  "rimary_request\020\354\017\022#\n\036db_idx64_find_prima"
-  "ry_response\020\355\017\022 \n\033db_idx64_lowerbound_re"
-  "quest\020\356\017\022!\n\034db_idx64_lowerbound_response"
-  "\020\357\017\022 \n\033db_idx64_upperbound_request\020\360\017\022!\n"
-  "\034db_idx64_upperbound_response\020\361\017\022\031\n\024db_i"
-  "dx64_end_request\020\362\017\022\032\n\025db_idx64_end_resp"
-  "onse\020\363\017\022\032\n\025db_idx64_next_request\020\364\017\022\033\n\026d"
-  "b_idx64_next_response\020\365\017\022\036\n\031db_idx64_pre"
-  "vious_request\020\366\017\022\037\n\032db_idx64_previous_re"
-  "sponse\020\367\017\022\034\n\027db_idx128_store_request\020\370\017\022"
-  "\035\n\030db_idx128_store_response\020\371\017\022\035\n\030db_idx"
-  "128_update_request\020\372\017\022\036\n\031db_idx128_updat"
-  "e_response\020\373\017\022\035\n\030db_idx128_remove_reques"
-  "t\020\374\017\022\036\n\031db_idx128_remove_response\020\375\017\022%\n "
-  "db_idx128_find_secondary_request\020\376\017\022&\n!d"
-  "b_idx128_find_secondary_response\020\377\017\022#\n\036d"
-  "b_idx128_find_primary_request\020\200\020\022$\n\037db_i"
-  "dx128_find_primary_response\020\201\020\022!\n\034db_idx"
-  "128_lowerbound_request\020\202\020\022\"\n\035db_idx128_l"
-  "owerbound_response\020\203\020\022!\n\034db_idx128_upper"
-  "bound_request\020\204\020\022\"\n\035db_idx128_upperbound"
-  "_response\020\205\020\022\032\n\025db_idx128_end_request\020\206\020"
-  "\022\033\n\026db_idx128_end_response\020\207\020\022\033\n\026db_idx1"
-  "28_next_request\020\210\020\022\034\n\027db_idx128_next_res"
-  "ponse\020\211\020\022\037\n\032db_idx128_previous_request\020\212"
-  "\020\022 \n\033db_idx128_previous_response\020\213\020\022\034\n\027d"
-  "b_idx256_store_request\020\214\020\022\035\n\030db_idx256_s"
-  "tore_response\020\215\020\022\035\n\030db_idx256_update_req"
-  "uest\020\216\020\022\036\n\031db_idx256_update_response\020\217\020\022"
-  "\035\n\030db_idx256_remove_request\020\220\020\022\036\n\031db_idx"
-  "256_remove_response\020\221\020\022%\n db_idx256_find"
-  "_secondary_request\020\222\020\022&\n!db_idx256_find_"
-  "secondary_response\020\223\020\022#\n\036db_idx256_find_"
-  "primary_request\020\224\020\022$\n\037db_idx256_find_pri"
-  "mary_response\020\225\020\022!\n\034db_idx256_lowerbound"
-  "_request\020\226\020\022\"\n\035db_idx256_lowerbound_resp"
-  "onse\020\227\020\022!\n\034db_idx256_upperbound_request\020"
-  "\230\020\022\"\n\035db_idx256_upperbound_response\020\231\020\022\032"
-  "\n\025db_idx256_end_request\020\232\020\022\033\n\026db_idx256_"
-  "end_response\020\233\020\022\033\n\026db_idx256_next_reques"
-  "t\020\234\020\022\034\n\027db_idx256_next_response\020\235\020\022\037\n\032db"
-  "_idx256_previous_request\020\236\020\022 \n\033db_idx256"
-  "_previous_response\020\237\020\022 \n\033db_idx_double_s"
-  "tore_request\020\240\020\022!\n\034db_idx_double_store_r"
-  "esponse\020\241\020\022!\n\034db_idx_double_update_reque"
-  "st\020\242\020\022\"\n\035db_idx_double_update_response\020\243"
-  "\020\022!\n\034db_idx_double_remove_request\020\244\020\022\"\n\035"
-  "db_idx_double_remove_response\020\245\020\022)\n$db_i"
-  "dx_double_find_secondary_request\020\246\020\022*\n%d"
-  "b_idx_double_find_secondary_response\020\247\020\022"
-  "\'\n\"db_idx_double_find_primary_request\020\250\020"
-  "\022(\n#db_idx_double_find_primary_response\020"
-  "\251\020\022%\n db_idx_double_lowerbound_request\020\252"
-  "\020\022&\n!db_idx_double_lowerbound_response\020\253"
-  "\020\022%\n db_idx_double_upperbound_request\020\254\020"
-  "\022&\n!db_idx_double_upperbound_response\020\255\020"
-  "\022\036\n\031db_idx_double_end_request\020\256\020\022\037\n\032db_i"
-  "dx_double_end_response\020\257\020\022\037\n\032db_idx_doub"
-  "le_next_request\020\260\020\022 \n\033db_idx_double_next"
-  "_response\020\261\020\022#\n\036db_idx_double_previous_r"
-  "equest\020\262\020\022$\n\037db_idx_double_previous_resp"
-  "onse\020\263\020\022%\n db_idx_long_double_store_requ"
-  "est\020\264\020\022&\n!db_idx_long_double_store_respo"
-  "nse\020\265\020\022&\n!db_idx_long_double_update_requ"
-  "est\020\266\020\022\'\n\"db_idx_long_double_update_resp"
-  "onse\020\267\020\022&\n!db_idx_long_double_remove_req"
-  "uest\020\270\020\022\'\n\"db_idx_long_double_remove_res"
-  "ponse\020\271\020\022.\n)db_idx_long_double_find_seco"
-  "ndary_request\020\272\020\022/\n*db_idx_long_double_f"
-  "ind_secondary_response\020\273\020\022,\n\'db_idx_long"
-  "_double_find_primary_request\020\274\020\022-\n(db_id"
-  "x_long_double_find_primary_response\020\275\020\022*"
-  "\n%db_idx_long_double_lowerbound_request\020"
-  "\276\020\022+\n&db_idx_long_double_lowerbound_resp"
-  "onse\020\277\020\022*\n%db_idx_long_double_upperbound"
-  "_request\020\300\020\022+\n&db_idx_long_double_upperb"
-  "ound_response\020\301\020\022#\n\036db_idx_long_double_e"
-  "nd_request\020\302\020\022$\n\037db_idx_long_double_end_"
-  "response\020\303\020\022$\n\037db_idx_long_double_next_r"
-  "equest\020\304\020\022%\n db_idx_long_double_next_res"
-  "ponse\020\305\020\022(\n#db_idx_long_double_previous_"
-  "request\020\306\020\022)\n$db_idx_long_double_previou"
-  "s_response\020\307\020\022#\n\036permission_level_check_"
-  "request\020\270\027\022$\n\037permission_level_check_res"
-  "ponse\020\271\027\022,\n\'check_transaction_authorizat"
-  "ion_request\020\272\027\022-\n(check_transaction_auth"
-  "orization_response\020\273\027\022+\n&check_permissio"
-  "n_authorization_request\020\274\027\022,\n\'check_perm"
-  "ission_authorization_response\020\275\027\022%\n get_"
-  "permission_last_used_request\020\276\027\022&\n!get_p"
-  "ermission_last_used_response\020\277\027\022&\n!get_a"
-  "ccount_creation_time_request\020\300\027\022\'\n\"get_a"
-  "ccount_creation_time_response\020\301\027"
+  "\014\022\017\n\007primary\030\005 \001(\004\"o\n\035db_idx_long_double"
+  "_lowerbound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004"
+  "\022\r\n\005table\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007pr"
+  "imary\030\005 \001(\004\"o\n\035db_idx_long_double_upperb"
+  "ound\022\014\n\004code\030\001 \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005tab"
+  "le\030\003 \001(\004\022\021\n\tsecondary\030\004 \001(\014\022\017\n\007primary\030\005"
+  " \001(\004\"D\n\026db_idx_long_double_end\022\014\n\004code\030\001"
+  " \001(\004\022\r\n\005scope\030\002 \001(\004\022\r\n\005table\030\003 \001(\004\"7\n\027db"
+  "_idx_long_double_next\022\013\n\003itr\030\001 \001(\r\022\017\n\007pr"
+  "imary\030\002 \001(\004\";\n\033db_idx_long_double_previo"
+  "us\022\013\n\003itr\030\001 \001(\r\022\017\n\007primary\030\002 \001(\004\"]\n\037chec"
+  "k_transaction_authorization\022\020\n\010trx_data\030"
+  "\001 \001(\014\022\024\n\014pubkeys_data\030\002 \001(\014\022\022\n\nperms_dat"
+  "a\030\003 \001(\014\"\201\001\n\036check_permission_authorizati"
+  "on\022\017\n\007account\030\001 \001(\014\022\022\n\npermission\030\002 \001(\014\022"
+  "\024\n\014pubkeys_data\030\003 \001(\014\022\022\n\nperms_data\030\004 \001("
+  "\014\022\020\n\010delay_us\030\005 \001(\004\"\?\n\030get_permission_la"
+  "st_used\022\017\n\007account\030\001 \001(\014\022\022\n\npermission\030\002"
+  " \001(\014\",\n\031get_account_creation_time\022\017\n\007acc"
+  "ount\030\001 \001(\014\"3\n\020reversible_block\022\021\n\tblock_"
+  "num\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\"n\n\026global_proper"
+  "ty_object\022#\n\033proposed_schedule_block_num"
+  "\030\001 \001(\r\022\030\n\020propose_schedule\030\002 \001(\014\022\025\n\rconf"
+  "iguration\030\003 \001(\014\"Y\n\013rpc_request\022*\n\006msg_id"
+  "\030\001 \001(\0162\032.action_message.message_id\022\020\n\010re"
+  "ceiver\030\002 \001(\004\022\014\n\004data\030\003 \001(\014\"\256\001\n\014rpc_respo"
+  "nse\022*\n\006msg_id\030\001 \001(\0162\032.action_message.mes"
+  "sage_id\022\"\n\003err\030\002 \001(\0132\025.action_message.er"
+  "ror\022\014\n\004data\030\003 \001(\014\022\016\n\006result\030\004 \001(\r\022\026\n\016res"
+  "ult_primary\030\005 \001(\004\022\030\n\020result_secondary\030\006 "
+  "\001(\004*\317\n\n\013object_type\022\024\n\020null_object_type\020"
+  "\000\022\027\n\023account_object_type\020\001\022 \n\034account_se"
+  "quence_object_type\020\002\022\032\n\026permission_objec"
+  "t_type\020\003\022 \n\034permission_usage_object_type"
+  "\020\004\022\037\n\033permission_link_object_type\020\005\022\"\n\036U"
+  "NUSED_action_code_object_type\020\006\022\031\n\025key_v"
+  "alue_object_type\020\007\022\027\n\023index64_object_typ"
+  "e\020\010\022\030\n\024index128_object_type\020\t\022\030\n\024index25"
+  "6_object_type\020\n\022\034\n\030index_double_object_t"
+  "ype\020\013\022!\n\035index_long_double_object_type\020\014"
+  "\022\037\n\033global_property_object_type\020\r\022\'\n#dyn"
+  "amic_global_property_object_type\020\016\022\035\n\031bl"
+  "ock_summary_object_type\020\017\022\033\n\027transaction"
+  "_object_type\020\020\022%\n!generated_transaction_"
+  "object_type\020\021\022\030\n\024producer_object_type\020\022\022"
+  "%\n!UNUSED_chain_property_object_type\020\023\022\'"
+  "\n#account_control_history_object_type\020\024\022"
+  "2\n.UNUSED_account_transaction_history_ob"
+  "ject_type\020\025\022*\n&UNUSED_transaction_histor"
+  "y_object_type\020\026\022\"\n\036public_key_history_ob"
+  "ject_type\020\027\022\036\n\032UNUSED_balance_object_typ"
+  "e\020\030\022%\n!UNUSED_staked_balance_object_type"
+  "\020\031\022%\n!UNUSED_producer_votes_object_type\020"
+  "\032\022(\n$UNUSED_producer_schedule_object_typ"
+  "e\020\033\022!\n\035UNUSED_proxy_vote_object_type\020\034\022%"
+  "\n!UNUSED_scope_sequence_object_type\020\035\022\030\n"
+  "\024table_id_object_type\020\036\022\037\n\033resource_limi"
+  "ts_object_type\020\037\022\036\n\032resource_usage_objec"
+  "t_type\020 \022%\n!resource_limits_state_object"
+  "_type\020!\022&\n\"resource_limits_config_object"
+  "_type\020\"\022\037\n\033account_history_object_type\020#"
+  "\022\036\n\032action_history_object_type\020$\022 \n\034reve"
+  "rsible_block_object_type\020%\022\034\n\030signed_blo"
+  "ck_object_type\020(\022\033\n\027block_state_object_t"
+  "ype\020)*\322f\n\nmessage_id\022\033\n\026account_create_r"
+  "equest\020\350\007\022\034\n\027account_create_response\020\351\007\022"
+  "\032\n\025account_guery_request\020\352\007\022\033\n\026account_q"
+  "uery_response\020\353\007\022\033\n\026account_update_reque"
+  "st\020\354\007\022\034\n\027account_update_response\020\355\007\022\033\n\026a"
+  "ccount_remove_request\020\356\007\022\034\n\027account_remo"
+  "ve_response\020\357\007\022$\n\037account_sequence_creat"
+  "e_request\020\360\007\022%\n account_sequence_create_"
+  "response\020\361\007\022#\n\036account_sequence_query_re"
+  "quest\020\362\007\022$\n\037account_sequence_query_respo"
+  "nse\020\363\007\022$\n\037account_sequence_update_reques"
+  "t\020\364\007\022%\n account_sequence_update_response"
+  "\020\365\007\022$\n\037account_sequence_remove_request\020\366"
+  "\007\022%\n account_sequence_remove_response\020\367\007"
+  "\022\036\n\031permission_create_request\020\370\007\022\037\n\032perm"
+  "ission_create_response\020\371\007\022\035\n\030permission_"
+  "query_request\020\372\007\022\036\n\031permission_query_res"
+  "ponse\020\373\007\022\036\n\031permission_update_request\020\374\007"
+  "\022\037\n\032permission_update_response\020\375\007\022\036\n\031per"
+  "mission_remove_request\020\376\007\022\037\n\032permission_"
+  "remove_response\020\377\007\022$\n\037permission_usage_c"
+  "reate_request\020\200\010\022%\n permission_usage_cre"
+  "ate_response\020\201\010\022#\n\036permission_usage_quer"
+  "y_request\020\202\010\022$\n\037permission_usage_query_r"
+  "esponse\020\203\010\022$\n\037permission_usage_update_re"
+  "quest\020\204\010\022%\n permission_usage_update_resp"
+  "onse\020\205\010\022$\n\037permission_usage_remove_reque"
+  "st\020\206\010\022%\n permission_usage_remove_respons"
+  "e\020\207\010\022#\n\036permission_link_create_request\020\210"
+  "\010\022$\n\037permission_link_create_response\020\211\010\022"
+  "\"\n\035permission_link_query_request\020\212\010\022#\n\036p"
+  "ermission_link_query_response\020\213\010\022#\n\036perm"
+  "ission_link_update_request\020\214\010\022$\n\037permiss"
+  "ion_link_update_response\020\215\010\022#\n\036permissio"
+  "n_link_remove_request\020\216\010\022$\n\037permission_l"
+  "ink_remove_response\020\220\010\022\035\n\030key_value_crea"
+  "te_request\020\221\010\022\036\n\031key_value_create_respon"
+  "se\020\222\010\022\034\n\027key_value_query_request\020\223\010\022\035\n\030k"
+  "ey_value_query_response\020\224\010\022\035\n\030key_value_"
+  "update_request\020\225\010\022\036\n\031key_value_update_re"
+  "sponse\020\226\010\022\035\n\030key_value_remove_request\020\227\010"
+  "\022\036\n\031key_value_remove_response\020\230\010\022\033\n\026inde"
+  "x64_create_request\020\231\010\022\034\n\027index64_create_"
+  "response\020\232\010\022\032\n\025index64_query_request\020\233\010\022"
+  "\033\n\026index64_query_response\020\234\010\022\033\n\026index64_"
+  "update_request\020\235\010\022\034\n\027index64_update_resp"
+  "onse\020\236\010\022\033\n\026index64_remove_request\020\237\010\022\034\n\027"
+  "index64_remove_response\020\240\010\022\034\n\027index128_c"
+  "reate_request\020\241\010\022\035\n\030index128_create_resp"
+  "onse\020\242\010\022\033\n\026index128_query_request\020\244\010\022\034\n\027"
+  "index128_query_response\020\245\010\022\034\n\027index128_u"
+  "pdate_request\020\246\010\022\035\n\030index128_update_resp"
+  "onse\020\247\010\022\034\n\027index128_remove_request\020\250\010\022\035\n"
+  "\030index128_remove_response\020\251\010\022\034\n\027index256"
+  "_create_request\020\252\010\022\035\n\030index256_create_re"
+  "sponse\020\253\010\022\033\n\026index256_query_request\020\254\010\022\034"
+  "\n\027index256_query_response\020\255\010\022\034\n\027index256"
+  "_update_request\020\256\010\022\035\n\030index256_update_re"
+  "sponse\020\257\010\022\034\n\027index256_remove_request\020\260\010\022"
+  "\035\n\030index256_remove_response\020\261\010\022 \n\033index_"
+  "double_create_request\020\262\010\022!\n\034index_double"
+  "_create_response\020\263\010\022\037\n\032index_double_quer"
+  "y_request\020\264\010\022 \n\033index_double_query_respo"
+  "nse\020\265\010\022 \n\033index_double_update_request\020\266\010"
+  "\022!\n\034index_double_update_response\020\267\010\022 \n\033i"
+  "ndex_double_remove_request\020\270\010\022!\n\034index_d"
+  "ouble_remove_response\020\271\010\022%\n index_long_d"
+  "ouble_create_request\020\272\010\022&\n!index_long_do"
+  "uble_create_response\020\273\010\022$\n\037index_long_do"
+  "uble_query_request\020\274\010\022%\n index_long_doub"
+  "le_query_response\020\275\010\022%\n index_long_doubl"
+  "e_update_request\020\276\010\022&\n!index_long_double"
+  "_update_response\020\277\010\022%\n index_long_double"
+  "_remove_request\020\300\010\022&\n!index_long_double_"
+  "remove_response\020\301\010\022#\n\036global_property_cr"
+  "eate_request\020\302\010\022$\n\037global_property_creat"
+  "e_response\020\303\010\022\"\n\035global_property_query_r"
+  "equest\020\304\010\022#\n\036global_property_query_respo"
+  "nse\020\305\010\022#\n\036global_property_update_request"
+  "\020\306\010\022$\n\037global_property_update_response\020\307"
+  "\010\022#\n\036global_property_remove_request\020\310\010\022$"
+  "\n\037global_property_remove_response\020\311\010\022+\n&"
+  "dynamic_global_property_create_request\020\312"
+  "\010\022,\n\'dynamic_global_property_create_resp"
+  "onse\020\313\010\022*\n%dynamic_global_property_query"
+  "_request\020\314\010\022+\n&dynamic_global_property_q"
+  "uery_response\020\315\010\022+\n&dynamic_global_prope"
+  "rty_update_request\020\316\010\022,\n\'dynamic_global_"
+  "property_update_response\020\317\010\022+\n&dynamic_g"
+  "lobal_property_remove_request\020\320\010\022,\n\'dyna"
+  "mic_global_property_remove_response\020\321\010\022!"
+  "\n\034block_summary_create_request\020\322\010\022\"\n\035blo"
+  "ck_summary_create_response\020\323\010\022 \n\033block_s"
+  "ummary_query_request\020\324\010\022!\n\034block_summary"
+  "_query_response\020\325\010\022!\n\034block_summary_upda"
+  "te_request\020\326\010\022\"\n\035block_summary_update_re"
+  "sponse\020\327\010\022!\n\034block_summary_remove_reques"
+  "t\020\330\010\022\"\n\035block_summary_remove_response\020\331\010"
+  "\022\037\n\032transaction_create_request\020\332\010\022 \n\033tra"
+  "nsaction_create_response\020\333\010\022\036\n\031transacti"
+  "on_query_request\020\334\010\022\037\n\032transaction_query"
+  "_response\020\335\010\022\037\n\032transaction_update_reque"
+  "st\020\336\010\022 \n\033transaction_update_response\020\337\010\022"
+  "\037\n\032transaction_remove_request\020\340\010\022 \n\033tran"
+  "saction_remove_response\020\341\010\022)\n$generated_"
+  "transaction_create_request\020\342\010\022*\n%generat"
+  "ed_transaction_create_response\020\343\010\022(\n#gen"
+  "erated_transaction_query_request\020\344\010\022)\n$g"
+  "enerated_transaction_query_response\020\345\010\022)"
+  "\n$generated_transaction_update_request\020\346"
+  "\010\022*\n%generated_transaction_update_respon"
+  "se\020\347\010\022)\n$generated_transaction_remove_re"
+  "quest\020\350\010\022*\n%generated_transaction_remove"
+  "_response\020\351\010\022\034\n\027producer_create_request\020"
+  "\352\010\022\035\n\030producer_create_response\020\353\010\022\033\n\026pro"
+  "ducer_query_request\020\354\010\022\034\n\027producer_query"
+  "_response\020\355\010\022\034\n\027producer_update_request\020"
+  "\356\010\022\035\n\030producer_update_response\020\357\010\022\034\n\027pro"
+  "ducer_remove_request\020\360\010\022\035\n\030producer_remo"
+  "ve_response\020\361\010\022+\n&account_control_histor"
+  "y_create_request\020\362\010\022,\n\'account_control_h"
+  "istory_create_response\020\363\010\022*\n%account_con"
+  "trol_history_query_request\020\364\010\022+\n&account"
+  "_control_history_query_response\020\365\010\022+\n&ac"
+  "count_control_history_update_request\020\366\010\022"
+  ",\n\'account_control_history_update_respon"
+  "se\020\367\010\022+\n&account_control_history_remove_"
+  "request\020\370\010\022,\n\'account_control_history_re"
+  "move_response\020\371\010\022&\n!public_key_history_c"
+  "reate_request\020\372\010\022\'\n\"public_key_history_c"
+  "reate_response\020\373\010\022%\n public_key_history_"
+  "query_request\020\374\010\022&\n!public_key_history_q"
+  "uery_response\020\375\010\022&\n!public_key_history_u"
+  "pdate_request\020\376\010\022\'\n\"public_key_history_u"
+  "pdate_response\020\377\010\022&\n!public_key_history_"
+  "remove_request\020\200\t\022\'\n\"public_key_history_"
+  "remove_response\020\201\t\022\034\n\027table_id_create_re"
+  "quest\020\202\t\022\035\n\030table_id_create_response\020\203\t\022"
+  "\033\n\026table_id_query_request\020\204\t\022\034\n\027table_id"
+  "_query_response\020\205\t\022\034\n\027table_id_update_re"
+  "quest\020\206\t\022\035\n\030table_id_update_response\020\207\t\022"
+  "\034\n\027table_id_remove_request\020\210\t\022\035\n\030table_i"
+  "d_remove_response\020\211\t\022#\n\036resource_limits_"
+  "create_request\020\212\t\022$\n\037resource_limits_cre"
+  "ate_response\020\213\t\022\"\n\035resource_limits_query"
+  "_request\020\214\t\022#\n\036resource_limits_query_res"
+  "ponse\020\215\t\022#\n\036resource_limits_update_reque"
+  "st\020\216\t\022$\n\037resource_limits_update_response"
+  "\020\217\t\022#\n\036resource_limits_remove_request\020\220\t"
+  "\022$\n\037resource_limits_remove_response\020\221\t\022\""
+  "\n\035resource_usage_create_request\020\222\t\022#\n\036re"
+  "source_usage_create_response\020\223\t\022!\n\034resou"
+  "rce_usage_query_request\020\224\t\022\"\n\035resource_u"
+  "sage_query_response\020\225\t\022\"\n\035resource_usage"
+  "_update_request\020\226\t\022#\n\036resource_usage_upd"
+  "ate_response\020\227\t\022\"\n\035resource_usage_remove"
+  "_request\020\230\t\022#\n\036resource_usage_remove_res"
+  "ponse\020\231\t\022)\n$resource_limits_state_create"
+  "_request\020\232\t\022*\n%resource_limits_state_cre"
+  "ate_response\020\233\t\022(\n#resource_limits_state"
+  "_query_request\020\234\t\022)\n$resource_limits_sta"
+  "te_query_response\020\235\t\022)\n$resource_limits_"
+  "state_update_request\020\236\t\022*\n%resource_limi"
+  "ts_state_update_response\020\237\t\022)\n$resource_"
+  "limits_state_remove_request\020\240\t\022*\n%resour"
+  "ce_limits_state_remove_response\020\241\t\022*\n%re"
+  "source_limits_config_create_request\020\242\t\022+"
+  "\n&resource_limits_config_create_response"
+  "\020\243\t\022)\n$resource_limits_config_query_requ"
+  "est\020\244\t\022*\n%resource_limits_config_query_r"
+  "esponse\020\245\t\022*\n%resource_limits_config_upd"
+  "ate_request\020\246\t\022+\n&resource_limits_config"
+  "_update_response\020\247\t\022*\n%resource_limits_c"
+  "onfig_remove_request\020\250\t\022+\n&resource_limi"
+  "ts_config_remove_response\020\251\t\022#\n\036account_"
+  "history_create_request\020\252\t\022$\n\037account_his"
+  "tory_create_response\020\253\t\022\"\n\035account_histo"
+  "ry_query_request\020\254\t\022#\n\036account_history_q"
+  "uery_response\020\255\t\022#\n\036account_history_upda"
+  "te_request\020\256\t\022$\n\037account_history_update_"
+  "response\020\257\t\022#\n\036account_history_remove_re"
+  "quest\020\260\t\022$\n\037account_history_remove_respo"
+  "nse\020\261\t\022\"\n\035action_history_create_request\020"
+  "\262\t\022#\n\036action_history_create_response\020\263\t\022"
+  "!\n\034action_history_query_request\020\264\t\022\"\n\035ac"
+  "tion_history_query_response\020\265\t\022\"\n\035action"
+  "_history_update_request\020\266\t\022#\n\036action_his"
+  "tory_update_response\020\267\t\022\"\n\035action_histor"
+  "y_remove_request\020\270\t\022#\n\036action_history_re"
+  "move_response\020\271\t\022$\n\037reversible_block_cre"
+  "ate_request\020\272\t\022%\n reversible_block_creat"
+  "e_response\020\273\t\022#\n\036reversible_block_query_"
+  "request\020\274\t\022$\n\037reversible_block_query_res"
+  "ponse\020\275\t\022$\n\037reversible_block_update_requ"
+  "est\020\276\t\022%\n reversible_block_update_respon"
+  "se\020\277\t\022$\n\037reversible_block_remove_request"
+  "\020\300\t\022%\n reversible_block_remove_response\020"
+  "\301\t\022*\n%reversible_block_multi_remove_requ"
+  "est\020\302\t\022+\n&reversible_block_multi_remove_"
+  "response\020\303\t\022\031\n\024db_store_i64_request\020\320\017\022\032"
+  "\n\025db_store_i64_response\020\321\017\022\032\n\025db_update_"
+  "i64_request\020\322\017\022\033\n\026db_update_i64_response"
+  "\020\323\017\022\032\n\025db_remove_i64_request\020\324\017\022\033\n\026db_re"
+  "move_i64_response\020\325\017\022\027\n\022db_get_i64_reque"
+  "st\020\326\017\022\030\n\023db_get_i64_response\020\327\017\022\030\n\023db_ne"
+  "xt_i64_request\020\330\017\022\031\n\024db_next_i64_respons"
+  "e\020\331\017\022\034\n\027db_previous_i64_request\020\332\017\022\035\n\030db"
+  "_previous_i64_response\020\333\017\022\030\n\023db_find_i64"
+  "_request\020\334\017\022\031\n\024db_find_i64_response\020\335\017\022\036"
+  "\n\031db_lowerbound_i64_request\020\336\017\022\037\n\032db_low"
+  "erbound_i64_response\020\337\017\022\036\n\031db_upperbound"
+  "_i64_request\020\340\017\022\037\n\032db_upperbound_i64_res"
+  "ponse\020\341\017\022\027\n\022db_end_i64_request\020\342\017\022\030\n\023db_"
+  "end_i64_response\020\343\017\022\033\n\026db_idx64_store_re"
+  "quest\020\344\017\022\034\n\027db_idx64_store_response\020\345\017\022\034"
+  "\n\027db_idx64_update_request\020\346\017\022\035\n\030db_idx64"
+  "_update_response\020\347\017\022\034\n\027db_idx64_remove_r"
+  "equest\020\350\017\022\035\n\030db_idx64_remove_response\020\351\017"
+  "\022$\n\037db_idx64_find_secondary_request\020\352\017\022%"
+  "\n db_idx64_find_secondary_response\020\353\017\022\"\n"
+  "\035db_idx64_find_primary_request\020\354\017\022#\n\036db_"
+  "idx64_find_primary_response\020\355\017\022 \n\033db_idx"
+  "64_lowerbound_request\020\356\017\022!\n\034db_idx64_low"
+  "erbound_response\020\357\017\022 \n\033db_idx64_upperbou"
+  "nd_request\020\360\017\022!\n\034db_idx64_upperbound_res"
+  "ponse\020\361\017\022\031\n\024db_idx64_end_request\020\362\017\022\032\n\025d"
+  "b_idx64_end_response\020\363\017\022\032\n\025db_idx64_next"
+  "_request\020\364\017\022\033\n\026db_idx64_next_response\020\365\017"
+  "\022\036\n\031db_idx64_previous_request\020\366\017\022\037\n\032db_i"
+  "dx64_previous_response\020\367\017\022\034\n\027db_idx128_s"
+  "tore_request\020\370\017\022\035\n\030db_idx128_store_respo"
+  "nse\020\371\017\022\035\n\030db_idx128_update_request\020\372\017\022\036\n"
+  "\031db_idx128_update_response\020\373\017\022\035\n\030db_idx1"
+  "28_remove_request\020\374\017\022\036\n\031db_idx128_remove"
+  "_response\020\375\017\022%\n db_idx128_find_secondary"
+  "_request\020\376\017\022&\n!db_idx128_find_secondary_"
+  "response\020\377\017\022#\n\036db_idx128_find_primary_re"
+  "quest\020\200\020\022$\n\037db_idx128_find_primary_respo"
+  "nse\020\201\020\022!\n\034db_idx128_lowerbound_request\020\202"
+  "\020\022\"\n\035db_idx128_lowerbound_response\020\203\020\022!\n"
+  "\034db_idx128_upperbound_request\020\204\020\022\"\n\035db_i"
+  "dx128_upperbound_response\020\205\020\022\032\n\025db_idx12"
+  "8_end_request\020\206\020\022\033\n\026db_idx128_end_respon"
+  "se\020\207\020\022\033\n\026db_idx128_next_request\020\210\020\022\034\n\027db"
+  "_idx128_next_response\020\211\020\022\037\n\032db_idx128_pr"
+  "evious_request\020\212\020\022 \n\033db_idx128_previous_"
+  "response\020\213\020\022\034\n\027db_idx256_store_request\020\214"
+  "\020\022\035\n\030db_idx256_store_response\020\215\020\022\035\n\030db_i"
+  "dx256_update_request\020\216\020\022\036\n\031db_idx256_upd"
+  "ate_response\020\217\020\022\035\n\030db_idx256_remove_requ"
+  "est\020\220\020\022\036\n\031db_idx256_remove_response\020\221\020\022%"
+  "\n db_idx256_find_secondary_request\020\222\020\022&\n"
+  "!db_idx256_find_secondary_response\020\223\020\022#\n"
+  "\036db_idx256_find_primary_request\020\224\020\022$\n\037db"
+  "_idx256_find_primary_response\020\225\020\022!\n\034db_i"
+  "dx256_lowerbound_request\020\226\020\022\"\n\035db_idx256"
+  "_lowerbound_response\020\227\020\022!\n\034db_idx256_upp"
+  "erbound_request\020\230\020\022\"\n\035db_idx256_upperbou"
+  "nd_response\020\231\020\022\032\n\025db_idx256_end_request\020"
+  "\232\020\022\033\n\026db_idx256_end_response\020\233\020\022\033\n\026db_id"
+  "x256_next_request\020\234\020\022\034\n\027db_idx256_next_r"
+  "esponse\020\235\020\022\037\n\032db_idx256_previous_request"
+  "\020\236\020\022 \n\033db_idx256_previous_response\020\237\020\022 \n"
+  "\033db_idx_double_store_request\020\240\020\022!\n\034db_id"
+  "x_double_store_response\020\241\020\022!\n\034db_idx_dou"
+  "ble_update_request\020\242\020\022\"\n\035db_idx_double_u"
+  "pdate_response\020\243\020\022!\n\034db_idx_double_remov"
+  "e_request\020\244\020\022\"\n\035db_idx_double_remove_res"
+  "ponse\020\245\020\022)\n$db_idx_double_find_secondary"
+  "_request\020\246\020\022*\n%db_idx_double_find_second"
+  "ary_response\020\247\020\022\'\n\"db_idx_double_find_pr"
+  "imary_request\020\250\020\022(\n#db_idx_double_find_p"
+  "rimary_response\020\251\020\022%\n db_idx_double_lowe"
+  "rbound_request\020\252\020\022&\n!db_idx_double_lower"
+  "bound_response\020\253\020\022%\n db_idx_double_upper"
+  "bound_request\020\254\020\022&\n!db_idx_double_upperb"
+  "ound_response\020\255\020\022\036\n\031db_idx_double_end_re"
+  "quest\020\256\020\022\037\n\032db_idx_double_end_response\020\257"
+  "\020\022\037\n\032db_idx_double_next_request\020\260\020\022 \n\033db"
+  "_idx_double_next_response\020\261\020\022#\n\036db_idx_d"
+  "ouble_previous_request\020\262\020\022$\n\037db_idx_doub"
+  "le_previous_response\020\263\020\022%\n db_idx_long_d"
+  "ouble_store_request\020\264\020\022&\n!db_idx_long_do"
+  "uble_store_response\020\265\020\022&\n!db_idx_long_do"
+  "uble_update_request\020\266\020\022\'\n\"db_idx_long_do"
+  "uble_update_response\020\267\020\022&\n!db_idx_long_d"
+  "ouble_remove_request\020\270\020\022\'\n\"db_idx_long_d"
+  "ouble_remove_response\020\271\020\022.\n)db_idx_long_"
+  "double_find_secondary_request\020\272\020\022/\n*db_i"
+  "dx_long_double_find_secondary_response\020\273"
+  "\020\022,\n\'db_idx_long_double_find_primary_req"
+  "uest\020\274\020\022-\n(db_idx_long_double_find_prima"
+  "ry_response\020\275\020\022*\n%db_idx_long_double_low"
+  "erbound_request\020\276\020\022+\n&db_idx_long_double"
+  "_lowerbound_response\020\277\020\022*\n%db_idx_long_d"
+  "ouble_upperbound_request\020\300\020\022+\n&db_idx_lo"
+  "ng_double_upperbound_response\020\301\020\022#\n\036db_i"
+  "dx_long_double_end_request\020\302\020\022$\n\037db_idx_"
+  "long_double_end_response\020\303\020\022$\n\037db_idx_lo"
+  "ng_double_next_request\020\304\020\022%\n db_idx_long"
+  "_double_next_response\020\305\020\022(\n#db_idx_long_"
+  "double_previous_request\020\306\020\022)\n$db_idx_lon"
+  "g_double_previous_response\020\307\020\022#\n\036permiss"
+  "ion_level_check_request\020\270\027\022$\n\037permission"
+  "_level_check_response\020\271\027\022,\n\'check_transa"
+  "ction_authorization_request\020\272\027\022-\n(check_"
+  "transaction_authorization_response\020\273\027\022+\n"
+  "&check_permission_authorization_request\020"
+  "\274\027\022,\n\'check_permission_authorization_res"
+  "ponse\020\275\027\022%\n get_permission_last_used_req"
+  "uest\020\276\027\022&\n!get_permission_last_used_resp"
+  "onse\020\277\027\022&\n!get_account_creation_time_req"
+  "uest\020\300\027\022\'\n\"get_account_creation_time_res"
+  "ponse\020\301\027\022\031\n\024session_push_request\020\240\037\022\032\n\025s"
+  "ession_push_response\020\241\037\022\033\n\026session_squas"
+  "h_request\020\242\037\022\034\n\027session_squash_response\020"
+  "\243\037\022\031\n\024session_undo_request\020\244\037\022\032\n\025session"
+  "_undo_response\020\245\037\022\035\n\030session_revision_re"
+  "quest\020\246\037\022\036\n\031session_revision_response\020\247\037"
+  "\022\033\n\026session_commit_request\020\250\037\022\034\n\027session"
+  "_commit_response\020\251\037\022\035\n\030session_undo_all_"
+  "request\020\252\037\022\036\n\031session_undo_all_response\020"
+  "\253\037\022\034\n\027session_type_id_request\020\254\037\022\035\n\030sess"
+  "ion_type_id_response\020\255\037\022\036\n\031session_row_c"
+  "ount_request\020\256\037\022\037\n\032session_row_count_res"
+  "ponse\020\257\037\022\036\n\031session_type_name_request\020\260\037"
+  "\022\037\n\032session_type_name_response\020\261\037\022\"\n\035ses"
+  "sion_remove_object_request\020\262\037\022#\n\036session"
+  "_remove_object_response\020\263\037"
 ,
-  "message.proto", &assign_descriptors_table_message_2eproto, 19192,
+  "message.proto", &assign_descriptors_table_message_2eproto, 20226,
 };
 
 void AddDescriptors_message_2eproto() {
@@ -3059,6 +3187,8 @@ bool message_id_IsValid(int value) {
     case 1215:
     case 1216:
     case 1217:
+    case 1218:
+    case 1219:
     case 2000:
     case 2001:
     case 2002:
@@ -3189,6 +3319,26 @@ bool message_id_IsValid(int value) {
     case 3007:
     case 3008:
     case 3009:
+    case 4000:
+    case 4001:
+    case 4002:
+    case 4003:
+    case 4004:
+    case 4005:
+    case 4006:
+    case 4007:
+    case 4008:
+    case 4009:
+    case 4010:
+    case 4011:
+    case 4012:
+    case 4013:
+    case 4014:
+    case 4015:
+    case 4016:
+    case 4017:
+    case 4018:
+    case 4019:
       return true;
     default:
       return false;
@@ -3237,7 +3387,7 @@ void error::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_error_message_2eproto.base);
   msg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  code_ = 0u;
+  code_ = PROTOBUF_ULONGLONG(0);
 }
 
 error::~error() {
@@ -3268,7 +3418,7 @@ void error::Clear() {
   if (cached_has_bits & 0x00000001u) {
     msg_.ClearNonDefaultToEmptyNoArena();
   }
-  code_ = 0u;
+  code_ = PROTOBUF_ULONGLONG(0);
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -3286,13 +3436,13 @@ const char* error::_InternalParse(const char* begin, const char* end, void* obje
     ptr = Varint::Parse32Inline(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // optional uint32 code = 1;
+      // optional uint64 code = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
         ::google::protobuf::uint64 val;
         ptr = Varint::Parse64(ptr, &val);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ::google::protobuf::uint32 value = val;
+        ::google::protobuf::uint64 value = val;
         msg->set_code(value);
         break;
       }
@@ -3346,12 +3496,12 @@ bool error::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 code = 1;
+      // optional uint64 code = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
           HasBitSetters::set_has_code(this);
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &code_)));
         } else {
           goto handle_unusual;
@@ -3402,9 +3552,9 @@ void error::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 code = 1;
+  // optional uint64 code = 1;
   if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->code(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->code(), output);
   }
 
   // optional string msg = 2;
@@ -3432,9 +3582,9 @@ void error::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // optional uint32 code = 1;
+  // optional uint64 code = 1;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->code(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->code(), target);
   }
 
   // optional string msg = 2;
@@ -3478,10 +3628,10 @@ size_t error::ByteSizeLong() const {
           this->msg());
     }
 
-    // optional uint32 code = 1;
+    // optional uint64 code = 1;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
           this->code());
     }
 
@@ -3949,6 +4099,415 @@ void meta::InternalSwap(meta* other) {
 }
 
 ::google::protobuf::Metadata meta::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
+  return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void account_object::InitAsDefaultInstance() {
+}
+class account_object::HasBitSetters {
+ public:
+  static void set_has_account_name(account_object* msg) {
+    msg->_has_bits_[0] |= 0x00000001u;
+  }
+  static void set_has_vm_type(account_object* msg) {
+    msg->_has_bits_[0] |= 0x00000002u;
+  }
+  static void set_has_vm_version(account_object* msg) {
+    msg->_has_bits_[0] |= 0x00000004u;
+  }
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int account_object::kAccountNameFieldNumber;
+const int account_object::kVmTypeFieldNumber;
+const int account_object::kVmVersionFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+account_object::account_object()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:action_message.account_object)
+}
+account_object::account_object(const account_object& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  account_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_account_name()) {
+    account_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_name_);
+  }
+  ::memcpy(&vm_type_, &from.vm_type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&vm_version_) -
+    reinterpret_cast<char*>(&vm_type_)) + sizeof(vm_version_));
+  // @@protoc_insertion_point(copy_constructor:action_message.account_object)
+}
+
+void account_object::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_account_object_message_2eproto.base);
+  account_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&vm_type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vm_version_) -
+      reinterpret_cast<char*>(&vm_type_)) + sizeof(vm_version_));
+}
+
+account_object::~account_object() {
+  // @@protoc_insertion_point(destructor:action_message.account_object)
+  SharedDtor();
+}
+
+void account_object::SharedDtor() {
+  account_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void account_object::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const account_object& account_object::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_account_object_message_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void account_object::Clear() {
+// @@protoc_insertion_point(message_clear_start:action_message.account_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    account_name_.ClearNonDefaultToEmptyNoArena();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&vm_type_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&vm_version_) -
+        reinterpret_cast<char*>(&vm_type_)) + sizeof(vm_version_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* account_object::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<account_object*>(object);
+  ::google::protobuf::uint32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ::google::protobuf::uint32 tag;
+    ptr = Varint::Parse32Inline(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // optional bytes account_name = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_account_name();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      // optional int32 vm_type = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::int32 value = val;
+        msg->set_vm_type(value);
+        break;
+      }
+      // optional int32 vm_version = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::int32 value = val;
+        msg->set_vm_version(value);
+        break;
+      }
+      default: {
+      handle_unusual: (void)&&handle_unusual;
+        if ((tag & 7) == 4 || tag == 0) {
+          bool ok = ctx->ValidEndGroup(tag);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end: (void)&&len_delim_till_end;
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                                 {parser_till_end, object}, size);
+group_continues: (void)&&group_continues;
+  GOOGLE_DCHECK(ptr >= end);
+  ctx->StoreGroup({_InternalParse, msg}, {parser_till_end, object}, depth);
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool account_object::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:action_message.account_object)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional bytes account_name = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_account_name()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional int32 vm_type = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+          HasBitSetters::set_has_vm_type(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &vm_type_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional int32 vm_version = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+          HasBitSetters::set_has_vm_version(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &vm_version_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:action_message.account_object)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:action_message.account_object)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void account_object::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:action_message.account_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bytes account_name = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      1, this->account_name(), output);
+  }
+
+  // optional int32 vm_type = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->vm_type(), output);
+  }
+
+  // optional int32 vm_version = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->vm_version(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:action_message.account_object)
+}
+
+::google::protobuf::uint8* account_object::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:action_message.account_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional bytes account_name = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        1, this->account_name(), target);
+  }
+
+  // optional int32 vm_type = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->vm_type(), target);
+  }
+
+  // optional int32 vm_version = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->vm_version(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:action_message.account_object)
+  return target;
+}
+
+size_t account_object::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:action_message.account_object)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes account_name = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->account_name());
+    }
+
+    // optional int32 vm_type = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->vm_type());
+    }
+
+    // optional int32 vm_version = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->vm_version());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void account_object::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:action_message.account_object)
+  GOOGLE_DCHECK_NE(&from, this);
+  const account_object* source =
+      ::google::protobuf::DynamicCastToGenerated<account_object>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.account_object)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.account_object)
+    MergeFrom(*source);
+  }
+}
+
+void account_object::MergeFrom(const account_object& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:action_message.account_object)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _has_bits_[0] |= 0x00000001u;
+      account_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_name_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      vm_type_ = from.vm_type_;
+    }
+    if (cached_has_bits & 0x00000004u) {
+      vm_version_ = from.vm_version_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void account_object::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:action_message.account_object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void account_object::CopyFrom(const account_object& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:action_message.account_object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool account_object::IsInitialized() const {
+  return true;
+}
+
+void account_object::Swap(account_object* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void account_object::InternalSwap(account_object* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  account_name_.Swap(&other->account_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(vm_type_, other->vm_type_);
+  swap(vm_version_, other->vm_version_);
+}
+
+::google::protobuf::Metadata account_object::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
   return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
 }
@@ -31325,11 +31884,786 @@ void get_account_creation_time::InternalSwap(get_account_creation_time* other) {
 
 // ===================================================================
 
+void reversible_block::InitAsDefaultInstance() {
+}
+class reversible_block::HasBitSetters {
+ public:
+  static void set_has_block_num(reversible_block* msg) {
+    msg->_has_bits_[0] |= 0x00000002u;
+  }
+  static void set_has_data(reversible_block* msg) {
+    msg->_has_bits_[0] |= 0x00000001u;
+  }
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int reversible_block::kBlockNumFieldNumber;
+const int reversible_block::kDataFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+reversible_block::reversible_block()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:action_message.reversible_block)
+}
+reversible_block::reversible_block(const reversible_block& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_data()) {
+    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  }
+  block_num_ = from.block_num_;
+  // @@protoc_insertion_point(copy_constructor:action_message.reversible_block)
+}
+
+void reversible_block::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_reversible_block_message_2eproto.base);
+  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  block_num_ = 0u;
+}
+
+reversible_block::~reversible_block() {
+  // @@protoc_insertion_point(destructor:action_message.reversible_block)
+  SharedDtor();
+}
+
+void reversible_block::SharedDtor() {
+  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void reversible_block::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const reversible_block& reversible_block::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_reversible_block_message_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void reversible_block::Clear() {
+// @@protoc_insertion_point(message_clear_start:action_message.reversible_block)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    data_.ClearNonDefaultToEmptyNoArena();
+  }
+  block_num_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* reversible_block::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<reversible_block*>(object);
+  ::google::protobuf::uint32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ::google::protobuf::uint32 tag;
+    ptr = Varint::Parse32Inline(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // optional uint32 block_num = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint32 value = val;
+        msg->set_block_num(value);
+        break;
+      }
+      // optional bytes data = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_data();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual: (void)&&handle_unusual;
+        if ((tag & 7) == 4 || tag == 0) {
+          bool ok = ctx->ValidEndGroup(tag);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end: (void)&&len_delim_till_end;
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                                 {parser_till_end, object}, size);
+group_continues: (void)&&group_continues;
+  GOOGLE_DCHECK(ptr >= end);
+  ctx->StoreGroup({_InternalParse, msg}, {parser_till_end, object}, depth);
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool reversible_block::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:action_message.reversible_block)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 block_num = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+          HasBitSetters::set_has_block_num(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &block_num_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes data = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_data()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:action_message.reversible_block)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:action_message.reversible_block)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void reversible_block::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:action_message.reversible_block)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 block_num = 1;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->block_num(), output);
+  }
+
+  // optional bytes data = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      2, this->data(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:action_message.reversible_block)
+}
+
+::google::protobuf::uint8* reversible_block::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:action_message.reversible_block)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 block_num = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->block_num(), target);
+  }
+
+  // optional bytes data = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->data(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:action_message.reversible_block)
+  return target;
+}
+
+size_t reversible_block::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:action_message.reversible_block)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional bytes data = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->data());
+    }
+
+    // optional uint32 block_num = 1;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->block_num());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void reversible_block::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:action_message.reversible_block)
+  GOOGLE_DCHECK_NE(&from, this);
+  const reversible_block* source =
+      ::google::protobuf::DynamicCastToGenerated<reversible_block>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.reversible_block)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.reversible_block)
+    MergeFrom(*source);
+  }
+}
+
+void reversible_block::MergeFrom(const reversible_block& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:action_message.reversible_block)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _has_bits_[0] |= 0x00000001u;
+      data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      block_num_ = from.block_num_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void reversible_block::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:action_message.reversible_block)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void reversible_block::CopyFrom(const reversible_block& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:action_message.reversible_block)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool reversible_block::IsInitialized() const {
+  return true;
+}
+
+void reversible_block::Swap(reversible_block* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void reversible_block::InternalSwap(reversible_block* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(block_num_, other->block_num_);
+}
+
+::google::protobuf::Metadata reversible_block::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
+  return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void global_property_object::InitAsDefaultInstance() {
+}
+class global_property_object::HasBitSetters {
+ public:
+  static void set_has_proposed_schedule_block_num(global_property_object* msg) {
+    msg->_has_bits_[0] |= 0x00000004u;
+  }
+  static void set_has_propose_schedule(global_property_object* msg) {
+    msg->_has_bits_[0] |= 0x00000001u;
+  }
+  static void set_has_configuration(global_property_object* msg) {
+    msg->_has_bits_[0] |= 0x00000002u;
+  }
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int global_property_object::kProposedScheduleBlockNumFieldNumber;
+const int global_property_object::kProposeScheduleFieldNumber;
+const int global_property_object::kConfigurationFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+global_property_object::global_property_object()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:action_message.global_property_object)
+}
+global_property_object::global_property_object(const global_property_object& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  propose_schedule_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_propose_schedule()) {
+    propose_schedule_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.propose_schedule_);
+  }
+  configuration_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_configuration()) {
+    configuration_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.configuration_);
+  }
+  proposed_schedule_block_num_ = from.proposed_schedule_block_num_;
+  // @@protoc_insertion_point(copy_constructor:action_message.global_property_object)
+}
+
+void global_property_object::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_global_property_object_message_2eproto.base);
+  propose_schedule_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  configuration_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  proposed_schedule_block_num_ = 0u;
+}
+
+global_property_object::~global_property_object() {
+  // @@protoc_insertion_point(destructor:action_message.global_property_object)
+  SharedDtor();
+}
+
+void global_property_object::SharedDtor() {
+  propose_schedule_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  configuration_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void global_property_object::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const global_property_object& global_property_object::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_global_property_object_message_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void global_property_object::Clear() {
+// @@protoc_insertion_point(message_clear_start:action_message.global_property_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      propose_schedule_.ClearNonDefaultToEmptyNoArena();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      configuration_.ClearNonDefaultToEmptyNoArena();
+    }
+  }
+  proposed_schedule_block_num_ = 0u;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* global_property_object::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<global_property_object*>(object);
+  ::google::protobuf::uint32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ::google::protobuf::uint32 tag;
+    ptr = Varint::Parse32Inline(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // optional uint32 proposed_schedule_block_num = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint32 value = val;
+        msg->set_proposed_schedule_block_num(value);
+        break;
+      }
+      // optional bytes propose_schedule = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_propose_schedule();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      // optional bytes configuration = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::internal::StringParser;
+        ::std::string* str = msg->mutable_configuration();
+        str->clear();
+        object = str;
+        if (size > end - ptr) goto len_delim_till_end;
+        str->append(ptr, size);
+        ptr += size;
+        break;
+      }
+      default: {
+      handle_unusual: (void)&&handle_unusual;
+        if ((tag & 7) == 4 || tag == 0) {
+          bool ok = ctx->ValidEndGroup(tag);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end: (void)&&len_delim_till_end;
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                                 {parser_till_end, object}, size);
+group_continues: (void)&&group_continues;
+  GOOGLE_DCHECK(ptr >= end);
+  ctx->StoreGroup({_InternalParse, msg}, {parser_till_end, object}, depth);
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool global_property_object::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:action_message.global_property_object)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional uint32 proposed_schedule_block_num = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+          HasBitSetters::set_has_proposed_schedule_block_num(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &proposed_schedule_block_num_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes propose_schedule = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_propose_schedule()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes configuration = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_configuration()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:action_message.global_property_object)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:action_message.global_property_object)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void global_property_object::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:action_message.global_property_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 proposed_schedule_block_num = 1;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->proposed_schedule_block_num(), output);
+  }
+
+  // optional bytes propose_schedule = 2;
+  if (cached_has_bits & 0x00000001u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      2, this->propose_schedule(), output);
+  }
+
+  // optional bytes configuration = 3;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      3, this->configuration(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:action_message.global_property_object)
+}
+
+::google::protobuf::uint8* global_property_object::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:action_message.global_property_object)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // optional uint32 proposed_schedule_block_num = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->proposed_schedule_block_num(), target);
+  }
+
+  // optional bytes propose_schedule = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        2, this->propose_schedule(), target);
+  }
+
+  // optional bytes configuration = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        3, this->configuration(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:action_message.global_property_object)
+  return target;
+}
+
+size_t global_property_object::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:action_message.global_property_object)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes propose_schedule = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->propose_schedule());
+    }
+
+    // optional bytes configuration = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->configuration());
+    }
+
+    // optional uint32 proposed_schedule_block_num = 1;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->proposed_schedule_block_num());
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void global_property_object::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:action_message.global_property_object)
+  GOOGLE_DCHECK_NE(&from, this);
+  const global_property_object* source =
+      ::google::protobuf::DynamicCastToGenerated<global_property_object>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:action_message.global_property_object)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:action_message.global_property_object)
+    MergeFrom(*source);
+  }
+}
+
+void global_property_object::MergeFrom(const global_property_object& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:action_message.global_property_object)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _has_bits_[0] |= 0x00000001u;
+      propose_schedule_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.propose_schedule_);
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _has_bits_[0] |= 0x00000002u;
+      configuration_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.configuration_);
+    }
+    if (cached_has_bits & 0x00000004u) {
+      proposed_schedule_block_num_ = from.proposed_schedule_block_num_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
+}
+
+void global_property_object::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:action_message.global_property_object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void global_property_object::CopyFrom(const global_property_object& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:action_message.global_property_object)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool global_property_object::IsInitialized() const {
+  return true;
+}
+
+void global_property_object::Swap(global_property_object* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void global_property_object::InternalSwap(global_property_object* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  propose_schedule_.Swap(&other->propose_schedule_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  configuration_.Swap(&other->configuration_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(proposed_schedule_block_num_, other->proposed_schedule_block_num_);
+}
+
+::google::protobuf::Metadata global_property_object::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_message_2eproto);
+  return ::file_level_metadata_message_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void rpc_request::InitAsDefaultInstance() {
 }
 class rpc_request::HasBitSetters {
  public:
   static void set_has_msg_id(rpc_request* msg) {
+    msg->_has_bits_[0] |= 0x00000004u;
+  }
+  static void set_has_receiver(rpc_request* msg) {
     msg->_has_bits_[0] |= 0x00000002u;
   }
   static void set_has_data(rpc_request* msg) {
@@ -31339,6 +32673,7 @@ class rpc_request::HasBitSetters {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int rpc_request::kMsgIdFieldNumber;
+const int rpc_request::kReceiverFieldNumber;
 const int rpc_request::kDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -31356,7 +32691,9 @@ rpc_request::rpc_request(const rpc_request& from)
   if (from.has_data()) {
     data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  msg_id_ = from.msg_id_;
+  ::memcpy(&receiver_, &from.receiver_,
+    static_cast<size_t>(reinterpret_cast<char*>(&msg_id_) -
+    reinterpret_cast<char*>(&receiver_)) + sizeof(msg_id_));
   // @@protoc_insertion_point(copy_constructor:action_message.rpc_request)
 }
 
@@ -31364,6 +32701,7 @@ void rpc_request::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_rpc_request_message_2eproto.base);
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  receiver_ = PROTOBUF_ULONGLONG(0);
   msg_id_ = 1000;
 }
 
@@ -31392,10 +32730,11 @@ void rpc_request::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      data_.ClearNonDefaultToEmptyNoArena();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    data_.ClearNonDefaultToEmptyNoArena();
+  }
+  if (cached_has_bits & 0x00000006u) {
+    receiver_ = PROTOBUF_ULONGLONG(0);
     msg_id_ = 1000;
   }
   _has_bits_.Clear();
@@ -31429,9 +32768,19 @@ const char* rpc_request::_InternalParse(const char* begin, const char* end, void
         msg->set_msg_id(value);
         break;
       }
-      // optional bytes data = 2;
+      // optional uint64 receiver = 2;
       case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint64 value = val;
+        msg->set_receiver(value);
+        break;
+      }
+      // optional bytes data = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
         ptr = Varint::Parse32Inline(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         parser_till_end = ::google::protobuf::internal::StringParser;
@@ -31496,9 +32845,22 @@ bool rpc_request::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bytes data = 2;
+      // optional uint64 receiver = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+          HasBitSetters::set_has_receiver(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &receiver_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional bytes data = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
         } else {
@@ -31536,15 +32898,20 @@ void rpc_request::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .action_message.message_id msg_id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->msg_id(), output);
   }
 
-  // optional bytes data = 2;
+  // optional uint64 receiver = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->receiver(), output);
+  }
+
+  // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->data(), output);
+      3, this->data(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -31563,16 +32930,21 @@ void rpc_request::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .action_message.message_id msg_id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->msg_id(), target);
   }
 
-  // optional bytes data = 2;
+  // optional uint64 receiver = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->receiver(), target);
+  }
+
+  // optional bytes data = 3;
   if (cached_has_bits & 0x00000001u) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->data(), target);
+        3, this->data(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -31597,16 +32969,23 @@ size_t rpc_request::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    // optional bytes data = 2;
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes data = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::BytesSize(
           this->data());
     }
 
-    // optional .action_message.message_id msg_id = 1;
+    // optional uint64 receiver = 2;
     if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->receiver());
+    }
+
+    // optional .action_message.message_id msg_id = 1;
+    if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msg_id());
     }
@@ -31640,12 +33019,15 @@ void rpc_request::MergeFrom(const rpc_request& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _has_bits_[0] |= 0x00000001u;
       data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
     }
     if (cached_has_bits & 0x00000002u) {
+      receiver_ = from.receiver_;
+    }
+    if (cached_has_bits & 0x00000004u) {
       msg_id_ = from.msg_id_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -31680,6 +33062,7 @@ void rpc_request::InternalSwap(rpc_request* other) {
   swap(_has_bits_[0], other->_has_bits_[0]);
   data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(receiver_, other->receiver_);
   swap(msg_id_, other->msg_id_);
 }
 
@@ -31698,7 +33081,7 @@ void rpc_response::InitAsDefaultInstance() {
 class rpc_response::HasBitSetters {
  public:
   static void set_has_msg_id(rpc_response* msg) {
-    msg->_has_bits_[0] |= 0x00000004u;
+    msg->_has_bits_[0] |= 0x00000020u;
   }
   static const ::action_message::error& err(const rpc_response* msg);
   static void set_has_err(rpc_response* msg) {
@@ -31706,6 +33089,15 @@ class rpc_response::HasBitSetters {
   }
   static void set_has_data(rpc_response* msg) {
     msg->_has_bits_[0] |= 0x00000001u;
+  }
+  static void set_has_result(rpc_response* msg) {
+    msg->_has_bits_[0] |= 0x00000010u;
+  }
+  static void set_has_result_primary(rpc_response* msg) {
+    msg->_has_bits_[0] |= 0x00000004u;
+  }
+  static void set_has_result_secondary(rpc_response* msg) {
+    msg->_has_bits_[0] |= 0x00000008u;
   }
 };
 
@@ -31717,6 +33109,9 @@ rpc_response::HasBitSetters::err(const rpc_response* msg) {
 const int rpc_response::kMsgIdFieldNumber;
 const int rpc_response::kErrFieldNumber;
 const int rpc_response::kDataFieldNumber;
+const int rpc_response::kResultFieldNumber;
+const int rpc_response::kResultPrimaryFieldNumber;
+const int rpc_response::kResultSecondaryFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 rpc_response::rpc_response()
@@ -31738,7 +33133,9 @@ rpc_response::rpc_response(const rpc_response& from)
   } else {
     err_ = NULL;
   }
-  msg_id_ = from.msg_id_;
+  ::memcpy(&result_primary_, &from.result_primary_,
+    static_cast<size_t>(reinterpret_cast<char*>(&msg_id_) -
+    reinterpret_cast<char*>(&result_primary_)) + sizeof(msg_id_));
   // @@protoc_insertion_point(copy_constructor:action_message.rpc_response)
 }
 
@@ -31746,7 +33143,9 @@ void rpc_response::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_rpc_response_message_2eproto.base);
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  err_ = NULL;
+  ::memset(&err_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&result_) -
+      reinterpret_cast<char*>(&err_)) + sizeof(result_));
   msg_id_ = 1000;
 }
 
@@ -31776,7 +33175,7 @@ void rpc_response::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
       data_.ClearNonDefaultToEmptyNoArena();
     }
@@ -31784,6 +33183,11 @@ void rpc_response::Clear() {
       GOOGLE_DCHECK(err_ != NULL);
       err_->Clear();
     }
+  }
+  if (cached_has_bits & 0x0000003cu) {
+    ::memset(&result_primary_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&result_) -
+        reinterpret_cast<char*>(&result_primary_)) + sizeof(result_));
     msg_id_ = 1000;
   }
   _has_bits_.Clear();
@@ -31844,6 +33248,36 @@ const char* rpc_response::_InternalParse(const char* begin, const char* end, voi
         if (size > end - ptr) goto len_delim_till_end;
         str->append(ptr, size);
         ptr += size;
+        break;
+      }
+      // optional uint32 result = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint32 value = val;
+        msg->set_result(value);
+        break;
+      }
+      // optional uint64 result_primary = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint64 value = val;
+        msg->set_result_primary(value);
+        break;
+      }
+      // optional uint64 result_secondary = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::google::protobuf::uint64 value = val;
+        msg->set_result_secondary(value);
         break;
       }
       default: {
@@ -31921,6 +33355,45 @@ bool rpc_response::MergePartialFromCodedStream(
         break;
       }
 
+      // optional uint32 result = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+          HasBitSetters::set_has_result(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &result_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint64 result_primary = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (40 & 0xFF)) {
+          HasBitSetters::set_has_result_primary(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &result_primary_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // optional uint64 result_secondary = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (48 & 0xFF)) {
+          HasBitSetters::set_has_result_secondary(this);
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &result_secondary_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -31950,7 +33423,7 @@ void rpc_response::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .action_message.message_id msg_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->msg_id(), output);
   }
@@ -31965,6 +33438,21 @@ void rpc_response::SerializeWithCachedSizes(
   if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       3, this->data(), output);
+  }
+
+  // optional uint32 result = 4;
+  if (cached_has_bits & 0x00000010u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->result(), output);
+  }
+
+  // optional uint64 result_primary = 5;
+  if (cached_has_bits & 0x00000004u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(5, this->result_primary(), output);
+  }
+
+  // optional uint64 result_secondary = 6;
+  if (cached_has_bits & 0x00000008u) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(6, this->result_secondary(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -31983,7 +33471,7 @@ void rpc_response::SerializeWithCachedSizes(
 
   cached_has_bits = _has_bits_[0];
   // optional .action_message.message_id msg_id = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->msg_id(), target);
   }
@@ -32000,6 +33488,21 @@ void rpc_response::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
         3, this->data(), target);
+  }
+
+  // optional uint32 result = 4;
+  if (cached_has_bits & 0x00000010u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->result(), target);
+  }
+
+  // optional uint64 result_primary = 5;
+  if (cached_has_bits & 0x00000004u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(5, this->result_primary(), target);
+  }
+
+  // optional uint64 result_secondary = 6;
+  if (cached_has_bits & 0x00000008u) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(6, this->result_secondary(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -32024,7 +33527,7 @@ size_t rpc_response::ByteSizeLong() const {
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000003fu) {
     // optional bytes data = 3;
     if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
@@ -32039,8 +33542,29 @@ size_t rpc_response::ByteSizeLong() const {
           *err_);
     }
 
-    // optional .action_message.message_id msg_id = 1;
+    // optional uint64 result_primary = 5;
     if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->result_primary());
+    }
+
+    // optional uint64 result_secondary = 6;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt64Size(
+          this->result_secondary());
+    }
+
+    // optional uint32 result = 4;
+    if (cached_has_bits & 0x00000010u) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->result());
+    }
+
+    // optional .action_message.message_id msg_id = 1;
+    if (cached_has_bits & 0x00000020u) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msg_id());
     }
@@ -32074,7 +33598,7 @@ void rpc_response::MergeFrom(const rpc_response& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
+  if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
       _has_bits_[0] |= 0x00000001u;
       data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
@@ -32083,6 +33607,15 @@ void rpc_response::MergeFrom(const rpc_response& from) {
       mutable_err()->::action_message::error::MergeFrom(from.err());
     }
     if (cached_has_bits & 0x00000004u) {
+      result_primary_ = from.result_primary_;
+    }
+    if (cached_has_bits & 0x00000008u) {
+      result_secondary_ = from.result_secondary_;
+    }
+    if (cached_has_bits & 0x00000010u) {
+      result_ = from.result_;
+    }
+    if (cached_has_bits & 0x00000020u) {
       msg_id_ = from.msg_id_;
     }
     _has_bits_[0] |= cached_has_bits;
@@ -32118,6 +33651,9 @@ void rpc_response::InternalSwap(rpc_response* other) {
   data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(err_, other->err_);
+  swap(result_primary_, other->result_primary_);
+  swap(result_secondary_, other->result_secondary_);
+  swap(result_, other->result_);
   swap(msg_id_, other->msg_id_);
 }
 
@@ -32136,6 +33672,9 @@ template<> PROTOBUF_NOINLINE ::action_message::error* Arena::CreateMaybeMessage<
 }
 template<> PROTOBUF_NOINLINE ::action_message::meta* Arena::CreateMaybeMessage< ::action_message::meta >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::meta >(arena);
+}
+template<> PROTOBUF_NOINLINE ::action_message::account_object* Arena::CreateMaybeMessage< ::action_message::account_object >(Arena* arena) {
+  return Arena::CreateInternal< ::action_message::account_object >(arena);
 }
 template<> PROTOBUF_NOINLINE ::action_message::db_store_i64* Arena::CreateMaybeMessage< ::action_message::db_store_i64 >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::db_store_i64 >(arena);
@@ -32328,6 +33867,12 @@ template<> PROTOBUF_NOINLINE ::action_message::get_permission_last_used* Arena::
 }
 template<> PROTOBUF_NOINLINE ::action_message::get_account_creation_time* Arena::CreateMaybeMessage< ::action_message::get_account_creation_time >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::get_account_creation_time >(arena);
+}
+template<> PROTOBUF_NOINLINE ::action_message::reversible_block* Arena::CreateMaybeMessage< ::action_message::reversible_block >(Arena* arena) {
+  return Arena::CreateInternal< ::action_message::reversible_block >(arena);
+}
+template<> PROTOBUF_NOINLINE ::action_message::global_property_object* Arena::CreateMaybeMessage< ::action_message::global_property_object >(Arena* arena) {
+  return Arena::CreateInternal< ::action_message::global_property_object >(arena);
 }
 template<> PROTOBUF_NOINLINE ::action_message::rpc_request* Arena::CreateMaybeMessage< ::action_message::rpc_request >(Arena* arena) {
   return Arena::CreateInternal< ::action_message::rpc_request >(arena);

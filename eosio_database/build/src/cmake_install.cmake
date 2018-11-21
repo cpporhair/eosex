@@ -34,9 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/fc/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/chain/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/softfloat/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/chainbase/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/builtins/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/utilities/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/cmake_install.cmake")
   include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/protocol/cmake_install.cmake")
   include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/rpc_service/cmake_install.cmake")
-  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/network/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/database_controller/cmake_install.cmake")
+  include("/Users/yangwenyu/workspace/eosex/eosio_database/build/src/programs/cmake_install.cmake")
 
 endif()
 

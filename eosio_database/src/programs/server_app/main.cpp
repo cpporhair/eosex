@@ -3,8 +3,14 @@
 #include <network/dispatcher.hpp>
 #include <network/fork_db_message_dispatcher.hpp>
 #include <thread_safe/queue.hpp>
+#include <database_controller/database_controller.hpp>
+
+
 
 int main(int argc, char const *argv[]) {
+
+
+    database_controller::get().initialize_database();
 
     queue<std::shared_ptr<message>> chain_base_msg_queue,fork_db_msg_queue;
     dispatcher chain_base_dispatcher{&chain_base_msg_queue};
