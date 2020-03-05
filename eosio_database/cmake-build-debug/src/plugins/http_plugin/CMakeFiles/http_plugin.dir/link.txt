@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhttp_plugin.a  CMakeFiles/http_plugin.dir/http_plugin.cpp.o
+/usr/bin/ranlib libhttp_plugin.a

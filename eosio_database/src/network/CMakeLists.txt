@@ -1,0 +1,10 @@
+add_library(
+        network
+        connection.cpp
+        tcp_server.cpp
+        connection_manager.cpp
+        dispatcher.cpp
+        message_handlers.cpp
+        fork_database_message_handlers.cpp
+        fork_db_message_dispatcher.cpp
+)

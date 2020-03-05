@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnetwork.a  CMakeFiles/network.dir/connection.cpp.o CMakeFiles/network.dir/tcp_server.cpp.o CMakeFiles/network.dir/connection_manager.cpp.o CMakeFiles/network.dir/dispatcher.cpp.o CMakeFiles/network.dir/message_handlers.cpp.o CMakeFiles/network.dir/fork_database_message_handlers.cpp.o CMakeFiles/network.dir/fork_db_message_dispatcher.cpp.o
+/usr/bin/ranlib libnetwork.a

@@ -7,3 +7,6 @@
 [submodule "vm/third_party/http-parser"]
 	path = vm/third_party/http-parser
 	url = https://github.com/nodejs/http-parser.git
+[submodule "vm/third_party/wabt"]
+	path = vm/third_party/wabt
+	url = https://github.com/WebAssembly/wabt.git

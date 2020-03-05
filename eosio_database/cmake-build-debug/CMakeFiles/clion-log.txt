@@ -1,0 +1,21 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -G "CodeBlocks - Unix Makefiles" /Users/yangwenyu/workspace/eosex/eosio_database
+-- Found Secp256k1: /usr/local/lib/libsecp256k1.a
+-- Configuring fc to build on Unix/Apple
+-- zlib found
+-- Configuring SoftFloat
+-- Using custom FindBoost.cmake
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   thread
+--   date_time
+--   filesystem
+--   system
+--   chrono
+--   unit_test_framework
+--   locale
+-- Configuring ChainBase on OS X
+-- Configuring Builtins
+-- protobuf library found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/yangwenyu/workspace/eosex/eosio_database/cmake-build-debug

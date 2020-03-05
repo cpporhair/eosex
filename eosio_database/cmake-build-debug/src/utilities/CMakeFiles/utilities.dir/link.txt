@@ -1,0 +1,2 @@
+/usr/bin/ar qc libutilities.a  CMakeFiles/utilities.dir/key_conversion.cpp.o CMakeFiles/utilities.dir/string_escape.cpp.o CMakeFiles/utilities.dir/tempdir.cpp.o CMakeFiles/utilities.dir/words.cpp.o
+/usr/bin/ranlib libutilities.a

@@ -1,3 +1,7 @@
+
+add_definitions(-DDLL_EXPORT=)
+add_definitions(-DDLL_IMPORT=)
+
 add_library(http_parser
         ${PROJECT_ROOT_PATH}/third_party/http-parser/http_parser.h
         ${PROJECT_ROOT_PATH}/third_party/http-parser/http_parser.c)
@@ -24,6 +28,7 @@ IF(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
             -I${SEASTAR_PATH}/fmt
             -I${PROJECT_ROOT_PATH}
             -I${PROJECT_ROOT_PATH}/third_party
+            -I${WAVM_INC_PATH}
             -DBOOST_TEST_DYN_LINK -Wno-ignored-attributes
             -Wno-overloaded-virtual
             -Wno-uninitialized
@@ -82,6 +87,7 @@ ELSEIF(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
             -I${SEASTAR_PATH}/fmt
             -I${PROJECT_ROOT_PATH}
             -I${PROJECT_ROOT_PATH}/third_party
+            -I${WAVM_INC_PATH}
             -DBOOST_TEST_DYN_LINK -Wno-ignored-attributes
             -Wno-overloaded-virtual -Wno-maybe-uninitialized -Wno-error=cpp -Wno-stringop-overflow
             #        -DSEASTAR_HAVE_GCC6_CONCEPTS

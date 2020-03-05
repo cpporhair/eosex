@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnet_plugin.a  CMakeFiles/net_plugin.dir/net_plugin.cpp.o
+/usr/bin/ranlib libnet_plugin.a

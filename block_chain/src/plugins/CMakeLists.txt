@@ -1,0 +1,7 @@
+add_subdirectory(bnet_plugin)
+add_subdirectory(net_plugin)
+add_subdirectory(producer_plugin)
+add_subdirectory(chain_plugin)
+add_subdirectory(http_plugin)
+add_subdirectory(history_plugin)
+add_subdirectory(http_client_plugin)

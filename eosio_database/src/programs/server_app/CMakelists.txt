@@ -1,0 +1,23 @@
+add_executable(eosio_database_application main.cpp)
+
+find_package(Protobuf REQUIRED)
+if(PROTOBUF_FOUND)
+    message(STATUS "protobuf library found")
+else()
+    message(FATAL_ERROR "protobuf library is needed but can not be found")
+endif()
+
+target_link_libraries(
+    eosio_database_application
+    protocol
+    chainbase
+    fc
+    eosio_chain
+    ${PROTOBUF_LIBRARIES}
+    network
+    softfloat
+    eos_utilities
+    database_controller
+    boost_system
+    boost_filesystem
+)
