@@ -1,15 +1,12 @@
 # eosex
 分布式智能合约并发执行系统。参考EOS源码开发
 
-VM: 虚拟机实现
+* [虚拟机分析](#EOS虚拟机源码分析)
+* [EOS网络通信分析](#EOS网络通信分析)
+* [EOS 存储分析](#EOS存储分析)
 
-block_chain 链存储实现
 
-eosio_database 合约数据库实现
-
-network P2P网络实现
-
-# EOS 虚拟机源码分析
+# EOS虚拟机源码分析
 
 ## 总览
   
@@ -1569,7 +1566,7 @@ void handle_http_request(...){
 
 ```
 
-# EOS 存储分析
+# EOS存储分析
 
 ## chain分析
 
